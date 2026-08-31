@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+</head>
+<body>
+    <!-- Header Section Start -->
+    <header class="site-header">
+        <div class="header-container container">
+
+            <!-- Logo -->
+            <a href="#" class="site-logo">
+            <img src="assets/images/Iquanti-logo.svg" alt="">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Our Work</a></li>
+                    <li><a href="#" class="active">Insights</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact Button -->
+            <a href="#" class="header-contact cta-action">Contact Us</a>
+
+            <!-- Mobile Toggle -->
+            <button class="menu-toggle" type="button" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-navigation">
+            <button class="menu-close" type="button" aria-label="close menu">
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Our Work</a></li>
+                    <li><a href="#" class="active">Insights</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+
+                <a href="#" class="mobile-contact cta-action cta-primary">Contact Us</a>
+            </nav>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    <!-- Header Section End -->
+
+
+<!--- Home Page-->
+
+<section class="hero-section">
+  <div class="hero-grid" aria-hidden="true">
+    <div class="hero-grid-line horizontal" style="top:16%"></div>
+    <div class="hero-grid-line horizontal" style="top:32%"></div>
+    <div class="hero-grid-line horizontal" style="top:48%"></div>
+    <div class="hero-grid-line horizontal" style="top:64%"></div>
+    <div class="hero-grid-line horizontal" style="top:80%"></div>
+    <div class="hero-grid-line horizontal" style="top:96%"></div>
+
+    <div class="hero-grid-line vertical" style="left:11%"></div>
+    <div class="hero-grid-line vertical" style="left:22%"></div>
+    <div class="hero-grid-line vertical" style="left:33%"></div>
+    <div class="hero-grid-line vertical" style="left:44%"></div>
+    <div class="hero-grid-line vertical" style="left:55%"></div>
+    <div class="hero-grid-line vertical" style="left:66%"></div>
+    <div class="hero-grid-line vertical" style="left:77%"></div>
+    <div class="hero-grid-line vertical" style="left:88%"></div>
+  </div>
+
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-container container">
+    <div class="hero-content">
+
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span>AI-Native Growth Marketing</span>
+      </div>
+
+      <h1 class="hero-title">
+        Turn Every Consumer Signal Into
+        <span>Enterprise Growth</span>
+      </h1>
+
+      <p class="hero-description">
+        Proprietary AI-Powered Tech. Deep industry expertise. A data science core built
+        for enterprise complexity. iQuanti drives measurable acquisition growth for global brands.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#solutions" class="hero-button hero-button-primary">
+          <span>Explore Solutions</span>
+          <svg class="hero-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <a href="#our-work" class="hero-button hero-button-secondary">
+          Our Work
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- ========================================
+     CONTACT SECTION
+======================================== -->
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-container">
+
+        <div class="contact-grid">
+
+            <!-- Contact Content -->
+            <div class="contact-content">
+
+                <h2 class="contact-title">
+                    Get In Touch
+                </h2>
+
+                <p class="contact-description">
+                    Ready to turn consumer signals into growth?
+                    Let's build your AI-native marketing strategy together.
+                </p>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+
+                <form class="contact-form">
+
+                    <!-- Form Header -->
+                    <div class="contact-form-header">
+
+                        <h3 class="contact-form-title">
+                            Getting started is easy.
+                        </h3>
+
+                        <p class="contact-form-required">
+                            Required fields<span class="asterisk">*</span>
+                        </p>
+
+                    </div>
+
+                    <div class="contact-form-row-wrap">
+                        
+                        <!-- Name & Company -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your name*
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="company">
+                                    Company name*
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email & Phone -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Your work email*
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone number
+                                    <span>(optional)</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Interest & Message -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="interest">
+                                    Interested in*
+                                </label>
+
+                                <select
+                                    id="interest"
+                                    name="interest"
+                                    required
+                                >
+                                    <option value="">
+                                        Select an option
+                                    </option>
+
+                                    <option value="seo">
+                                        SEO
+                                    </option>
+
+                                    <option value="paid-media">
+                                        Paid Media
+                                    </option>
+
+                                    <option value="digital-marketing">
+                                        Digital Marketing
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Add message
+                                    <span>(optional)</span>
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="2"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Privacy Checkbox -->
+                    <div class="privacy-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="privacy"
+                            name="privacy"
+                            required
+                        >
+
+                        <label for="privacy">
+                            I confirm I have read iQuanti's
+                            <span>Privacy Policy.* </span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- reCAPTCHA -->
+                    <div class="recaptcha-box">
+
+                        <div class="recaptcha-checkbox"></div>
+
+                        <div class="recaptcha-content">
+
+                            <p>
+                                I'm not a robot
+                            </p>
+
+                            <span>
+                                reCAPTCHA · Privacy · Terms
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="contact-submit cta-action cta-action-primary"
+                        disabled
+                    >
+                        Contact Us
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer Section Start -->
+<footer class="site-footer">
+    <!-- Footer Tagline -->
+    <div class="footer-tagline">
+        <div class="footer-container">
+            <p>Empowering Clients. Unleashing Growth</p>
+        </div>
+    </div>
+
+    <!-- Footer Main -->
+    <div class="footer-container footer-main">
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <img src="assets/images/iquanti-logo.svg" alt="iQuanti" />
+                </a>
+
+                <p class="footer-description">
+                    iQuanti is an AI-native growth marketing company built for the age of conversational and agentic
+                    transformation that turns consumer signals into enterprise impact.
+                </p>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect width="20" height="20" x="2" y="2" rx="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                            ></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Company Links -->
+            <div class="footer-column footer-company">
+                <h2>Company</h2>
+
+                <ul>
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#careers">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#solutions">Solutions</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h2>Stay Connected</h2>
+                <p>Subscribe to our newsletter for insights and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter Email Id" aria-label="Email Address" required />
+
+                    <button type="submit" class="cta-action cta-action-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>
+                <a href="https://www.iquanti.com/privacy-policy/"> Privacy Policy </a>
+
+                <span class="footer-separator">|</span>
+
+                © Copyright 2026 iQuanti, Inc. All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</html>
