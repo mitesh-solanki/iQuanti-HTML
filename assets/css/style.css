@@ -73,6 +73,7 @@
     --color-slate-grey: #51565B;
     --color-rich-black: #0E1216;
     --color-midnight-navy: #030920;
+    --color-soft-beige: #DCD7CD;
 }
 
 body {
@@ -94,34 +95,36 @@ body,* {
 
 h1,h2,h3,h4,h5,h6 {
 font-family: "neulis-neue" !important;
+color: var(--color-elevate-gray);
+font-weight: 700;
 }
 
 /* H1 — 96 / 110 */
 h1,
 .h1 {
     font-size: 72px;
-    line-height: 110%;
+    line-height: 1;
 }
 
 /* H2 — 72 / 120 */
 h2,
 .h2 {
     font-size: 48px;
-    line-height: 120%;
+    line-height: 1.25;
 }
 
 /* H3 — 64 / 120 */
 h3,
 .h3 {
     font-size: 36px;
-    line-height: 120%;
+    line-height: 1.25;
 }
 
 /* H4 — 56 / 120 */
 h4,
 .h4 {
     font-size: 24px;
-    line-height: 120%;
+    line-height: 1.25;
 }
 
 /* H5 — 48 / Auto */
@@ -143,7 +146,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 14.5px;
 line-height: 1.569;
-color: var(--color-slate-gery);
+color: var(--color-slate-grey);
 }
 
 /* SH1 — 32 / 150 */
@@ -1800,4 +1803,144 @@ text-decoration: none;
   .hero-button {
     width: 100%;
   }
+}
+
+
+/* Trust section CSS */
+
+/* ========================================
+   TRUST SECTION
+======================================== */
+
+.trust-section {
+    width: 100%;
+    background-color: #f2f8ff;
+    padding: 50px 52px 38px;
+    box-sizing: border-box;
+}
+
+.trust-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 128px 111px;
+    gap: 8px;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.trust-heading {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+}
+
+.trust-heading h2 {
+    margin: 0;
+    color: #3b4c68;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.trust-card {
+    background-color: #fdfcf8;
+    border: 1px solid #9ecbfa;
+    border-radius: 7px;
+
+    padding: 14px 14px 12px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.trust-card-title {
+    display: block;
+
+    color: #555555;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    margin-bottom: 2px;
+}
+
+.trust-card strong {
+    display: block;
+
+    color: #4057bf;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    margin: 0 0 7px;
+}
+
+.trust-card p {
+    margin: 0;
+
+    color: #555b63;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    line-height: 1.45;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   TOP CARDS
+======================================== */
+
+.trust-card-credit {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.trust-card-banking {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+
+/* ========================================
+   BOTTOM CARDS
+======================================== */
+
+.trust-card:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(5) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(6) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(7) {
+    grid-column: 4;
+    grid-row: 2;
 }
