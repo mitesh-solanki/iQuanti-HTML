@@ -680,7 +680,7 @@ text-wrap:balance;
   display: flex;
 padding: 13.5px 16.004px 14.5px 16px;
 justify-content: center;
-align-items: flex-end;
+align-items: center;
 gap: 11.406px;
 border-radius: 6px;
 background-color: #FF8000 !important;
