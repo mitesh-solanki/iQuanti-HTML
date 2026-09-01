@@ -3234,26 +3234,49 @@ color: #000000;
         padding: 64px 30px;
     }
 
-     /* -----------------------------------------
-       Heading Wrap
-    ----------------------------------------- */
-    .heading-wrap {
-        margin-bottom: 48px;
-        margin-inline: auto;
-    }
 
-    .heading-wrap.heading-wrap-left {
-        text-align: center;
-    }
+   
+/* ================================
+   Heading Wrap
+================================ */
 
-    .heading-wrap h2 {
-        margin-bottom: 16px;
-    }
+.heading-wrap {
+   margin-bottom:  48px;
+}
 
-    .heading-wrap p {
-        font-size: 16px;
-    }
+.heading-wrap h2{
+    color: var(--color-elevate-gray);
+    margin: 0 0 24px;
+}
 
+.heading-wrap.dark h2{
+    color: var(--color-pure-white);
+}
+
+.heading-wrap p{
+    font-size: 18px;
+    line-height: 1.625;
+}
+
+.heading-wrap.dark p{
+    color: var(--color-pure-white-60);
+}
+
+.heading-wrap.heading-wrap-left {
+    text-align: left;
+
+}
+
+.heading-wrap.heading-wrap-center {
+    text-align: center;
+    margin: 0 auto 48px;
+}
+
+.heading-wrap .highlight-text {
+    font-family: neulis-neue , sans-serif;
+    color: var(--color-primary-orange);
+    font-weight: 700;
+}
     /* -----------------------------------------
        HEADER
     ----------------------------------------- */
