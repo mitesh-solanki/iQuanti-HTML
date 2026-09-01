@@ -19,6 +19,7 @@
        White
     ======================================== */
     --color-pure-white: #FFF;
+    --color-pure-white-6: rgb(255 255 255 / 6%);
     --color-pure-white-60: rgb(255 255 255 / 60%);
     --color-pure-white-80: rgb(255 255 255 / 80%);
     /* ========================================
@@ -183,12 +184,90 @@ color: var(--color-slate-grey);
     background: #e66f00;
 }
 
+/* CTA ACTION LINK */
+ 
+.cta-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    color: var(--color-primary-orange);
+    transition: gap 0.2s ease;
+}
+ 
+.cta-action-link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top:3px;
+}
+ 
+.cta-action-link:hover {
+    gap: 10px;
+}
+
 
 /* ========================================
    SECTION
 ======================================== */
 section {
     padding: 96px 30px;
+}
+
+/* ========================================
+   Section Footer
+======================================== */
+
+.section-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.section-footer button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    background: 0E121620;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition:background 0.2s ease, color 0.2s ease;
+}
+
+.section-footer.dark button{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-pure-white);
+}
+
+.section-footer button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-primary-orange);
+}
+
+.section-footer button svg {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.section-footer button:hover svg {
+    transform: translateX(4px);
 }
 
 /* ========================================
@@ -215,6 +294,10 @@ section {
 .heading-wrap p{
     font-size: 18px;
     line-height: 1.625;
+}
+
+.heading-wrap.dark p{
+    color: var(--color-pure-white-60);
 }
 
 .heading-wrap.heading-wrap-left {
@@ -1122,6 +1205,108 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 
+/* ========================================
+   INSIGHTS SECTION
+======================================== */
+
+.insights-section {
+    background: var(--color-midnight-navy);
+}
+
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.insights-header {
+    max-width: 635px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+
+/* ========================================
+   INSIGHTS GRID
+======================================== */
+
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* ========================================
+   INSIGHT CARD
+======================================== */
+
+.info-card{
+    position: relative;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: var(--color-pure-white-6);
+    cursor: default;
+    transition: box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+                0 8px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+.info-card .info-card-innner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 28px;
+}
+
+
+/* ========================================
+   CARD TAG
+======================================== */
+
+.info-card .info-tag {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 16px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: inter, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.info-card .info-card-title {
+    margin: 0 0 10px;
+    font-family: area-normal, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.375;
+    color: var(--color-pure-white);
+}
+
+.info-card .info-card-description {
+    margin: 0 0 24px;
+    font-weight: 400;
+    line-height: 1.62;
+    color:var(--color-pure-white-60);
+}
+
 
 /* ================================
    Recognition & Trust Section
@@ -1945,6 +2130,24 @@ color: #000000;
 
 
 /* =========================================
+   TABLET LANDSCAPE / SMALL LAPTOP — 1199px and below
+========================================= */
+@media (max-width: 1199px) {
+    /* ========================================
+    INSIGHTS SECTION
+    ======================================== */
+    .info-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .info-card-grid .insight-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 12px);
+    } 
+}
+
+/* =========================================
    TABLET — 1023px and below
 ========================================= */
 
@@ -2194,7 +2397,11 @@ color: #000000;
     }
 }
 
-
+@media (max-width: 1024px) {
+    .trust-container {
+    grid-template-rows: 228px 228px;
+  }
+}
 
 /* md: text-5xl */
 @media (min-width: 768px) {
@@ -2213,11 +2420,6 @@ color: #000000;
   .hero-title {
     font-size: 3.75rem;
   }
-
-  .trust-container {
-    grid-template-rows: 228px 228px;
-  }
-
 }
 
 /* xl: text-7xl */
@@ -2417,6 +2619,17 @@ color: #000000;
         min-height: 52px;
         padding: 0 14px;
         font-size: 14px;
+    }
+
+    /* ==============================
+    Info-card =====================*/
+
+    .info-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card-grid .insight-card:last-child {
+        width: 100%;
     }
 
     /* ================================
