@@ -93,7 +93,7 @@
   <div class="hero-container container">
     <div class="hero-content">
 
-      <div class="section-label">
+      <div class="section-label section-label-left">
         <div class="section-label-line"></div>
         <span>AI-Native Growth Marketing</span>
       </div>
@@ -178,6 +178,88 @@
 </section>
 
 <!--trust Section End-->
+
+
+<!--Native Section Start-->
+<section class="ai-native-section">
+    <div class="ai-native-container container">
+
+        <!-- Left Content -->
+        <div class="ai-native-content">
+            <div class="section-label has-primary-orange section-label-left">
+                <span class="section-label-line "></span>
+                <span>AI-NATIVE APPROACH</span>
+            </div>
+
+            <h2>
+                AI runs through<br>
+                everything we do
+            </h2>
+
+            <p>
+                Not bolted on as afterthought. Our proprietary platforms and
+                AI-first workflows are embedded across strategy, execution
+                and measurement.
+            </p>
+        </div>
+
+        <!-- Right Accordion -->
+        <div class="ai-accordion">
+
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">
+                    <span>AI for Visibility</span>
+                    <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M4 6L8 10L12 6" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        AI-powered solutions that improve visibility,
+                        insights and decision-making.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">
+                    <span>AI for Performance</span>
+                    <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M4 6L8 10L12 6" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        Intelligent workflows designed to improve performance
+                        and deliver measurable outcomes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">
+                    <span>AI for Experience</span>
+                    <span class="accordion-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M4 6L8 10L12 6" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                </button>
+
+                <div class="accordion-content">
+                    <p>
+                        AI-driven experiences that create more relevant,
+                        seamless and engaging interactions.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--native Section End-->
 
     <!-- Recognition & trust Section Start -->
      <section id="our-work" class="recognition-section">
@@ -623,6 +705,23 @@
 </footer>
 
 </body>
+<script>
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            const currentItem = header.parentElement;
+
+            document.querySelectorAll(".accordion-item").forEach((item) => {
+                if (item !== currentItem) {
+                    item.classList.remove("active");
+                }
+            });
+
+            currentItem.classList.toggle("active");
+        });
+    });
+</script>
 <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"></script>
 <script src="assets/js/custom.js"></script>
 </html>
