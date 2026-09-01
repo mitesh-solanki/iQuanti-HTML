@@ -1309,9 +1309,8 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-
-    margin-top: 18px;
+    gap: 8px;
+    margin-top: 32px;
 }
 
 .research-dot {
@@ -3089,6 +3088,30 @@ color: #000000;
         justify-content: center;
         text-align: center;
     }
+
+    .research-top {
+        justify-content: center;
+    }
+
+    .research-card {
+        flex-direction: column;
+    }
+
+    .research-content {
+        align-items: center;
+    }
+
+    .research-content h3 {
+        text-align: center;
+    }
+
+    .research-button {
+        margin-top: 16px;
+    }
+
+    .research-controls {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -3325,6 +3348,18 @@ color: #000000;
 
     .info-card-grid .insight-card:last-child {
         width: 100%;
+    }
+
+    .research-content h3 {
+        font-size: 32px;
+    }
+
+    .research-card {
+        padding: 48px 48px;
+    }
+
+    .research-heading h2 {
+        text-align: center;
     }
 
     /* =========================================
