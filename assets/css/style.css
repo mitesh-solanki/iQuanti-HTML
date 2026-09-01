@@ -879,6 +879,7 @@ text-decoration: none;
 
 .client-heading {
     max-width: 730px;
+    margin-bottom: 48px;
 }
 
 .client-heading h2 {
