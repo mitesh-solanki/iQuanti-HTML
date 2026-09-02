@@ -55,7 +55,7 @@
        MIDNIGHT PURPLE
     ======================================== */
 
-    --color-midnight-purple: #212C4C;
+    --color-midnight-purple: #4057BF;
     --color-midnight-purple-50: #808ED5;
     --color-midnight-purple-25: #BFC7EB;
 
@@ -1130,7 +1130,7 @@ margin-inline: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 228px 198px;
+    grid-template-rows: 228px auto;
     gap: 16px;
 }
 
@@ -1165,52 +1165,52 @@ margin-inline: auto;
 ======================================== */
 
 .trust-card {
-    background-color: #fdfcf8;
-    border: 1px solid  #007BFF;
-    border-radius: 12px;
-
-    padding: 24px;
-    gap:8px;
+    background-color: var(--color-pure-white);
+    border: 1px solid  var(--color-electric-blue);
+    border-radius: 8px;
+    padding: 16px 16px 24px;
+    gap:18px;
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    box-shadow: 10px 14px 14px 0 rgba(0, 123, 255, 0.10);
 }
 
 .trust-card-title {
-font-style: normal;
-font-weight: 700;
-font-size: 17.6px;
-line-height: 20px;
-letter-spacing: 0.35px;
-text-transform: uppercase;
-color: #5B5852;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-electric-blue);
 }
 
-.trust-card strong {
-font-style: normal;
-font-weight: 700;
-font-size: 35.3px;
-line-height: 45px;
-display: flex;
-align-items: center;
-color: #4057BF;
-font-family: 'neulis-neue';
+.trust-card > strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--color-midnight-purple);
+    font-family: 'neulis-neue';
 }
 
 .trust-card p {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 23px;
-display: flex;
-align-items: center;
-color: #51565B;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-slate-grey);
+    margin-top: auto;
 }
 
 
+.trust-card p strong {
+    font-weight: 900;
+}
 /* ========================================
    TOP CARDS
 ======================================== */
