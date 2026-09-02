@@ -1451,7 +1451,7 @@ justify-content: center;
 .research-track {
     display: flex;
     width: 100%;
-
+    gap:20px;
     transition: transform 0.5s ease;
     will-change: transform;
 }
