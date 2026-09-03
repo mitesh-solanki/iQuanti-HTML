@@ -1130,7 +1130,7 @@ margin-inline: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 228px auto;
+    grid-template-rows: 228px 292px;
     gap: 16px;
 }
 
@@ -1166,7 +1166,7 @@ margin-inline: auto;
 
 .trust-card {
     background-color: var(--color-pure-white);
-    border: 1px solid  var(--color-electric-blue);
+    /* border: 1px solid  var(--color-electric-blue); */
     border-radius: 8px;
     padding: 16px 16px 24px;
     gap:18px;
@@ -1176,6 +1176,27 @@ margin-inline: auto;
     align-items: flex-start;
     justify-content: flex-start;
     box-shadow: 10px 14px 14px 0 rgba(0, 123, 255, 0.10);
+    position: relative;
+}
+
+.trust-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.card-border-fill {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.card-border-fill rect {
+    fill: none;
+    stroke: var(--color-electric-blue);
+    stroke-width: 2;
+    stroke-dasharray: 292 228;
+    stroke-dashoffset: 292;
+    transition: stroke-dashoffset 0.5s ease;
 }
 
 .trust-card-title {
@@ -1224,7 +1245,6 @@ margin-inline: auto;
     grid-column: 4;
     grid-row: 1;
 }
-
 
 /* ========================================
    BOTTOM CARDS
@@ -2999,6 +3019,11 @@ color: #000000;
 
     .trust-heading h2 {
         font-size: 40px;
+    }
+
+    .trust-card-credit > strong ,
+    .trust-card-banking > strong {
+        font-size: 48px;
     }
 }
 
