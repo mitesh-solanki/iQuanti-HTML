@@ -1871,6 +1871,7 @@ Case Study Section =====================*/
     display: flex;
     align-items: center;
     color: #4057BF;
+    text-transform:capitalize !important ;
 }
 
 .case-studies-section .case-studies-more-btn {
@@ -1921,7 +1922,7 @@ color: #0E1216 !important;
 .solutions-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     gap: 24px;
     align-items: stretch;
 }
@@ -1994,7 +1995,7 @@ color: #0E1216 !important;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 32px 24px;
+    padding: 24px 24px;
     box-sizing: border-box;
 
     color: #ffffff;
@@ -2249,7 +2250,6 @@ color: #FFFFFF;
     height: 226px;
     z-index: 1;
     background-repeat: no-repeat;
-    opacity: 0.4;
 }
 
 .feature-card::before {
@@ -2526,6 +2526,9 @@ color: #FFFFFF;
 .contact-section {
     width: 100%;
     background: var(--color-midnight-navy);
+     position: relative;
+     overflow: hidden;
+         z-index: 1;
 }
 
 
@@ -2539,6 +2542,28 @@ color: #FFFFFF;
     margin: 0 auto;
 }
 
+/* ========================================
+   CONTACT VECTOR
+======================================== */
+
+.contact-vector {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 552px;
+    height: 552px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-vector img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scaleX(-1);
+    opacity: 0.3;
+}
 
 /* ========================================
    CONTACT GRID
@@ -2613,7 +2638,7 @@ color: #FFFFFF;
 .contact-form-title {
     margin: 0 0 8px;
     color: var(--color-elevate-gray);
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.33365;
 }
 
@@ -2658,9 +2683,9 @@ color: #FFFFFF;
 
 .contact-form .form-group label {
 font-style: normal;
-font-weight: 700;
+font-weight: 500;
 font-size: 12px;
-line-height: 14px;
+line-height: 20px;
 color: #000000;
 }
 
