@@ -1738,17 +1738,15 @@ color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     text-align: left;
 
-    transition:
-        background-color 0.25s ease,
-        border-color 0.25s ease,
-        border-radius 0.25s ease;
+    transition:0.3s all ease;
 }
 
 /* Hover */
 
 .accordion-header:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.16);
+    border-color: #ff800088;
+    transform: translateX(4px);
 }
 
 
@@ -2326,8 +2324,7 @@ color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     background: var(--color-pure-white-6);
-    cursor: default;
-    transition: box-shadow 0.3s ease;
+    transition: 0.3s all ease;
 }
 
 .insight-card:hover {
@@ -2342,6 +2339,11 @@ color: #FFFFFF;
     flex-direction: column;
     height: 100%;
     padding: 28px;
+    transition: 0.3s all ease-in-out;
+}
+
+ .info-card:hover {
+    transform: translateY(-4px) scale(1.025);
 }
 
 
@@ -2427,7 +2429,8 @@ color: #FFFFFF;
 
 .recognition-card:hover {
     box-shadow:
-        0 10px 25px rgb(205 105 18 / 8%), 0 0 20px rgb(255 154 66 / 8%)
+        0 10px 25px rgb(205 105 18 / 8%), 0 0 20px rgb(255 154 66 / 8%);
+     transform: translateY(-4px) scale(1.025);    
 }
 
 .recognition-card-content {
