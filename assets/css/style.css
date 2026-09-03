@@ -1553,11 +1553,6 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
     transition: 0.2s ease;
 }
 
-.research-button:hover {
-    background: #ff8a1a;
-    transform: translateX(2px);
-}
-
 .research-button span {
     font-size: 16px;
 }
