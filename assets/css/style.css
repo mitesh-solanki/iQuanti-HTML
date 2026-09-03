@@ -270,9 +270,9 @@ section {
 }
 
 .section-footer.dark button{
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-pure-white);
+    border: 1px solid #D9D9D9 !important ;
+    background: var(--color-pure-white) !important;
+    color: #3B4C68 !important;
 }
 
 .section-footer button:hover {
@@ -1765,11 +1765,13 @@ color: rgba(255, 255, 255, 0.6);
 ======================================== */
 
 .accordion-icon {
-    color: #000000;
     font-size: 15px;
     line-height: 1;
-
     transition: transform 0.25s ease;
+}
+
+.accordion-icon svg {
+    stroke: #fff;
 }
 
 
@@ -1949,7 +1951,14 @@ color: #0E1216 !important;
     height: 100%;
     border: 1px solid var(--color-soft-beige);
     border-radius: 12px;
-    transition: box-shadow 0.3s ease;
+     height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .solution-card:hover {
@@ -1967,8 +1976,152 @@ color: #0E1216 !important;
     flex-direction: column;
     height: 100%;
     padding: 28px;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+    z-index: 2;    
 }
 
+/* ========================================
+   HOVER CONTENT
+======================================== */
+
+.solution-hover-content {
+    position: absolute;
+    z-index: 3;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+    
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease;
+}
+
+.solution-card .powered-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap:17px;
+
+}
+
+
+/* ========================================
+   HOVER DESCRIPTION
+======================================== */
+
+.solution-hover-content .hover-description {
+    color: #ffffff;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+display: flex;
+align-items: center;
+}
+
+
+/* ========================================
+   POWERED BY
+======================================== */
+
+.powered-by {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.powered-by span {
+    flex-shrink: 0;
+font-style: normal;
+font-weight: 500;
+font-size: 14.5px;
+line-height: 23px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+}
+
+.powered-by i {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--color-primary-orange);
+}
+
+
+/* ========================================
+   POWERED ITEMS
+======================================== */
+
+.powered-item {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.powered-item strong {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.powered-item span {
+font-style: normal;
+font-weight: 500;
+font-size: 14.5px;
+line-height: 23px;
+color: #FFFFFF;
+}
+
+
+/* ========================================
+   HOVER STATE
+======================================== */
+
+.solution-card:hover {
+    background: linear-gradient(
+        135deg,
+        #087cff 0%,
+        #0755a8 100%
+    );
+
+    border-color: #ffffff;
+
+    box-shadow: 0 15px 35px rgba(0, 83, 180, 0.20);
+}
+
+
+/* Hide normal content */
+.solution-card:hover .solution-card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Show hover content */
+.solution-card:hover .solution-hover-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
 /* =========================================
    CARD HEADER
@@ -2082,7 +2235,7 @@ color: #0E1216 !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 620px;
+    min-height: 750px;
     height: 100%;
     padding: 40px;
     border-radius: 12px;
