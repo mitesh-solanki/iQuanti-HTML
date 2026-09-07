@@ -2324,7 +2324,7 @@ color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     background: var(--color-pure-white-6);
-    transition: 0.3s all ease;
+    transition: 0.3s all ease !important;
 }
 
 .insight-card:hover {
@@ -2339,11 +2339,11 @@ color: #FFFFFF;
     flex-direction: column;
     height: 100%;
     padding: 28px;
-    transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out !important;
 }
 
  .info-card:hover {
-    transform: translateY(-4px) scale(1.025);
+    transform: translateY(-4px) scale(1.025) !important;
 }
 
 
@@ -2424,13 +2424,13 @@ color: #FFFFFF;
     border-radius: 12px;
     transition:
         box-shadow 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease !important;
 }
 
 .recognition-card:hover {
     box-shadow:
         0 10px 25px rgb(205 105 18 / 8%), 0 0 20px rgb(255 154 66 / 8%);
-     transform: translateY(-4px) scale(1.025);    
+     transform: translateY(-4px) scale(1.025) !important;    
 }
 
 
