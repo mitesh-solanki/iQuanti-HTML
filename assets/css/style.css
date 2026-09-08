@@ -625,9 +625,8 @@ section {
   overflow: hidden;
   padding-top: 133px;
   background-color: var(--color-pure-white);
+  z-index: 0;
 }
-
-
 
 .hero-section {
     position: relative;
@@ -653,6 +652,7 @@ section {
     width: 100%;
     height: 100%;
     grid-template-rows: 1fr;
+    opacity: 20%;
 }
 
 .grid-vertical-lines span {
@@ -679,6 +679,7 @@ section {
     height: 100%;
     grid-template-columns: 1fr;
     display: grid;
+    opacity: 20%;
 }
 
 .grid-horizontal-lines span {
@@ -732,6 +733,23 @@ section {
 }
 
 
+.blurb-bg {
+    position:absolute;
+}
+.blurb-bg-top-left {
+    top:0;
+    left:0;
+}
+.blurb-bg-bottom-left {
+    left: 0;
+    bottom: 0;
+}
+.blurb-bg-center-bottom {
+   right: 0;
+   bottom: 0;
+}
+
+
 /* ==========================================================
    CONTAINER
    ========================================================== */
@@ -758,7 +776,10 @@ margin-inline: auto;
 .hero-grid .hero-content {
   width: 55%;
   text-align: left;
-  padding-top: 80px;
+}
+
+.hero-grid .hero-content .section-label {
+    margin-bottom: 38px;
 }
 
 .hero-grid .hero-content .section-label-line {
@@ -776,9 +797,9 @@ margin-inline: auto;
 .hero-grid .hero-content .hero-description {
   max-width: 48rem; 
   color:#51565b;
-  font-size: 20px; 
-  line-height: 1.625;
-  font-weight: 700;
+  font-size: 18px; 
+  line-height: 1.556;
+  font-weight: 400;
 }
 
 .hero-grid .hero-image {
@@ -793,26 +814,8 @@ margin-inline: auto;
 /* ==========================================================
    Hero Mesh Elipse
 ========================================================== */
-.hero-mesh-elipse {
-    position: absolute;
-    width: 341px;
-    height: 341px;
-    background: #007BFF;
-    filter: blur(150px);
-}
-.hero-mesh-elipse-left {
-    left: -201px;
-    top: 642px;
-    background: #007BFF;
-    opacity: 0.18;
-    filter: blur(150px);
-}
 
-.hero-mesh-elipse-right {
-    right: -71px;
-    top: 28px;
-    opacity: 0.05;
-}
+
 
 /* ==========================================================
    SECTION EYEBROW
@@ -845,7 +848,7 @@ margin-inline: auto;
 
 .section-label span {
   font-size: 18px;
-  line-height: 1.25rem; 
+  line-height: 1.3335; 
   font-weight: 700; 
   letter-spacing: 0.7px; 
   text-transform: uppercase; 
