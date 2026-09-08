@@ -1,3 +1,14 @@
+// Sticky Header Js
+jQuery(document).ready(function ($) {
+    jQuery(window).on('scroll', function () {
+        if (jQuery(window).scrollTop() > 50) {
+            jQuery('.site-header').addClass('sticky-header');
+        } else {
+            jQuery('.site-header').removeClass('sticky-header');
+        }
+    });
+});
+
 // Mobile Menu Js 
 jQuery(function ($) {
 

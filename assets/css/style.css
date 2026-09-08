@@ -169,18 +169,17 @@ color: var(--color-slate-grey);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 14.1px;
-    line-height: 20px;
-    padding: 6px 13px;
-    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 16px 12px;
+    border-radius: 100px;
     transition: all 0.25s ease;
-    font-family: inter;
     font-weight: 700;
 }
 
 .cta-action-primary {
     background-color: var(--color-primary-orange);
-    color: var(--color-pure-white);
+    color: #FCFCFC;
     border: 0;
 }
 
@@ -346,15 +345,12 @@ section {
 
 .site-header {
     width: 100%;
-    background: #FCFAF6F2;
-    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
-                0px 1px 3px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     z-index: 999;
-    height: 65px;
     align-content: center;
-    padding-inline:20px;
+    padding:24px 20px;
+    transition: all 0.3s ease;
 }
 
 .site-header .header-container {
@@ -365,6 +361,10 @@ section {
     gap: 30px;
 }
 
+.site-header.sticky-header {
+  background: var(--color-pure-white);
+  box-shadow: 0 0 6px #ddd;
+}
 
 /* ========================================
    LOGO
@@ -385,7 +385,7 @@ section {
 .site-header .site-logo img {
     display: block;
     max-width: 100%;
-    width: 132.33px;
+    width: 114.5px;
     height: auto;
 }
 
@@ -399,8 +399,11 @@ section {
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    background: #3F4551;
+    border: 1px solid #F2F2F2;
     gap: 4px;
+    border-radius: 100px;
 }
 
 .site-header .main-navigation li {
@@ -411,14 +414,12 @@ section {
 .site-header .main-navigation a {
     display: flex;
     align-items: center;
-    min-height: 38px;
-    padding: 0 16px;
-    color: #51565B;
+    padding: 10px 16px;
+    color: var(--color-elevate-gray-50);
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 14.5px;
+    font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 30px;
     transition:
         background-color 0.25s ease,
@@ -623,7 +624,82 @@ section {
   align-items: center;
   overflow: hidden;
   padding-top: 133px;
+  background-color: var(--color-pure-white);
 }
+
+
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================
+   VERTICAL 16 COLUMNS
+========================= */
+
+.grid-vertical-lines {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr;
+}
+
+.grid-vertical-lines span {
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #FFFFFF 1%,
+        #FFC281 66%
+    );
+    display: block;
+    width: 1px;
+    background-size: cover;
+}
+
+/* =========================
+   HORIZONTAL LINES
+========================= */
+
+.grid-horizontal-lines {
+    position: absolute;
+    inset: 0;
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    display: grid;
+}
+
+.grid-horizontal-lines span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        #FFFFFF 1%,
+        #FFC281 66%
+    );
+}
+
+/* Content above grid */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
 
 /* left-0 right-0 h-px
    bg-gradient-to-r from-transparent via-primary/20 to-transparent */
