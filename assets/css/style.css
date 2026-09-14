@@ -20,16 +20,17 @@
     ======================================== */
     --color-pure-white: #FFF;
     --color-pure-white-6: rgb(255 255 255 / 6%);
+    --color-pure-white-10: rgb(255 255 255 / 10%);
     --color-pure-white-60: rgb(255 255 255 / 60%);
     --color-pure-white-80: rgb(255 255 255 / 80%);
     /* ========================================
        ELEVATE GRAY
     ======================================== */
 
-    --color-elevate-gray: #3B4C68;
+    --color-elevate-gray: #3F4551;
     --color-elevate-gray-75: #6D798F;
     --color-elevate-gray-50: #9DA4B4;
-
+    --color-warm-gray: #B8B6B5;
 
     /* ========================================
        ELECTRIC BLUE
@@ -45,7 +46,7 @@
        PRIMARY ORANGE
     ======================================== */
 
-    --color-primary-orange: #FF8000;
+    --color-primary-orange: #FF8500;
     --color-primary-orange-75: #FDA341;
     --color-primary-orange-50: #FFC281;
     --color-primary-orange-25: #FFE1BF;
@@ -164,18 +165,27 @@ color: var(--color-slate-grey);
 /* ========================================
    GLOBAL COMPONENTS 
 ======================================== */
+.cta-action-group {
+    display: flex;
+    gap: 24px;
+}
 .cta-action {
-    background: var(--color-primary-orange);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     line-height: 24px;
-    padding: 10px 16px 12px;
+    padding: 12px 16px;
     border-radius: 100px;
     transition: all 0.25s ease;
     font-weight: 700;
     text-decoration: none;
+    gap: 10px;
+}
+
+.cta-action svg {
+    position: relative;
+    top: 1px;
 }
 
 .cta-action-primary {
@@ -186,6 +196,26 @@ color: var(--color-slate-grey);
 
 .cta-action-primary:hover {
     background: #e66f00;
+}
+
+.cta-action-outline {
+    background-color: transparent;
+    color: var(--color-electric-blue);
+    border: 1px solid #B8B6B5 !important;
+}
+
+.cta-action-outline:hover {
+    background-color: var(--color-electric-blue);
+    color: var(--color-pure-white);
+    border: 1px solid #B8B6B5 !important;
+}
+
+.cta-action-outline:hover svg {
+    transition: all 0.25s ease;
+}
+.cta-action-outline:hover svg path{
+    stroke: var(--color-pure-white);
+    fill: var(--color-pure-white);
 }
 
 /* CTA ACTION LINK */
@@ -294,7 +324,7 @@ section {
    CONTAINER
 ======================================== */
 .container {
-    max-width: 1216px;
+    max-width: 1260px;
     margin: 0 auto;
 }
 
@@ -340,6 +370,13 @@ section {
     font-weight: 700;
 }
 
+.heading-wrap.heading-wrap-dark h2{
+    color: var(--color-pure-white);
+}
+
+.heading-wrap.heading-wrap-dark p{
+    color: var(--color-pure-white);
+}
 /* ========================================
    HEADER
 ======================================== */
@@ -350,7 +387,7 @@ section {
     top: 0;
     z-index: 999;
     align-content: center;
-    padding:24px 20px;
+    padding:16px 20px;
     transition: all 0.3s ease;
 }
 
@@ -386,7 +423,7 @@ section {
 .site-header .site-logo img {
     display: block;
     max-width: 100%;
-    width: 114.5px;
+    width: 145px;
     height: auto;
 }
 
@@ -400,8 +437,8 @@ section {
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 5px;
-    background: #3F4551;
+    padding: 4px;
+    background: var(--color-elevate-gray);
     border: 1px solid #F2F2F2;
     gap: 4px;
     border-radius: 100px;
@@ -429,12 +466,12 @@ section {
 
 .site-header .main-navigation a:hover {
     color: #111827;
-    background: #f3f1ed;
+    background: var(--color-pure-white);
 }
 
 .site-header .main-navigation a.active {
     color: #0E1216;
-    background: #EFEBE2;
+    background: var(--color-pure-white);
     font-weight: 500;
 }
 
@@ -742,8 +779,8 @@ section {
     left:0;
 }
 .blurb-bg-bottom-left {
-    left: 0;
-    bottom: 0;
+    left: -62px;
+    bottom: -24px;
 }
 .blurb-bg-center-bottom {
    right: 0;
@@ -757,9 +794,9 @@ section {
 
 .hero-container {
   position: relative; 
-z-index: 10; 
-width: 100%; 
-margin-inline: auto;
+  z-index: 10; 
+  width: 100%; 
+  margin-inline: auto;
 }
 
 
@@ -775,12 +812,16 @@ margin-inline: auto;
 }
 
 .hero-grid .hero-content {
-  width: 55%;
+  width: 53%;
   text-align: left;
 }
 
+.hero-grid .hero-content .cta-action-group{
+  margin-top: 38px;
+}
+
 .hero-grid .hero-content .section-label {
-    margin-bottom: 38px;
+    margin-bottom: 16px;
 }
 
 .hero-grid .hero-content .section-label-line {
@@ -804,7 +845,7 @@ margin-inline: auto;
 }
 
 .hero-grid .hero-image {
-    width: 45%;
+    width: 47%;
 }
 
 .hero-grid .hero-image img{
@@ -822,11 +863,15 @@ margin-inline: auto;
    SECTION EYEBROW
 ========================================================== */
 .section-label {
-    display: flex; 
+    display: inline-flex; 
     margin-bottom: 16px; 
     gap: 12px; 
     align-items: center; 
     justify-content: center;
+    padding: 4px 12px;
+    background-color: #E6F2FF;
+    border: 0.5px solid #C5D9E6;
+    border-radius: 100px;
 }
 
 .section-label.section-label-center {
@@ -848,12 +893,11 @@ margin-inline: auto;
 }
 
 .section-label span {
-  font-size: 18px;
-  line-height: 1.3335; 
-  font-weight: 700; 
-  letter-spacing: 0.7px; 
+  font-size: 16px;
+  line-height: 1.5; 
+  font-weight: 800; 
   text-transform: uppercase; 
-  color:#5B5852;
+  color:var(--color-electric-blue);
 }
 
 .section-label.has-primary-orange span {
@@ -888,7 +932,7 @@ margin-inline: auto;
 
 .client-section::after {
     content: "";
-    background-image: url(../images/Isolation-star-vector.png);
+    background-image: url(../images/client-section-bg.jpg);
     background-size: cover;
     position: absolute;
     inset: 0;
@@ -908,13 +952,12 @@ margin-inline: auto;
 
 .client-heading h2 {
     margin: 0 0 24px;
-    color: var(--color-pure-white);
 }
 
 .client-heading p {
     max-width: 760px;
     margin: 0;
-    color: #B0B0B0;
+    opacity: 0.8 !important;
 }
 
 
@@ -932,8 +975,11 @@ margin-inline: auto;
     padding: 26px 24px 46px;
     display: flex;
     flex-direction: column;
-    border-radius: 18px;
-    background: #34373F;
+    background: rgba(63, 69, 81, 0.6);
+    border: 0.5px solid #b8b6b573;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 
@@ -942,12 +988,18 @@ margin-inline: auto;
 ======================================== */
 
 .client-label {
-    color: var(--color-primary-orange);
+    color: var(--color-pure-white);
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    padding: 4px 12px;
+    display: inline-block;
+    width: fit-content;
+    background-color: #FAFAFA10;
+    border: 0.5px solid #FAFAFA20;
+    border-radius: 100px;
 }
 
 .client-card h3 {
@@ -1062,7 +1114,7 @@ margin-inline: auto;
 }
 
 .fortune-bar-orange {
-    background: #f58b32;
+    background: #F08B34;
 }
 
 .fortune-bar-gold {
@@ -1072,9 +1124,9 @@ margin-inline: auto;
 .fortune-name {
     margin-top: 8px;
     white-space: nowrap;
-    color: #636567;
-    font-size: 12px;
-    line-height: 14px;
+    color: var(--color-pure-white);
+    font-size: 14px;
+    line-height: 24px;
 }
 
 .fortune-axis-title {
@@ -1109,11 +1161,9 @@ margin-inline: auto;
 }
 
 .company-chart .company-row:not(:last-child) {
-    padding-bottom: 6px;
-    border-bottom:1px solid #3B4C68;
-    padding-bottom: 12px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #3B4C68;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #85838690;
+    margin-bottom: 20px;
 }
 
 .company-chart .company-row .company-row-col-left {
@@ -1126,10 +1176,9 @@ margin-inline: auto;
 
 .company-chart .company-name {
     color: var(--color-pure-white);
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    text-align: right;
+    font-size: 18px;
+    line-height: 1.556;
+    font-weight: 700;
 }
 
 .company-chart .company-bar-wrapper {
@@ -1157,7 +1206,7 @@ margin-inline: auto;
 
 .company-chart .company-value {
     font-family: "neulis-neue";
-    color: var(--color-elevate-gray-50);
+    color: var(--color-pure-white);
     font-size: 48px;
     line-height: 1.167;
     font-weight: 800;
@@ -1171,7 +1220,7 @@ margin-inline: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
 }
 
@@ -1185,16 +1234,16 @@ margin-inline: auto;
     justify-content: space-between;
     margin-bottom: 8px;
     color: var(--color-pure-white);
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.556;
 }
 
 .industry-top span:last-child {
     color: var(--color-pure-white);
-    font-weight: 900;
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
-
 }
 
 .industry-track {
@@ -1787,21 +1836,6 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
 
 .ai-native-content {
     padding-top: 1px;
-}
-
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-bottom: 20px;
-
-    color: #ff8a00;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.2px;
-    text-transform: uppercase;
 }
 
 .label-line {
@@ -3052,6 +3086,7 @@ color: #000000;
 .site-footer {
     width: 100%;
     border-top: 1px solid #e5e7eb;
+    background: var(--color-pure-white);
 }
 
 
@@ -3063,8 +3098,6 @@ color: #000000;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 
 
@@ -3109,14 +3142,25 @@ color: #000000;
         minmax(0, 1fr)
         minmax(0, 1fr)
         minmax(0, 2fr);
-
-    gap: 48px;
+    gap: 16px;
+    padding-block: 30px 16px;
 }
 
 
 /* ========================================
    FOOTER BRAND
 ======================================== */
+.site-footer .footer-card {
+    padding: 24px;
+    border: 1px solid #B8B6B5;
+    border-radius: 8px;
+    background-color: var(--color-pure-white-10);
+}
+
+.site-footer .footer-card::before {
+    content: "";
+    /* background-image: url(""); */
+}
 
 .site-footer .footer-brand {
     min-width: 0;
