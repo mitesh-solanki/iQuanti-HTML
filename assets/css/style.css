@@ -1254,7 +1254,6 @@ section {
 }
 
 .company-chart .company-row .company-row-col-left {
-    width: 202px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1998,7 +1997,7 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
    ACCORDION
 ======================================== */
 
-.ai-accordion {
+.accordion-bordered {
     width: 100%;
     padding: 34px 33px 38px;
     border-radius: 8px;
@@ -2006,25 +2005,26 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
     border: 1px solid var(--color-warm-gray-75);
     backdrop-filter: blur(8px);
 }
-.ai-accordion.glass-bg::before {
+
+.accordion-bordered.glass-bg::before {
     background: url('../images/accordion-galss-image.png');
 }
 
-.accordion-item {
+.accordion-bordered .accordion-item {
     width: 100%;
 }
-.accordion-item {
-    padding-block:35px;
+
+.accordion-bordered .accordion-item:not(:first-child) {
+    padding-top:35px;
+    margin-top: 35px;
+    border-top: 1px solid #545454;
 }
 
-
-.accordion-item:last-child {
+.accordion-bordered .accordion-item:last-child {
     margin-bottom: 0;
 }
 
-/* Accordion Header */
-
-.accordion-header {
+.accordion-bordered .accordion-header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -2037,95 +2037,64 @@ text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
     text-align: left;
     transition:0.3s all ease;
 }
-.accordion-header span:first-child {
+.accordion-bordered .accordion-header span:first-child {
     color: #C5D9E6;
     font-weight: 700;
     font-size: 25px;
     line-height: 1.32;
     font-family: "neulis-neue";
 }
-/* Hover */
 
-.accordion-header:hover {
-}
-
-.accordion-item.active span:first-child {
+.accordion-bordered .accordion-item.active span:first-child {
     color: var(--color-primary-orange);
 }
-/* ========================================
-   ICON
-======================================== */
 
-.accordion-icon {
+.accordion-bordered .accordion-header .accordion-icon {
     font-size: 15px;
     line-height: 1;
     transition: transform 0.25s ease;
 }
 
-.accordion-icon svg {
+.accordion-bordered .accordion-header .accordion-icon svg {
   width: 22px;
   height: 22px;
 }
 
-
-/* ========================================
-   ACCORDION CONTENT
-======================================== */
-
-.accordion-content {
+.accordion-bordered .accordion-content {
     max-height: 0;
     overflow: hidden;
-
-    padding: 0 17px;
-
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-
-    background: rgba(255, 255, 255, 0.02);
-
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-
     transition:
         max-height 0.35s ease,
         padding 0.35s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease;  
 }
 
-.accordion-content p {
-    margin: 0;
-     color: rgba(255, 255, 255, 0.45);
-}
-
-
-/* ========================================
-   ACTIVE ACCORDION
-======================================== */
-
-.accordion-item.active .accordion-header {
-    border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 150px;
-
+.accordion-bordered .accordion-content .accordion-content-inner {
     padding-top: 16px;
-    padding-bottom: 20px;
-
-    border-left-color: rgba(255, 255, 255, 0.14);
-    border-right-color: rgba(255, 255, 255, 0.14);
-
-    /* Bottom border */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-
-    /* Round only bottom corners */
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
 }
 
-.accordion-item.active .accordion-icon {
+.accordion-bordered .accordion-item.active .accordion-content-inner {
+    max-height: 100vh;
+}
+.accordion-bordered .accordion-item.active .accordion-content-inner {
+    max-height: 100vh;
+}
+.accordion-bordered .accordion-content p {
+    margin: 0;
+    color: var(--color-pure-white);
+    font-size: 18px;
+    line-height: 1.556;
+}
+
+.accordion-bordered .accordion-item.active .accordion-content {
+    max-height: 100vh;
+}
+
+.accordion-bordered .accordion-item.active .accordion-icon {
     transform: rotate(180deg);
 }
 
