@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="56" height="58" viewBox="0 0 56 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Layer_1" clip-path="url(#clip0_0_168)">
+<g id="Group">
+<path id="Vector" d="M0.479492 28.6014C18.2225 9.12376 37.9746 9.12376 55.712 28.6014Z" fill="#007BFF"/>
+<path id="Vector_2" d="M55.7176 28.6407C37.9746 48.1183 18.2225 48.1183 0.485136 28.6407Z" fill="#007BFF"/>
+</g>
+<path id="Vector_3" d="M28.0983 39.6407C34.2072 39.6407 39.1594 34.708 39.1594 28.6231C39.1594 22.5382 34.2072 17.6055 28.0983 17.6055C21.9894 17.6055 17.0371 22.5382 17.0371 28.6231C17.0371 34.708 21.9894 39.6407 28.0983 39.6407Z" fill="#FAFAFA"/>
+<path id="Vector_4" d="M28.0988 36.6561C32.5527 36.6561 36.1633 33.0597 36.1633 28.6234C36.1633 24.187 32.5527 20.5906 28.0988 20.5906C23.6449 20.5906 20.0343 24.187 20.0343 28.6234C20.0343 33.0597 23.6449 36.6561 28.0988 36.6561Z" fill="#FF8500"/>
+<path id="Vector_5" d="M0.282173 9.3144V0.281062H10.2542" stroke="#858386" stroke-miterlimit="10"/>
+<path id="Vector_6" d="M44.5889 0.281062H55.7178V8.95464" stroke="#858386" stroke-miterlimit="10"/>
+<path id="Vector_7" d="M55.7178 48.6856V57.7189H45.7402" stroke="#858386" stroke-miterlimit="10"/>
+<path id="Vector_8" d="M11.4111 57.7185H0.282227V49.0449" stroke="#858386" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_0_168">
+<rect width="56" height="58" fill="white"/>
+</clipPath>
+</defs>
+</svg>

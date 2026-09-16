@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Layer_1" clip-path="url(#clip0_0_178)">
+<path id="Vector" d="M59.8909 38.2533L29.9996 59.742L0.104492 38.2533L29.9996 16.7646L59.8909 38.2533Z" fill="#007BFF"/>
+<path id="Vector_2" opacity="0.5" d="M59.8909 29.6518L29.9996 51.1405L0.104492 29.6518L29.9996 8.16309L59.8909 29.6518Z" fill="#007BFF"/>
+<path id="Vector_3" opacity="0.25" d="M59.8909 21.4887L29.9996 42.9774L0.104492 21.4887L29.9996 0L59.8909 21.4887Z" fill="#007BFF"/>
+<path id="Vector_4" d="M30 35.623C33.3137 35.623 36 32.9368 36 29.623C36 26.3093 33.3137 23.623 30 23.623C26.6863 23.623 24 26.3093 24 29.623C24 32.9368 26.6863 35.623 30 35.623Z" fill="#FF8500"/>
+<path id="Vector_5" d="M59.8909 38.2539L29.9996 59.7426L0.104492 38.2539" stroke="#FAFAFA" stroke-miterlimit="10"/>
+<path id="Vector_6" d="M59.8909 29.6523L29.9996 51.141L0.104492 29.6523" stroke="#FAFAFA" stroke-miterlimit="10"/>
+<path id="Vector_7" d="M59.8909 21.4883L29.9996 42.977L0.104492 21.4883" stroke="#FAFAFA" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_0_178">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>

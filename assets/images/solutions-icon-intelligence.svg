@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Layer_1" clip-path="url(#clip0_0_191)">
+<path id="Vector" opacity="0.25" d="M30.0003 54.6431C43.6102 54.6431 54.6431 43.6102 54.6431 30.0003C54.6431 16.3904 43.6102 5.35742 30.0003 5.35742C16.3904 5.35742 5.35742 16.3904 5.35742 30.0003C5.35742 43.6102 16.3904 54.6431 30.0003 54.6431Z" fill="#007BFF"/>
+<path id="Vector_2" d="M30.0621 46.194C38.9717 46.194 46.1944 38.9713 46.1944 30.0617C46.1944 21.1521 38.9717 13.9295 30.0621 13.9295C21.1525 13.9295 13.9299 21.1521 13.9299 30.0617C13.9299 38.9713 21.1525 46.194 30.0621 46.194Z" fill="#007BFF"/>
+<g id="Group 1000014000">
+<path id="Vector_3" d="M30.5273 9.68898V0" stroke="#B8B6B5" stroke-miterlimit="10"/>
+<path id="Vector_4" d="M30.5273 60.0005V50.3115" stroke="#B8B6B5" stroke-miterlimit="10"/>
+<path id="Vector_5" d="M50.3115 29.9766H60.0005" stroke="#B8B6B5" stroke-miterlimit="10"/>
+<path id="Vector_6" d="M0 29.9766H9.68898" stroke="#B8B6B5" stroke-miterlimit="10"/>
+</g>
+<g id="Group 1000014001">
+<path id="Vector_7" d="M30 38.5714C34.7339 38.5714 38.5714 34.7339 38.5714 30C38.5714 25.2661 34.7339 21.4286 30 21.4286C25.2661 21.4286 21.4286 25.2661 21.4286 30C21.4286 34.7339 25.2661 38.5714 30 38.5714Z" fill="#FF8500"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_191">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>
