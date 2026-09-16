@@ -173,6 +173,12 @@ color: var(--color-slate-grey);
     line-height: 1.714;
 }
 
+.body-text-20 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
 .sm-text-12 {
     font-size: 12px;
     font-weight: 500;
@@ -968,6 +974,8 @@ section {
     border: 0.5px solid #C5D9E6;
     border-radius: 100px;
     width: fit-content;
+    text-transform: uppercase; 
+    font-weight: 800; 
 }
 
 .section-label.section-label-center {
@@ -2865,7 +2873,7 @@ color: #FFFFFF;
 .info-card{
     position: relative;
     height: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-warm-gray-75);
     border-radius: 12px;
     background: var(--color-pure-white-6);
     transition: 0.3s all ease !important;
@@ -2882,7 +2890,7 @@ color: #FFFFFF;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 28px;
+    padding: 24px;
     transition: 0.3s all ease-in-out !important;
 }
 
@@ -2897,19 +2905,7 @@ color: #FFFFFF;
 
 .info-card .info-tag {
     display: inline-flex;
-    width: fit-content;
     margin-bottom: 16px;
-    padding: 5px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.1);
-    font-family: inter, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -2918,19 +2914,27 @@ color: #FFFFFF;
 ======================================== */
 
 .info-card .info-card-title {
-    margin: 0 0 10px;
-    font-family: area-normal, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.375;
+    margin: 0 0 16px;
+    font-family: area-normal, sans-serif !important;
     color: var(--color-pure-white);
+    min-height: 89px;
+    align-content: center;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
 }
 
 .info-card .info-card-description {
     margin: 0 0 24px;
     font-weight: 400;
-    line-height: 1.62;
+    font-size: 14px;
+    line-height: 1.714;
     color:var(--color-pure-white-60);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
 }
 
 /* ================================
@@ -3839,6 +3843,10 @@ color: #FFFFFF;
     .trust-card-banking > strong {
         font-size: 80px;
         line-height: 56px;
+    }
+
+    .insights-section {
+        padding-block: 62px 98px;
     }
 
     .contact-section {
