@@ -1419,7 +1419,7 @@ section {
 .trust-blur-vector-right {
     position: absolute;
     right: 0;
-    top:0;
+    top: -70%;
 }
 
 .trust-blur-vector-left {
@@ -2778,7 +2778,6 @@ color: #FFFFFF;
 
 .recognition-section {
     position: relative;
-    background: #FCFAF6;
     overflow: hidden;
     z-index: 0;
 }
