@@ -91,6 +91,8 @@ html {
 
 body {
     background: #FCFAF6;
+     background-image: url('../images/checked-line.png');
+     background-size: cover;
 }
 
 body,* {
@@ -98,7 +100,7 @@ body,* {
     padding: 0;
     box-sizing: border-box;
     font-family: area-normal, system-ui, sans-serif;
-    
+   
 }
 
 /* =========================================
@@ -202,14 +204,15 @@ color: var(--color-slate-grey);
     padding: 12px 16px;
     border-radius: 100px;
     transition: all 0.25s ease;
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: none;
     gap: 10px;
     cursor: pointer;
     width: fit-content;
 }
 
-.cta-action svg {
+.cta-action svg,
+.cta-action img {
     position: relative;
     top: 1px;
 }
@@ -226,7 +229,8 @@ color: var(--color-slate-grey);
 
 .cta-action-white {
     border: 1px solid var(--color-warm-gray);
-    color: var(--color-electric-blue) !important
+    color: var(--color-electric-blue) !important;
+    background: var(--color-pure-white);
 }
 
 .cta-action-white:hover {
@@ -343,6 +347,16 @@ color: var(--color-slate-grey);
     z-index: -1;
 }
 
+/* Blurb Background */
+.has-blurb-bg {
+    position: relative;
+}
+
+.blurb-bg {
+    position:absolute;
+    z-index: -1;
+}
+
 /* ========================================
    Custom Check-Box
 ======================================== */
@@ -381,7 +395,7 @@ color: var(--color-slate-grey);
    SECTION
 ======================================== */
 section {
-    padding: 96px 30px;
+    padding: 100px 30px;
 }
 
 /* ========================================
@@ -391,7 +405,6 @@ section {
 .section-footer {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .section-footer button svg {
@@ -861,10 +874,6 @@ section {
 }
 
 
-.blurb-bg {
-    position:absolute;
-    z-index: -1;
-}
 .blurb-bg-top-left {
     top:0;
     left:0;
@@ -955,7 +964,7 @@ section {
 ========================================================== */
 .section-label {
     display: inline-flex; 
-    margin-bottom: 16px; 
+    margin-bottom: 7px; 
     gap: 12px; 
     align-items: center; 
     justify-content: center;
@@ -965,7 +974,9 @@ section {
     border-radius: 100px;
     width: fit-content;
     text-transform: uppercase; 
-    font-weight: 800; 
+    font-weight: 800;
+    height: 32px;
+    color: var(--color-electric-blue); 
 }
 
 .section-label.section-label-center {
@@ -1525,21 +1536,22 @@ height: 100%;
 
 
 .trust-card-title {
- color:  #007BFF;
-font-size: 16px;
-font-style: normal;
-font-weight: 800;
-line-height: 24px; /* 150% */
-text-transform: uppercase;
-display: inline-flex;
-height: 32px;
-padding: 4px 12px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 100px;
-border: 0.5px solid  #C5D9E6;
-background:#E6F2FF;
+    color:  #007BFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+    text-transform: uppercase;
+    display: inline-flex;
+    height: 32px;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 0.5px solid  #C5D9E6;
+    background:#E6F2FF;
+    margin-bottom: 22px;
 }
 
 .trust-card > strong {
@@ -2094,8 +2106,14 @@ justify-content: center;
 /* =======================================
 Case Study Section =====================*/
 
-.case-studies-section {
-    background: #FCFAF6;
+.case-studies-section .case-studies-blurb-left-center{
+    left: 0;
+    bottom: -22%;
+}
+.case-studies-section .case-studies-blurb-top-right{
+    top:-55%;
+    right: 0;
+    opacity: 80%;
 }
 
 .case-studies-section .case-studies-container {
@@ -2116,96 +2134,22 @@ Case Study Section =====================*/
     margin: 0;
 }
 
-.case-studies-section .section-label {
-    margin-bottom: 7px;
-    height: 32px;
-    padding: 4px 12px;
-    background-color: #E6F2FF;
-    border: 0.5px solid #C5D9E6;
-    border-radius: 100px;
-}
 
-.case-studies-section .section-label span {
-    font-family: area-normal, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    color: var(--color-electric-blue);
-}
-
-.case-studies-section .case-studies-title {
-    margin: 0;
-    color: var(--color-elevate-gray);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-}
-
-.case-studies-section .case-studies-description,
-.case-studies-section .heading-wrap p.case-studies-description {
-    margin: 24px 0 0;
-    color: var(--color-slate-grey);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-}
-
-.case-studies-section .info-card-grid {
-    width: 100%;
-    gap: 40px;
-}
-
-.case-studies-section .info-card {
-    overflow: hidden;
-    border: 0.5px solid var(--color-warm-gray);
-    border-radius: 8px;
-    background: rgba(250, 250, 250, 0.1);
+/* Info Card Light Widget */
+.info-card.info-card-dark {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 0 0 0 0.5px var(--color-warm-gray);
+    box-shadow: inset 0 0 10px 0 #B8B6B520;
+    background: #ffffff10;
 }
 
-.case-studies-section .info-card-innner {
-    gap: 0;
-    padding: 24px;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    mix-blend-mode: normal;
-}
-
-.case-studies-section .info-card .info-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-    height: 32px;
-    padding: 4px 12px;
-    border: 0.5px solid #C5D9E6;
-    border-radius: 100px;
-    background: #E6F2FF;
-    font-family: area-normal, sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    letter-spacing: 0;
-    text-transform: uppercase !important;
-    color: var(--color-electric-blue);
-}
-
-.case-studies-section .info-card-innner .info-card-title {
+.info-card.info-card-dark .info-card-innner .info-card-title {
     margin: 0 0 16px;
     max-height: 88px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    font-family: area-normal, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
     color: var(--color-elevate-gray);
 }
 
@@ -2214,68 +2158,19 @@ Case Study Section =====================*/
 }
 
 .case-studies-section .info-card .info-card-description {
-    margin: 0 0 20px;
     max-height: 72px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #5B5D61;
+
 }
 
-.case-studies-section .info-card-read-more.cta-action {
-    margin-top: auto;
-    width: fit-content;
-    align-self: flex-start;
-    gap: 10px;
-    font-weight: 900;
-}
-
-.case-studies-section .info-card-read-more img,
 .case-studies-section .case-studies-more-btn img {
     width: 15px;
     height: 15px;
     display: block;
     flex-shrink: 0;
+    margin-top: 4px;
 }
 
-.case-studies-section .section-footer {
-    margin-top: 0;
-}
 
-.case-studies-section .section-footer.dark button,
-.case-studies-section .case-studies-more-btn {
-    box-sizing: border-box !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: auto;
-    padding: 12px 16px;
-    border: 1px solid var(--color-warm-gray) !important;
-    border-radius: 100px !important;
-    background: #FAFAFA !important;
-    box-shadow: none !important;
-    font-size: 16px !important;
-    font-weight: 900 !important;
-    line-height: 24px !important;
-    color: var(--color-electric-blue) !important;
-    mix-blend-mode: normal;
-    backdrop-filter: none;
-}
-
-.case-studies-section .section-footer.dark button:hover,
-.case-studies-section .case-studies-more-btn:hover {
-    background: #fff !important;
-    color: var(--color-electric-blue) !important;
-}
-
-.case-studies-section .case-studies-more-btn svg {
-    display: none;
-}
 
 /* ========================================
    INSIGHTS SECTION
@@ -2321,10 +2216,6 @@ Case Study Section =====================*/
     color: var(--color-warm-gray);
 }
 
-.insights-section .info-card-grid {
-    gap: 40px;
-}
-
 .insights-section .info-card {
     overflow: hidden;
     border: 0.5px solid var(--color-warm-gray-60);
@@ -2345,17 +2236,10 @@ Case Study Section =====================*/
 }
 
 .insights-section .info-card .info-card-description {
-    margin: 0 0 20px;
     max-height: 72px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    color: var(--color-warm-gray);
 }
+
+
 
 .insights-section .info-card-read-more.cta-action {
     margin-top: auto;
@@ -2383,6 +2267,11 @@ Case Study Section =====================*/
     display: none;
 }
 
+
+/* Info Card Light */
+.info-card.info-card-light  .info-card-description {
+    color: var(--color-warm-gray);
+}
 
 /* ========================================
    SECTION HEADER
@@ -2860,7 +2749,7 @@ color: #FFFFFF;
 .info-card-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 40px;
 }
 
 
@@ -2902,8 +2791,7 @@ color: #FFFFFF;
 ======================================== */
 
 .info-card .info-tag {
-    display: inline-flex;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 
@@ -2923,8 +2811,8 @@ color: #FFFFFF;
 }
 
 .info-card .info-card-description {
-    margin: 0 0 24px;
-    font-weight: 400;
+    margin: 0 0 20px;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.714;
     color:var(--color-pure-white-60);
@@ -2933,6 +2821,7 @@ color: #FFFFFF;
     overflow: hidden;
     line-clamp: 3;
     -webkit-line-clamp: 3;
+    color: #5B5D61;
 }
 
 /* ================================
