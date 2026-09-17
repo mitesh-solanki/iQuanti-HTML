@@ -81,6 +81,7 @@
     ======================================== */
     --color-slate-grey: #51565B;
     --color-rich-black: #0E1216;
+     --color-rich-black-80: #0E121680;
     --color-midnight-navy: #030920;
     --color-soft-beige: #DCD7CD;
 }
@@ -176,10 +177,17 @@ color: var(--color-slate-grey);
     line-height: 1.714;
 }
 
+.body-text-16 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 .body-text-20 {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.4;
+    font-family: area-normal, sans-serif !important;
 }
 
 .sm-text-12 {
@@ -1416,7 +1424,8 @@ section {
 
 .trust-blur-vector-left {
     position: absolute;
-    left:0;
+    left: 0;
+    top: 30%;
 }
  
 .trust-container {
@@ -1637,33 +1646,13 @@ line-height: 48px; /* 90% */
 .research-section .grid-lines {
   top: -96px
 }
+
 .research-section .grid-lines .grid-horizontal-lines {
   grid-template-rows: repeat(22, 1fr);
 }
 
-.solution-container {
-    padding-top: 100px;
-}
-
-.solution-container .heading-wrap.heading-wrap-center {
-    margin-bottom: 80px;
-}
-
-.solution-container .heading-wrap.heading-wrap-center h2 {
-    margin-bottom: 0;
-    color: var(--color-elevate-gray);
-}
-
-.solution-container .section-label {
-    margin-bottom: 7px;
-}
-
-.solution-container .section-label-line {
-    display: none;
-}
-
 .research-blurb-bg-right-center {
-    top: -10%;
+    top: 0;
     right: 0;
     transform: scaleX(-1);
     z-index: -1;
@@ -2287,7 +2276,13 @@ Case Study Section =====================*/
 /* =========================================
    SOLUTIONS SECTION
 ========================================= */
+.solution-container {
+    padding-top: 100px;
+}
 
+.solution-container .heading-wrap.heading-wrap-center {
+    margin-bottom: 80px;
+}
 
 /* =========================================
    SOLUTIONS GRID
@@ -2320,18 +2315,18 @@ Case Study Section =====================*/
     width: 100%;
     height: 100%;
     min-height: 367px;
-    border: 0.5px solid var(--color-warm-gray);
+    border: 0.5px solid var(--color-warm-gray-75);
     border-radius: 8px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    box-shadow: inset 0 0 0 0.5px var(--color-warm-gray);
     transition:
         background 0.2s ease-in-out,
         border-color 0.2s ease-in-out,
         box-shadow 0.2s ease-in-out,
         backdrop-filter 0.2s ease-in-out;
+        backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: inset 0 0 10px 0 #B8B6B520;
+    background: #ffffff10;
 }
 
 .solution-card .solution-card-inner {
@@ -2382,7 +2377,7 @@ Case Study Section =====================*/
 .solution-card .powered-item-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 8px;
 }
 
 
@@ -2504,16 +2499,17 @@ color: #FFFFFF;
     margin-bottom: 24px;
 }
 
-.solution-icon {
+.solution-card .solution-card-header .section-label {
+    margin-bottom: 0;
+}
+
+.solution-card  .solution-icon {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
-    border-radius: 0;
-    background: transparent;
-    color: inherit;
 }
 
 .solution-card .solution-icon img {
@@ -2529,38 +2525,13 @@ color: #FFFFFF;
 }
 
 .solution-card .solution-title {
-    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
-
-.solution-card .solution-title p {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 32px;
-    padding: 4px 12px;
-    border: 0.5px solid #C5D9E6;
-    border-radius: 100px;
-    background: #E6F2FF;
-    font-family: area-normal, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    color: var(--color-electric-blue);
-}
-
+    
 .solution-card .solution-title h3 {
-    margin: 0;
-    font-family: area-normal, sans-serif !important;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
     color: var(--color-electric-blue);
 }
 
@@ -2570,12 +2541,7 @@ color: #FFFFFF;
 ========================================= */
 
 .solution-description {
-    margin: 0 0 30px;
-    font-family: area-normal, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: var(--color-slate-grey);
+    margin: 0 0 25px;
 }
 
 /* =========================================
@@ -2620,37 +2586,10 @@ color: #FFFFFF;
    VIEW DETAILS BUTTON
 ========================================= */
 
-.solution-card .view-details.cta-action-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.solution-card .view-details.cta-action {
     margin-top: auto;
-    padding: 12px 16px;
-    border-radius: 100px;
-    background: var(--color-primary-orange);
-    color: #FCFCFC;
-    font-family: area-normal, sans-serif;
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 24px;
-    text-decoration: none;
 }
 
-.solution-card .view-details.cta-action-link svg {
-    width: 15px;
-    height: 15px;
-    margin-top: 0;
-    color: #FCFCFC;
-}
-
-.view-details:hover {
-    gap: 10px;
-}
-
-.view-details[aria-expanded="true"] svg {
-    transform: none;
-}
 
 
 /* =========================================
@@ -2680,7 +2619,15 @@ color: #FFFFFF;
     box-shadow: none;
 }
 
-.feature-card::before,
+.feature-card::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #001FAB;
+    opacity: 40%;
+    position: absolute;
+    inset: 0;
+}
 .feature-card::after {
     content: none;
     display: none;
@@ -2693,12 +2640,13 @@ color: #FFFFFF;
 }
 
 .feature-card .feature-content .feature-title {
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     font-family: neulis-neue, sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
     color: var(--color-pure-white);
+    text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
 }
 
 .feature-card .feature-powered {
@@ -2738,7 +2686,7 @@ color: #FFFFFF;
     font-family: area-normal, sans-serif;
     font-size: 16.6px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 1.566;
 }
 
 
