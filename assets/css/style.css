@@ -21,6 +21,7 @@
     --color-pure-white: #FFF;
     --color-pure-white-6: rgb(255 255 255 / 6%);
     --color-pure-white-10: rgb(255 255 255 / 10%);
+    --color-pure-white-20: rgb(255 255 255 / 20%);
     --color-pure-white-60: rgb(255 255 255 / 60%);
     --color-pure-white-80: rgb(255 255 255 / 80%);
     --color-pure-white-90: rgb(255 255 255 / 90%);
@@ -114,9 +115,7 @@ color: var(--color-elevate-gray);
 font-weight: 700;
 }
 
-:is(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *) {
-    font-family: "Neulis Neue", sans-serif !important;
-}
+
 
 /* H1 — 96 / 110 */
 h1,
@@ -161,12 +160,12 @@ h5,
 }
 
 p{
-font-family: area-normal,sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 14.5px;
-line-height: 1.569;
-color: var(--color-slate-grey);
+    font-family: area-normal,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 1.569;
+    color: var(--color-slate-grey);
 }
 
 /* L1 — 8 / 150 */
@@ -205,6 +204,13 @@ color: var(--color-slate-grey);
     font-size: 12px;
     font-weight: 500;
     line-height: 1.714;
+}
+
+.sub-head-2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 700;
+    font-family: "neulis-neue" !important;
 }
 
 /* ========================================
@@ -329,16 +335,14 @@ color: var(--color-slate-grey);
 /* ========================================
    Glass Effect
 ======================================== */
-.has-glass-effect {
-    position: relative;
-}
-
-.has-glass-effect::before {
+.has-glass-effect-white {
     content: "";
-    background: #fff;
-
-    background-color: var(--color-pure-white-10);
+    background-color: var(--color-pure-white-20);
+    border: 0.5px solid var(--color-warm-gray-75);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
 }
+
 
 .glass-bg {
     position: relative;
@@ -350,6 +354,7 @@ color: var(--color-slate-grey);
     inset: 0;
     z-index: -1;
 }
+
 
 /* Background Image */
 .has-bg-image {
@@ -1091,6 +1096,7 @@ section {
     max-width: 760px;
     margin: 0;
     opacity: 0.8 !important;
+    font-weight: 400;
 }
 
 
@@ -1816,7 +1822,7 @@ justify-content: center;
     padding: 15px 20px;
     background-color: var(--color-pure-white);
     color: var(--color-electric-blue);
-    font-weight: 800;
+    font-weight: 900;
     line-height: 30px;
     font-size: 20px;
 }
@@ -2316,11 +2322,12 @@ Case Study Section =====================*/
 /* =========================================
    SOLUTION CARD
 ========================================= */
-
+.research-section .solution-card { 
+    min-height: 367px;
+}
 .solution-card {
     width: 100%;
     height: 100%;
-    min-height: 367px;
     border-radius: 8px;
     overflow: hidden;
     transition:
@@ -2384,6 +2391,8 @@ Case Study Section =====================*/
     flex-direction: column;
     gap: 8px;
 }
+
+
 
 
 /* ========================================
@@ -2493,6 +2502,17 @@ color: #FFFFFF;
         transform 0.2s ease-in-out;
 }
 
+
+.solution-card.no-hover-content:hover {
+    background: inherit !important;
+}
+
+.solution-card.no-hover-content:hover .solution-card-content{
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /* =========================================
    CARD HEADER
 ========================================= */
@@ -2541,6 +2561,10 @@ color: #FFFFFF;
 }
 
 
+.solution-card.has-content-side-left .solution-card-body{
+    padding-left: 76px;
+} 
+
 /* =========================================
    CARD DESCRIPTION
 ========================================= */
@@ -2576,7 +2600,7 @@ color: #FFFFFF;
     line-height: 24px;
 }
 
-.solution-tags span:not(:last-child)::after {
+.solution-tags span:not(:first-child)::before {
     content: "";
     display: inline-block;
     width: 4px;
@@ -3640,6 +3664,222 @@ color: #FFFFFF;
 }
 
 
+
+/* Contact Page CSS */
+
+/* Contact section */
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+body.contact-page {
+    background-color: var(--color-pure-white);
+}
+
+.site-header.contact-page-header {
+    background: var(--color-pure-white);
+}
+
+.iq-contact-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../images/Contact-section-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 180px;
+}
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.iq-contact-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:174px;
+}
+
+.iq-contact-section .contact-form-wrapper {
+    position: sticky;
+    top:0;
+    max-width: 511px;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.iq-contact-section .sub-details {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.contact-heading {
+    font-family: 'Neulis Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color:var(--color-pure-white);
+}
+
+.contact-heading span {
+    color:var(--color-electric-blue);
+    font-weight: 700 !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--color-warm-gray);
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 64px;
+    gap: 24px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.contact-detail .detail-icon {
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1px;
+    color: #087dff;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   DETAIL CONTENT
+========================================= */
+
+.contact-detail.detail-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.contact-detail .detail-content h3 {
+    margin: 0 0 16px;
+    color: var(--color-primary-orange);
+}
+
+.contact-detail .detail-content p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.214;
+    color: var(--color-pure-white)
+}
+
+.contact-detail  p  a {
+    color: var(--color-pure-white) !important;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.contact-detail  p a:hover {
+    color: var(--color-primary-orange) !important;
+}
+
+.contact-detail .email-detail-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* IQ Contact Content Section */
+.iq-contact-content-section .sub-head-2 {
+    min-height: 84px;
+    align-content: center;
+}
+
+.iq-contact-solution {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.iq-contact-content-right {
+    max-width: 649px;
+}
+
+.contact-solutions-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.contact-solutions-grid .solution-card .solution-card-content{
+    padding: 16px;
+}
+
+.solution-card .solution-card-header {
+    margin-bottom: 16px;
+}
+
+.contact-solutions-grid .solution-card .solution-title h3 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.429;
+}
+
+.contact-solutions-grid .solution-card .solution-description {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7145;
+    color: #222222;
+}
+
+.contact-solutions-grid .solution-card .solution-tags {
+    max-width: 500px;
+}
+
+.contact-solutions-grid .solution-card .solution-tags span {
+    font-weight: 400;
+}
+
+/* Count Box Widget */
+.count-box-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.count-box {
+    padding: 40px 28px 35px;
+}
+
 /* Media Query Start Here */
 @media (min-width: 1024px) {
     .hero-section {
@@ -4439,155 +4679,4 @@ color: #FFFFFF;
     }
 }
 
-
-/* Contact Page CSS */
-
-/* Contact section */
-
-/* =========================================
-   CONTACT SECTION
-========================================= */
-
-.site-header.contact-page-header {
-    background: var(--color-pure-white);
-}
-
-.iq-contact-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background-image: url("../images/Contact-section-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 180px;
-}
-
-/* =========================================
-   MAIN WRAPPER
-========================================= */
-
-.iq-contact-wrapper {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap:174px;
-}
-
-.iq-contact-section .contact-form-wrapper {
-    position: sticky;
-    top:0;
-    max-width: 511px;
-}
-
-/* =========================================
-   HEADING
-========================================= */
-
-.iq-contact-section .sub-details {
-    display: flex;
-    flex-direction: column;
-    gap:16px;
-}
-
-.contact-heading {
-    font-family: 'Neulis Neue';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    color:var(--color-pure-white);
-}
-
-.contact-heading span {
-    color:var(--color-electric-blue);
-    font-weight: 700 !important;
-}
-
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.contact-description {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: var(--color-warm-gray);
-}
-
-
-/* =========================================
-   CONTACT DETAILS
-========================================= */
-
-.contact-detail {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 64px;
-    gap: 24px;
-}
-
-
-/* =========================================
-   ICON
-========================================= */
-
-.contact-detail .detail-icon {
-    width: 40px;
-    min-width: 40px;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 1px;
-    color: #087dff;
-    font-size: 22px;
-}
-
-
-/* =========================================
-   DETAIL CONTENT
-========================================= */
-
-.contact-detail.detail-content {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.contact-detail .detail-content h3 {
-    margin: 0 0 16px;
-    color: var(--color-primary-orange);
-}
-
-.contact-detail .detail-content p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.214;
-    color: var(--color-pure-white)
-}
-
-.contact-detail  p  a {
-    color: var(--color-pure-white) !important;
-    text-decoration: none;
-    transition: color 0.25s ease;
-}
-
-.contact-detail  p a:hover {
-    color: var(--color-primary-orange) !important;
-}
-
-.contact-detail .email-detail-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
 
