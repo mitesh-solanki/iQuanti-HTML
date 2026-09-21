@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="https://use.typekit.net/sac8dhf.css"> 
+    <!-- 1. Fonts (External/CDN) -->
+    <link rel="stylesheet" href="https://use.typekit.net/sac8dhf.css">
+
+    <!-- 2. Third-party Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- 3. Custom Main CSS (Last, taaki agar library ya base style override karni ho toh easily ho jaye) -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <!-- Header Section Start -->
@@ -179,7 +183,7 @@
                 CARD 1 - FORTUNE RANKING
             ========================================= -->
 
-            <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="client-card has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="100">
                 <p class="client-label">By Fortune Reach</p>
 
                 <div class="fortune-chart">
@@ -251,7 +255,7 @@
                 CARD 2 - COMPANY SIZE
             ========================================= -->
 
-            <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="client-card has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="200">
                 <p class="client-label">By Company Size</p>
 
                 <div class="company-chart">
@@ -306,7 +310,7 @@
                 CARD 3 - INDUSTRY
             ========================================= -->
 
-            <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="client-card has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="300">
                 <p class="client-label">By Industry</p>
 
                 <div class="industry-chart">
@@ -408,7 +412,7 @@
         </div>
 
         <!-- Credit Card -->
-        <div class="trust-card trust-card-credit" data-aos="fade-up" data-aos-delay="100">
+        <div class="trust-card trust-card-credit has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="100">
             <span class="trust-card-title">Banking</span>
             <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
             <p>of the <strong>largest US banks</strong> partner with us for growth marketing </p>
@@ -419,7 +423,7 @@
         </div>
 
         <!-- Banking -->
-        <div class="trust-card trust-card-banking" data-aos="fade-up" data-aos-delay="200">
+        <div class="trust-card trust-card-banking has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="200">
             <span class="trust-card-title">Credit Card</span>
             <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
              <p>of the <strong>leading US credit card issuers</strong> empowered to grow</p>
@@ -430,7 +434,7 @@
         </div>
 
         <!-- 6 Markets -->
-        <div class="trust-card" data-aos="fade-up"  data-aos-delay="300">
+        <div class="trust-card has-glass-effect has-glass-white" data-aos="fade-up"  data-aos-delay="300">
             <strong class="highlight-text highlight-text-electric-blue">P&C · Auto ·  Dental</strong>
             <p>Trusted by leading US insurance providers</p>
             <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
@@ -440,7 +444,7 @@
         </div>
 
         <!-- P&C Auto Dental -->
-        <div class="trust-card" data-aos="fade-up"  data-aos-delay="400">
+        <div class="trust-card has-glass-effect has-glass-white" data-aos="fade-up"  data-aos-delay="400">
             <strong class="highlight-text highlight-text-electric-blue">Global Reach</strong>
               <p>AMER · EMEA · APAC</p>
               <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
@@ -450,7 +454,7 @@
         </div>
 
         <!-- BFSI CoE -->
-        <div class="trust-card" data-aos="fade-up"  data-aos-delay="500">
+        <div class="trust-card has-glass-effect has-glass-white" data-aos="fade-up"  data-aos-delay="500">
             <strong class="highlight-text highlight-text-electric-blue">18+ Years</strong>
             <p>Dedicated <br> BFSI practice </p>
             <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
@@ -460,7 +464,7 @@
         </div>
 
         <!-- 18+ Years -->
-        <div class="trust-card" data-aos="fade-up"  data-aos-delay="600">
+        <div class="trust-card has-glass-effect has-glass-white" data-aos="fade-up"  data-aos-delay="600">
             <strong class="highlight-text highlight-text-electric-blue">BFSI CoE</strong>
             <p>In-house <br> centre of excellence </p>
             <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
@@ -770,7 +774,7 @@
         <div class="solutions-grid">
 
             <!-- Marketing Analytics -->
-            <div class="solution-card" data-aos="fade-up" data-aos-duration="750" data-aos-delay="0">
+            <div class="solution-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="750" data-aos-delay="0">
                 <div class="solution-card-inner">
 
                     <div class="solution-card-content">
@@ -863,7 +867,7 @@
             </div>
 
             <!-- Performance Marketing -->
-            <div class="solution-card"  data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
+            <div class="solution-card has-glass-effect has-glass-white"  data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                 <div class="solution-card-inner">
 
                     <div class="solution-card-content">
@@ -940,7 +944,7 @@
             </div>
 
             <!-- Marketing Technology -->
-            <div class="solution-card" data-aos="fade-up" data-aos-duration="750" data-aos-delay="240">
+            <div class="solution-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="750" data-aos-delay="240">
                 <div class="solution-card-inner">
 
                     <div class="solution-card-content">
@@ -1009,9 +1013,8 @@
             </div>
             <!-- Left Column -->
 
-
             <!-- Creative Design -->
-            <div class="solution-card" data-aos="fade-up" data-aos-duration="750" data-aos-delay="360">
+            <div class="solution-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="750" data-aos-delay="360">
                 <div class="solution-card-inner">
 
                     <div class="solution-card-content">
@@ -1143,7 +1146,7 @@
         </div>
 
         <!-- Right Accordion -->
-        <div class="ai-accordion accordion-bordered glass-bg" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+        <div class="ai-accordion accordion-bordered has-glass-effect has-glass-dark" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
 
             <div class="accordion-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
                 <button class="accordion-header" type="button">
@@ -1269,7 +1272,7 @@
         <div class="info-card-grid">
             <!-- Card 1 -->
              <div data-aos="fade-up" data-aos-delay="100">
-                 <div class="info-card info-card-dark">
+                 <div class="info-card info-card-dark has-glass-effect has-glass-white">
                      <div class="info-card-innner">
                          <span class="info-tag section-label">Uniform Services</span>
      
@@ -1289,7 +1292,7 @@
 
             <!-- Card 2 -->
              <div  data-aos="fade-up" data-aos-delay="200">
-                 <div class="info-card info-card-dark">
+                 <div class="info-card info-card-dark has-glass-effect has-glass-white">
                      <div class="info-card-innner">
                          <span class="info-tag section-label">Digital Banking</span>
      
@@ -1309,7 +1312,7 @@
 
             <!-- Card 3 -->
              <div data-aos="fade-up" data-aos-delay="300">
-                 <div class="info-card info-card-dark">
+                 <div class="info-card info-card-dark has-glass-effect has-glass-white">
                      <div class="info-card-innner">
                          <span class="info-tag section-label">Healthcare Finance</span>
      
@@ -1359,7 +1362,7 @@
         <div class="info-card-grid">
             <!-- Card 1 -->
              <div data-aos="fade-up" data-aos-delay="100">
-                 <div class="info-card info-card-light">
+                 <div class="info-card info-card-light has-glass-effect has-glass-dark">
                      <div class="info-card-innner">
                          <span class="info-tag section-label has-white">Playbook</span>
      
@@ -1380,7 +1383,7 @@
 
             <!-- Card 2 -->
              <div data-aos="fade-up" data-aos-delay="200">
-                 <div class="info-card info-card-light">
+                 <div class="info-card info-card-light has-glass-effect has-glass-dark">
                      <div class="info-card-innner">
                          <span class="info-tag section-label has-white">Report</span>
      
@@ -1401,7 +1404,7 @@
 
             <!-- Card 3 -->
              <div data-aos="fade-up" data-aos-delay="300">
-                 <div class="info-card info-card-light">
+                 <div class="info-card info-card-light has-glass-effect has-glass-dark">
                      <div class="info-card-innner">
                          <span class="info-tag section-label has-white">Perspective</span>
      
@@ -1447,7 +1450,7 @@
 
             <!-- Inc. 5000 -->
             <div class="recognition-card-wrap" data-aos="fade-up" data-aos-delay="100">
-                <div class="recognition-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                <div class="recognition-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
@@ -1467,7 +1470,7 @@
 
             <!-- Industry Awards -->
             <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="200" >
-                <div class="recognition-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="recognition-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
@@ -1487,7 +1490,7 @@
 
             <!-- Great Place To Work -->
             <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="300">
-                <div class="recognition-card"  data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
+                <div class="recognition-card has-glass-effect has-glass-white"  data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
@@ -1507,7 +1510,7 @@
 
             <!-- Enterprise Security -->
             <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="400">
-                <div class="recognition-card"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                <div class="recognition-card has-glass-effect has-glass-white"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
@@ -1529,7 +1532,7 @@
 
         <!-- Certifications -->
         <div class="certifications-wrap" data-aos="fade-up" data-aos-delay="200">
-            <div class="certifications-card recognition-card">
+            <div class="certifications-card recognition-card has-glass-effect has-glass-white">
                 <div class="certifications-content">
                     <span class="certifications-title">Certifications</span>
 
@@ -1543,7 +1546,7 @@
     </div>
   </section>
 <!-- Recognition & trust Section End -->
-
+		
 <!--Contact section Start-->
 <section id="contact" class="contact-section has-bg-image">
     <div class="contact-container container">
@@ -1568,7 +1571,7 @@
             <!-- Contact Form -->
             <div class="contact-form-wrapper">
 
-                <form class="contact-form" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+                <form class="contact-form has-glass-effect has-glass-dark" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
 
                     <!-- Form Header -->
                     <div class="contact-form-header">
@@ -1787,7 +1790,7 @@
     <div class="footer-container container">
         <div class="footer-grid">
             <!-- Brand -->
-            <div class="footer-brand footer-card has-glass-effect" data-aos="fade-up" data-aos-delay="100">
+            <div class="footer-brand footer-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="100">
                 <a href="/" class="footer-logo">
                     <img src="assets/images/iquanti-logo.svg" alt="iQuanti" />
                 </a>
@@ -1818,7 +1821,7 @@
             </div>
 
             <!-- Company Links -->
-            <div class="footer-column footer-company footer-card has-glass-effect" data-aos="fade-up" data-aos-delay="200">
+            <div class="footer-column footer-company footer-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="200">
                 <h2>Company</h2>
 
                 <ul>
@@ -1838,7 +1841,7 @@
             </div>
 
             <!-- Newsletter -->
-            <div class="footer-newsletter footer-card has-glass-effect" data-aos="fade-up" data-aos-delay="300">
+            <div class="footer-newsletter footer-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="300">
                 <h2>Stay Connected</h2>
                 <p>Subscribe to our newsletter for insights and updates</p>
                 <form class="newsletter-form">

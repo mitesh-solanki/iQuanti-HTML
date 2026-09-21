@@ -334,26 +334,36 @@ p{
 
 /* ========================================
    Glass Effect
-======================================== */
-.has-glass-effect-white {
-    content: "";
-    background-color: var(--color-pure-white-20);
-    border: 0.5px solid var(--color-warm-gray-75);
-    border-radius: 8px;
-    backdrop-filter: blur(4px);
+/* Base Glass Utility */
+.has-glass-effect {
+  --glass-blur: 16px;
+  
+  border: 0.5px solid var(--color-warm-gray-75, #b8b6b5);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
 }
 
-
-.glass-bg {
-    position: relative;
+/* Modifier: White Glass */
+.has-glass-effect.is-white,
+.has-glass-white {
+  background-color: var(--color-pure-white-20, rgba(255, 255, 255, 0.2)); 
 }
 
-.glass-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+/* Modifier: Dark Glass (Figma me jo #3F4551 60% hai) */
+.has-glass-effect.is-dark,
+.has-glass-dark {
+  background-color: var(--color-elevate-gray-60, rgba(63, 69, 81, 0.6));
+  --glass-blur: 16px; /* Dark ke liye default 16px */
 }
+
+/* Optional: Reusable Blur Helper Classes */
+.blur-xs { --glass-blur: 2px; }
+.blur-sm { --glass-blur: 4px; }
+.blur-md { --glass-blur: 8px; }
+.blur-12 { --glass-blur: 12px; } /* direct pixel name */
+.blur-lg { --glass-blur: 16px; }
+.blur-xl { --glass-blur: 24px; }
 
 
 /* Background Image */
@@ -1114,9 +1124,6 @@ section {
     padding: 26px 24px 46px;
     display: flex;
     flex-direction: column;
-    background: var(--color-elevate-gray-60);
-    border: 0.5px solid #B8B6B575;
-    backdrop-filter: blur(16px);
     border-radius: 8px;
 }
 
@@ -1496,18 +1503,9 @@ line-height: 56px; /* 116.667% */
     justify-content: flex-start;
     position: relative;
     border-radius: 8px;
-   border: 0.5px solid  #B8B6B5;
-   background: rgba(255, 255, 255, 0.10);
 }
 
-.trust-card::before {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-   content: '';
-   background-image: url(../images/glass-image.png);
-}
+
 
 .trust-card {
     position: relative;
@@ -2012,9 +2010,6 @@ justify-content: center;
     padding: 34px 33px 38px;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--color-warm-gray-75);
-    backdrop-filter: blur(16px);
-    background-color: var(--color-elevate-gray-60);
 }
 
 .accordion-bordered .accordion-item {
@@ -2138,12 +2133,7 @@ Case Study Section =====================*/
 
 
 /* Info Card Light Widget */
-.info-card.info-card-dark {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 0 0 10px 0 #B8B6B520;
-    background: #ffffff10;
-}
+
 
 .info-card.info-card-dark .info-card-innner .info-card-title {
     margin: 0 0 16px;
@@ -2220,10 +2210,6 @@ Case Study Section =====================*/
 
 .insights-section .info-card {
     overflow: hidden;
-    border: 0.5px solid var(--color-warm-gray-60);
-    background: var(--color-elevate-gray-60);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
 }
 
 .insights-section .info-card .info-card-innner {
@@ -2335,9 +2321,6 @@ Case Study Section =====================*/
     border-color 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out,
     backdrop-filter 0.2s ease-in-out;
-    background: rgba(250, 250, 250, 0.2);
-    backdrop-filter: blur(4px);
-    border: 0.5px solid var(--color-warm-gray-75);
 }
 
 .solution-card .solution-card-inner {
@@ -2739,7 +2722,6 @@ color: #FFFFFF;
     height: 100%;
     border: 1px solid var(--color-warm-gray-75);
     border-radius: 8px;
-    background: var(--color-pure-white-6);
     /* transition: 0.3s all ease !important; */
     transition-behavior: normal !important;
     transition-duration: 0.3s !important;
@@ -2852,10 +2834,6 @@ color: #FFFFFF;
     cursor: default;
     border: 0.5px solid var(--color-warm-gray-75);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 0 0 10px 5px #B8B6B520;
     transition: transform 0.3s ease !important;
 }
 
@@ -3069,18 +3047,9 @@ color: #FFFFFF;
     flex-direction: column;
     gap: 20px;
     position: relative;
-    background: var(--color-elevate-gray-60);
-    backdrop-filter: blur(16px);
     overflow: hidden;
 }
 
-.contact-form::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('../images/contact-glass-image.png');
-    z-index: -1;
-}
 
 /* ========================================
    FORM HEADER
@@ -3453,9 +3422,7 @@ color: #FFFFFF;
 ======================================== */
 .site-footer .footer-card {
     padding: 24px 24px 50px;
-    border: 1px solid #B8B6B570;
-    border-radius: 8px;
-    backdrop-filter: blur(8px);
+    border: 1px solid #B8B6B575;
     overflow: hidden;
 }
 
