@@ -4429,5 +4429,28 @@ color: #FFFFFF;
 }
 
 
+/* Contact Page CSS */
+
+/* Contact section */
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    position: relative;
+    min-height: 765px;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../images/contact-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.site-header.contact-page-header {
+    background: var(--color-pure-white);
+}
 
 
