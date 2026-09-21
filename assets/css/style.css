@@ -1097,11 +1097,10 @@ section {
     padding: 26px 24px 46px;
     display: flex;
     flex-direction: column;
-    background: rgba(63, 69, 81, 0.6);
-    border: 0.5px solid #b8b6b573;
+    background: var(--color-elevate-gray-60);
+    border: 0.5px solid #B8B6B575;
+    backdrop-filter: blur(16px);
     border-radius: 8px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 
@@ -1997,11 +1996,8 @@ justify-content: center;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--color-warm-gray-75);
-    backdrop-filter: blur(8px);
-}
-
-.accordion-bordered.glass-bg::before {
-    background: url('../images/accordion-galss-image.png');
+    backdrop-filter: blur(16px);
+    background-color: var(--color-elevate-gray-60);
 }
 
 .accordion-bordered .accordion-item {
@@ -2211,7 +2207,6 @@ Case Study Section =====================*/
     background: var(--color-elevate-gray-60);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 0 0 0 0.5px var(--color-warm-gray-75);
 }
 
 .insights-section .info-card .info-card-innner {
@@ -2315,18 +2310,16 @@ Case Study Section =====================*/
     width: 100%;
     height: 100%;
     min-height: 367px;
-    border: 0.5px solid var(--color-warm-gray-75);
     border-radius: 8px;
     overflow: hidden;
     transition:
-        background 0.2s ease-in-out,
-        border-color 0.2s ease-in-out,
-        box-shadow 0.2s ease-in-out,
-        backdrop-filter 0.2s ease-in-out;
-        backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: inset 0 0 10px 0 #B8B6B520;
-    background: #ffffff10;
+    background 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    backdrop-filter 0.2s ease-in-out;
+    background: rgba(250, 250, 250, 0.2);
+    backdrop-filter: blur(4px);
+    border: 0.5px solid var(--color-warm-gray-75);
 }
 
 .solution-card .solution-card-inner {
@@ -2346,6 +2339,7 @@ Case Study Section =====================*/
         opacity 0.25s ease,
         visibility 0.25s ease;
     z-index: 2;    
+
 }
 
 /* ========================================
@@ -3040,7 +3034,9 @@ color: #FFFFFF;
     flex-direction: column;
     gap: 20px;
     position: relative;
-    background: #3F455170;
+    background: var(--color-elevate-gray-60);
+    backdrop-filter: blur(16px);
+
 }
 
 .contact-form::before {
