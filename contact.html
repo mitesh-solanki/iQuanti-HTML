@@ -66,68 +66,238 @@
 </header>
 <!-- Header Section End -->
 
-<section class="contact-section">
-    <div class="contact-overlay"></div>
+<section class="iq-contact-section">
+  <div class="container">
 
-    <div class="contact-grid">
-        <div class="contact-container">
+    <div class="iq-contact-wrapper">
 
-            <!-- Left Content -->
-            <div class="contact-content">
+        <!-- LEFT CONTENT -->
+        <div class="contact-left">
+            <div class="sub-details">
+            <h2 class="contact-heading">
+                Let's Build Your<br>
+                <span>Impact</span> Story
+            </h2>
 
-                <h2 class="contact-title">
-                    Let's Build Your<br>
-                    <span>Impact</span> Story
-                </h2>
-
-                <p class="contact-description">
-                    Whether you're looking to dominate search, optimize performance
-                    across channels, or build an AI-native marketing engine, we'd like to
-                    hear from you.
-                </p>
-
-                <!-- Address -->
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="ri-map-pin-2-fill"></i>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3>Address</h3>
-                        <p>111 Town Square Place</p>
-                    </div>
+            <p class="contact-description">
+                Whether you're looking to dominate search, optimize performance
+                across channels, or build an AI-native marketing engine, we'd like to
+                hear from you.
+            </p>
+            </div>
+            <!-- ADDRESS -->
+             <div class="contact-detail-wrapper">
+            <div class="contact-detail">
+                <div class="detail-icon">
+                    <img src="./assets/images/Address (1).png" alt="address">
                 </div>
 
-                <!-- Email -->
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="ri-mail-fill"></i>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3>Email</h3>
-
-                        <p>info@iquanti.com</p>
-                        <p>For HR/recruitment queries</p>
-                        <p>HR@iquanti.com</p>
-                    </div>
+                <div class="detail-content">
+                    <h3>Address</h3>
+                    <p>111 Town Square Place</p>
                 </div>
-
-                <!-- Phone -->
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="ri-phone-fill"></i>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3>Phone</h3>
-                        <p>(201)633-2125</p>
-                    </div>
-                </div>
-
             </div>
 
+            <!-- EMAIL -->
+            <div class="contact-detail email-detail">
+                <div class="detail-icon">
+                    <img src="./assets/images/mail (3).png" alt="mail">
+                </div>
+
+                <div class="detail-content">
+                    <h3>Email</h3>
+                    <p>info@iquanti.com</p>
+                    <p>For HR/recruitment queries</p>
+                    <p>HR@iquanti.com</p>
+                </div>
+            </div>
+
+            <!-- PHONE -->
+            <div class="contact-detail phone-detail">
+                <div class="detail-icon">
+                    <img src="./assets/images/call.png" alt="call">
+                </div>
+
+                <div class="detail-content">
+                    <h3>Phone</h3>
+                    <p>(201)633-2125</p>
+                </div>
+            </div>
+          </div>
         </div>
+
+
+        <!-- RIGHT FORM -->
+            <div class="contact-form-wrapper">
+
+                <form class="contact-form" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+
+                    <!-- Form Header -->
+                    <div class="contact-form-header">
+
+                        <h3 class="contact-form-title">
+                            Getting started is easy.
+                        </h3>
+
+                        <p class="contact-form-required body-text-14">
+                            Required fields<span class="asterisk">*</span>
+                        </p>
+
+                    </div>
+
+                    <div class="contact-form-row-wrap">
+                        
+                        <!-- Name & Company -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your name*
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="company">
+                                    Company name*
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Your work email*
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+                        
+                        <!-- Interest & Message -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="interest">
+                                    Interested in*
+                                </label>
+
+                                <select
+                                    id="interest"
+                                    name="interest"
+                                    required
+                                >
+                                    <option value="">
+                                        Select an option
+                                    </option>
+
+                                    <option value="seo">
+                                        SEO
+                                    </option>
+
+                                    <option value="paid-media">
+                                        Paid Media
+                                    </option>
+
+                                    <option value="digital-marketing">
+                                        Digital Marketing
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+                                </select>
+
+                            </div>
+                    </div>
+                    <div class="privacy-message-wrap">
+                        <button type="button" class="add-message-btn">
+                            <span class="plus-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M9 7H16.5V9H9V16.5H7V9H0V7H7V0H9V7Z" fill="#FAFAFA"/>
+                                </svg>
+                            </span>
+                            <span class="btn-text body-text-14">Add message <span class="optional sm-text-12">(Optional)</span></span>
+                        </button>
+                        <!-- Privacy Checkbox -->
+                        <div class="privacy-checkbox">
+                            <div class="custom-check-box-wrap">
+                                <input type="checkbox"id="privacy"name="privacy" required>
+                                <span class="custom-check-box"></span>
+                            </div>
+                            <label for="privacy">
+                                <span class="sm-text-12">I confirm I have read iQuanti's</span>
+                                <span class="sm-text-12 privacy-policy-text">Privacy Policy.* </span>
+                            </label>
+    
+                        </div>
+                    </div>
+
+
+                    <!-- reCAPTCHA -->
+                    <div class="recaptcha-box">
+
+                        <div class="recaptcha-checkbox"></div>
+
+                        <div class="recaptcha-content">
+
+                            <p>
+                                I'm not a robot
+                            </p>
+
+                            <span>
+                                reCAPTCHA · Privacy · Terms
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="contact-submit cta-action cta-action-primary"
+                        disabled
+                    >
+                        Contact Us
+                    </button>
+
+                </form>
+
+            </div>
+      </div>
     </div>
 </section>
 

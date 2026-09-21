@@ -4437,20 +4437,140 @@ color: #FFFFFF;
    CONTACT SECTION
 ========================================= */
 
-.contact-section {
-    position: relative;
-    min-height: 765px;
-    width: 100%;
-    overflow: hidden;
-    background-image: url("../images/contact-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-
 .site-header.contact-page-header {
     background: var(--color-pure-white);
+}
+
+.iq-contact-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../images/Contact-section-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 180px;
+}
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.iq-contact-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:174px;
+}
+
+.iq-contact-section .contact-form-wrapper {
+    position: sticky;
+    top:0;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.iq-contact-section .sub-details {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.contact-heading {
+font-family: 'Neulis Neue';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+color:var(--color-pure-white);
+}
+
+.contact-heading span {
+    color:var(--color-electric-blue);
+    font-weight: 700 !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #B8B6B5;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 64px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.detail-icon {
+    width: 40px;
+    min-width: 40px;
+
+    display: flex;
+    justify-content: flex-start;
+
+    padding-top: 1px;
+
+    color: #087dff;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   DETAIL CONTENT
+========================================= */
+
+.detail-content {
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 28px;
+}
+
+.detail-content h3 {
+    margin: 0 0 9px;
+
+    color: #ff8a00;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1;
+    font-family: 'Area Normal' !important;
+}
+
+.detail-content p {
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+color: var(--color-pure-white)
 }
 
 
