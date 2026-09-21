@@ -10,6 +10,17 @@
     <!-- 2. Third-party Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!--3. Sick Slider CDN  -->
+   <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+>
+
     <!-- 3. Custom Main CSS (Last, taaki agar library ya base style override karni ho toh easily ho jaye) -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -136,7 +147,7 @@
         <!-- RIGHT FORM -->
             <div class="contact-form-wrapper">
 
-                <form class="contact-form" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+                <form class="contact-form has-glass-effect has-glass-dark" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
 
                     <!-- Form Header -->
                     <div class="contact-form-header">
@@ -311,11 +322,11 @@
     <div class="container">
         <div class="iq-contact-content-right">
             <div class="iq-contact-solution">
-                <h2 class="sub-head-2">Our Solutions</h2>
+                <h2 class="sub-head-2" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">Our Solutions</h2>
                 <!-- Solutions Grid -->
                 <div class="solutions-grid contact-solutions-grid">
                     <!-- Marketing Analytics -->
-                    <div class="solution-card no-hover-content has-content-side-left" data-aos="fade-up" data-aos-duration="750" data-aos-delay="0">
+                    <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="0">
                         <div class="solution-card-inner">
                             <div class="solution-card-content">
                                 <div class="solution-card-header">
@@ -345,7 +356,7 @@
                     </div>
 
                                         <!-- Marketing Technology -->
-                    <div class="solution-card no-hover-content has-content-side-left" data-aos="fade-up" data-aos-duration="750" data-aos-delay="240">
+                    <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="240">
                         <div class="solution-card-inner">
                             <div class="solution-card-content">
                                 <div class="solution-card-header">
@@ -376,7 +387,7 @@
                         </div>
                     </div>
                     <!-- Performance Marketing -->
-                    <div class="solution-card no-hover-content has-content-side-left" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
+                    <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                         <div class="solution-card-inner">
                             <div class="solution-card-content">
                                 <div class="solution-card-header">
@@ -410,7 +421,7 @@
                     <!-- Left Column -->
         
                     <!-- Creative Design -->
-                    <div class="solution-card no-hover-content has-content-side-left" data-aos="fade-up" data-aos-duration="750" data-aos-delay="360">
+                    <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="360">
                         <div class="solution-card-inner">
                             <div class="solution-card-content">
                                 <div class="solution-card-header">
@@ -444,14 +455,102 @@
             </div>
 
             <div class="iq-contact-diffrence">
-                <h2 class="sub-head-2">The iQuanti Difference</h2>
+                <h2 class="sub-head-2" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">The iQuanti Difference</h2>
                 <div class="count-box-grid">
-                       <div class="count-box has-glass-effect-white">
+                       <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                             <div class="count-value">18+</div>
                             <div class="count-divider"></div>
-                            <p class="count-text">Years in digital marketing</p>
+                            <p class="count-text body-text-20">Years in digital marketing</p>
+                       </div> 
+                        <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                            <div class="count-value">250+</div>
+                            <div class="count-divider"></div>
+                            <p class="count-text body-text-20">Clients empowered</p>
+                       </div> 
+                        <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                            <div class="count-value">10</div>
+                            <div class="count-divider"></div>
+                            <p class="count-text body-text-20">Locations in the US and globally</p>
+                       </div> 
+                        <div class="count-box has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                            <div class="count-value">11</div>
+                            <div class="count-divider"></div>
+                            <p class="count-text body-text-20">Times in the Inc.5000 list</p>
                        </div> 
                 </div>
+            </div>
+
+            <div class="testimonial-card-container">
+                <div class="testimonial-slider">
+                    <div>
+                    <div class="testimonial-slider-card">
+                            <div>
+                                <!-- Double Quote Icon SVG -->
+                                 <img src="assets/images/quote.svg" class="quote-icon" alt="Quote Icon">
+                                <p class="quote-text">Working with iQuanti has been a game-changer for our organization. Their analytical approach and creative execution set them apart.</p>
+                            </div>
+                            <div>
+                                <h4 class="author-title">Head of Marketing</h4>
+                                <span class="company-title">TOP US BANK</span>
+                            </div>
+                            </div>
+                      </div>
+                    <div>your content</div>
+                    <div>your content</div>
+                </div>
+
+            </div>
+
+            <div class="iq-contact-growth">
+                <h2 class="sub-head-2">The <span class="highlight-text highlight-text-electric-blue">growth partner</span> that organizations trust above all others.</h2>
+
+                <div class="trust-card-grid">
+                    <!-- Credit Card -->
+                    <div class="trust-card title-des-card  trust-card-credit has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <span class="trust-card-title">Banking</span>
+                        <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
+                        <p>of the <strong>largest US banks</strong> partner with us for growth marketing </p>
+                    <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                    </rect>
+                </svg>
+                    </div>
+
+                    <!-- Banking -->
+                    <div class="trust-card  title-des-card trust-card-banking has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="200">
+                        <span class="trust-card-title">Credit Card</span>
+                        <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
+                        <p>of the <strong>leading US credit card issuers</strong> empowered to grow</p>
+                        <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                    </rect>
+                </svg>
+                    </div>
+
+
+                    <!-- P&C Auto Dental -->
+                        <div class="trust-card title-des-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="400">
+                            <strong class="highlight-text highlight-text-electric-blue">Global Reach</strong>
+                            <p>AMER · EMEA · APAC</p>
+                            <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                        <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                        </rect>
+                    </svg>
+                    </div>
+
+                    <!-- 6 Markets -->
+                    <div class="trust-card title-des-card has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <strong class="highlight-text highlight-text-electric-blue">P&amp;C · Auto ·  Dental</strong>
+                        <p>Trusted by leading US insurance providers</p>
+                        <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                    </rect>
+                </svg>
+                    </div>
+
+ 
+                </div>
+    
             </div>
         </div> 
     </div>
@@ -576,6 +675,7 @@
     </div>
 </footer>
 
+
 </body>
 <script>
     const accordionHeaders = document.querySelectorAll(".accordion-header");
@@ -615,6 +715,8 @@
 
     });
   </script> -->
-<script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="assets/js/custom.js"></script>
 </html>
