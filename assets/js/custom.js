@@ -224,3 +224,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+// Vercel prototype motion parity.
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.site-header');
+    if (header) {
+        requestAnimationFrame(function () {
+            header.classList.add('is-motion-ready');
+        });
+    }
+
+    const clientSection = document.querySelector('.client-section');
+    if (clientSection && 'IntersectionObserver' in window) {
+        const chartObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add('is-chart-visible');
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '-10% 0px -10% 0px'
+        });
+
+        chartObserver.observe(clientSection);
+    } else if (clientSection) {
+        clientSection.classList.add('is-chart-visible');
+    }
+});

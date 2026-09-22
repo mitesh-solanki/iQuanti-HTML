@@ -4929,3 +4929,103 @@ body.contact-page {
 }
 
 
+
+/* =========================================================
+   Vercel prototype motion parity
+   Keeps AOS as the scroll engine, but matches the prototype's
+   60px travel distance and cubic-bezier timing more closely.
+   ========================================================= */
+
+[data-aos="fade-up"] {
+    transform: translate3d(0, 60px, 0);
+}
+
+[data-aos="fade-down"] {
+    transform: translate3d(0, -60px, 0);
+}
+
+[data-aos="fade-left"] {
+    transform: translate3d(60px, 0, 0);
+}
+
+[data-aos="fade-right"] {
+    transform: translate3d(-60px, 0, 0);
+}
+
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    will-change: opacity, transform;
+}
+
+/* Header enters from above on the first paint, matching the prototype. */
+.site-header {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+}
+
+.site-header.is-motion-ready {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Keep the hero artwork feeling alive after its entrance. */
+.hero-image img {
+    animation: iqHeroFloat 18s ease-in-out infinite alternate;
+    transform-origin: 50% 50%;
+    will-change: transform;
+}
+
+@keyframes iqHeroFloat {
+    0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate3d(0, -10px, 0) rotate(1deg) scale(1.01); }
+    100% { transform: translate3d(0, 8px, 0) rotate(-1deg) scale(1); }
+}
+
+/* Animate chart values when their section enters the viewport. */
+.client-section:not(.is-chart-visible) .fortune-bar {
+    transform: scaleY(0);
+}
+
+.fortune-bar {
+    transform-origin: bottom center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.client-section.is-chart-visible .fortune-bar-item:nth-child(1) .fortune-bar { transition-delay: 0.05s; }
+.client-section.is-chart-visible .fortune-bar-item:nth-child(2) .fortune-bar { transition-delay: 0.15s; }
+.client-section.is-chart-visible .fortune-bar-item:nth-child(3) .fortune-bar { transition-delay: 0.25s; }
+
+.client-section:not(.is-chart-visible) .industry-progress {
+    transform: scaleX(0);
+}
+
+.industry-progress {
+    transform-origin: left center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.client-section.is-chart-visible .industry-item:nth-child(1) .industry-progress { transition-delay: 0.05s; }
+.client-section.is-chart-visible .industry-item:nth-child(2) .industry-progress { transition-delay: 0.15s; }
+.client-section.is-chart-visible .industry-item:nth-child(3) .industry-progress { transition-delay: 0.25s; }
+.client-section.is-chart-visible .industry-item:nth-child(4) .industry-progress { transition-delay: 0.35s; }
+
+/* Respect OS accessibility settings and avoid hidden AOS content. */
+@media (prefers-reduced-motion: reduce) {
+    html:not(.no-js) [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .site-header,
+    .site-header.is-motion-ready,
+    .hero-image img,
+    .fortune-bar,
+    .industry-progress {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}

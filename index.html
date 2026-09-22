@@ -126,20 +126,20 @@
 
             <div class="hero-content">
 
-                <div class="section-label section-label-left" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="section-label section-label-left" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
                     <span>AI-Native Growth Marketing</span>
                 </div>
 
-                <h1 class="hero-title"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <h1 class="hero-title"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     Turn Every Consumer Signal Into
                     <span class="highlight-text highlight-text-electric-blue">Enterprise Growth</span>
                 </h1>
 
-                <p class="hero-description"  data-aos="fade-up"  data-aos-duration="1200" data-aos-delay="600">
+                <p class="hero-description"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
                     Proprietary AI-Powered Tech. Deep industry expertise. A data science core built
                     for enterprise complexity. iQuanti drives measurable acquisition growth for global brands.
                 </p>
-                <div class="cta-action-group"  data-aos="fade-up"  data-aos-duration="1400" data-aos-delay="800">
+                <div class="cta-action-group"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
                     <a href="#" class="cta-action cta-action-primary">Explore Solutions</a>
                      <a href="#" class="cta-action cta-action-outline">Our Work
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
@@ -1884,8 +1884,13 @@
     });
 </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+  <script>
     AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+        offset: 80,
+        anchorPlacement: 'top-bottom'
     });
   </script>
   <!-- <script>
