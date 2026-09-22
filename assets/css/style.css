@@ -202,6 +202,14 @@ p{
     font-family: area-normal, sans-serif !important;
 }
 
+.body-text-20-reg {
+    font-weight: 400 !important;
+}
+
+.body-text-20-bold {
+    font-weight: 700 !important;
+}
+
 .sm-text-12 {
     font-size: 12px;
     font-weight: 500;
@@ -469,6 +477,15 @@ p{
     border-radius: 100px;
 }
 
+
+/* ========================================
+   Banner Global CSS
+======================================== */
+.banner-main {
+    min-height: 766px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* ========================================
    SECTION
@@ -4088,11 +4105,25 @@ body.contact-page {
     height: 5px;
 }
 
-
-.sticky-contact-form.is-sticky {
-    position: fixed;
-    top: 30px;
+/* Our Works Page */
+.has-content-light > * {
+    color: var(--color-pure-white);
 }
+
+.our-works-banner {
+    background-image: url("../images/our-works-banner.jpg");
+} 
+
+.our-works-banner .banner-content {
+    max-width: 748px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
@@ -4113,6 +4144,10 @@ body.contact-page {
     .insights-section {
         padding-block: 62px 98px;
     }
+
+    .our-works-banner {
+        padding-block: 282px 30px;
+    } 
 
     .recognition-section {
         padding-block: 112px 100px;
