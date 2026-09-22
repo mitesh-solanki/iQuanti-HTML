@@ -1030,6 +1030,7 @@ section {
 
 .hero-grid .hero-content h1 {
     margin-bottom: 24px;
+    letter-spacing: -1.8px;
 }
 
 .hero-grid .hero-content .hero-description {
@@ -1517,7 +1518,7 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 228px 198px;
+    grid-template-rows: 228px 220px;
     gap: 24px;
 }
 
@@ -1539,11 +1540,11 @@ section {
     margin: 0;
     max-width: 500px;
     color: #3F4551;
-font-family: "Neulis Neue";
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 56px; /* 116.667% */
+    font-family: "Neulis Neue";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
 }
 
 /* .trust-heading .highlight-text  {
@@ -1557,7 +1558,6 @@ line-height: 56px; /* 116.667% */
 .trust-card {
     border-radius: 8px;
     padding: 16px 16px 24px;
-    gap:18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1565,15 +1565,9 @@ line-height: 56px; /* 116.667% */
     justify-content: flex-start;
     position: relative;
     border-radius: 8px;
-}
-
-
-
-.trust-card {
-    position: relative;
     overflow: hidden;
-    border-radius: 8px;
 }
+
 
 /* SVG */
 .card-border-fill {
@@ -1679,6 +1673,11 @@ line-height: 56px; /* 116.667% */
 .trust-card-banking {
     grid-column: 4;
     grid-row: 1;
+}
+
+.trust-card-banking ~ .trust-card > strong{
+    line-height: 1.125;
+    margin-bottom: 14px;
 }
 
 /* ========================================
@@ -3077,7 +3076,6 @@ color: #FFFFFF;
 .contact-title {
     margin: 0 0 24px;
     color: var(--color-pure-white);
-    font-size: 48px;
     line-height: 1.25;
     font-weight: 700;
     text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
@@ -3994,6 +3992,12 @@ body.contact-page {
     color: var(--color-slate-grey);
 }
 
+.trust-card-credit > strong ,
+.trust-card-banking > strong {
+    font-size: 64px;
+    line-height: 1.125;
+}
+
 .trust-card-grid .trust-card-credit > strong {
     font-size: 64px;
     line-height: 1.125;
@@ -4126,19 +4130,22 @@ body.contact-page {
 
 
 /* Media Query Start Here */
+
 @media (min-width: 1024px) {
     .hero-section {
         padding-bottom: 80px;
     }
 
-    .trust-heading h2 {
-        font-size: 40px;
+    .trust-section {
+        padding-block: 78px;
     }
 
-    .trust-card-credit > strong ,
-    .trust-card-banking > strong {
-        font-size: 80px;
-        line-height: 56px;
+    .research-section {
+        padding-block: 50px 100px;
+    }
+
+    .trust-heading h2 {
+        font-size: 40px;
     }
 
     .insights-section {
@@ -4152,18 +4159,85 @@ body.contact-page {
     .recognition-section {
         padding-block: 112px 100px;
     }
+
     .contact-section {
         padding-block: 45px 52px;
     }
+
 }
 
+
+@media(max-width:1380px){
+    /* Typography */
+    h1, .h1 {
+        font-size: 54px;
+    }
+
+    /* Home Page CSS */
+    /*Hero Section CSS  */
+    .hero-grid .hero-image img {
+        width: 85%;
+        margin: -60px auto -60px;
+        display: block;
+    }
+
+    .hero-grid .hero-content .cta-action-group {
+        margin-top: 24px;
+    }
+
+    .hero-grid .hero-content .cta-action-group[data-aos=fade-up] {
+        opacity: 1 !important;
+        -webkit-transform: translate3d(0, 10px, 0) !important;
+        transform: translate3d(0, 10px, 0) !important;
+    }
+
+    /* Client Section CSS */
+    .company-chart .company-value {
+        font-size: 38px;
+    }
+
+    /* Growth Section CSS */
+    .trust-card-credit > strong, 
+    .trust-card-banking > strong {
+        font-size: 54px;
+    }
+
+    /* Research Section */
+    .research-content h3 {
+        font-size: 32px;
+    }
+
+    .research-button {
+        font-size: 18px;
+    }
+
+    .ai-native-section {
+        min-height: 600px;
+    }
+
+    .site-footer .footer-grid {
+        padding-inline: 30px;
+    }
+
+    .site-footer .footer-logo img {
+        width: 145px;
+    }
+}
 
 
 /* =========================================
    TABLET LANDSCAPE / SMALL LAPTOP — 1199px and below
 ========================================= */
 @media (max-width: 1199px) {
-    
+    /* Typography */
+    h1, .h1 {
+        font-size: 48px;
+    } 
+        
+    h2, .h2 {
+        font-size: 44px;
+        line-height: 1.167;
+    }
     /* ========================================
     HERO SECTION
     ======================================== */
@@ -4174,6 +4248,10 @@ body.contact-page {
         display: unset;
     }
 
+    .trust-card-credit > strong, .trust-card-banking > strong {
+        font-size: 44px;
+    }
+
     /* ========================================
     INSIGHTS SECTION
     ======================================== */
@@ -4181,7 +4259,7 @@ body.contact-page {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .info-card-grid .info-card:last-child {
+    .info-card-grid >div:last-child {
         grid-column: 1 / -1;
         justify-self: center;
         width: calc(50% - 12px);
@@ -4245,6 +4323,14 @@ body.contact-page {
     .feature-card .impact-badge span {
         font-size: 24px;
         line-height: 30px;
+    }
+
+    
+    /* ========================================
+    Recognition & Trust Section 
+    ======================================== */
+    .recognition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -4326,7 +4412,11 @@ body.contact-page {
     .heading-wrap p {
         font-size: 16px;
     }
- 
+
+    .hero-grid .hero-image img {
+        width: 100%;
+        margin: 0;
+    }
     /* -----------------------------------------
        HEADER
     ----------------------------------------- */
@@ -4357,6 +4447,10 @@ body.contact-page {
     }
     .hero-grid .hero-image {
         width: 60%;
+    }
+
+    .hero-grid .hero-content .cta-action-group {
+        justify-content: center;
     }
 
     /* -----------------------------------------
@@ -4532,12 +4626,6 @@ body.contact-page {
     .research-controls {
         display: none;
     }
-}
-
-@media (max-width: 1024px) {
-    .trust-container {
-    grid-template-rows: 228px 228px;
-  }
 }
 
 
@@ -4900,6 +4988,14 @@ body.contact-page {
 ========================================= */
 
 @media (max-width: 575px) {
+        /* CTA Action Group */
+    .cta-action-group {
+        flex-direction: column;
+    }
+ 
+    .cta-action-group > a {
+        width: 100%;
+    }
 
     .contact-title {
         font-size: 32px;
