@@ -925,6 +925,7 @@ section {
 
 .hero-grid .hero-content h1 {
     margin-bottom: 24px;
+    letter-spacing: -1.8px;
 }
 
 .hero-grid .hero-content .hero-description {
@@ -1412,7 +1413,7 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 228px 198px;
+    grid-template-rows: 228px 220px;
     gap: 24px;
 }
 
@@ -1434,11 +1435,11 @@ section {
     margin: 0;
     max-width: 500px;
     color: #3F4551;
-font-family: "Neulis Neue";
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: 56px; /* 116.667% */
+    font-family: "Neulis Neue";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
 }
 
 /* .trust-heading .highlight-text  {
@@ -1452,7 +1453,6 @@ line-height: 56px; /* 116.667% */
 .trust-card {
     border-radius: 8px;
     padding: 16px 16px 24px;
-    gap:18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1460,24 +1460,9 @@ line-height: 56px; /* 116.667% */
     justify-content: flex-start;
     position: relative;
     border-radius: 8px;
-   border: 0.5px solid  #B8B6B5;
-   background: rgba(255, 255, 255, 0.10);
-}
-
-.trust-card::before {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-   content: '';
-   background-image: url(../images/glass-image.png);
-}
-
-.trust-card {
-    position: relative;
     overflow: hidden;
-    border-radius: 8px;
 }
+
 
 /* SVG */
 .card-border-fill {
@@ -1578,6 +1563,11 @@ line-height: 48px; /* 90% */
 .trust-card-banking {
     grid-column: 4;
     grid-row: 1;
+}
+
+.trust-card-banking ~ .trust-card > strong{
+    line-height: 1.125;
+    margin-bottom: 14px;
 }
 
 /* ========================================
@@ -3109,7 +3099,6 @@ color: #FFFFFF;
 .contact-title {
     margin: 0 0 24px;
     color: var(--color-pure-white);
-    font-size: 48px;
     line-height: 1.25;
     font-weight: 700;
     text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
@@ -3739,38 +3728,549 @@ color: #FFFFFF;
 }
 
 
+
+/* Contact Page CSS */
+
+/* Contact section */
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+body.contact-page {
+    background-color: var(--color-pure-white);
+}
+
+.site-header.contact-page-header {
+    background: var(--color-pure-white);
+}
+
+.iq-contact-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../images/Contact-section-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 180px;
+}
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.iq-contact-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:174px;
+}
+
+.iq-contact-section .contact-form-wrapper {
+    position: sticky;
+    top:0;
+    max-width: 511px;
+}
+
+.iq-contact-section .contact-form-wrapper .contact-form {
+    background-color: #3F455170;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.iq-contact-section .sub-details {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.contact-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color:var(--color-pure-white);
+}
+
+.contact-heading span {
+    color:var(--color-electric-blue);
+    font-weight: 700 !important;
+    font-family: "neulis-neue" !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--color-warm-gray);
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 64px;
+    gap: 24px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.contact-detail .detail-icon {
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1px;
+    color: #087dff;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   DETAIL CONTENT
+========================================= */
+
+.contact-detail.detail-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.contact-detail .detail-content h3 {
+    margin: 0 0 16px;
+    color: var(--color-primary-orange);
+}
+
+.contact-detail .detail-content p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.214;
+    color: var(--color-pure-white)
+}
+
+.contact-detail  p  a {
+    color: var(--color-pure-white) !important;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.contact-detail  p a:hover {
+    color: var(--color-primary-orange) !important;
+}
+
+.contact-detail .email-detail-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* IQ Contact Content Section */
+.iq-contact-content-section {
+    position: relative;
+}
+
+.iq-contact-content-section .sub-head-2 {
+    min-height: 84px;
+    align-content: center;
+}
+
+.iq-contact-solution {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.iq-contact-content-right {
+    max-width: 649px;
+}
+
+.contact-solutions-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.contact-solutions-grid .solution-card .solution-card-content{
+    padding: 16px;
+}
+
+.solution-card .solution-card-header {
+    margin-bottom: 16px;
+}
+
+.contact-solutions-grid .solution-card .solution-title h3 {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.429;
+}
+
+.contact-solutions-grid .solution-card .solution-description {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7145;
+    color: #222222;
+}
+
+.contact-solutions-grid .solution-card .solution-tags {
+    max-width: 500px;
+}
+
+.contact-solutions-grid .solution-card .solution-tags span {
+    font-weight: 400;
+}
+
+
+/* IQ Contact Diffrence */
+.iq-contact-diffrence {
+    margin-top: 110px;
+}
+
+.iq-contact-diffrence .sub-head-2 {
+    margin-bottom: 40px;
+}
+
+/* Count Box Widget */
+.count-box-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.count-box {
+    padding: 40px 28px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.count-box .count-value {
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "neulis-neue", sans-serif;
+    color: var(--color-electric-blue);
+    margin-bottom: 28px;
+}
+
+.count-box .count-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-electric-blue);
+}
+.count-box .count-text {
+    padding-top: 12px;
+    max-width: 190px;
+    font-weight: 500;
+    color: var(--color-elevate-gray);
+}
+
+/* IQ Contact Growth */
+.iq-contact-growth {
+    margin-top: 87px;
+}
+
+.iq-contact-growth .sub-head-2{
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.iq-contact-growth .trust-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.trust-card-grid .trust-card {
+    padding: 12px 16px 20px;
+}
+
+.trust-card-grid  .trust-card {
+    grid-column: auto;
+    gap: 0;
+}
+
+.trust-card-grid .trust-card .trust-card-title{
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-bottom: 9px;
+    font-size: 14px;
+    height: auto;
+}
+
+.trust-card-grid .trust-card p {
+    color: var(--color-slate-grey);
+}
+
+.trust-card-credit > strong ,
+.trust-card-banking > strong {
+    font-size: 64px;
+    line-height: 1.125;
+}
+
+.trust-card-grid .trust-card-credit > strong {
+    font-size: 64px;
+    line-height: 1.125;
+}
+
+.trust-card-grid .trust-card > strong {       
+    margin-bottom: 22px;
+    display: block;
+}
+
+
+/* IQ Testimonial Slider  */
+.iq-testimonial {
+    margin-top: 190px;
+}
+
+.contact-blurb-top-right {
+    top: -21%;
+    right: 0%;
+}
+
+.contact-blurb-bottom-right {
+    bottom: -15%;
+    right: -5%;
+}
+
+.contact-blurb-center-right {
+    right: -2%;
+    top: 8%;
+}
+
+.contact-blurb-center-left {
+    top: 22%;
+}
+
+.contact-blurb-center-bottom {
+    top: 45%;
+    right: 0;
+}
+
+/* Testimonial Slider Widget */
+.testimonial {
+    padding: 46px 32px 24px;
+    background-image: url('../images/testimonial-card-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.testimonial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000020;
+    z-index: -1;
+} 
+
+.testimonial .testimonial-card {
+    margin-bottom: 46px;
+}
+
+.testimonial-card .testimonial-quote-icon {
+    width: 66px;
+    height: 56px;
+    margin-bottom: 18px;
+}
+
+.testimonial-card .testimonial-quote-text {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.429;
+    color: var(--color-pure-white);
+}
+
+.testimonial-card .testimonial-author {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.testimonial-card .testimonial-author .testimonial-author-title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 900;
+    color: #FAFAFA;
+    font-family: area-normal,sans-serif !important;
+}
+
+.testimonial-card .testimonial-author .testimonial-company-title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ECBF87;
+}
+
+.testimonial .slick-dots li button {
+    width: 5px;
+    height: 5px;
+}
+.testimonial .slick-dots li.slick-active button {
+    width: 20px;
+    height: 5px;
+}
+
+/* Our Works Page */
+.has-content-light > * {
+    color: var(--color-pure-white);
+}
+
+.our-works-banner {
+    background-image: url("../images/our-works-banner.jpg");
+} 
+
+.our-works-banner .banner-content {
+    max-width: 748px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+
+
 /* Media Query Start Here */
+
 @media (min-width: 1024px) {
     .hero-section {
         padding-bottom: 80px;
+    }
+
+    .trust-section {
+        padding-block: 78px;
+    }
+
+    .research-section {
+        padding-block: 50px 100px;
     }
 
     .trust-heading h2 {
         font-size: 40px;
     }
 
-    .trust-card-credit > strong ,
-    .trust-card-banking > strong {
-        font-size: 80px;
-        line-height: 56px;
-    }
-
     .insights-section {
         padding-block: 62px 98px;
+    }
+
+    .our-works-banner {
+        padding-block: 282px 30px;
+    } 
+
+    .recognition-section {
+        padding-block: 112px 100px;
     }
 
     .contact-section {
         padding-block: 45px 52px;
     }
+
 }
 
+
+@media(max-width:1380px){
+    /* Typography */
+    h1, .h1 {
+        font-size: 54px;
+    }
+
+    /* Home Page CSS */
+    /*Hero Section CSS  */
+    .hero-grid .hero-image img {
+        width: 85%;
+        margin: -60px auto -60px;
+        display: block;
+    }
+
+    .hero-grid .hero-content .cta-action-group {
+        margin-top: 24px;
+    }
+
+    .hero-grid .hero-content .cta-action-group[data-aos=fade-up] {
+        opacity: 1 !important;
+        -webkit-transform: translate3d(0, 10px, 0) !important;
+        transform: translate3d(0, 10px, 0) !important;
+    }
+
+    /* Client Section CSS */
+    .company-chart .company-value {
+        font-size: 38px;
+    }
+
+    /* Growth Section CSS */
+    .trust-card-credit > strong, 
+    .trust-card-banking > strong {
+        font-size: 54px;
+    }
+
+    /* Research Section */
+    .research-content h3 {
+        font-size: 32px;
+    }
+
+    .research-button {
+        font-size: 18px;
+    }
+
+    .ai-native-section {
+        min-height: 600px;
+    }
+
+    .site-footer .footer-grid {
+        padding-inline: 30px;
+    }
+
+    .site-footer .footer-logo img {
+        width: 145px;
+    }
+}
 
 
 /* =========================================
    TABLET LANDSCAPE / SMALL LAPTOP — 1199px and below
 ========================================= */
 @media (max-width: 1199px) {
-    
+    /* Typography */
+    h1, .h1 {
+        font-size: 48px;
+    } 
+        
+    h2, .h2 {
+        font-size: 44px;
+        line-height: 1.167;
+    }
     /* ========================================
     HERO SECTION
     ======================================== */
@@ -3781,6 +4281,10 @@ color: #FFFFFF;
         display: unset;
     }
 
+    .trust-card-credit > strong, .trust-card-banking > strong {
+        font-size: 44px;
+    }
+
     /* ========================================
     INSIGHTS SECTION
     ======================================== */
@@ -3788,7 +4292,7 @@ color: #FFFFFF;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .info-card-grid .info-card:last-child {
+    .info-card-grid >div:last-child {
         grid-column: 1 / -1;
         justify-self: center;
         width: calc(50% - 12px);
@@ -3862,6 +4366,15 @@ color: #FFFFFF;
 
     .feature-card .impact-badge span {
         font-size: 24px;
+        line-height: 30px;
+    }
+
+    
+    /* ========================================
+    Recognition & Trust Section 
+    ======================================== */
+    .recognition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -3943,7 +4456,11 @@ color: #FFFFFF;
     .heading-wrap p {
         font-size: 16px;
     }
- 
+
+    .hero-grid .hero-image img {
+        width: 100%;
+        margin: 0;
+    }
     /* -----------------------------------------
        HEADER
     ----------------------------------------- */
@@ -3974,6 +4491,10 @@ color: #FFFFFF;
     }
     .hero-grid .hero-image {
         width: 60%;
+    }
+
+    .hero-grid .hero-content .cta-action-group {
+        justify-content: center;
     }
 
     /* -----------------------------------------
@@ -4149,12 +4670,6 @@ color: #FFFFFF;
     .research-controls {
         display: none;
     }
-}
-
-@media (max-width: 1024px) {
-    .trust-container {
-    grid-template-rows: 228px 228px;
-  }
 }
 
 
@@ -4517,6 +5032,14 @@ color: #FFFFFF;
 ========================================= */
 
 @media (max-width: 575px) {
+        /* CTA Action Group */
+    .cta-action-group {
+        flex-direction: column;
+    }
+ 
+    .cta-action-group > a {
+        width: 100%;
+    }
 
     .contact-title {
         font-size: 32px;
@@ -4543,6 +5066,9 @@ color: #FFFFFF;
     .contact-form {
         padding: 28px 20px !important;
     }
+
+
+
 }
 
 
