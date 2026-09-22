@@ -190,15 +190,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-jQuery(document).ready(function () {
+
+// Write JQuery Code Here
+ jQuery(document).ready(function () {
+
+    // Testimonials Slider
     jQuery('.testimonial-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 550,
         slidesToShow: 1,
         slidesToScroll: 1,
-        fade: true,
-        cssEase: 'cubic-bezier(0.25, 1, 0.5, 1)',
-        arrows: false
+        infinite: true,
+        arrows: false,
+        dots: true,
+        autoplay: false,
+        speed: 600,
+
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
+
 });
+
+
+

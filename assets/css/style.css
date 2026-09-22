@@ -89,12 +89,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body {
     background: #FCFAF6;
      background-image: url('../images/checked-line.png');
      background-size: cover;
+     overflow-x: clip;
 }
 
 body,* {
@@ -424,6 +426,49 @@ p{
 .custom-check-box-wrap input:checked + .custom-check-box {
     background-color: var(--color-primary-orange);
 }
+
+
+/* ========================================
+   Slick Slider Customize
+======================================== */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: static;
+}
+
+.slick-dots li {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.slick-dots li button {
+    padding: 0;
+    background-color: var(--color-soft-beige);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    transition: width, opacity, 150ms ease;
+}
+
+.slick-dots li button::before {
+    display: none;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #ED7000;
+    width: 32px;
+    height: 8px;
+    border-radius: 100px;
+}
+
 
 /* ========================================
    SECTION
@@ -3698,7 +3743,6 @@ body.contact-page {
 }
 
 .contact-heading {
-    font-family: 'Neulis Neue';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -3709,6 +3753,7 @@ body.contact-page {
 .contact-heading span {
     color:var(--color-electric-blue);
     font-weight: 700 !important;
+    font-family: "neulis-neue" !important;
 }
 
 
@@ -3796,6 +3841,10 @@ body.contact-page {
 
 
 /* IQ Contact Content Section */
+.iq-contact-content-section {
+    position: relative;
+}
+
 .iq-contact-content-section .sub-head-2 {
     min-height: 84px;
     align-content: center;
@@ -3897,6 +3946,7 @@ body.contact-page {
 
 .iq-contact-growth .sub-head-2{
     margin-bottom: 40px;
+    max-width: 600px;
 }
 
 .iq-contact-growth .trust-card-grid {
@@ -3937,7 +3987,38 @@ body.contact-page {
     display: block;
 }
 
-.testimonial-slider-card {
+
+/* IQ Testimonial Slider  */
+.iq-testimonial {
+    margin-top: 190px;
+}
+
+.contact-blurb-top-right {
+    top: -21%;
+    right: 0%;
+}
+
+.contact-blurb-bottom-right {
+    bottom: -15%;
+    right: -5%;
+}
+
+.contact-blurb-center-right {
+    right: -2%;
+    top: 8%;
+}
+
+.contact-blurb-center-left {
+    top: 22%;
+}
+
+.contact-blurb-center-bottom {
+    top: 45%;
+    right: 0;
+}
+
+/* Testimonial Slider Widget */
+.testimonial {
     padding: 46px 32px 24px;
     background-image: url('../images/testimonial-card-image.png');
     background-repeat: no-repeat;
@@ -3945,9 +4026,11 @@ body.contact-page {
     position: relative;
     z-index: 0;
     border: 1px solid #E0E0E0;
+    border-radius: 24px;
+    overflow: hidden;
 }
 
-.testimonial-slider-card::before {
+.testimonial::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -3957,15 +4040,58 @@ body.contact-page {
     z-index: -1;
 } 
 
-.testimonial-slider-card .quote-icon {
-    width: 66px;
-    height: 56px;
+.testimonial .testimonial-card {
+    margin-bottom: 46px;
 }
 
-.testimonial-slider-card .quote-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain ;
+.testimonial-card .testimonial-quote-icon {
+    width: 66px;
+    height: 56px;
+    margin-bottom: 18px;
+}
+
+.testimonial-card .testimonial-quote-text {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.429;
+    color: var(--color-pure-white);
+}
+
+.testimonial-card .testimonial-author {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.testimonial-card .testimonial-author .testimonial-author-title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 900;
+    color: #FAFAFA;
+    font-family: area-normal,sans-serif !important;
+}
+
+.testimonial-card .testimonial-author .testimonial-company-title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ECBF87;
+}
+
+.testimonial .slick-dots li button {
+    width: 5px;
+    height: 5px;
+}
+.testimonial .slick-dots li.slick-active button {
+    width: 20px;
+    height: 5px;
+}
+
+
+.sticky-contact-form.is-sticky {
+    position: fixed;
+    top: 30px;
 }
 
 /* Media Query Start Here */
