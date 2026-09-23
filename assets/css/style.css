@@ -112,14 +112,14 @@ body,* {
 ========================================= */
 
 h1,h2,h3,h4,h5,h6 {
-font-family: "neulis-neue" !important;
+font-family: "neulis-neue";
 color: var(--color-elevate-gray);
 font-weight: 700;
 }
 
+/*
 
 
-/* H1 — 96 / 110 */
 h1,
 .h1 {
     font-size: 64px;
@@ -127,40 +127,36 @@ h1,
     letter-spacing: -1.8px;
 }
 
-/* H2 — 72 / 120 */
+
 h2,
 .h2 {
     font-size: 48px;
     line-height: 1.167;
 }
 
-/* H3 — 64 / 120 */
 h3,
 .h3 {
     font-size: 36px;
     line-height: 1.25;
 }
 
-/* H4 — 56 / 120 */
 h4,
 .h4 {
     font-size: 24px;
     line-height: 1.25;
 }
 
-/* H5 — 48 / Auto */
 .h5-large {
     font-size: 20px;
     line-height: normal;
 }
 
-/* H5 — 40 / 110 */
 h5,
 .h5 {
     font-size: 18px;
     line-height: 110%;
 }
-
+*/
 p{
     font-family: area-normal,sans-serif;
     font-style: normal;
@@ -176,7 +172,7 @@ p{
     line-height: 150%;
 }
 
-.body-text-14 {
+/* .body-text-14 {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.714;
@@ -221,7 +217,153 @@ p{
     line-height: 1.25;
     font-weight: 700;
     font-family: "neulis-neue" !important;
+} */
+
+
+
+
+/* ========================================
+   Typography Base
+======================================== */
+
+h1,
+h2,
+.headline-1,
+.headline-2,
+.sub-head-1,
+.sub-head-2 {
+    font-family: "neulis-neue", sans-serif;
+    margin: 0;
 }
+
+
+/* ========================================
+   Headings
+======================================== */
+
+h1,
+.headline-1 {
+    font-size: 64px;
+    line-height: 1.125;
+    font-weight: 700;
+}
+
+h2,
+.headline-2 {
+    font-size: 48px;
+    line-height: 1.167;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   Sub Headings
+======================================== */
+
+.sub-head-1 {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.sub-head-2 {
+    font-size: 48px;
+    line-height: 1.167;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   Body Text
+======================================== */
+
+.body-text-32,
+.body-text-24,
+.body-text-20,
+.body-text-18,
+.body-text-16,
+.body-text-14,
+.body-text-12 {
+    font-family: "area-normal", sans-serif;
+    margin: 0;
+}
+
+.body-text-32 {
+    font-size: 32px;
+    line-height: 1.125;
+}
+
+.body-text-24 {
+    font-size: 24px;
+    line-height: 1.333;
+}
+
+.body-text-20 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.body-text-18 {
+    font-size: 18px;
+    line-height: 1.556;
+}
+
+.body-text-16 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.body-text-14 {
+    font-size: 14px;
+    line-height: 1.714;
+}
+
+.body-text-12 {
+    font-size: 12px;
+    line-height: 1.333;
+}
+
+
+/* ========================================
+   Font Weights
+======================================== */
+
+.body-text-reg {
+    font-weight: 400;
+}
+
+.body-text-mid{
+    font-weight: 500;
+}
+
+.body-text-semi {
+    font-weight: 600;
+}
+
+.body-text-ext-bold {
+  font-weight: 800;
+}    
+
+.body-text-bold {
+    font-weight: 700;
+}
+
+.body-text-black {
+    font-weight: 900;
+}
+
+/* ========================================
+   Small Text
+======================================== */
+
+.sm-text {
+    font-size: 12px;
+    line-height: 1.667;
+}
+
+
+
+
 
 /* ========================================
    GLOBAL COMPONENTS 
@@ -1305,10 +1447,6 @@ section {
     transform: translateX(-50%);
     margin-bottom: 5px;
     color: var(--color-pure-white);
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.7px;
-    font-weight: 900;
 }
 
 .fortune-bar {
@@ -1333,8 +1471,6 @@ section {
     margin-top: 8px;
     white-space: nowrap;
     color: var(--color-pure-white);
-    font-size: 14px;
-    line-height: 24px;
 }
 
 .fortune-axis-title {
@@ -1383,9 +1519,6 @@ section {
 
 .company-chart .company-name {
     color: var(--color-pure-white);
-    font-size: 18px;
-    line-height: 1.556;
-    font-weight: 700;
 }
 
 .company-chart .company-bar-wrapper {
@@ -1414,9 +1547,7 @@ section {
 .company-chart .company-value {
     font-family: "neulis-neue";
     color: var(--color-pure-white);
-    font-size: 48px;
-    line-height: 1.167;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* ========================================
@@ -1441,16 +1572,10 @@ section {
     justify-content: space-between;
     margin-bottom: 8px;
     color: var(--color-pure-white);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.556;
 }
 
 .industry-top span:last-child {
     color: var(--color-pure-white);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
 }
 
 .industry-track {
@@ -1538,13 +1663,9 @@ section {
 
 .trust-heading h2 {
     margin: 0;
-    max-width: 500px;
+    max-width: 588px;
     color: #3F4551;
     font-family: "Neulis Neue";
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 56px; /* 116.667% */
 }
 
 /* .trust-heading .highlight-text  {
@@ -1630,20 +1751,19 @@ section {
     border-radius: 100px;
     border: 0.5px solid  #C5D9E6;
     background:#E6F2FF;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
 }
 
 .trust-card > strong {
     font-style: normal;
     display: flex;
     align-items: center;
-    font-family: "Neulis Neue";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 48px; /* 90% */
+    color: var(--color-electric-blue); 
 }
 
+.trust-card>strong.headline-1 {
+    margin-bottom: 10px;
+}
 .trust-card.title-des-card > strong {
     font-family: area-normal, sans-serif;
 }
@@ -1651,16 +1771,8 @@ section {
 .trust-card p {
     margin-top: auto;
     color: var(--color-elevate-gray);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
 }
 
-
-.trust-card p strong {
-    font-weight: 900;
-}
 /* ========================================
    TOP CARDS
 ======================================== */
@@ -3992,8 +4104,8 @@ body.contact-page {
     color: var(--color-slate-grey);
 }
 
-.trust-card-credit > strong ,
-.trust-card-banking > strong {
+.trust-card-grid .trust-card-credit > strong ,
+.trust-card-grid .trust-card-banking > strong {
     font-size: 64px;
     line-height: 1.125;
 }
@@ -4144,10 +4256,6 @@ body.contact-page {
         padding-block: 50px 100px;
     }
 
-    .trust-heading h2 {
-        font-size: 40px;
-    }
-
     .insights-section {
         padding-block: 62px 98px;
     }
@@ -4168,9 +4276,55 @@ body.contact-page {
 
 
 @media(max-width:1380px){
-    /* Typography */
-    h1, .h1 {
+
+    /* ========================================
+    Typography
+    ======================================== */
+    h1,
+    .headline-1 {
         font-size: 54px;
+    }
+
+    h2,
+    .headline-2 {
+        font-size: 46px;
+    }
+
+    .sub-head-1 {
+        font-size: 38px;
+    }
+
+    .sub-head-2 {
+        font-size: 46px;
+    }
+
+    .body-text-32 {
+        font-size: 30px;
+    }
+
+    .body-text-24 {
+        font-size: 23px;
+    }
+
+    .body-text-20 {
+        font-size: 19px;
+    }
+
+    .body-text-18 {
+        font-size: 18px;
+    }
+
+    .body-text-16 {
+        font-size: 16px;
+    }
+
+    .body-text-14 {
+        font-size: 14px;
+    }
+
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
     }
 
     /* Home Page CSS */
@@ -4194,12 +4348,6 @@ body.contact-page {
     /* Client Section CSS */
     .company-chart .company-value {
         font-size: 38px;
-    }
-
-    /* Growth Section CSS */
-    .trust-card-credit > strong, 
-    .trust-card-banking > strong {
-        font-size: 54px;
     }
 
     /* Research Section */
@@ -4229,15 +4377,58 @@ body.contact-page {
    TABLET LANDSCAPE / SMALL LAPTOP — 1199px and below
 ========================================= */
 @media (max-width: 1199px) {
-    /* Typography */
-    h1, .h1 {
+
+    /* ========================================
+    Typography
+    ======================================== */
+
+    h1,
+    .headline-1 {
         font-size: 48px;
-    } 
-        
-    h2, .h2 {
-        font-size: 44px;
-        line-height: 1.167;
     }
+
+    h2,
+    .headline-2 {
+        font-size: 42px;
+    }
+
+    .sub-head-1 {
+        font-size: 34px;
+    }
+
+    .sub-head-2 {
+        font-size: 42px;
+    }
+
+    .body-text-32 {
+        font-size: 28px;
+    }
+
+    .body-text-24 {
+        font-size: 22px;
+    }
+
+    .body-text-20 {
+        font-size: 18px;
+    }
+
+    .body-text-18 {
+        font-size: 17px;
+    }
+
+    .body-text-16 {
+        font-size: 16px;
+    }
+
+    .body-text-14 {
+        font-size: 14px;
+    }
+
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
+    }
+
     /* ========================================
     HERO SECTION
     ======================================== */
@@ -4246,10 +4437,6 @@ body.contact-page {
     }
     .hero-grid .hero-content .hero-title .highlight-text {
         display: unset;
-    }
-
-    .trust-card-credit > strong, .trust-card-banking > strong {
-        font-size: 44px;
     }
 
     /* ========================================
@@ -4385,6 +4572,106 @@ body.contact-page {
     }
     .l1 {
         font-size: 8px;
+    }
+
+
+
+    h1,
+  .headline-1 {
+    font-size: 42px;
+  }
+
+  h2,
+  .headline-2 {
+    font-size: 36px;
+  }
+
+  .sub-head-1 {
+    font-size: 32px;
+  }
+
+  .sub-head-2 {
+    font-size: 36px;
+  }
+
+  .body-text-32 {
+    font-size: 26px;
+  }
+
+  .body-text-24 {
+    font-size: 21px;
+  }
+
+  .body-text-20 {
+    font-size: 18px;
+  }
+
+  .body-text-18 {
+    font-size: 16px;
+  }
+
+  .body-text-16 {
+    font-size: 15px;
+  }
+
+  .body-text-14 {
+    font-size: 14px;
+  }
+
+  .body-text-12,
+  .sm-text {
+    font-size: 12px;
+  }
+
+
+   /* ========================================
+    Typography
+    ======================================== */
+    h1,
+    .headline-1 {
+        font-size: 42px;
+    }
+
+    h2,
+    .headline-2 {
+        font-size: 36px;
+    }
+
+    .sub-head-1 {
+        font-size: 32px;
+    }
+
+    .sub-head-2 {
+        font-size: 36px;
+    }
+
+    .body-text-32 {
+        font-size: 26px;
+    }
+
+    .body-text-24 {
+        font-size: 21px;
+    }
+
+    .body-text-20 {
+        font-size: 18px;
+    }
+
+    .body-text-18 {
+        font-size: 16px;
+    }
+
+    .body-text-16 {
+        font-size: 15px;
+    }
+
+    .body-text-14 {
+        font-size: 14px;
+    }
+
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
     }
 
 
@@ -4685,6 +4972,56 @@ body.contact-page {
         line-height: 150%;
     }
 
+    /* ========================================
+    Typography
+    ======================================== */
+    h1,
+    .headline-1 {
+        font-size: 38px;
+    }
+
+    h2,
+    .headline-2 {
+        font-size: 32px;
+    }
+
+    .sub-head-1 {
+        font-size: 28px;
+    }
+
+    .sub-head-2 {
+        font-size: 32px;
+    }
+
+    .body-text-32 {
+        font-size: 24px;
+    }
+
+    .body-text-24 {
+        font-size: 20px;
+    }
+
+    .body-text-20 {
+        font-size: 17px;
+    }
+
+    .body-text-18 {
+        font-size: 16px;
+    }
+
+    .body-text-16 {
+        font-size: 15px;
+    }
+
+    .body-text-14 {
+        font-size: 14px;
+    }
+
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
+    }
+
 
     /* -----------------------------------------
        SECTION
@@ -4807,10 +5144,6 @@ body.contact-page {
     .fortune-bars {
         gap: 8px;
         justify-content: space-evenly;
-    }
-
-    .fortune-value {
-        font-size: 14px;
     }
 
     .fortune-bar {
@@ -4988,7 +5321,58 @@ body.contact-page {
 ========================================= */
 
 @media (max-width: 575px) {
-        /* CTA Action Group */
+    /* ========================================
+        Typography
+    ======================================== */
+
+    h1,
+    .headline-1 {
+        font-size: 34px;
+    }
+
+    h2,
+    .headline-2 {
+        font-size: 28px;
+    }
+
+    .sub-head-1 {
+        font-size: 26px;
+    }
+
+    .sub-head-2 {
+        font-size: 28px;
+    }
+
+    .body-text-32 {
+        font-size: 22px;
+    }
+
+    .body-text-24 {
+        font-size: 19px;
+    }
+
+    .body-text-20 {
+        font-size: 16px;
+    }
+
+    .body-text-18 {
+        font-size: 16px;
+    }
+
+    .body-text-16 {
+        font-size: 14px;
+    }
+
+    .body-text-14 {
+        font-size: 13px;
+    }
+
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
+    }
+
+    /* CTA Action Group */
     .cta-action-group {
         flex-direction: column;
     }
