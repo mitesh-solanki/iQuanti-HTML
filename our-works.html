@@ -10,12 +10,12 @@
     <!-- 2. Third-party Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- 3. Custom Main CSS (Last, taaki agar library ya base style override karni ho toh easily ho jaye) -->
+    <!-- 3. Custom Main CSS  -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="contact-page">
+<body class="our-works-page bg-pure-white">
 <!-- Header Section Start -->
-<header class="site-header contact-page-header">
+<header class="site-header contact-page-header has-header-white">
     <div class="header-container container">
 
         <!-- Logo -->
@@ -70,11 +70,11 @@
 </header>
 <!-- Header Section End -->
 
-<section class="our-works-banner banner-main">
+<section class="our-works-banner banner-main has-header-space">
     <div class="container">
         <div class="banner-content has-content-light">
-            <h1>From Signal to Growth,  Proven in the Market </h1>
-            <p class="body-text-20 body-text-20-reg">Proprietary AI, a data science core, and deep industry expertise put to work for global brands. Here's what measurable enterprise growth looks like in practice. </p>
+            <h1 class="headline-1">From Signal to Growth,  Proven in the Market </h1>
+            <p class="body-text-20 body-text-reg">Proprietary AI, a data science core, and deep industry expertise put to work for global brands. Here's what measurable enterprise growth looks like in practice. </p>
             <a href="#contact" class="cta-action cta-action-primary" bis_skin_checked="1">Contact Us
                 <img src="assets/images/arrow-white.svg" alt="" width="15" height="15" >
             </a>
@@ -83,10 +83,10 @@
 </section>
 
 <!-- Our Works Filters Start -->
-<section class="our-works-filters">
+<section class="our-works-filters-section">
     <div class="container">
 
-        <div class="our-works-switch" role="group" aria-label="Filter by">
+        <div class="pill-switch" role="group" aria-label="Filter by">
             <button type="button"
                 class="cta-action cta-action-primary"
                 data-works-mode="industry"
@@ -101,34 +101,37 @@
             </button>
         </div>
 
-        <div class="our-works-chips" data-works-group="industry">
-            <button type="button" class="our-works-chip">All Work</button>
-            <button type="button" class="our-works-chip is-active">Banking &amp; Financial Services</button>
-            <button type="button" class="our-works-chip">Insurance</button>
-            <button type="button" class="our-works-chip">Fintech</button>
-            <button type="button" class="our-works-chip">E-commerce</button>
-            <button type="button" class="our-works-chip">Consumer Brands</button>
+        <div class="pill-tabs" data-works-group="industry">
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">All Work</button>
+            <button type="button" class="pill-tab-button is-active body-text-16 body-text-reg">Banking &amp; Financial Services</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Insurance</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Fintech</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">E-commerce</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Consumer Brands</button>
         </div>
 
-        <div class="our-works-chips" data-works-group="solution" hidden>
-            <button type="button" class="our-works-chip is-active">All Work</button>
-            <button type="button" class="our-works-chip">Marketing Analytics</button>
-            <button type="button" class="our-works-chip">Performance Marketing</button>
-            <button type="button" class="our-works-chip">Marketing Technology</button>
-            <button type="button" class="our-works-chip">Creative &amp; Experience</button>
+        <div class="pill-tabs" data-works-group="solution" hidden>
+            <button type="button" class="pill-tab-button is-active body-text-16 body-text-reg">All Work</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Marketing Analytics</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Performance Marketing</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Marketing Technology</button>
+            <button type="button" class="pill-tab-button body-text-16 body-text-reg">Creative &amp; Experience</button>
         </div>
 
-        <div class="info-card-grid">
+        <div class="media-content-card-grid">
+            <!-- Card 1: Laurel Road -->
             <div data-aos="fade-up" data-aos-delay="100">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-laurel-road has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-1.jpg" alt="Laurel Road and LEAP">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title"><span class="highlight-text highlight-text-electric-blue">152% Uplift</span> in Form Fill Starts for Laurel Road Achieved Through AI-Led LEAP Optimization Framework</h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold body-text-20 body-text-bold">
+                            <span class="highlight-text highlight-text-area highlight-text-electric-blue body-text-20 body-text-bold">152% Uplift</span> in Form Fill Starts for Laurel Road Achieved Through AI-Led LEAP Optimization Framework
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -136,16 +139,19 @@
                 </div>
             </div>
 
+            <!-- Card 2: Ranking Growth -->
             <div data-aos="fade-up" data-aos-delay="150">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-ranking-growth has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-2.jpg" alt="Ranking growth case study">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title">Reversing Negative Trends to Achieve <span class="highlight-text highlight-text-electric-blue">260% Ranking Growth</span></h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold">
+                            Reversing Negative Trends to Achieve <span class="highlight-text highlight-text-area highlight-text-electric-blue">260% Ranking Growth</span>
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -153,16 +159,19 @@
                 </div>
             </div>
 
+            <!-- Card 3: UniFirst -->
             <div data-aos="fade-up" data-aos-delay="200">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-unifirst has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-3.jpg" alt="UniFirst and iQuanti">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title">Driving <span class="highlight-text highlight-text-electric-blue">3.7X Lead Growth</span> with Strategic Paid Search</h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold">
+                            Driving <span class="highlight-text highlight-text-area highlight-text-electric-blue body-text-20 body-text-bold">3.7X Lead Growth</span> with Strategic Paid Search
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -170,16 +179,19 @@
                 </div>
             </div>
 
+            <!-- Card 4: Cruise Company -->
             <div data-aos="fade-up" data-aos-delay="100">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-cruise has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-4.jpg" alt="Cruise company case study">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title">How a leading cruise company navigated volatile demand with <span class="highlight-text highlight-text-electric-blue">creative targeting</span> and automated bidding</h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold">
+                            How a leading cruise company navigated volatile demand with <span class="highlight-text highlight-text-electric-blue">creative targeting</span> and automated bidding
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -187,16 +199,19 @@
                 </div>
             </div>
 
+            <!-- Card 5: Hospitality Brand -->
             <div data-aos="fade-up" data-aos-delay="150">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-hospitality has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-5.jpg" alt="Hospitality brand case study">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title">Optimizing user experience: Driving <span class="highlight-text highlight-text-electric-blue">80% higher conversions</span> for a hospitality brand</h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold">
+                            Optimizing user experience: Driving <span class="highlight-text highlight-text-area highlight-text-electric-blue body-text-20 body-text-bold">80% higher conversions</span> for a hospitality brand
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -204,16 +219,19 @@
                 </div>
             </div>
 
+            <!-- Card 6: GA4 Migration -->
             <div data-aos="fade-up" data-aos-delay="200">
-                <div class="info-card has-glass-effect has-glass-white blur-xs">
-                    <div class="info-card-media">
+                <div class="media-content-card media-content-card-ga4 has-glass-effect has-glass-white blur-sm">
+                    <div class="media-content-card-media">
                         <img src="assets/images/our-works-card-6.jpg" alt="GA4 performance reporting case study">
                     </div>
-                    <div class="info-card-innner">
-                        <h3 class="info-card-title">Transforming <span class="highlight-text highlight-text-electric-blue">performance reporting</span>: How iQuanti helped a financial services company migrate seamlessly to GA4</h3>
-                        <div class="info-card-actions">
-                            <a href="#" class="info-card-read-more cta-action">Explore Solutions</a>
-                            <a href="#" class="cta-action cta-action-white">Key Results
+                    <div class="media-content-card-body">
+                        <h3 class="media-content-card-title body-text-20 body-text-bold">
+                            Transforming <span class="highlight-text  highlight-text-area highlight-text-area highlight-text-electric-blue body-text-20 body-text-bold">performance reporting</span>: How iQuanti helped a financial services company migrate seamlessly to GA4
+                        </h3>
+                        <div class="media-content-card-actions">
+                            <a href="#" class="media-content-card-link cta-action">Explore Solutions</a>
+                            <a href="#" class="media-content-card-btn cta-action cta-action-white">Key Results
                                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
                             </a>
                         </div>
@@ -233,29 +251,27 @@
 <!-- Our Works Filters End -->
 
 <!-- Our Works Stats Start -->
-<section class="our-works-stats">
+<section class="our-works-stats-section">
     <div class="container">
-        <div class="our-works-stats-bar has-glass-effect blur-xs" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="our-works-stat">
-                <div class="count-value">381%</div>
+        <div class="stats-bar-box has-glass-effect blur-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="stats-bar-box-stat">
+                <div class="stats-bar-count-value number-headline">381%</div>
                 <p class="count-text body-text-20">Enterprise clients in regulated categories</p>
             </div>
 
-            <span class="our-works-stat-divider" aria-hidden="true">
-                <img src="assets/images/our-works-stat-divider.svg" alt="">
+            <span class="stats-bar-stat-divider" aria-hidden="true">
             </span>
 
-            <div class="our-works-stat">
-                <div class="count-value">18+</div>
+            <div class="stats-bar-box-stat">
+                <div class="stats-bar-count-value number-headline">18+</div>
                 <p class="count-text body-text-20">Years focused on banking, insurance and fintech</p>
             </div>
 
-            <span class="our-works-stat-divider" aria-hidden="true">
-                <img src="assets/images/our-works-stat-divider.svg" alt="">
+            <span class="stats-bar-stat-divider" aria-hidden="true">
             </span>
 
-            <div class="our-works-stat">
-                <div class="count-value">381%</div>
+            <div class="stats-bar-box-stat">
+                <div class="stats-bar-count-value number-headline">381%</div>
                 <p class="count-text body-text-20">Average lift across conversion engagements</p>
             </div>
         </div>
@@ -264,12 +280,12 @@
 <!-- Our Works Stats End -->
 
 <!-- Our Works CTA Start -->
-<section class="our-works-cta">
+<section class="our-works-cta-section">
     <div class="container">
-        <div class="our-works-cta-inner">
-            <div class="heading-wrap heading-wrap-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
-                <h2>Ready to Put AI to Work for Your Growth?</h2>
-                <p>Bring us your most complex marketing problem. We're built for it.</p>
+        <div class="call-to-action-content">
+            <div class="call-to-action-content-heading-wrap heading-wrap-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+                <h2 class="headline-2">Ready to Put AI to Work for Your Growth?</h2>
+                <p class="body-text-24 body-text-bold">Bring us your most complex marketing problem. We're built for it.</p>
             </div>
             <a href="#contact" class="cta-action cta-action-primary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
                 Get In Touch
@@ -423,22 +439,6 @@
     AOS.init({
     });
   </script>
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-        document.querySelectorAll('[data-aos]').forEach(function (element, index) {
-            element.setAttribute('data-aos-delay', index * 200);
-        });
-
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out-cubic',
-            offset: 0
-        });
-
-    });
-  </script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="assets/js/custom.js"></script>
