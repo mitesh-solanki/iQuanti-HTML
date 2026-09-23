@@ -4972,6 +4972,10 @@ body.contact-page {
     .solution-container {
         padding-top: 80px;
     }
+
+        .section-footer {
+        margin-top:30px !important
+    }   
 }
 
 
