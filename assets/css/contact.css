@@ -407,7 +407,7 @@ body.contact-page {
 
 @media(max-width:1380px) {
     .count-box .count-value {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .iq-contact-diffrence,
@@ -422,5 +422,119 @@ body.contact-page {
 
     .contact-detail {
         margin-top: 34px;
+    }
+
+    .iq-contact-content-section {
+        padding-block:80px;
+    }
+
+    .trust-card-grid .trust-card-credit > strong, .trust-card-grid .trust-card-banking > strong {
+        font-size: 44px;
+    }
+
+   
+
+}
+
+@media(max-width: 1023px) { 
+    .iq-contact-section .sub-details {
+        max-width: 500px;
+        margin: 0 auto 50px;
+    }
+     .contact-solutions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 24px !important;
+    }
+
+    .contact-heading {
+        text-align: center;
+    }
+
+    .contact-solutions-grid .solution-card .solution-title h3 {
+        font-size: 22px;
+    }
+
+    .iq-contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .iq-contact-section .contact-form-wrapper {
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .contact-detail-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .contact-detail-wrapper > div {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-detail {
+        margin-top: 0;
+    }
+
+    .iq-contact-content-right {
+        max-width: 100%;
+    }
+
+    .solution-card .solution-card-header {
+        flex-direction: column;
+    }
+
+    .solution-card.has-content-side-left .solution-card-body {
+        padding-left: 0 !important;
+    }
+
+    .iq-contact-content-section .sub-head-2 {
+        min-height: auto;
+        margin-inline: auto;
+    }
+
+    .iq-contact-diffrence .sub-head-2,
+    .iq-contact-content-section .sub-head-2 {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .iq-contact-solution {
+        gap: 0;
+    }
+
+    .testimonial-card .testimonial-quote-text {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:767px) {
+        .contact-detail-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-solutions-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    .count-box-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .iq-contact-diffrence, .testimonial {
+        margin-top: 60px;
+    }
+
+    .testimonial-card .testimonial-quote-text {
+        font-size: 20px;
+    }
+
+    .iq-contact-growth {
+        margin-top: 60px;
+    }
+    .iq-contact-growth .trust-card-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

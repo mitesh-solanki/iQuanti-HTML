@@ -3452,7 +3452,7 @@ color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 16px;
-    Width: 315px;
+    max-Width: 315px;
     padding: 16px;
     background: #F8F8F8;
     border: 1px solid #E5E7EB;
@@ -3461,7 +3461,7 @@ color: #FFFFFF;
     background: #EBEBEB;
     border: 1px solid #CFCFCF;
     border-radius: 8px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .recaptcha-checkbox {
@@ -4346,8 +4346,7 @@ color: #FFFFFF;
 
     .site-footer .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        padding-inline: 0;
+        gap: 24px;
     }
 
     .site-footer .footer-newsletter {
@@ -4438,8 +4437,8 @@ color: #FFFFFF;
     .trust-card:nth-of-type(5),
     .trust-card:nth-of-type(6),
     .trust-card:nth-of-type(7) {
-        grid-column: auto;
-        grid-row: auto;
+        grid-column: unset;
+        grid-row: unset;
     }
 
     .trust-card {
@@ -4731,16 +4730,6 @@ color: #FFFFFF;
         text-align: center;
     }
 
-    /* All cards become single column */
-    .trust-card-credit,
-    .trust-card-banking,
-    .trust-card:nth-of-type(4),
-    .trust-card:nth-of-type(5),
-    .trust-card:nth-of-type(6),
-    .trust-card:nth-of-type(7) {
-        grid-column: 1;
-        grid-row: auto;
-    }
 
     .trust-card {
         width: 100%;
@@ -4949,7 +4938,7 @@ color: #FFFFFF;
 
     .site-footer .footer-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        padding-inline: 0;
     }
 
     .site-footer .footer-newsletter {
