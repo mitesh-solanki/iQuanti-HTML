@@ -4276,6 +4276,90 @@ body.contact-page {
     margin-top: 28px;
 }
 
+/* Our Works Stats */
+.our-works-stats {
+    padding-block: 0 80px;
+}
+
+.our-works-stats-bar {
+    display: flex;
+    align-items: center;
+    min-height: 321px;
+    padding: 80px 88px;
+    background: rgba(250, 250, 250, 0.2);
+}
+
+.our-works-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-inline: 24px;
+}
+
+.our-works-stats-bar .count-value {
+    margin: 0;
+    font-size: 76px;
+    line-height: 68px;
+    font-weight: 700;
+    font-family: "neulis-neue", sans-serif;
+    color: var(--color-electric-blue);
+}
+
+.our-works-stats-bar .count-text {
+    margin: 0;
+    padding-top: 0;
+    max-width: 268px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--color-elevate-gray);
+    text-align: left;
+}
+
+.our-works-stat-divider {
+    flex-shrink: 0;
+    width: 2px;
+    height: 162px;
+    align-self: center;
+}
+
+.our-works-stat-divider img {
+    display: block;
+    width: 2px;
+    height: 100%;
+}
+
+/* Our Works CTA */
+.our-works-cta {
+    padding-block: 0 100px;
+}
+
+.our-works-cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.our-works-cta .heading-wrap {
+    margin: 0;
+    max-width: 100%;
+}
+
+.our-works-cta .heading-wrap h2 {
+    margin-bottom: 24px;
+    line-height: 56px;
+    color: var(--color-elevate-gray);
+}
+
+.our-works-cta .heading-wrap p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: var(--color-elevate-gray);
+    text-align: center;
+}
 
 
 
@@ -4309,7 +4393,15 @@ body.contact-page {
 
     .our-works-filters {
         padding-block: 48px;
-    } 
+    }
+
+    .our-works-stats {
+        padding-block: 0 80px;
+    }
+
+    .our-works-cta {
+        padding-block: 0 100px;
+    }
 
     .recognition-section {
         padding-block: 112px 100px;
@@ -4502,6 +4594,24 @@ body.contact-page {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .our-works-stats-bar {
+        padding: 56px 40px;
+        min-height: 0;
+    }
+
+    .our-works-stats-bar .count-value {
+        font-size: 56px;
+        line-height: 1;
+    }
+
+    .our-works-stat {
+        padding-inline: 16px;
+    }
+
+    .our-works-stat-divider {
+        height: 120px;
+    }
+
 }
 
 /* =========================================
@@ -4670,6 +4780,49 @@ body.contact-page {
     .recognition-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
+    }
+
+    .our-works-stats {
+        padding-block: 0 48px;
+    }
+
+    .our-works-stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 48px 32px;
+        gap: 24px;
+    }
+
+    .our-works-stat {
+        max-width: none;
+    }
+
+    .our-works-stat-divider {
+        width: 100%;
+        height: 2px;
+        background-color: #E6F2FF;
+    }
+
+    .our-works-stat-divider img {
+        display: none;
+    }
+
+    .our-works-cta {
+        padding-block: 0 64px;
+    }
+
+    .our-works-cta-inner {
+        gap: 32px;
+    }
+
+    .our-works-cta .heading-wrap h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .our-works-cta .heading-wrap p {
+        font-size: 20px;
+        line-height: 28px;
     }
 
     /*--------------------------------------------
@@ -5084,6 +5237,45 @@ body.contact-page {
         grid-template-columns: 1fr;
         gap: 24px;
         margin-bottom: 32px;
+    }
+
+    .our-works-stats {
+        padding-block: 0 40px;
+    }
+
+    .our-works-stats-bar {
+        padding: 40px 24px;
+        gap: 20px;
+    }
+
+    .our-works-stats-bar .count-value {
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .our-works-stats-bar .count-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .our-works-cta {
+        padding-block: 0 48px;
+    }
+
+    .our-works-cta-inner {
+        gap: 24px;
+        padding-inline: 16px;
+    }
+
+    .our-works-cta .heading-wrap h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .our-works-cta .heading-wrap p {
+        font-size: 18px;
+        line-height: 26px;
     }
 
 
