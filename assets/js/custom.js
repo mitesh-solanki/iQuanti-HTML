@@ -191,6 +191,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Our Works Filters
+jQuery(function ($) {
+    var $filters = $('.our-works-filters');
+
+    if (!$filters.length) {
+        return;
+    }
+
+    $filters.on('click', '[data-works-mode]', function () {
+        var mode = $(this).data('works-mode');
+
+        $filters.find('[data-works-mode]')
+            .removeClass('cta-action-primary')
+            .attr('aria-pressed', 'false');
+
+        $(this)
+            .addClass('cta-action-primary')
+            .attr('aria-pressed', 'true');
+
+        $filters.find('.our-works-chips').attr('hidden', true);
+        $filters.find('.our-works-chips[data-works-group="' + mode + '"]').removeAttr('hidden');
+    });
+
+    $filters.on('click', '.our-works-chip', function () {
+        $(this).addClass('is-active').siblings('.our-works-chip').removeClass('is-active');
+    });
+});
+
 // Write JQuery Code Here
  jQuery(document).ready(function () {
 
