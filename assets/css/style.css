@@ -4099,6 +4099,10 @@ color: #FFFFFF;
     .content-showcase-section {
         padding-block: 70px 110px;
     }
+
+    .our-works-stats-section {
+        padding-top: 0;
+    }
 }
 @media (min-width: 1024px) {
     .hero-section {
@@ -4464,7 +4468,7 @@ color: #FFFFFF;
     .our-works-stats-section    {
         padding-bottom: 0;
     }
-
+ 
     .our-works-banner .banner-content {
         max-width: 568px;
     }
