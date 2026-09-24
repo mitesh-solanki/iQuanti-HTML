@@ -619,6 +619,24 @@ h2,
 }
 
 
+/* Call To Action Section */
+.call-to-action-section {
+    background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
+}
+
+.call-to-action-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    text-align: center;
+}
+
+.call-to-action-content h2 {
+    margin-bottom: 24px;
+}
+
+
 
 /* ========================================
    Higlight Text
@@ -3987,9 +4005,16 @@ color: #FFFFFF;
 
 /* Our Works Filters */
 .our-works-filters-section {
-    padding-block: 48px;
+   position: relative;
 }
-
+.our-works-filter-blurb-left-top {
+    top: -10%;
+    left: 0;
+}
+.our-works-filter-blurb-right-center {
+    top: 20%;
+    right: 0;
+}
 .our-works-filters-section .container {
     display: flex;
     flex-direction: column;
@@ -4052,23 +4077,15 @@ color: #FFFFFF;
 }
 
 
-/*Call To Action Content */
-.our-works-stats-section {
-    padding-block: 0 100px;
+/* Our Works Call To Action */
+.our-works-call-to-action-section {
+    position: relative;
 }
 
-.call-to-action-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-    text-align: center;
+.our-works-cta-blurb-left-bottom {
+    left: 0;
+    bottom: -125%;
 }
-
-.call-to-action-content h2 {
-    margin-bottom: 24px;
-}
-
 
 /* Media Query Start Here */
 
@@ -4097,13 +4114,18 @@ color: #FFFFFF;
         padding-block: 45px 52px;
     }
 
+    /* Call To Action */
+    .call-to-action-section {
+        padding-block: 66px 100px;
+    }
+
     /* Our Works Filter Section */
     .our-works-filters-section {
         padding-block: 70px 110px;
     }
 
     .our-works-stats-section {
-        padding-block: 0 90px;
+        padding-block: 0 24px;
     }
 
     .our-works-cta-section{
