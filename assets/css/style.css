@@ -4648,7 +4648,7 @@ body.contact-page {
 /* ==========================================================================
    WEBINAR SLIDER BLOCK STYLES (EXACT 1440PX FIGMA SPECIFICATIONS)
    ========================================================================== */
-.iq-webinar-slider-section {
+.peek-slider-section {
     position: relative;
     width: 100%;
     padding-inline: 0;
@@ -4659,14 +4659,7 @@ body.contact-page {
     bottom: -70%;
 }
 
-.iq-webinar-slider-section *,
-.iq-webinar-slider-section *::before,
-.iq-webinar-slider-section *::after {
-    box-sizing: border-box;
-}
-
-
-.iq-webinar-header {
+.peek-slider-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4675,7 +4668,7 @@ body.contact-page {
     padding-inline: 80px 73px;
 }
 
-.iq-webinar-header h2 {
+.peek-slider-header h2 {
     padding: 8px;
 }
 
@@ -4722,20 +4715,23 @@ body.contact-page {
     transform: none;
 }
 
-.iq-webinar-slider-viewport {
+.peek-slider-viewport {
     overflow: hidden;
     position: relative;
-    margin-left: 81px; 
     min-height: 250px; 
     cursor: grab;
     user-select: none;
 }
 
-.iq-webinar-slider-viewport.is-dragging {
+.peek-slider-viewport.peek-slider-viewport-left {
+    margin-left: 81px; 
+}
+
+.peek-slider-viewport.is-dragging {
     cursor: grabbing;
 }
 
-.iq-webinar-track {
+.peek-slider-tracke {
     display: flex;
     align-items: flex-start; 
     gap: 24px; 
@@ -4750,7 +4746,7 @@ body.contact-page {
    CARD STYLES (EXACT FIGMA 1440PX DIMENSIONS)
    ========================================================================== */
 /* Inactive Cards: Exactly 297px width x 184px height from Figma */
-.iq-webinar-card {
+.peek-slide-card {
     flex: 0 0 297px;
     width: 297px;
     height: 184px;
@@ -4770,7 +4766,7 @@ body.contact-page {
 }
 
 
-.iq-webinar-card.is-active {
+.peek-slide-card.is-active {
     flex: 0 0 404px;
     width: 404px;
     height: 250px;
@@ -4780,16 +4776,16 @@ body.contact-page {
     border-color: rgba(255, 255, 255, 0.28);
 }
 
-.iq-webinar-card:hover {
+.peek-slide-card:hover {
     opacity: 1;
     border-color: rgba(255, 133, 0, 0.5);
 }
 
-.iq-webinar-card.is-active:hover {
+.peek-slide-card.is-active:hover {
     border-color: rgba(255, 255, 255, 0.45);
 }
 
-.iq-webinar-card-img {
+.peek-slide-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -4800,7 +4796,7 @@ body.contact-page {
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.iq-webinar-card:hover .iq-webinar-card-img {
+.peek-slide-card:hover .peek-slide-card-img {
     transform: scale(1.02);
 }
 
@@ -5049,11 +5045,11 @@ body.contact-page {
 
 
     /* Webinar Page css */
-    .iq-webinar-header {
+    .peek-slider-header {
         padding-inline: 30px;
     }
 
-    .iq-webinar-slider-viewport {
+    .peek-slider-viewport {
         margin-left: 30px;
     }
 
@@ -5335,11 +5331,11 @@ body.contact-page {
         margin-top: 24px;
     }
 
-    .iq-webinar-slider-section .iq-webinar-header {
+    .iq-webinar-slider-section .peek-slider-header {
         margin-bottom: 40px;
     }
 
-    .iq-webinar-header h2 {
+    .peek-slider-header h2 {
         padding: 0;
         text-align: center;
     }
@@ -5939,7 +5935,7 @@ body.contact-page {
         display: none;
     }
 
-    .iq-webinar-slider-section .iq-webinar-header {
+    .iq-webinar-slider-section .peek-slider-header {
         justify-content: center;
     }
 }
@@ -6440,7 +6436,7 @@ body.contact-page {
     }
 
 
-    .iq-webinar-slider-section .iq-webinar-header {
+    .iq-webinar-slider-section .peek-slider-header {
         margin-bottom: 30px;
     }
     
@@ -6448,29 +6444,32 @@ body.contact-page {
         display: none;
     }
 
-    .iq-webinar-header {
+    .peek-slider-header {
         padding-left: 20px;
         padding-right: 20px;
         margin-bottom: 24px;
     }
 
-    .iq-webinar-slider-viewport {
-        margin-left: 20px;
+    .peek-slider-viewport {
         width: calc(100% - 20px);
         min-height: 200px
     }
 
-    .iq-webinar-track {
+    .peek-slider-viewport.peek-slider-viewport-left {
+         margin-left: 20px;
+    }
+
+    .peek-slider-tracke {
         min-height: 200px;
     }
 
-    .iq-webinar-card {
+    .peek-slide-card {
         flex: 0 0 80vw;
         width: 80vw;
         height: 200px;
     }
 
-    .iq-webinar-card.is-active {
+    .peek-slide-card.is-active {
         flex: 0 0 80vw;
         width: 80vw;
         height: 200px;
@@ -6695,6 +6694,7 @@ body.contact-page {
         opacity: 1 !important;
     }
 }
+
 
 /* Webinar Page CSS */
 /* Contact Banner section */
