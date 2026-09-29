@@ -3496,13 +3496,12 @@ color: #FFFFFF;
 }
 
 
-
 /* ========================================
    INPUT
 ======================================== */
 
 .form-group input,
-.form-group select {
+.form-group select:not([multiple]) {
     height: 46px;
     padding: 0 12px;
     background-color: var(--color-pure-white);
@@ -3513,7 +3512,7 @@ color: #FFFFFF;
    SELECT
 ======================================== */
 
-.form-group select {
+.form-group select:not([multiple]) {
     appearance: none;
     cursor: pointer;
     background-image:
@@ -3527,6 +3526,272 @@ color: #FFFFFF;
     font-size: 12px;
     line-height: 14px;
     color: #6D798F;
+}
+
+.form-group select[multiple] {
+    height: auto;
+    min-height: 112px;
+    padding: 6px 8px;
+    background-color: var(--color-pure-white);
+    background-image: none;
+    appearance: auto;
+    overflow-y: auto;
+    font-size: 12px;
+    color: var(--color-rich-black);
+}
+
+.form-group select[multiple] option {
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: var(--color-rich-black);
+    cursor: pointer;
+}
+
+.form-group select[multiple] option:checked {
+    background: var(--color-primary-orange) linear-gradient(0deg, var(--color-primary-orange) 0%, var(--color-primary-orange) 100%);
+    color: var(--color-pure-white);
+}
+
+
+/* ========================================
+   CUSTOM MULTISELECT WITH CAPSULES
+======================================== */
+
+.custom-multiselect {
+    position: relative;
+    width: 100%;
+}
+
+.multiselect-container {
+    position: relative;
+    width: 100%;
+}
+
+.multiselect-trigger {
+    width: 100%;
+    min-height: 46px;
+    padding: 6px 12px;
+    background-color: var(--color-pure-white);
+    border: 1px solid var(--color-warm-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.multiselect-trigger:focus,
+.custom-multiselect.is-open .multiselect-trigger {
+    border-color: var(--color-primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 128, 0, 0.1);
+}
+
+.multiselect-selected {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+.multiselect-placeholder {
+    color: #6D798F;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    user-select: none;
+}
+
+.multiselect-capsule {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px 3px 10px;
+    background-color: #EBF3FF;
+    border: 1px solid #BEDDFF;
+    border-radius: 100px;
+    color: var(--color-electric-blue);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.33;
+    animation: capsuleFadeIn 0.2s ease;
+}
+
+@keyframes capsuleFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.capsule-text {
+    white-space: nowrap;
+}
+
+.capsule-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 123, 255, 0.12);
+    border: 0;
+    border-radius: 50%;
+    color: var(--color-electric-blue);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.capsule-remove svg {
+    width: 8px;
+    height: 8px;
+    stroke-width: 2.5;
+}
+
+.capsule-remove:hover {
+    background-color: var(--color-primary-orange);
+    color: var(--color-pure-white);
+    transform: scale(1.1);
+}
+
+.capsule-remove:active {
+    transform: scale(0.95);
+}
+
+.multiselect-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #6D798F;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.custom-multiselect.is-open .multiselect-arrow,
+.multiselect-trigger[aria-expanded="true"] .multiselect-arrow {
+    transform: rotate(180deg);
+    color: var(--color-primary-orange);
+}
+
+.multiselect-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: var(--color-pure-white);
+    border: 1px solid #D9DDE2;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+    padding: 6px;
+    max-height: 220px;
+    overflow-y: auto;
+    animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.multiselect-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.multiselect-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-rich-black);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.multiselect-option:hover,
+.multiselect-option:focus {
+    background-color: #F4F6FA;
+}
+
+.multiselect-option.is-selected {
+    background-color: #EEF4FF;
+    color: var(--color-electric-blue);
+    font-weight: 600;
+}
+
+.multiselect-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #9DA4B4;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: var(--color-pure-white);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.multiselect-option.is-selected .multiselect-checkbox {
+    background-color: var(--color-primary-orange);
+    border-color: var(--color-primary-orange);
+    background-image: url("../images/check-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+}
+
+.multiselect-option-label {
+    flex: 1;
+    line-height: 1.3;
+}
+
+.multiselect-native-select.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 
@@ -3689,7 +3954,59 @@ color: #FFFFFF;
 
 .contact-submit {
     width: 100%;
-    margin-top: 6px;    
+    margin-top: 6px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.contact-submit:disabled,
+.cta-action:disabled,
+button:disabled {
+    cursor: not-allowed !important;
+}
+
+.contact-submit.is-loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent !important;
+}
+
+.contact-submit.is-loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2.5px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: contactBtnSpin 0.7s linear infinite;
+}
+
+@keyframes contactBtnSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact-form .lead-response {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.contact-form .lead-response.is-success {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.contact-form .lead-response.error_message {
+    color: #ff8f8f;
+    font-weight: 500;
 }
 
 
@@ -4008,15 +4325,24 @@ body.contact-page {
 
 
 /* iQ Split Hero Section  */
+.iq-contact-section {
+   background-image: url("../images/contact-banner-image.jpg");
+}
 
 .iq-split-hero-section {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    background-image: url("../images/Contact-section-bg.png");
+    overflow: hidden; 
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 180px;
+    z-index: 0;
+}
+
+.iq-split-hero-blurb-center-left {
+    position:absolute;
+    top: 40%;
+    left:-10%;
+    transform: translateY(-50%)
 }
 
 .iq-split-hero-wrapper {
@@ -4032,51 +4358,36 @@ body.contact-page {
 }
 
 .iq-split-hero-section .contact-form-wrapper {
-    position: sticky;
-    top:0;
     max-width: 511px;
     margin-left: auto;
 }
 
-.iq-contact-section .contact-form-wrapper .contact-form {
-    background-color: #3F455170;
+.iq-split-hero-section .contact-form-wrapper.sticky-contact-form {
+    position: sticky;
+    top:0;
 }
 
-/* =========================================
-   HEADING
-========================================= */
+.iq-split-contact-form.contact-form {
+    background-color: #22222260;
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+}
 
-.iq-contact-section .sub-details {
+.iq-split-hero-section .iq-split-hero-header {
     display: flex;
     flex-direction: column;
     gap:16px;
 }
 
-.contact-heading {
+.iq-split-hero-title-light {
     color:var(--color-pure-white);
 }
 
-.contact-heading span {
-    color:var(--color-electric-blue);
-    font-weight: 700 !important;
-    font-family: "neulis-neue" !important;
-}
-
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.contact-description {
-    display: flex;
-    align-items: center;
+.iq-split-hero-desc {
     color: var(--color-warm-gray);
 }
 
 
-/* =========================================
-   CONTACT DETAILS
-========================================= */
 
 .contact-detail {
     display: flex;
@@ -4834,6 +5145,11 @@ body.contact-page {
 
 /* Media Query Start Here */
 @media (min-width: 1200px) {
+    /* Contact Page css */
+    .iq-split-hero-section {
+        padding: 45px 42px
+    }
+
     .content-showcase-section {
         padding-block: 70px 110px;
     }
@@ -4842,7 +5158,6 @@ body.contact-page {
     .call-to-action-section {
         padding-block: 66px 100px;
     }
-
 
     .overview-section {
         padding-block: 71px 155px;
@@ -4877,6 +5192,10 @@ body.contact-page {
     .insights-section {
         padding-block: 62px 98px;
     }
+
+    .our-works-banner {
+        padding-block: 282px 30px;
+    } 
 
     .recognition-section {
         padding-block: 112px 100px;
@@ -5508,6 +5827,9 @@ body.contact-page {
         align-items: center;
     }
 
+    .has-header-space {
+        margin-top: 74px;
+    }
 
     /* -----------------------------------------
        SECTION
@@ -5607,7 +5929,7 @@ body.contact-page {
         justify-content: center;
      }
 
-     .contact-description {
+     .iq-split-hero-desc {
         max-width: 100%;
         text-align: center;
      }
@@ -5795,7 +6117,7 @@ body.contact-page {
     }
     
     /* Contact Page css */
-    .iq-contact-section .sub-details {
+    .iq-split-hero-section .iq-split-hero-header {
         max-width: 500px;
         margin: 0 auto 40px;
     }
@@ -5805,7 +6127,7 @@ body.contact-page {
         gap: 24px !important;
     }
 
-    .contact-heading {
+    .iq-split-hero-section .iq-split-hero-title {
         text-align: center;
     }
 
@@ -5817,8 +6139,8 @@ body.contact-page {
         grid-template-columns: 1fr !important;
     }
 
-    .iq-contact-section .contact-form-wrapper {
-        margin-right: auto;
+    .iq-split-hero-section .contact-form-wrapper {
+        margin: 0;
         max-width: 100%;
     }
 
@@ -6369,7 +6691,7 @@ body.contact-page {
         gap: 30px;
     }
 
-    .iq-contact-section .sub-details {
+    .iq-split-hero-section .iq-split-hero-header {
         margin: 0 auto 30px;
     }
 
@@ -6570,11 +6892,9 @@ body.contact-page {
     .privacy-checkbox input {
         margin-top: 4px !important;
     }
-
     .contact-description {
         font-size: 16px;
     }
-
     .contact-form-row {
         grid-template-columns: 1fr !important;
         gap:20px !important;
