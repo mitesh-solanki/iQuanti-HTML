@@ -636,6 +636,7 @@ h2,
 /* Call To Action Section */
 .call-to-action-section {
     background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
+    position: relative;
 }
 
 .call-to-action-content {
@@ -4744,11 +4745,11 @@ body.contact-page {
 .content-showcase-section {
    position: relative;
 }
-.our-works-filter-blurb-left-top {
+.content-showcase-blurb-left-top {
     top: -10%;
     left: 0;
 }
-.our-works-filter-blurb-right-center {
+.content-showcase-blurb-right-center {
     top: 20%;
     right: 0;
 }
@@ -4816,11 +4817,7 @@ body.contact-page {
 
 
 /* Our Works Call To Action */
-.our-works-call-to-action-section {
-    position: relative;
-}
-
-.our-works-cta-blurb-left-bottom {
+.call-to-action-blurb-left-bottom {
     left: 0;
     bottom: -125%;
 }
