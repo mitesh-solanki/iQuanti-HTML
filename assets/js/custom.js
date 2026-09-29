@@ -289,234 +289,213 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Webinar Slider
 (function (window) {
-    'use strict';
- 
-    function initWebinarSlider(section) {
-        if (!section || section.getAttribute('data-webinar-slider-init') === 'true') {
-            // return;
-        }
- 
-        var viewport = section.querySelector('[data-webinar-viewport]');
-        var track = section.querySelector('[data-webinar-track]');
-        var prevBtn = section.querySelector('[data-webinar-prev]');
-        var nextBtn = section.querySelector('[data-webinar-next]');
-        var pagination = section.querySelector('[data-webinar-pagination]');
- 
-        if (!viewport || !track) {
-            return;
-        }
- 
-        var originalCards = Array.prototype.slice.call(track.querySelectorAll('.iq-webinar-card:not(.is-clone)'));
-        var N = originalCards.length;
-        if (N === 0) {
-            return;
-        }
- 
-        section.setAttribute('data-webinar-slider-init', 'true');
- 
-        // Remove any existing clones if re-initializing
-        var existingClones = track.querySelectorAll('.iq-webinar-card.is-clone');
-        existingClones.forEach(function (c) {
-            c.remove();
-        });
- 
-        // Clone cards before and after in exact order for infinite looping
-        var firstRealCard = originalCards[0];
-        originalCards.forEach(function (card) {
-            var cloneBefore = card.cloneNode(true);
-            cloneBefore.classList.add('is-clone');
-            cloneBefore.classList.remove('is-active');
-            track.insertBefore(cloneBefore, firstRealCard);
-        });
- 
-        originalCards.forEach(function (card) {
-            var cloneAfter = card.cloneNode(true);
-            cloneAfter.classList.add('is-clone');
-            cloneAfter.classList.remove('is-active');
-            track.appendChild(cloneAfter);
-        });
- 
-        var allCards = Array.prototype.slice.call(track.querySelectorAll('.iq-webinar-card'));
-        var currentIndex = N; // Start precisely at the first real card
-        var isTransitioning = false;
-        var startX = 0;
-        var isDragging = false;
- 
-        // Render Pagination Dots (for real items 0..N-1)
-        function buildPagination() {
-            if (!pagination) return;
-            pagination.innerHTML = '';
-            for (var i = 0; i < N; i++) {
-                (function (realIndex) {
-                    var dot = document.createElement('button');
-                    dot.type = 'button';
-                    dot.className = 'iq-pagination-dot' + (realIndex === 0 ? ' is-active' : '');
-                    dot.setAttribute('aria-label', 'Go to slide ' + (realIndex + 1));
-                    dot.addEventListener('click', function () {
-                        if (isTransitioning) return;
-                        currentIndex = N + realIndex;
-                        updateSlider(true);
-                    });
-                    pagination.appendChild(dot);
-                })(i);
-            }
-        }
- 
-        function updateSlider(animate) {
-            if (animate) {
-                track.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
-            } else {
-                track.style.transition = 'none';
-            }
- 
-            var inactiveCard = track.querySelector('.iq-webinar-card:not(.is-active)');
-            var cardWidth = inactiveCard ? inactiveCard.offsetWidth : 297;
-            var gap = parseFloat(window.getComputedStyle(track).gap) || 24;
-            var moveDistance = (cardWidth + gap) * currentIndex;
-            track.style.transform = 'translateX(-' + moveDistance + 'px)';
- 
-            // Real active index (0 .. N-1)
-            var realActive = ((currentIndex % N) + N) % N;
- 
-            // Highlight the active card in the DOM
-            allCards.forEach(function (card, idx) {
-                if (idx === currentIndex) {
-                    card.classList.add('is-active');
-                } else {
-                    card.classList.remove('is-active');
-                }
-            });
- 
-            // Update Pagination Dot
-            if (pagination) {
-                var dots = pagination.querySelectorAll('.iq-pagination-dot');
-                dots.forEach(function (dot, i) {
-                    if (i === realActive) {
-                        dot.classList.add('is-active');
-                    } else {
-                        dot.classList.remove('is-active');
-                    }
-                });
-            }
- 
-            if (prevBtn) prevBtn.disabled = false;
-            if (nextBtn) nextBtn.disabled = false;
-        }
- 
-        // Seamless wrap when reaching clone boundaries
-        track.addEventListener('transitionend', function (e) {
-            if (e.target !== track) return;
-            isTransitioning = false;
- 
-            if (currentIndex >= 2 * N) {
-                currentIndex = currentIndex - N;
-                updateSlider(false);
-            } else if (currentIndex < N) {
-                currentIndex = currentIndex + N;
-                updateSlider(false);
-            }
-        });
- 
-        // Click any card to slide to it
-        allCards.forEach(function (card, idx) {
-            card.addEventListener('click', function (e) {
-                if (idx !== currentIndex) {
-                    e.preventDefault();
-                    if (isTransitioning) return;
-                    isTransitioning = true;
-                    currentIndex = idx;
-                    updateSlider(true);
-                }
-            });
-        });
- 
-        function slideNext() {
+  'use strict';
+
+  function initWebinarSlider(section) {
+    if (!section || section.dataset.sliderInitialized === 'true') {
+      return;
+    }
+
+    var viewport = section.querySelector('[data-slider-viewport]');
+    var track = section.querySelector('[data-slider-track]');
+    var prevBtn = section.querySelector('[data-slider-action="prev"]');
+    var nextBtn = section.querySelector('[data-slider-action="next"]');
+    var pagination = section.querySelector('[data-slider-pagination]');
+
+    if (!viewport || !track) return;
+
+    var originalCards = Array.prototype.slice.call(
+      track.querySelectorAll('[data-slider-item]:not([data-slider-clone])')
+    );
+    var N = originalCards.length;
+    if (N === 0) return;
+
+    section.dataset.sliderInitialized = 'true';
+
+    // Remove existing clones if re-initializing
+    var existingClones = track.querySelectorAll('[data-slider-clone]');
+    existingClones.forEach(function (c) {
+      c.remove();
+    });
+
+    // Clone cards before and after in exact order for infinite looping
+    var firstRealCard = originalCards[0];
+    originalCards.forEach(function (card) {
+      var cloneBefore = card.cloneNode(true);
+      cloneBefore.setAttribute('data-slider-clone', 'true');
+      cloneBefore.classList.remove('is-active');
+      track.insertBefore(cloneBefore, firstRealCard);
+    });
+
+    originalCards.forEach(function (card) {
+      var cloneAfter = card.cloneNode(true);
+      cloneAfter.setAttribute('data-slider-clone', 'true');
+      cloneAfter.classList.remove('is-active');
+      track.appendChild(cloneAfter);
+    });
+
+    var allCards = Array.prototype.slice.call(track.querySelectorAll('[data-slider-item]'));
+    var currentIndex = N;
+    var isTransitioning = false;
+    var startX = 0;
+    var isDragging = false;
+
+    // Render Pagination Dots
+    function buildPagination() {
+      if (!pagination) return;
+      pagination.innerHTML = '';
+      for (var i = 0; i < N; i++) {
+        (function (realIndex) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'iq-pagination-dot' + (realIndex === 0 ? ' is-active' : '');
+          dot.setAttribute('data-slider-dot-index', realIndex);
+          dot.setAttribute('aria-label', 'Go to slide ' + (realIndex + 1));
+          dot.addEventListener('click', function () {
             if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex++;
+            currentIndex = N + realIndex;
             updateSlider(true);
-        }
- 
-        function slidePrev() {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex--;
-            updateSlider(true);
-        }
- 
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                slideNext();
-            });
-        }
- 
-        if (prevBtn) {
-            prevBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                slidePrev();
-            });
-        }
- 
-        // Drag & Touch Gestures
-        viewport.addEventListener('mousedown', function (e) {
-            isDragging = true;
-            startX = e.pageX;
-            viewport.classList.add('is-dragging');
+          });
+          pagination.appendChild(dot);
+        })(i);
+      }
+    }
+
+    function updateSlider(animate) {
+      track.style.transition = animate 
+        ? 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)' 
+        : 'none';
+
+      var inactiveCard = track.querySelector('[data-slider-item]:not(.is-active)');
+      var cardWidth = inactiveCard ? inactiveCard.offsetWidth : 297;
+      var gap = parseFloat(window.getComputedStyle(track).gap) || 24;
+      var moveDistance = (cardWidth + gap) * currentIndex;
+      track.style.transform = 'translateX(-' + moveDistance + 'px)';
+
+      var realActive = ((currentIndex % N) + N) % N;
+
+      // Active state updates
+      allCards.forEach(function (card, idx) {
+        card.classList.toggle('is-active', idx === currentIndex);
+      });
+
+      if (pagination) {
+        var dots = pagination.querySelectorAll('.iq-pagination-dot');
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('is-active', i === realActive);
         });
- 
-        window.addEventListener('mouseup', function (e) {
-            if (!isDragging) return;
-            isDragging = false;
-            viewport.classList.remove('is-dragging');
-            var diff = e.pageX - startX;
-            if (diff < -45) {
-                slideNext();
-            } else if (diff > 45) {
-                slidePrev();
-            }
-        });
- 
-        viewport.addEventListener('touchstart', function (e) {
-            startX = e.touches[0].clientX;
-        }, { passive: true });
- 
-        viewport.addEventListener('touchend', function (e) {
-            var endX = e.changedTouches[0].clientX;
-            var diff = endX - startX;
-            if (diff < -40) {
-                slideNext();
-            } else if (diff > 40) {
-                slidePrev();
-            }
-        }, { passive: true });
- 
-        // Resize handler
-        window.addEventListener('resize', function () {
-            updateSlider(false);
-        });
- 
-        // Initial setup
-        buildPagination();
+      }
+
+      if (prevBtn) prevBtn.disabled = false;
+      if (nextBtn) nextBtn.disabled = false;
+    }
+
+    // Seamless loop reset
+    track.addEventListener('transitionend', function (e) {
+      if (e.target !== track) return;
+      isTransitioning = false;
+
+      if (currentIndex >= 2 * N) {
+        currentIndex = currentIndex - N;
         updateSlider(false);
+      } else if (currentIndex < N) {
+        currentIndex = currentIndex + N;
+        updateSlider(false);
+      }
+    });
+
+    // Card click navigation
+    allCards.forEach(function (card, idx) {
+      card.addEventListener('click', function (e) {
+        if (idx !== currentIndex) {
+          e.preventDefault();
+          if (isTransitioning) return;
+          isTransitioning = true;
+          currentIndex = idx;
+          updateSlider(true);
+        }
+      });
+    });
+
+    function slideNext() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex++;
+      updateSlider(true);
     }
- 
-    function initWebinarSliders(root) {
-        var scope = root || document;
-        var sections = scope.querySelectorAll('[data-webinar-slider]');
-        sections.forEach(function (sec) {
-            initWebinarSlider(sec);
-        });
+
+    function slidePrev() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex--;
+      updateSlider(true);
     }
- 
-    window.iQuantiInitWebinarSliders = initWebinarSliders;
- 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () {
-            initWebinarSliders(document);
-        });
-    } else {
-        initWebinarSliders(document);
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        slideNext();
+      });
     }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        slidePrev();
+      });
+    }
+
+    // Drag & Touch gestures
+    viewport.addEventListener('mousedown', function (e) {
+      isDragging = true;
+      startX = e.pageX;
+      viewport.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mouseup', function (e) {
+      if (!isDragging) return;
+      isDragging = false;
+      viewport.classList.remove('is-dragging');
+      var diff = e.pageX - startX;
+      if (diff < -45) slideNext();
+      else if (diff > 45) slidePrev();
+    });
+
+    viewport.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', function (e) {
+      var endX = e.changedTouches[0].clientX;
+      var diff = endX - startX;
+      if (diff < -40) slideNext();
+      else if (diff > 40) slidePrev();
+    }, { passive: true });
+
+    window.addEventListener('resize', function () {
+      updateSlider(false);
+    });
+
+    buildPagination();
+    updateSlider(false);
+  }
+
+  function initWebinarSliders(root) {
+    var scope = root || document;
+    var sections = scope.querySelectorAll('[data-slider-root]');
+    sections.forEach(function (sec) {
+      initWebinarSlider(sec);
+    });
+  }
+
+  window.iQuantiInitWebinarSliders = initWebinarSliders;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initWebinarSliders(document);
+    });
+  } else {
+    initWebinarSliders(document);
+  }
 })(window);
  

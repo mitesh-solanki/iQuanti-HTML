@@ -5044,7 +5044,7 @@ body.contact-page {
     padding-inline: 0;
 }
 
-.webinar-slider-blurb-bottom-left {
+.peek-slider-blurb-bottom-left {
     right: -40%;
     bottom: -70%;
 }
@@ -5063,13 +5063,13 @@ body.contact-page {
 }
 
 /* Navigation Arrows */
-.iq-webinar-nav {
+.peek-slider-nav {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.iq-nav-btn {
+.peek-slider-btn {
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -5084,18 +5084,18 @@ body.contact-page {
     padding: 0;
 }
 
-.iq-nav-btn:hover {
+.peek-slider-btn:hover {
     border-color: #0284c7;
     background: #f0f9ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.18);
 }
 
-.iq-nav-btn:active {
+.peek-slider-btn:active {
     transform: scale(0.95);
 }
 
-.iq-nav-btn:disabled {
+.peek-slider-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
     border-color: #e2e8f0;
@@ -5121,7 +5121,7 @@ body.contact-page {
     cursor: grabbing;
 }
 
-.peek-slider-tracke {
+.peek-slider-track {
     display: flex;
     align-items: flex-start; 
     gap: 24px; 
@@ -5193,7 +5193,7 @@ body.contact-page {
 /* ==========================================================================
    PAGINATION DOTS (CENTERED DIRECTLY UNDER CARD 1 AS PER FIGMA)
    ========================================================================== */
-.iq-webinar-pagination {
+.peek-slider-pagination {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5448,7 +5448,7 @@ body.contact-page {
         padding-inline: 30px;
     }
 
-    .peek-slider-viewport {
+    .peek-slider-viewport.peek-slider-viewport-left {
         margin-left: 30px;
     }
 
@@ -5694,7 +5694,7 @@ body.contact-page {
         padding-bottom: 0;
     }
 
-    .iq-nav-btn {
+    .peek-slider-btn {
         width: 54px;
         height: 54px;
     }
@@ -5726,7 +5726,7 @@ body.contact-page {
         gap: 24px;
     }
 
-    .iq-webinar-pagination {
+    .peek-slider-pagination {
         margin-top: 24px;
     }
 
@@ -6341,7 +6341,7 @@ body.contact-page {
         margin-bottom: 12px;
     }
 
-    .iq-webinar-nav {
+    .peek-slider-nav {
         display: none;
     }
 
@@ -6861,10 +6861,6 @@ body.contact-page {
         margin-bottom: 30px;
     }
     
-    .iq-webinar-nav {
-        display: none;
-    }
-
     .peek-slider-header {
         padding-left: 20px;
         padding-right: 20px;
@@ -6880,7 +6876,7 @@ body.contact-page {
          margin-left: 20px;
     }
 
-    .peek-slider-tracke {
+    .peek-slider-track {
         min-height: 200px;
     }
 
@@ -6896,7 +6892,7 @@ body.contact-page {
         height: 200px;
     }
 
-    .iq-webinar-pagination {
+    .peek-slider-pagination {
         width: 80vw;
         margin-left: 20px;
     }
