@@ -7338,3 +7338,9 @@ body.contact-page {
 .iq-marquee:hover .iq-marquee-track {
     animation-play-state: paused;
 }
+
+/* our-legacy-section start */
+
+.our-legacy-section .heading-wrap {
+    max-width: 762px;
+}
