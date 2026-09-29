@@ -7129,12 +7129,12 @@ body.contact-page {
    LEADERSHIP SECTION
 ========================================== */
 
-.leadership-section {
+.iq-profile-grid-section {
     position: relative;
     overflow: hidden;
 }
 
-.leadership-section .heading-wrap {
+.iq-profile-grid-section .heading-wrap {
    max-width: 954px;
    width: 100%;
 }
@@ -7143,7 +7143,7 @@ body.contact-page {
    LEADERSHIP GRID
 ========================================== */
 
-.leadership-grid {
+.iq-profile-grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -7153,7 +7153,7 @@ body.contact-page {
    LEADER CARD
 ========================================== */
 
-.leader-card {
+.iq-profile-card {
     position: relative;
     height: 500px;
     display: flex;
@@ -7171,7 +7171,7 @@ body.contact-page {
    LEADER INFO
 ========================================== */
 
-.leader-info {
+.iq-profile-card-badge {
     position: relative;
     width: 100%;
     z-index: 2;
@@ -7184,7 +7184,7 @@ body.contact-page {
     border-radius: 999px;
 }
 
-.leader-info h3 {
+.iq-profile-card-badge h3 {
     color: var(--color-pure-white);
     font-size: 24px;
     font-style: normal;
@@ -7193,7 +7193,7 @@ body.contact-page {
     white-space: nowrap;
 }
 
-.leader-info p {
+.iq-profile-card-badge p {
     color:var(--color-pure-white);
     font-size: 14px;
     font-style: normal;
@@ -7205,7 +7205,7 @@ body.contact-page {
    CTA
 ========================================== */
 
-.leadership-action {
+.iq-profile-grid-action {
     display: flex;
     justify-content: center;
     margin-top: 64px;
@@ -7214,7 +7214,7 @@ body.contact-page {
 /* Core values section start */
 /* 28-09-2026 */
 
-.core-values-section .heading-wrap {
+.iq-feature-grid-section .heading-wrap {
     max-width: 762px;
     width: 1005;
 }
@@ -7223,7 +7223,7 @@ body.contact-page {
    CARDS GRID
 ========================================== */
 
-.unit-grid {
+.iq-feature-grid-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
         gap: 18px;
@@ -7233,7 +7233,7 @@ body.contact-page {
    CARD
 ========================================== */
 
-.unit-card {
+.iq-feature-card {
     padding: 41px;
     border-radius: 8px;
     border: 0.5px solid var(--EG-3, #B8B6B5);
@@ -7241,20 +7241,86 @@ body.contact-page {
     backdrop-filter: blur(12px);
 }
 
-.unit-card .unit-icon {
+.iq-feature-card .iq-feature-card-icon {
     margin-bottom: 46px;
 }
 
-.unit-card h3 {
+.iq-feature-card h3 {
     color: var(--color-electric-blue);
     margin-bottom: 8px;
 }
 
 /* Cta button */
 
-.unit-cta {
+.iq-feature-grid-action {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 46px;
+}
+
+
+/* Marquee section start */
+
+.iq-marquee-section {
+    width: 100%;
+    overflow: hidden;
+    padding-inline: 0 !important;
+}
+
+.iq-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.iq-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: iqMarquee 10s linear infinite;
+    will-change: transform;
+}
+
+.iq-marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.iq-marquee-item {
+    width: 404px;
+    height: 350px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iq-marquee-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   INFINITE ANIMATION
+========================================== */
+
+@keyframes iqMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================
+   HOVER PAUSE
+========================================== */
+
+.iq-marquee:hover .iq-marquee-track {
+    animation-play-state: paused;
 }
