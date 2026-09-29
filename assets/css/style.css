@@ -4006,7 +4006,10 @@ body.contact-page {
     background: var(--color-pure-white);
 }
 
-.iq-contact-section {
+
+/* iQ Split Hero Section  */
+
+.iq-split-hero-section {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -4016,11 +4019,7 @@ body.contact-page {
     padding-top: 180px;
 }
 
-/* =========================================
-   MAIN WRAPPER
-========================================= */
-
-.iq-contact-wrapper {
+.iq-split-hero-wrapper {
     position: relative;
     z-index: 3;
     width: 100%;
@@ -4032,7 +4031,7 @@ body.contact-page {
     gap: 40px;
 }
 
-.iq-contact-section .contact-form-wrapper {
+.iq-split-hero-section .contact-form-wrapper {
     position: sticky;
     top:0;
     max-width: 511px;
@@ -4509,7 +4508,7 @@ body.contact-page {
 /* Webinar Page CSS */
 /* Contact Banner section */
 
-.webinar-hero-section .webinar-logo {
+.webinar-logo {
     width: 199.999px;
     height: 64.983px; 
     aspect-ratio: 200.00/64.98;
@@ -4517,12 +4516,8 @@ body.contact-page {
     object-fit: contain;
 }
 
-.webinar-hero-section  .iq-contact-wrapper {
+.webinar-contact-wrapper {
     align-items: center;
-}
-
-.webinar-hero-section .contact-detail-wrapper {
-    margin-top: 80px;
 }
 
 .webinar-hero-section  .webinar-speaker__name,
@@ -4530,20 +4525,21 @@ body.contact-page {
     color: var(--color-pure-white);
 }
 
-.webinar-hero-section .contact-detail-wrapper {
+.webinar-hero-section .webinar-author-info-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap:27px;
+    margin-top: 80px;
 }
 
-.webinar-hero-section .contact-detail-wrapper .webinar-speaker__info {
+.webinar-speaker-info {
     display: flex;
     flex-direction: column;
     gap:8px;
 }
 
-.webinar-hero-section .contact-detail-wrapper .webinar-speaker__info  .divider {
+.webinar-speaker-info  .divider {
     width: 100%;
     height: 2px;
     background-color: var(--color-primary-orange);
@@ -4568,12 +4564,12 @@ body.contact-page {
     position: relative;
 }
 
-.overview-blurb-bottom-left.blurb-bg {
+.sticky-content-bottom-left.blurb-bg {
     left: -40%;
     top: 50%;
 }
 
-.overview-blurb-top-right.blurb-bg {
+.sticky-content-top-right.blurb-bg {
     top:-40%;
     right:0
 }
@@ -4590,18 +4586,18 @@ body.contact-page {
     gap:24px;
 }
 
-.sticky-content-section .sticky-left-content .overview-list {
+.sticky-content-section .sticky-left-content .iq-highlight-list {
     display: flex;
     flex-direction: column;
     gap:34px;
     color:#5B5D61;
 }
 
-.sticky-content-section .sticky-left-content .overview-list li {
+.sticky-content-section .sticky-left-content .iq-highlight-list li {
     margin-left: 25px;
 }
 
-.sticky-content-section .sticky-left-content .overview-list .divider {
+.sticky-content-section .sticky-left-content .iq-highlight-list .divider {
     width: 100%;
     height: 1px;
     background-color: #9DA4B4;
@@ -5323,7 +5319,7 @@ body.contact-page {
         margin-top: 100px;
     }
 
-    .sticky-content-section .sticky-left-content .overview-list {
+    .sticky-content-section .sticky-left-content .iq-highlight-list {
         gap: 24px;
     }
 
@@ -5817,7 +5813,7 @@ body.contact-page {
         font-size: 22px;
     }
 
-    .iq-contact-wrapper {
+    .iq-split-hero-wrapper {
         grid-template-columns: 1fr !important;
     }
 
@@ -5910,7 +5906,7 @@ body.contact-page {
         justify-content: center;
     }
 
-    .webinar-hero-section .webinar-logo {
+    .webinar-logo {
         object-position: center;
     }
 
@@ -6811,7 +6807,7 @@ body.contact-page {
 .unit-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+        gap: 18px;
 }
 
 /* ==========================================
