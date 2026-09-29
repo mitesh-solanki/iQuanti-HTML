@@ -625,6 +625,7 @@ h2,
 /* Call To Action Section */
 .call-to-action-section {
     background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
+    position: relative;
 }
 
 .call-to-action-content {
@@ -4013,11 +4014,11 @@ color: #FFFFFF;
 .content-showcase-section {
    position: relative;
 }
-.our-works-filter-blurb-left-top {
+.content-showcase-blurb-left-top {
     top: -10%;
     left: 0;
 }
-.our-works-filter-blurb-right-center {
+.content-showcase-blurb-right-center {
     top: 20%;
     right: 0;
 }
@@ -4085,14 +4086,411 @@ color: #FFFFFF;
 
 
 /* Our Works Call To Action */
-.our-works-call-to-action-section {
-    position: relative;
-}
-
-.our-works-cta-blurb-left-bottom {
+.call-to-action-blurb-left-bottom {
     left: 0;
     bottom: -125%;
 }
+
+
+
+/* Webinar Page CSS */
+/* Contact Banner section */
+.webinar-hero-section {
+    background-image: url("../images/webinar-banner-image.jpg");
+}
+
+.webinar-hero-section .iq-split-hero-header {
+    gap: 40px;
+}
+
+.webinar-logo {
+    width: 199.999px;
+    height: 64.983px; 
+    aspect-ratio: 200.00/64.98;
+    object-position: left;
+    object-fit: contain;
+}
+
+.speaker-profile-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:27px;
+}
+
+.speaker-profile-card .speaker-avatar {
+    width: 143px;
+    height: 143px;
+}
+
+.speaker-profile-card .speaker-avatar img{
+    padding: 8px;
+    border: 1px solid var(--color-primary-orange);
+    background-color: var(--color-pure-white);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.speaker-profile-card .speaker-name,
+.speaker-profile-card .speaker-role {
+    color: var(--color-pure-white);
+}
+
+.speaker-info {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.speaker-info .divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary-orange);
+}
+
+
+/* overview section css */
+
+.overview-section .overview-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 139px;
+}
+
+.overview-section .overview-left-content {
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.overview-section .overview-left-content .overview-list {
+    display: flex;
+    flex-direction: column;
+    gap:34px;
+    color:#5B5D61;
+}
+
+.overview-section .overview-left-content .overview-list li {
+    margin-left: 25px;
+}
+
+.overview-section .overview-left-content .overview-list .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #9DA4B4;
+    opacity: 0.5;
+}
+
+.overview-right-content {
+    position: sticky;
+    top:176px;
+    max-width: 403px;
+    width: 100%;
+    height: fit-content;
+    background: var(--color-electric-blue);
+    border-radius: 8px;
+    margin-top: 176px;
+    padding: 21px 24px;
+}
+
+.key-highlight {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 7px;
+    padding: 16px 24px;
+    margin-bottom: 7px;
+    border: 1px solid var(--color-off-white);
+    border-radius: 8px;
+}
+
+.key-highlight img {
+    width: 32px;
+    height: 32px;
+}
+
+.key-highlight span {
+    color: var(--color-pure-white);
+}
+
+.key-highlight-detail p {
+    color: var(--color-pure-white);
+}
+
+
+/* overview section css */
+.overview-section {
+    position: relative;
+}
+
+.sticky-content-bottom-left.blurb-bg {
+    left: -40%;
+    top: 50%;
+}
+
+.sticky-content-top-right.blurb-bg {
+    top:-40%;
+    right:0
+}
+
+.sticky-content-section .sticky-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 139px;
+}
+
+.sticky-content-section .sticky-left-content {
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.sticky-content-section .sticky-left-content .iq-highlight-list {
+    display: flex;
+    flex-direction: column;
+    gap:34px;
+    color:#5B5D61;
+}
+
+.sticky-content-section .sticky-left-content .iq-highlight-list li {
+    margin-left: 25px;
+}
+
+.sticky-content-section .sticky-left-content .iq-highlight-list .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #9DA4B4;
+    opacity: 0.5;
+}
+
+.info-highlight-card {
+    position: sticky;
+    top:176px;
+    max-width: 403px;
+    width: 100%;
+    height: fit-content;
+    background: var(--color-electric-blue);
+    border-radius: 8px;
+    margin-top: 176px;
+    padding: 21px 24px;
+}
+
+.info-highlight-card-label {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 7px;
+    padding: 16px 24px;
+    margin-bottom: 7px;
+    border: 1px solid var(--color-off-white);
+    border-radius: 8px;
+}
+
+.info-highlight-card-label img {
+    width: 32px;
+    height: 32px;
+}
+
+.info-highlight-card-label span {
+    color: var(--color-pure-white);
+}
+
+.info-highlight-card-content p {
+    color: var(--color-pure-white);
+}
+
+
+/* ==========================================================================
+   WEBINAR SLIDER BLOCK STYLES (EXACT 1440PX FIGMA SPECIFICATIONS)
+   ========================================================================== */
+.peek-slider-section {
+    position: relative;
+    width: 100%;
+    padding-inline: 0;
+}
+
+.peek-slider-blurb-bottom-left {
+    right: -40%;
+    bottom: -70%;
+}
+
+.peek-slider-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px; 
+    gap: 20px;
+    padding-inline: 80px 73px;
+}
+
+.peek-slider-header h2 {
+    padding: 8px;
+}
+
+/* Navigation Arrows */
+.peek-slider-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.peek-slider-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid var(--color-warm-gray);
+    background: #FDFCF8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    padding: 0;
+}
+
+.peek-slider-btn:hover {
+    border-color: #0284c7;
+    background: #f0f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.18);
+}
+
+.peek-slider-btn:active {
+    transform: scale(0.95);
+}
+
+.peek-slider-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+    color: #94a3b8;
+    background: #f8fafc;
+    box-shadow: none;
+    transform: none;
+}
+
+.peek-slider-viewport {
+    overflow: hidden;
+    position: relative;
+    min-height: 250px; 
+    cursor: grab;
+    user-select: none;
+}
+
+.peek-slider-viewport.peek-slider-viewport-left {
+    margin-left: 81px; 
+}
+
+.peek-slider-viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.peek-slider-track {
+    display: flex;
+    align-items: flex-start; 
+    gap: 24px; 
+    padding: 0;
+    margin: 0;
+    min-height: 255px; 
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+
+/* ==========================================================================
+   CARD STYLES (EXACT FIGMA 1440PX DIMENSIONS)
+   ========================================================================== */
+/* Inactive Cards: Exactly 297px width x 184px height from Figma */
+.peek-slide-card {
+    flex: 0 0 297px;
+    width: 297px;
+    height: 184px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    background-color: #0b1536;
+    cursor: pointer;
+    transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), 
+                height 0.45s cubic-bezier(0.22, 1, 0.36, 1), 
+                flex-basis 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+}
+
+
+.peek-slide-card.is-active {
+    flex: 0 0 404px;
+    width: 404px;
+    height: 250px;
+    border-radius: 14px;
+    opacity: 1;
+    z-index: 5;
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.peek-slide-card:hover {
+    opacity: 1;
+    border-color: rgba(255, 133, 0, 0.5);
+}
+
+.peek-slide-card.is-active:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+.peek-slide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.peek-slide-card:hover .peek-slide-card-img {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   PAGINATION DOTS (CENTERED DIRECTLY UNDER CARD 1 AS PER FIGMA)
+   ========================================================================== */
+.peek-slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 404px; /* Matches Card 1 width */
+    margin-left: clamp(24px, 5.625vw, 81px); /* Exactly 81px at 1440px */
+    margin-top: 14px;
+}
+
+.iq-pagination-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var( --color-soft-beige);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iq-pagination-dot:hover {
+    background-color: #94a3b8;
+}
+
+.iq-pagination-dot.is-active {
+    width: 32px;
+    border-radius: 4px;
+    background-color: var(--color-primary-orange);
+}
+
+
 
 /* Media Query Start Here */
 @media (min-width: 1200px) {
