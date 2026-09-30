@@ -270,8 +270,8 @@ h2,
 }
 
 .sub-head-2 {
-    font-size: 48px;
-    line-height: 1.167;
+    font-size: 32px;
+    line-height: 1.25;
     font-weight: 700;
 }
 
@@ -399,6 +399,10 @@ h2,
 
 .iq-items-center {
   align-items: center !important;
+}
+
+.iq-items-start {
+    align-content: flex-start;
 }
 
 
@@ -671,6 +675,10 @@ h2,
 
 .highlight-text.highlight-text-elevate-grey{
     color: var(--color-elevate-gray);
+}
+
+.highlight-text.highlight-text-orange {
+    color: var(--color-primary-orange);
 }
 
 
@@ -7114,9 +7122,15 @@ body.contact-page {
 
 .about-us-banner {
     background-image: url("../images/about-us-banner.png");
-    align-content: flex-start;
     background-position: bottom;
 } 
+
+.about-us-banner .banner-content {
+    max-width: 883px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
 
 .about-us-page .contact-section::before {
     background:  url("../images/about-contact-banner.png");
