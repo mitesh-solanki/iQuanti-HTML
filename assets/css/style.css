@@ -270,8 +270,8 @@ h2,
 }
 
 .sub-head-2 {
-    font-size: 48px;
-    line-height: 1.167;
+    font-size: 32px;
+    line-height: 1.25;
     font-weight: 700;
 }
 
@@ -7134,6 +7134,10 @@ body.contact-page {
     align-content: flex-start;
     background-position: bottom;
 } 
+
+.about-us-banner .banner-content {
+    max-width: 883px;
+}
 
 .about-us-page .contact-section::before {
     background:  url("../images/about-contact-banner.png");
