@@ -50,6 +50,7 @@
     --color-electric-blue-75: #419BFC;
     --color-electric-blue-50: #80BCFE;
     --color-electric-blue-25: #BEDDFF;
+    --color-ice-blue: #A7D2FF;
 
 
     /* ========================================
@@ -78,6 +79,7 @@
     --color-q-purple: #928EFF;
     --color-q-purple-50: #B6B4FF;
     --color-q-purple-25: #DBD9FF;
+    --color-indigo-light: #C9C7FF;
 
     /* ========================================
        Others
@@ -327,6 +329,11 @@ h2,
 }
 
 
+/* Font Style Override CSS */
+.body-text-18.body-text-mid {
+    line-height: 1.444;
+}
+
 /* ========================================
    Font Weights
 ======================================== */
@@ -363,6 +370,11 @@ h2,
     font-size: 12px;
     line-height: 1.667;
 }
+
+.sm-text-8 {
+    font-size: 8px;
+    line-height: 1.111;
+} 
 
 
 /* ========================================
@@ -673,6 +685,10 @@ h2,
     color: var(--color-electric-blue);
 }
 
+.highlight-text.highlight-text-white {
+    color: var(--color-pure-white) !important;
+}
+
 .highlight-text.highlight-text-elevate-grey{
     color: var(--color-elevate-gray);
 }
@@ -755,7 +771,6 @@ h2,
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    border: 2px solid var(--color-elevate-gray-50);
 }
 
 .custom-check-box-wrap .custom-check-box::before {
@@ -765,6 +780,7 @@ h2,
     background: url("../images/check-icon.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .custom-check-box-wrap input {
@@ -885,17 +901,15 @@ section {
 }
 
 .heading-wrap.dark h2{
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .heading-wrap p{
     font-size: 18px;
-    line-height: 1.556;
-    font-weight: 700;
 }
 
 .heading-wrap.dark p{
-    color: var(--color-pure-white-60);
+    color: var(--color-off-white);
 }
 
 .heading-wrap.heading-wrap-left {
@@ -910,7 +924,6 @@ section {
 
 .heading-wrap .highlight-text {
     font-family: neulis-neue , sans-serif;
-    color: var(--color-primary-orange);
     font-weight: 700;
 }
 
@@ -1379,11 +1392,8 @@ section {
 }
 
 .hero-grid .hero-content .hero-description {
-  max-width: 48rem; 
+  max-width: 593px; 
   color:#51565b;
-  font-size: 18px; 
-  line-height: 1.556;
-  font-weight: 400;
 }
 
 .hero-grid .hero-image {
@@ -1475,14 +1485,8 @@ section {
 }
 
 .client-section::before {
-    content: "";
     background-image: url(../images/client-section-bg.png);
-    background-size: cover;
-    position: absolute;
-    inset: 0;
     opacity: 40%;
-    width: 100%;
-    height: 100%;
     z-index: -2;
 }
 
@@ -1502,12 +1506,13 @@ section {
 ======================================== */
 
 .client-heading {
-    max-width: 730px;
+    max-width: 828px;
     margin-bottom: 48px;
 }
 
 .client-heading h2 {
     margin: 0 0 24px;
+    color: var(--color-ice-blue) !important;
 }
 
 .client-heading p {
@@ -1515,6 +1520,7 @@ section {
     margin: 0;
     opacity: 0.8 !important;
     font-weight: 400;
+    color: var(--color-off-white) !important;
 }
 
 
@@ -2419,15 +2425,11 @@ justify-content: center;
     transition:0.3s all ease;
 }
 .accordion-bordered .accordion-header span:first-child {
-    color: #C5D9E6;
+    color: var(--color-indigo-light);
     font-weight: 700;
     font-size: 25px;
     line-height: 1.32;
     font-family: "neulis-neue";
-}
-
-.accordion-bordered .accordion-item.active span:first-child {
-    color: var(--color-primary-orange);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
@@ -2440,6 +2442,7 @@ justify-content: center;
 .accordion-bordered .accordion-header .accordion-icon svg {
   width: 22px;
   height: 22px;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(7399%) hue-rotate(191deg) brightness(107%) contrast(102%);
 }
 
 .accordion-bordered .accordion-content {
@@ -2467,9 +2470,7 @@ justify-content: center;
 
 .accordion-bordered .accordion-content p {
     margin: 0;
-    color: var(--color-pure-white);
-    font-size: 18px;
-    line-height: 1.556;
+    color: var(--color-off-white);
 }
 
 
@@ -2557,7 +2558,6 @@ Case Study Section =====================*/
 .insights-section.has-bg-image::before {
     background-image: url('../images/insights-section-bg.png');
     background-position: center top;
-    background-size: cover;
 }
 
 .insights-section .insights-container {
@@ -2581,10 +2581,6 @@ Case Study Section =====================*/
     margin-bottom: 7px;
     height: 32px;
     padding: 4px 12px;
-}
-
-.insights-section .heading-wrap.dark .insights-description {
-    color: var(--color-warm-gray);
 }
 
 .insights-section .info-card {
@@ -3400,7 +3396,6 @@ color: #FFFFFF;
     max-width: 520px;
     margin: 0;
     color: var(--color-pure-white-80 );
-    font-weight: 400;
 }
 
 
@@ -3833,7 +3828,7 @@ color: #FFFFFF;
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: var(--color-primary-orange);
+    /* border-color: var(--color-primary-orange); */
     box-shadow:
         0 0 0 3px rgba(255, 128, 0, 0.1);
 }
@@ -4313,7 +4308,7 @@ button:disabled {
     margin: 0;
     text-align: center;
     color: var(--color-slate-grey);
-    font-size: 12px;
+    font-size: 8px;
     line-height: 20px;
 }
 
