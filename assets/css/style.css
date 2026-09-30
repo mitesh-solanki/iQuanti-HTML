@@ -391,6 +391,21 @@ h2,
     margin-top: 82px;
 }
 
+/* CSS Classes */
+
+.iq-text-white {
+    color: var(--color-pure-white);
+}
+
+.iq-items-center {
+  align-items: center !important;
+}
+
+.iq-items-start {
+    align-content: flex-start;
+}
+
+
 /* ========================================
    GLOBAL COMPONENTS 
 ======================================== */
@@ -7131,7 +7146,6 @@ body.contact-page {
 
 .about-us-banner {
     background-image: url("../images/about-us-banner.png");
-    align-content: flex-start;
     background-position: bottom;
 } 
 
