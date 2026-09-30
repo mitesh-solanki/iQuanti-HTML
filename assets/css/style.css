@@ -997,7 +997,7 @@ section {
     padding: 4px;
     background: var(--color-elevate-gray);
     border: 1px solid #F2F2F2;
-    gap: 4px;
+    gap: 5px;
     border-radius: 100px;
 }
 
