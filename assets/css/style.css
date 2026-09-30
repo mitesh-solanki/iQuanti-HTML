@@ -405,6 +405,9 @@ h2,
     align-content: flex-start;
 }
 
+.iq-overflow-visible {
+    overflow: visible !important;
+}
 
 /* ========================================
    GLOBAL COMPONENTS 
@@ -640,6 +643,12 @@ h2,
 /* Call To Action Section */
 .call-to-action-section {
     background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
+    position: relative;
+}
+
+.call-to-action-blurb-left-top {
+    top: -100%;
+    left: 0;
 }
 
 .call-to-action-content {
@@ -3180,13 +3189,15 @@ color: #FFFFFF;
     left: 0;
 }
 
+.recognition-blurb-top-right {
+    right: 0;
+    top: -70%;
+}
+
 .recognition-section .recognition-container {
     max-width: 1264px;
 }
 
-.recognition-section .recognition-heading {
-    margin-bottom: 60px;
-}
 
 /* Cards Grid */
 .recognition-grid {
@@ -5161,6 +5172,249 @@ body.contact-page {
 }
 
 
+/* About us page */
+/* 28-09-2026 */
+
+.about-us-banner {
+    background-image: url("../images/about-us-banner.png");
+    background-position: bottom;
+} 
+
+.about-us-banner .banner-content {
+    max-width: 883px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.about-us-page .contact-section::before {
+    background:  url("../images/about-contact-banner.png");
+}
+
+.about-us-call-to-action-section .call-to-action-content {
+    max-width: 967px;
+    width: 100%;
+    margin-inline: auto !important;
+}
+
+/* ==========================================
+   LEADERSHIP SECTION
+========================================== */
+
+.iq-profile-grid-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.iq-profile-grid-section .heading-wrap {
+   max-width: 954px;
+   width: 100%;
+}
+
+/* ==========================================
+   LEADERSHIP GRID
+========================================== */
+
+.iq-profile-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ==========================================
+   LEADER CARD
+========================================== */
+
+.iq-profile-card {
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap:81px;
+    padding: 30px;
+    background: var(--color-off-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ==========================================
+   LEADER INFO
+========================================== */
+
+.iq-profile-card-badge {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    background: rgba(34, 34, 34, 0.40);
+    border-radius: 999px;
+}
+
+.iq-profile-card-badge h3 {
+    color: var(--color-pure-white);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+.iq-profile-card-badge p {
+    color:var(--color-pure-white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.iq-profile-grid-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+/* Core values section start */
+/* 28-09-2026 */
+
+.iq-feature-grid-section  {
+    position: relative;
+}
+
+.iq-feature-grid-section .heading-wrap {
+    max-width: 762px;
+    width: 100%;
+}
+
+.iq-feature-blurb-left-bottom  {
+    left: 0;
+    top: 20%;
+}
+
+/* ==========================================
+   CARDS GRID
+========================================== */
+
+.iq-feature-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.iq-feature-card {
+    padding: 41px;
+    border-radius: 8px;
+    border: 0.5px solid var(--EG-3, #B8B6B5);
+    background: rgba(250, 250, 250, 0.10);
+    backdrop-filter: blur(12px);
+}
+
+.iq-feature-card .iq-feature-card-icon {
+    margin-bottom: 46px;
+}
+
+.iq-feature-card h3 {
+    color: var(--color-electric-blue);
+    margin-bottom: 8px;
+}
+
+/* Cta button */
+
+.iq-feature-grid-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 46px;
+}
+
+
+/* Marquee section start */
+
+.iq-marquee-section {
+    width: 100%;
+    overflow: hidden;
+    padding-inline: 0 !important;
+}
+
+.iq-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.iq-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: iqMarquee 10s linear infinite;
+    will-change: transform;
+}
+
+.iq-marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.iq-marquee-item {
+    width: 404px;
+    height: 350px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iq-marquee-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   INFINITE ANIMATION
+========================================== */
+
+@keyframes iqMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================
+   HOVER PAUSE
+========================================== */
+
+.iq-marquee:hover .iq-marquee-track {
+    animation-play-state: paused;
+}
+
+/* our-legacy-section start */
+
+.our-legacy-section .heading-wrap {
+    max-width: 762px;
+}
+
+
+
 
 /* Media Query Start Here */
 @media (min-width: 1200px) {
@@ -5171,6 +5425,11 @@ body.contact-page {
 
     .content-showcase-section {
         padding-block: 70px 110px;
+    }
+
+    /* Recognition & trust Section CSS  */
+    .recognition-section .recognition-heading {
+        margin-bottom: 60px;
     }
 
     /* Call To Action */
@@ -5192,6 +5451,32 @@ body.contact-page {
 
     .our-works-stats-section {
         padding-top: 0;
+    }
+
+    /* Aboutus Page CSS */
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+
+    .core-feature-grid-section {
+        padding-bottom: 112px;
+    }
+
+    .about-marquee-section,
+    .our-legacy-section {
+        padding-block: 0 112px;
+    }
+
+    .our-leadership-section {
+        padding-block: 40px;
+    }
+
+    .about-recognition-section.recognition-section  {
+        padding-block: 130px;
+    }
+
+    .about-us-call-to-action-section {
+        padding-block: 0 116px;
     }
 }
 
@@ -5215,10 +5500,6 @@ body.contact-page {
     .our-works-banner {
         padding-block: 282px 30px;
     } 
-
-    .recognition-section {
-        padding-block: 112px 100px;
-    }
 
     .contact-section {
         padding-block: 45px 52px;
@@ -5454,6 +5735,9 @@ body.contact-page {
     /* ========================================
     Global Utilities
     ======================================== */
+    .heading-wrap {
+        margin-bottom: 40px !important;
+    }
     .banner-main {
         min-height: 70vh;
     }
@@ -5672,6 +5956,35 @@ body.contact-page {
     .peek-slider-header h2 {
         padding: 0;
         text-align: center;
+    }
+
+    /* Aboutus Page CSS  */
+    .spotlight-banner-section.iq-content-start {
+        align-content: center;
+    }
+
+    .core-feature-grid-section,
+    .about-marquee-section,
+    .our-legacy-section,
+    .our-leadership-section,
+    .about-recognition-section {
+        padding-bottom: 0;
+    }
+
+    .iq-feature-card {
+        padding: 24px;
+    }
+
+    .iq-feature-card .iq-feature-card-icon {
+        margin-bottom: 24px;
+    }
+
+    .iq-feature-card-content p br {
+        display: none;
+    }
+
+    .iq-feature-grid-action {
+        margin-top: 40px;
     }
 
 
@@ -7145,234 +7458,3 @@ body.contact-page {
     color: var(--color-pure-white);
 }
 
-/* About us page */
-/* 28-09-2026 */
-
-.about-us-banner {
-    background-image: url("../images/about-us-banner.png");
-    background-position: bottom;
-} 
-
-.about-us-banner .banner-content {
-    max-width: 883px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap:24px;
-}
-
-.about-us-page .contact-section::before {
-    background:  url("../images/about-contact-banner.png");
-}
-
-.about-us-call-to-action-section .call-to-action-content {
-    max-width: 967px;
-    width: 100%;
-    margin-inline: auto !important;
-}
-
-/* ==========================================
-   LEADERSHIP SECTION
-========================================== */
-
-.iq-profile-grid-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.iq-profile-grid-section .heading-wrap {
-   max-width: 954px;
-   width: 100%;
-}
-
-/* ==========================================
-   LEADERSHIP GRID
-========================================== */
-
-.iq-profile-grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-/* ==========================================
-   LEADER CARD
-========================================== */
-
-.iq-profile-card {
-    position: relative;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap:81px;
-    padding: 30px;
-    background: var(--color-off-white);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* ==========================================
-   LEADER INFO
-========================================== */
-
-.iq-profile-card-badge {
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 23px;
-    background: rgba(34, 34, 34, 0.40);
-    border-radius: 999px;
-}
-
-.iq-profile-card-badge h3 {
-    color: var(--color-pure-white);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
-    white-space: nowrap;
-}
-
-.iq-profile-card-badge p {
-    color:var(--color-pure-white);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
-}
-
-/* ==========================================
-   CTA
-========================================== */
-
-.iq-profile-grid-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
-}
-
-/* Core values section start */
-/* 28-09-2026 */
-
-.iq-feature-grid-section .heading-wrap {
-    max-width: 762px;
-    width: 1005;
-}
-
-/* ==========================================
-   CARDS GRID
-========================================== */
-
-.iq-feature-grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-}
-
-/* ==========================================
-   CARD
-========================================== */
-
-.iq-feature-card {
-    padding: 41px;
-    border-radius: 8px;
-    border: 0.5px solid var(--EG-3, #B8B6B5);
-    background: rgba(250, 250, 250, 0.10);
-    backdrop-filter: blur(12px);
-}
-
-.iq-feature-card .iq-feature-card-icon {
-    margin-bottom: 46px;
-}
-
-.iq-feature-card h3 {
-    color: var(--color-electric-blue);
-    margin-bottom: 8px;
-}
-
-/* Cta button */
-
-.iq-feature-grid-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 46px;
-}
-
-
-/* Marquee section start */
-
-.iq-marquee-section {
-    width: 100%;
-    overflow: hidden;
-    padding-inline: 0 !important;
-}
-
-.iq-marquee {
-    width: 100%;
-    overflow: hidden;
-}
-
-.iq-marquee-track {
-    display: flex;
-    width: max-content;
-    animation: iqMarquee 10s linear infinite;
-    will-change: transform;
-}
-
-.iq-marquee-group {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-shrink: 0;
-    padding-right: 10px;
-}
-
-.iq-marquee-item {
-    width: 404px;
-    height: 350px;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.iq-marquee-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ==========================================
-   INFINITE ANIMATION
-========================================== */
-
-@keyframes iqMarquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/* ==========================================
-   HOVER PAUSE
-========================================== */
-
-.iq-marquee:hover .iq-marquee-track {
-    animation-play-state: paused;
-}
-
-/* our-legacy-section start */
-
-.our-legacy-section .heading-wrap {
-    max-width: 762px;
-}
