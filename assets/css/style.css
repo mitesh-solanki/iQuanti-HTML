@@ -1519,7 +1519,6 @@ section {
     max-width: 760px;
     margin: 0;
     opacity: 0.8 !important;
-    font-weight: 400;
     color: var(--color-off-white) !important;
 }
 
