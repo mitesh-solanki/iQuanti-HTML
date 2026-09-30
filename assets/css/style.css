@@ -5284,6 +5284,17 @@ body.contact-page {
     gap: 24px;
 }
 
+.iq-profile-grid-wrapper .iq-profile-card-image {
+    width: 197.25px;
+    height: 217.17px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ==========================================
    LEADER CARD
 ========================================== */
@@ -5336,16 +5347,6 @@ body.contact-page {
     line-height: 24px; /* 171.429% */
 }
 
-/* ==========================================
-   CTA
-========================================== */
-
-.iq-profile-grid-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
-}
-
 /* Core values section start */
 /* 28-09-2026 */
 
@@ -5392,15 +5393,6 @@ body.contact-page {
 .iq-feature-card h3 {
     color: var(--color-electric-blue);
     margin-bottom: 8px;
-}
-
-/* Cta button */
-
-.iq-feature-grid-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 46px;
 }
 
 
@@ -5545,6 +5537,16 @@ body.contact-page {
     .about-us-call-to-action-section {
         padding-block: 0 116px;
     }
+
+    .iq-profile-grid-action {
+        margin-top: 64px;
+    }
+
+    /* Cta button */
+
+    .iq-feature-grid-section .iq-feature-grid-action {
+        margin-top: 47px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -5575,9 +5577,6 @@ body.contact-page {
     .contact-section {
         padding-block: 45px 52px;
     }
-
-
-
     /* Our Works Filter Section */
     .our-works-cta-section{
         padding-block: 0 100px;
@@ -6058,6 +6057,36 @@ body.contact-page {
         margin-top: 40px;
     }
 
+
+}
+
+
+/* =========================================
+   TABLET — 1024px and below
+========================================= */
+
+@media (max-width: 1024px) {
+
+    /* About us page */
+
+    .iq-marquee-item {
+        width: 350px;
+        height: 310px;
+    }
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .iq-profile-grid-wrapper .iq-profile-card-image {
+        width: 150px;
+        height: 166px;
+    }
+
+    .iq-profile-card {
+        gap:30px;
+        height:auto;
+    }
 
 }
 
