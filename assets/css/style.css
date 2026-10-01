@@ -5229,8 +5229,10 @@ body.contact-page {
 }
 
 .iq-profile-grid-wrapper .iq-profile-card-image {
-    width: 197.25px;
-    height: 217.17px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
 }
 
 .iq-profile-grid-wrapper .iq-profile-card-image img {
@@ -5349,7 +5351,7 @@ body.contact-page {
 .iq-marquee-track {
     display: flex;
     width: max-content;
-    animation: iqMarquee 10s linear infinite;
+    animation: iqMarquee 12s linear infinite;
     will-change: transform;
 }
 
@@ -6000,6 +6002,10 @@ body.contact-page {
         margin-top: 40px;
     }
 
+    .iq-profile-card {
+        height: 400px;
+    }
+
 
 }
 
@@ -6019,16 +6025,10 @@ body.contact-page {
 
     .iq-profile-grid-wrapper {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .iq-profile-grid-wrapper .iq-profile-card-image {
-        width: 150px;
-        height: 166px;
-    }
+    }   
 
     .iq-profile-card {
         gap:30px;
-        height:auto;
         padding:20px;
     }
 
@@ -7148,11 +7148,6 @@ body.contact-page {
 
     /* about us page css */
 
-    .iq-profile-grid-wrapper .iq-profile-card-image {
-        Width: 120px;
-        height: 138px;
-    }
-
     .iq-feature-grid-cards {
        grid-template-columns: 1fr;
     }
@@ -7177,6 +7172,11 @@ body.contact-page {
 
     .recognition-blurb-top-right {
         top:-35%;
+    }
+
+
+    .iq-feature-grid-cards >div:last-child {
+        grid-column: span 1;
     }
 
     .iq-feature-card .iq-feature-card-icon {
