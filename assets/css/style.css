@@ -280,7 +280,7 @@ h2,
 
 .sub-head-3 {
     font-size: 24px;
-    line-height: 40px;
+    line-height: 1.667;
     font-weight: 700;
 }
 
@@ -5318,8 +5318,10 @@ body.contact-page {
 }
 
 .iq-profile-grid-wrapper .iq-profile-card-image {
-    width: 197.25px;
-    height: 217.17px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
 }
 
 .iq-profile-grid-wrapper .iq-profile-card-image img {
@@ -5357,15 +5359,16 @@ body.contact-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     padding: 13px 23px;
     background: rgba(34, 34, 34, 0.40);
     border-radius: 999px;
+    text-align: center;
 }
 
 .iq-profile-card-badge h3 {
     color: var(--color-pure-white);
-    white-space: nowrap;
 }
 
 .iq-profile-card-badge p {
@@ -5437,7 +5440,7 @@ body.contact-page {
 .iq-marquee-track {
     display: flex;
     width: max-content;
-    animation: iqMarquee 10s linear infinite;
+    animation: iqMarquee 12s linear infinite;
     will-change: transform;
 }
 
@@ -5641,6 +5644,10 @@ body.contact-page {
         font-size: 32px;
     }
 
+    .sub-head-3 {
+        font-size: 23px;
+    }
+
     .body-text-32 {
         font-size: 30px;
     }
@@ -5797,6 +5804,11 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 28px;
+    }
+
+    .sub-head-3 {
+        font-size: 22px;
+        line-height: 1.367;
     }
 
     .body-text-32 {
@@ -6059,6 +6071,7 @@ body.contact-page {
     }
 
     /* Aboutus Page CSS  */
+
     .spotlight-banner-section.iq-content-start {
         align-content: center;
     }
@@ -6087,6 +6100,10 @@ body.contact-page {
         margin-top: 40px;
     }
 
+    .iq-profile-card {
+        height: 400px;
+    }
+
 
 }
 
@@ -6105,19 +6122,20 @@ body.contact-page {
     }
 
     .iq-profile-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .iq-profile-grid-wrapper .iq-profile-card-image {
-        width: 150px;
-        height: 166px;
-    }
+        grid-template-columns: repeat(3, 1fr);
+    }   
 
     .iq-profile-card {
         gap:30px;
-        height:auto;
+        padding:20px;
     }
 
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .iq-profile-grid-section  .sub-head-3 {
+        font-size: 18px;
+    } 
 }
 
 /* =========================================
@@ -6191,6 +6209,10 @@ body.contact-page {
   .sub-head-2 {
     font-size: 26px;
   }
+
+  .sub-head-3 {
+    font-size: 20px;
+   }
 
   .body-text-32 {
     font-size: 26px;
@@ -6540,10 +6562,6 @@ body.contact-page {
         display: none;
     }
 
-    .heading-wrap {
-        margin-bottom: 50px !important;
-    }
-
     .case-studies-section .case-studies-container {
         gap: 0;
     }
@@ -6653,6 +6671,16 @@ body.contact-page {
         font-size: 24px;
     }
 
+    /* about us page css */
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .iq-marquee-item {
+        width: 280px;
+        height: 250px;
+    }
 
     /* Our Works Page css */
     .our-works-banner {
@@ -6726,6 +6754,21 @@ body.contact-page {
     .iq-webinar-slider-section .peek-slider-header {
         justify-content: center;
     }
+
+    /* Aboutus Page css */
+    .iq-feature-grid-cards {
+        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .iq-feature-grid-cards  >div:last-child {
+        grid-column: span 2;
+    }
+
+    .about-us-banner .banner-content {
+        max-width: 584px;
+    }
+
 }
 
 
@@ -6804,6 +6847,10 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 24px;
+    }
+
+    .sub-head-3 {
+        font-size: 18px;
     }
 
     .body-text-32 {
@@ -7203,6 +7250,43 @@ body.contact-page {
     }
 
 
+    /* about us page css */
+
+    .iq-feature-grid-cards {
+       grid-template-columns: 1fr;
+    }
+
+    .iq-feature-grid-cards .iq-feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iq-feature-grid-cards h3 {
+        text-align: center;
+    }
+
+    .iq-feature-grid-cards p {
+        text-align: center;
+    }
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-blurb-top-right {
+        top:-35%;
+    }
+
+
+    .iq-feature-grid-cards >div:last-child {
+        grid-column: span 1;
+    }
+
+    .iq-feature-card .iq-feature-card-icon {
+        margin-bottom: 8px; 
+    }
+
     .speaker-profile-card {
         flex-direction: column;
         align-items: center;
@@ -7317,6 +7401,10 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 28px;
+    }
+
+     .sub-head-3 {
+        font-size: 18px;
     }
 
     .body-text-32 {
