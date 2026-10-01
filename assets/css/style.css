@@ -5225,6 +5225,8 @@ body.contact-page {
 
 
 
+
+
 /* Media Query Start Here */
 @media (min-width: 1200px) {
     /* IQ Split Banner css */
@@ -5740,6 +5742,37 @@ body.contact-page {
 
 
 }
+
+@media (min-width: 1025px) {
+ 
+    /* 4-column staggered: 1st and 3rd columns pushed down */
+ 
+    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) {
+        transform: translateY(50px);
+    }
+ 
+    /* 3-column staggered: 2nd column pushed down */
+ 
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
+        transform: translateY(45px);
+    }
+
+ 
+    /* 2-column staggered: 2nd column pushed down */
+ 
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
+        transform: translateY(40px);
+    }
+ 
+}
+
+.iq-profile-grid-wrapper.columns-4,
+    .iq-profile-grid-wrapper.columns-3 {
+        grid-template-columns: repeat(2, 1fr);
+ 
+    }
+ 
 
 /* =========================================
    TABLET — 1023px and below
@@ -6911,7 +6944,16 @@ body.contact-page {
 
 }
 
-
+@media (max-width: 640px) {
+ 
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4,
+    .iq-profile-grid-wrapper.columns-3,
+    .iq-profile-grid-wrapper.columns-2 { 
+        grid-template-columns: 1fr;
+    }
+ 
+}
 
 /* =========================================
    MOBILE — 575px and below
@@ -7149,6 +7191,30 @@ body.contact-page {
 .iq-profile-grid-section .heading-wrap {
    max-width: 954px;
    width: 100%;
+}
+
+/* ==========================================
+ 
+   Profile Grid Block Extensions
+ 
+========================================== */
+ 
+.iq-profile-grid-wrapper.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+ 
+.iq-profile-grid-wrapper.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+ 
+.iq-profile-grid-wrapper.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+ 
+/* Staggered / Up-Down Layout */
+ 
+.iq-profile-grid-wrapper.is-staggered {
+    padding-bottom: 50px;
 }
 
 /* ==========================================
