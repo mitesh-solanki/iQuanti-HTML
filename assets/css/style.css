@@ -41,6 +41,7 @@
     --color-warm-gray-75: #B8B6B575;
     --color-warm-gray-60: #B8B6B560;
     --color-steel-blue-gray: #9da4b465;
+    --color-neutral-gray : #5B5D61;
 
     /* ========================================
        BLUE
@@ -998,7 +999,6 @@ section {
     height: auto;
 }
 
-
 /* ========================================
    DESKTOP NAVIGATION
 ======================================== */
@@ -1062,6 +1062,33 @@ section {
     background: #e66f00;
     color: var(--color-pure-white);
 }
+
+/* Header Dark Mode */
+.site-header.header-mode-dark .site-logo .site-logo-dark {
+    display: none;
+}
+
+.site-header.header-mode-dark .site-logo .site-logo-white {
+    display: block;
+}
+
+.site-header .site-logo .site-logo-white {
+    display: none;
+}
+
+.site-header.header-mode-dark .main-navigation ul {
+    background: var(--color-off-white);
+}
+
+.site-header.header-mode-dark .main-navigation a {
+    color: var(--color-neutral-gray);
+}
+
+ .site-header.header-mode-dark .main-navigation a:hover {
+    background: var(--color-elevate-gray);
+    color: var(--color-off-white);
+}
+
 
 
 /* ========================================
