@@ -5268,6 +5268,7 @@ body.contact-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     padding: 13px 23px;
     background: rgba(34, 34, 34, 0.40);
@@ -5543,6 +5544,10 @@ body.contact-page {
         font-size: 32px;
     }
 
+      .sub-head-3 {
+        font-size: 23px;
+    }
+
     .body-text-32 {
         font-size: 30px;
     }
@@ -5699,6 +5704,11 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 28px;
+    }
+
+    .sub-head-3 {
+        font-size: 22px;
+        line-height: 26px;
     }
 
     .body-text-32 {
@@ -6007,7 +6017,7 @@ body.contact-page {
     }
 
     .iq-profile-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .iq-profile-grid-wrapper .iq-profile-card-image {
@@ -6018,8 +6028,15 @@ body.contact-page {
     .iq-profile-card {
         gap:30px;
         height:auto;
+        padding:20px;
     }
 
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .iq-profile-grid-section  .sub-head-3 {
+        font-size: 18px;
+    } 
 }
 
 /* =========================================
@@ -6093,6 +6110,10 @@ body.contact-page {
   .sub-head-2 {
     font-size: 26px;
   }
+
+  .sub-head-3 {
+     font-size: 20px;
+   }
 
   .body-text-32 {
     font-size: 26px;
@@ -6555,6 +6576,16 @@ body.contact-page {
         font-size: 24px;
     }
 
+    /* about us page css */
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .iq-marquee-item {
+        width: 280px;
+        height: 250px;
+    }
 
     /* Our Works Page css */
     .our-works-banner {
@@ -6698,6 +6729,10 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 24px;
+    }
+
+    .sub-head-3 {
+        font-size: 19px;
     }
 
     .body-text-32 {
@@ -7099,6 +7134,43 @@ body.contact-page {
     }
 
 
+    /* about us page css */
+
+    .iq-profile-grid-wrapper .iq-profile-card-image {
+        Width: 120px;
+        height: 138px;
+    }
+
+    .iq-feature-grid-cards {
+       grid-template-columns: 1fr;
+    }
+
+    .iq-feature-grid-cards .iq-feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iq-feature-grid-cards h3 {
+        text-align: center;
+    }
+
+    .iq-feature-grid-cards p {
+        text-align: center;
+    }
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-blurb-top-right {
+        top:-35%;
+    }
+
+    .iq-feature-card .iq-feature-card-icon {
+        margin-bottom: 8px; 
+    }
+
     /* Webinar Page css */
     .webinar-hero-section .contact-detail-wrapper {
         flex-direction: column;
@@ -7204,6 +7276,10 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 28px;
+    }
+
+     .sub-head-3 {
+        font-size: 18px;
     }
 
     .body-text-32 {
