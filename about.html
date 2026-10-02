@@ -240,7 +240,7 @@
 <section id="leadership" class="iq-profile-grid-section our-leadership-section">
     <div class="container">
 
-      <div class="heading-wrap heading-wrap-center aos-init aos-animate" data-aos="fade-up data-aos-duration=" 800"="">
+      <div class="heading-wrap heading-wrap-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
 
             <h2 class="headline-2 aos-init aos-animate" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
                 Our leadership
@@ -263,7 +263,7 @@
                         <p class="body-text-14 body-text-reg">Founder &amp; Executive Chairman</p>
                     </div>
 
-                    <button class="popup-open-btn">
+                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
                         <img src="./assets/images/resize-icon.svg" alt="Resize icon">
                     </button>
                 </div>
@@ -280,8 +280,7 @@
                         <h3 class="sub-head-3">Arnab Sen</h3>
                         <p class="body-text-14 body-text-reg">Chief Executive Officer</p>
                     </div>
-    
-                    <button class="popup-open-btn">
+                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
                         <img src="./assets/images/resize-icon.svg" alt="Resize icon">
                     </button>
                 </div>
@@ -298,7 +297,7 @@
                         <h3 class="sub-head-3">Jonathan Gagliano</h3>
                         <p class="body-text-14 body-text-reg">Chief Growth Officer</p>
                     </div>
-                    <button class="popup-open-btn">
+                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
                         <img src="./assets/images/resize-icon.svg" alt="Resize icon">
                     </button>
                 </div>
@@ -315,7 +314,7 @@
         </div>
 
     </div>
-    <div class="media-content-popup-main">
+    <div class="media-content-popup-main" id="mediaContentPopup" popover>
     <div class="media-content-popup has-popup-hr has-popup-dark">
           <div class="media-content-popup-media">
             <img src="assets/images/hr-popup-place-holder-image.jpg" alt="leader-image">
@@ -342,7 +341,7 @@
               </div>
           </div>
           
-            <button class="popup-close-btn">
+            <button class="popup-close-btn" popovertarget="mediaContentPopup" popovertargetaction="hide" aria-label="Close popup">
                 <img src="./assets/images/close-line-icon.svg" alt="Close line icon">
             </button>
       </div>
