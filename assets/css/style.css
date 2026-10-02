@@ -1103,7 +1103,7 @@ section {
     padding: 12px;
     transition: transform 0.3s ease-in-out;
     z-index: 9999;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
 .site-header .mobile-navigation nav {
@@ -1205,6 +1205,7 @@ section {
     opacity: 1;
     display: block;
     z-index: 9998;
+    min-height: 100vh;
 }
 
 
@@ -5362,7 +5363,7 @@ body.contact-page {
     display: block;
 }
 
-button.popup-open-btn {
+.popup-open-btn {
     background: var(--color-elevate-gray);
     width: 24px;
     height: 24px;
@@ -5379,7 +5380,7 @@ button.popup-open-btn {
     opacity: 0;
 }
 
-.iq-profile-card:hover button.popup-open-btn {
+.iq-profile-card:hover .popup-open-btn {
     opacity: 1;
 }
 
@@ -5387,7 +5388,7 @@ button.popup-open-btn img {
     margin-left: 1px;
 }
 
-.our-leadership-section button.popup-open-btn {
+.our-leadership-section .popup-open-btn {
     width: 32px;
     height: 32px;
 }
@@ -5406,10 +5407,29 @@ button.popup-open-btn img {
     background: rgba(0, 0, 0, 0.65);
     padding: 60px 0;
     overflow: auto;
-    display: none;
     opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
 }
 
+.media-content-popup-main:popover-open {
+  opacity: 1;
+  padding-right: 15px;
+  pointer-events: auto;
+}
+
+html:has(.media-content-popup-main:popover-open),
+body:has(.media-content-popup-main:popover-open) {
+  overflow: hidden;
+}
+
+body:has(.media-content-popup-main:popover-open) header.site-header {
+    width: calc(100% - 15px);
+}
+
+html:has(.media-content-popup-main:popover-open) {
+    padding-right:15px;
+}
 
 .media-content-popup.has-popup-hr {
     display: grid;
@@ -6953,6 +6973,18 @@ button.popup-open-btn img {
 
     .media-content-popup .media-content-popup-media {
         height: 207px;
+    }
+
+    .media-content-popup-main:popover-open {
+        padding-right: 0;
+    }
+
+    body:has(.media-content-popup-main:popover-open) header.site-header {
+        width: calc(100% - 0px);
+    }
+
+    html:has(.media-content-popup-main:popover-open) {
+        padding-right:0;
     }
 
 }
