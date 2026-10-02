@@ -5516,12 +5516,56 @@ body.contact-page {
  
 
 /* Staggered / Up-Down Layout */
- 
+
 .iq-profile-grid-wrapper.is-staggered {
     padding-bottom: 50px;
 }
 
+.iq-profile-grid-lsiting-blurb-top-left {
+    top: -10%;
+    left: 0;
+}
+
+/* Our Team Page css */
+.iq-profile-grid-lsiting-section {
+    position: relative;
+}
+
+.iq-profile-grid-lsiting-section .container {
+    position: relative;
+}
+
+.iq-profile-grid-lsiting-section .iq-profile-card {
+    height: 380px;
+    padding: 15px;
+    position: relative;
+}
+
+.iq-profile-grid-wrapper.columns-4.has-card-updown {
+    padding-bottom: 50px;
+}
+
+.iq-orbit-rings-vector {
+    position: absolute;
+    top: -3%;
+    right: 0;
+    z-index: -1;
+}
+
+/* 4-column staggered: 1st and 3rd columns pushed down */
+
+.iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
+.iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) { 
+    top:50px;
+}
+
 /* Media Query Start Here */
+@media (min-width: 1380px) {
+    .iq-profile-grid-lsiting-section .container > .heading-wrap{
+        margin-bottom: 200px;
+    }
+}
+
 @media (min-width: 1200px) {
     /* IQ Split Banner css */
     .iq-split-hero-section {
@@ -5599,10 +5643,15 @@ body.contact-page {
      }
 
     /* Cta button */
-
     .iq-feature-grid-section .iq-feature-grid-action {
         margin-top: 47px;
     }
+
+    .iq-profile-grid-lsiting-section {
+        padding-bottom: 125px;
+    }
+    
+
 }
 
 @media (min-width: 1024px) {
@@ -5638,9 +5687,15 @@ body.contact-page {
         padding-block: 0 100px;
     }
 
+
 }
 
-@media (min-width:768px) { 
+@media (min-width:575px) { 
+    /* 2-column staggered: 2nd column pushed down */
+ 
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
+        top:40px;
+    }
 }
 
 
@@ -6127,31 +6182,29 @@ body.contact-page {
         height: 400px;
     }
 
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-}
 
-
-@media (min-width: 1025px) {
- 
-    /* 4-column staggered: 1st and 3rd columns pushed down */
- 
     .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
-    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) { 
-        transform: translateY(50px);
+    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) {
+        top: 0;
     }
 
-      /* 3-column staggered: 2nd column pushed down */
- 
+    /* Our Team Page css */
+    /* 4-column staggered: 2nd column pushed down */
+    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
+        top:50px !important;
+    }
+
     .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
-        transform: translateY(45px);
-    }
-
-    /* 2-column staggered: 2nd column pushed down */
- 
-    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
-        transform: translateY(40px);
-    }
+        top:50px;
+    } 
 }
+
+
+
 
 /* =========================================
    TABLET — 1024px and below
@@ -6173,11 +6226,6 @@ body.contact-page {
     .iq-profile-card {
         gap:30px;
         padding:20px;
-    }
-
-    .iq-profile-grid-wrapper.columns-4,
-    .iq-profile-grid-wrapper.columns-3 {
-        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -6243,56 +6291,56 @@ body.contact-page {
 
 
 
-    h1,
-  .headline-1 {
-    font-size: 42px;
-  }
+        h1,
+    .headline-1 {
+        font-size: 42px;
+    }
 
-  h2,
-  .headline-2 {
-    font-size: 36px;
-  }
+    h2,
+    .headline-2 {
+        font-size: 36px;
+    }
 
-  .sub-head-1 {
-    font-size: 32px;
-  }
+    .sub-head-1 {
+        font-size: 32px;
+    }
 
-  .sub-head-2 {
-    font-size: 26px;
-  }
+    .sub-head-2 {
+        font-size: 26px;
+    }
 
-  .sub-head-3 {
-    font-size: 20px;
-   }
+    .sub-head-3 {
+        font-size: 20px;
+    }
 
-  .body-text-32 {
-    font-size: 26px;
-  }
+    .body-text-32 {
+        font-size: 26px;
+    }
 
-  .body-text-24 {
-    font-size: 22px;
-  }
+    .body-text-24 {
+        font-size: 22px;
+    }
 
-  .body-text-20 {
-    font-size: 18px;
-  }
+    .body-text-20 {
+        font-size: 18px;
+    }
 
-  .body-text-18 {
-    font-size: 16px;
-  }
+    .body-text-18 {
+        font-size: 16px;
+    }
 
-  .body-text-16 {
-    font-size: 15px;
-  }
+    .body-text-16 {
+        font-size: 15px;
+    }
 
-  .body-text-14 {
-    font-size: 14px;
-  }
+    .body-text-14 {
+        font-size: 14px;
+    }
 
-  .body-text-12,
-  .sm-text {
-    font-size: 12px;
-  }
+    .body-text-12,
+    .sm-text {
+        font-size: 12px;
+    }
 
 
    /* ========================================
@@ -6724,8 +6772,9 @@ body.contact-page {
 
     /* about us page css */
 
-    .iq-profile-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .iq-marquee-item {
@@ -6819,6 +6868,15 @@ body.contact-page {
     .about-us-banner .banner-content {
         max-width: 584px;
     }
+
+
+    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
+        top: 0 !important;
+    }
+
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1) {
+        top: 50px !important;
+    } 
 
 }
 
@@ -7321,10 +7379,6 @@ body.contact-page {
         text-align: center;
     }
 
-    .iq-profile-grid-wrapper {
-        grid-template-columns: 1fr;
-    }
-
     .recognition-blurb-top-right {
         top:-35%;
     }
@@ -7425,17 +7479,6 @@ body.contact-page {
 
 }
 
-@media (max-width: 640px) {
- 
-    .iq-profile-grid-wrapper,
-    .iq-profile-grid-wrapper.columns-4,
-    .iq-profile-grid-wrapper.columns-3,
-    .iq-profile-grid-wrapper.columns-2 { 
-        grid-template-columns: 1fr;
-    }
- 
-}
-
 /* =========================================
    MOBILE — 575px and below
 ========================================= */
@@ -7532,6 +7575,25 @@ body.contact-page {
     .trust-card p br {
         display: none;
     }
+
+
+    /* Our Team Page css */
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4,
+    .iq-profile-grid-wrapper.columns-3,
+    .iq-profile-grid-wrapper.columns-2 { 
+        grid-template-columns: 1fr;
+    }
+
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1) {
+        top: 0 !important;
+    }
+ 
 }
 
 
