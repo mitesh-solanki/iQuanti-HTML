@@ -5552,12 +5552,25 @@ body.contact-page {
     z-index: -1;
 }
 
+
+/* 2-column staggered: 2nd column pushed down */
+
+.iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
+    top:50px;
+}
+
+/* 4-column staggered: 1st and 3rd columns pushed down */
+.iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
+    top:50px;
+} 
+
 /* 4-column staggered: 1st and 3rd columns pushed down */
 
 .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
 .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) { 
     top:50px;
 }
+
 
 /* Media Query Start Here */
 @media (min-width: 1380px) {
@@ -5690,13 +5703,6 @@ body.contact-page {
 
 }
 
-@media (min-width:575px) { 
-    /* 2-column staggered: 2nd column pushed down */
- 
-    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
-        top:40px;
-    }
-}
 
 
 @media(max-width:1380px){
@@ -6197,10 +6203,6 @@ body.contact-page {
     .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
         top:50px !important;
     }
-
-    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
-        top:50px;
-    } 
 }
 
 
@@ -6870,13 +6872,22 @@ body.contact-page {
     }
 
 
-    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
+    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
         top: 0 !important;
     }
 
-    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1) {
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.columns-4.is-staggered> :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n + 1){
         top: 50px !important;
-    } 
+    }
+    
+    .iq-profile-grid-wrapper.columns-4.has-card-updown {
+        padding-bottom: 0;
+    }
 
 }
 
@@ -7477,6 +7488,21 @@ body.contact-page {
         margin-inline: auto;
     }
 
+    .iq-orbit-rings-vector {
+        position: absolute;
+        top: -1%;
+        z-index: -1;
+        left: 50%;
+        right: auto;
+        opacity: 1;
+        transform: translate(-50%);
+        opacity: 0.7;
+    }
+
+      .iq-orbit-rings-vector img {
+        width: 400px;
+      }
+
 }
 
 /* =========================================
@@ -7590,10 +7616,12 @@ body.contact-page {
         grid-template-columns: 1fr !important;
     }
     
-    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1) {
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.columns-4.is-staggered> :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n + 1){
         top: 0 !important;
     }
- 
 }
 
 
