@@ -770,6 +770,7 @@ h2,
 .blurb-bg {
     position:absolute;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* ========================================
@@ -5344,8 +5345,8 @@ body.contact-page {
     overflow: hidden;
 }
 
-.iq-profile-card {
-    position:relative;
+.iq-profile-card:hover .iq-profile-card-badge {
+    background-color: var(--color-electric-blue);
 }
 
 .iq-profile-card::before {
