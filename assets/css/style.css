@@ -1882,7 +1882,7 @@ section {
 .card-border-fill rect {
     fill: none;
     stroke: #3c83f6;
-    stroke-width: 2;
+    stroke-width: 5;
 
     /* Using pathLength makes this 100% of the border */
     stroke-dasharray: 1;
@@ -6567,6 +6567,11 @@ html:has(.media-content-popup-main:popover-open) {
         justify-content: center;
     }
 
+    /* Trust Section CSS */
+    .trust-card:hover .card-border-fill rect {
+        animation:none;
+    }
+
     /* -----------------------------------------
        FOOTER
     ----------------------------------------- */
@@ -7002,55 +7007,6 @@ html:has(.media-content-popup-main:popover-open) {
 
 @media (max-width: 767px) {
 
-    /* -----------------------------------------
-       TYPOGRAPHY
-    ----------------------------------------- */
-
-    h1,
-    .h1 {
-        font-size: 36px;
-        line-height: 1.1;
-    }
-
-    h2,
-    .h2 {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    h3,
-    .h3 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    h4,
-    .h4 {
-        font-size: 20px;
-        line-height: 1.25;
-    }
-
-    .h5-large {
-        font-size: 17px;
-        line-height: normal;
-    }
-
-    h5,
-    .h5 {
-        font-size: 16px;
-        line-height: 1.1;
-    }
-
-    p {
-        font-size: 14px;
-        line-height: 1.55;
-    }
-
-    .l1 {
-        font-size: 8px;
-        line-height: 150%;
-    }
-
     /* ========================================
     Typography
     ======================================== */
@@ -7107,6 +7063,17 @@ html:has(.media-content-popup-main:popover-open) {
 
     .number-headline {
         font-size: 42px;
+    }
+
+    
+    p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .l1 {
+        font-size: 8px;
+        line-height: 150%;
     }
 
     /* ========================================
