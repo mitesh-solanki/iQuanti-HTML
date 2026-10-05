@@ -121,46 +121,7 @@ color: var(--color-elevate-gray);
 font-weight: 700;
 }
 
-/*
 
-
-h1,
-.h1 {
-    font-size: 64px;
-    line-height: 1.188;
-    letter-spacing: -1.8px;
-}
-
-
-h2,
-.h2 {
-    font-size: 48px;
-    line-height: 1.167;
-}
-
-h3,
-.h3 {
-    font-size: 36px;
-    line-height: 1.25;
-}
-
-h4,
-.h4 {
-    font-size: 24px;
-    line-height: 1.25;
-}
-
-.h5-large {
-    font-size: 20px;
-    line-height: normal;
-}
-
-h5,
-.h5 {
-    font-size: 18px;
-    line-height: 110%;
-}
-*/
 p{
     font-family: area-normal,sans-serif;
     font-style: normal;
@@ -175,56 +136,6 @@ p{
     font-size: 8px;
     line-height: 150%;
 }
-
-/* .body-text-14 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.714;
-}
-
-.body-text-16 {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.body-text-18 {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.556;
-    font-family: area-normal, sans-serif !important;
-}
-
-.body-text-20 {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.4;
-    font-family: area-normal, sans-serif !important;
-}
-
-.body-text-20-reg {
-    font-weight: 400 !important;
-}
-
-.body-text-20-bold {
-    font-weight: 700 !important;
-}
-
-.sm-text-12 {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.714;
-}
-
-.sub-head-2 {
-    font-size: 32px;
-    line-height: 1.25;
-    font-weight: 700;
-    font-family: "neulis-neue" !important;
-} */
-
-
-
 
 /* ========================================
    Typography Base
@@ -1477,21 +1388,11 @@ section {
 }
 
 .client-section::before {
-    background-image: url(../images/client-section-bg.png);
-    opacity: 40%;
-    z-index: -2;
-}
-
-.client-section::after {
     content: "";
     background-image: url(../images/client-section-bg.jpg);
-    background-size: cover;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    background-position: center;
 }
+
 
 /* ========================================
    SECTION HEADING
@@ -1831,18 +1732,20 @@ section {
     position: absolute;
     right: 0;
     top: -70%;
+    pointer-events: none;
 }
 
 .trust-blur-vector-left {
     position: absolute;
     left: 0;
     top: 30%;
+    pointer-events: none;
 }
  
 .trust-container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 228px 220px;
     gap: 24px;
 }
@@ -1987,7 +1890,6 @@ section {
 }
 
 .trust-card-banking ~ .trust-card > strong{
-    line-height: 1.125;
     margin-bottom: 14px;
 }
 
@@ -2176,6 +2078,7 @@ justify-content: center;
 
 .research-card::before {
     background: url(../images/research-slide-bg.jpg);
+    background-position: center;
 }
 
 
@@ -2766,13 +2669,13 @@ Case Study Section =====================*/
 
 .powered-by span {
     flex-shrink: 0;
-font-style: normal;
-font-weight: 500;
-font-size: 14.5px;
-line-height: 23px;
-display: flex;
-align-items: center;
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.5px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
 }
 
 .powered-by i {
@@ -3019,10 +2922,6 @@ color: #FFFFFF;
 
 .feature-card .feature-content .feature-title {
     margin: 0 0 20px;
-    font-family: neulis-neue, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
     color: var(--color-pure-white);
     text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
 }
@@ -3134,23 +3033,16 @@ color: #FFFFFF;
     color: var(--color-pure-white);
     min-height: 89px;
     align-content: center;
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: 700;
 }
 
 .info-card .info-card-description {
     margin: 0 0 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.714;
-    color:var(--color-pure-white-60);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-clamp: 3;
     -webkit-line-clamp: 3;
-    color: #5B5D61;
+    color: var(--color-slate-grey);
 }
 
 /* ================================
@@ -4136,6 +4028,9 @@ button:disabled {
     max-width: 390px;
     margin: 0 0 20px;
     color: var(--color-slate-grey);
+    font-size: 14px;
+    line-height: 1.714;
+    font-weight: 700;
 }
 
 
@@ -5219,6 +5114,32 @@ body.contact-page {
 
 /* Media Query Start Here */
 @media (min-width: 1200px) {
+
+    .hero-section {
+        padding-bottom: 80px;
+    }
+
+    .trust-section {
+        padding-block: 78px;
+    }
+
+    .research-section {
+        padding-block: 50px 100px;
+    }
+
+    .insights-section {
+        padding-block: 62px 98px;
+    }
+
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+
+    .contact-section {
+        padding-block: 45px 52px;
+    }
+
+
     /* IQ Split Banner css */
     .iq-split-hero-section {
         padding: 45px 42px
@@ -5256,31 +5177,6 @@ body.contact-page {
 }
 
 @media (min-width: 1024px) {
-    .hero-section {
-        padding-bottom: 80px;
-    }
-
-    .trust-section {
-        padding-block: 78px;
-    }
-
-    .research-section {
-        padding-block: 50px 100px;
-    }
-
-    .insights-section {
-        padding-block: 62px 98px;
-    }
-
-    .recognition-section {
-        padding-block: 112px 100px;
-    }
-
-    .contact-section {
-        padding-block: 45px 52px;
-    }
-
-
 
     /* Our Works Filter Section */
     .our-works-cta-section{
@@ -5289,8 +5185,6 @@ body.contact-page {
 
 }
 
-@media (min-width:768px) { 
-}
 
 
 @media(max-width:1380px){
@@ -5357,6 +5251,10 @@ body.contact-page {
 
     /* Home Page CSS */
     /*Hero Section CSS  */
+    .home-hero-section .hero-content {
+        padding-bottom: 10px;
+    }
+
     .hero-grid .hero-image img {
         width: 85%;
         margin: -60px auto -60px;
@@ -5373,11 +5271,6 @@ body.contact-page {
         transform: translate3d(0, 10px, 0) !important;
     }
 
-    /* Client Section CSS */
-    .company-chart .company-value {
-        font-size: 38px;
-    }
-
     /* Research Section */
     .research-content h3 {
         font-size: 32px;
@@ -5385,6 +5278,10 @@ body.contact-page {
 
     .research-button {
         font-size: 18px;
+    }
+
+    .solution-container {
+        padding-top: 80px;
     }
 
     .ai-native-section {
@@ -5522,6 +5419,11 @@ body.contact-page {
         margin-top: 0 !important;
     }
 
+    .heading-wrap {
+        margin-bottom: 50px !important;
+    }
+
+
     /* ========================================
     Global Widget
     ======================================== */
@@ -5548,19 +5450,27 @@ body.contact-page {
         padding: 70px 30px;
     }
 
-    /* ========================================
-    HERO SECTION
-    ======================================== */
+    /* Home Page css */
     .hero-grid .hero-content {
         padding-top: 0;
     }
+
     .hero-grid .hero-content .hero-title .highlight-text {
         display: unset;
     }
 
-    /* ========================================
-    INSIGHTS SECTION
-    ======================================== */
+    .solution-container {
+     padding-top: 70px;
+    }
+
+    .research-section {
+        padding-top: 0;
+    }
+
+    .insights-section .insights-container {
+        gap: 0;
+    }
+
     .info-card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -5575,12 +5485,20 @@ body.contact-page {
         gap: 24px;
     }
 
+    .client-cards {
+        gap: 24px;
+    }
+
+    .ai-native-container {
+        column-gap: 40px;
+    }
+
     .case-studies-section .info-card-grid {
         gap: 24px;
     }
 
     .case-studies-section .case-studies-container {
-        gap: 40px;
+        gap: 0;
     } 
 
     /* ========================================
@@ -5598,7 +5516,7 @@ body.contact-page {
     SOLUTIONS SECTION
     ========================================= */
     .solutions-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .solutions-column {
@@ -5621,11 +5539,6 @@ body.contact-page {
         min-height: 360px;
     }
 
-    .feature-card .feature-content .feature-title {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
     .feature-card .impact-badge span {
         font-size: 24px;
         line-height: 30px;
@@ -5645,7 +5558,8 @@ body.contact-page {
     Contact Section CSS
     ======================================== */
     .contact-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap: 40px;
     }
 
 
@@ -5743,40 +5657,6 @@ body.contact-page {
        TYPOGRAPHY
     ----------------------------------------- */
 
-    .h1 {
-        font-size: 56px;
-        line-height: 1.05;
-    }
-
-    h2,
-    .h2 {
-        font-size: 40px;
-        line-height: 1.2;
-    }
-
-    h3,
-    .h3 {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    h4,
-    .h4 {
-        font-size: 22px;
-        line-height: 1.25;
-    }
-
-    .h5-large {
-        font-size: 18px;
-        line-height: normal;
-    }
-
-    h5,
-    .h5 {
-        font-size: 17px;
-        line-height: 1.1;
-    }
-
     p {
         font-size: 14px;
         line-height: 1.55;
@@ -5784,55 +5664,6 @@ body.contact-page {
     .l1 {
         font-size: 8px;
     }
-
-
-
-    h1,
-  .headline-1 {
-    font-size: 42px;
-  }
-
-  h2,
-  .headline-2 {
-    font-size: 36px;
-  }
-
-  .sub-head-1 {
-    font-size: 32px;
-  }
-
-  .sub-head-2 {
-    font-size: 36px;
-  }
-
-  .body-text-32 {
-    font-size: 26px;
-  }
-
-  .body-text-24 {
-    font-size: 22px;
-  }
-
-  .body-text-20 {
-    font-size: 18px;
-  }
-
-  .body-text-18 {
-    font-size: 16px;
-  }
-
-  .body-text-16 {
-    font-size: 15px;
-  }
-
-  .body-text-14 {
-    font-size: 14px;
-  }
-
-  .body-text-12,
-  .sm-text {
-    font-size: 12px;
-  }
 
 
    /* ========================================
@@ -5933,7 +5764,7 @@ body.contact-page {
 
     .hero-grid .hero-image img {
         width: 100%;
-        margin: 0;
+        margin-top: 0;
     }
     /* -----------------------------------------
        HEADER
@@ -6013,6 +5844,12 @@ body.contact-page {
         text-align: center;
      }
 
+
+     /*Home Page css  */
+    .hero-grid .hero-content .hero-description {
+        margin-inline: auto;
+    }
+
     /* ================================
     Recognition & Trust Section
     ================================ */
@@ -6025,11 +5862,6 @@ body.contact-page {
     /*--------------------------------------------
     Trust Section 
     -------------------------------*/
-
-      .trust-section {
-        padding: 45px 30px 35px;
-    }
-
     .trust-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
@@ -6046,22 +5878,20 @@ body.contact-page {
     }
 
     .trust-heading h2 {
-        font-size: 36px;
-        line-height: 1.2;
         text-align: center;
     }
 
-      .trust-heading h2>br {
-          display: none;
-      }
+    .trust-heading h2>br {
+        display: none;
+    }
 
-      .trust-heading p {
-        text-align: center;
-      }
+    .trust-heading p {
+    text-align: center;
+    }
 
-      .trust-heading p>br {
-         display: none;
-      }
+    .trust-heading p>br {
+        display: none;
+    }
 
     /* Reset desktop positioning */
     .trust-card-credit,
@@ -6079,13 +5909,7 @@ body.contact-page {
         padding: 22px;
     }
 
-    .trust-card-title {
-        font-size: 16px;
-    }
-
     .trust-card p {
-        font-size: 15px;
-        line-height: 22px;
         margin: 0;
     }
 
@@ -6143,6 +5967,7 @@ body.contact-page {
 
     .research-content h3 {
         text-align: center;
+        font-size: 28px;
     }
 
     .research-button {
@@ -6152,19 +5977,24 @@ body.contact-page {
     .research-controls {
         display: none;
     }
-
-    .heading-wrap {
-        margin-bottom: 50px !important;
+    
+    .solution-container {
+        padding-top: 64px;
     }
 
     .case-studies-section .case-studies-container {
         gap: 0;
     }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 0;
         display: flex;
         flex-direction: column;
+    }
+
+    .contact-form-title {
+        font-size: 26px;
     }
 
     .contact-form-row-wrap {
@@ -6187,8 +6017,22 @@ body.contact-page {
         padding: 0;
     }
 
-    .solution-container {
-        padding-top: 80px;
+    .accordion-bordered {
+        padding: 32px;
+    }
+
+    .accordion-bordered .accordion-header span:first-child {
+        font-size: 24px;
+    }
+
+    .accordion-bordered .accordion-item:not(:first-child) {
+        padding-top: 24px;
+        margin-top: 24px;
+        border-top: 1px solid #545454;
+    }
+
+    .site-footer .footer-bottom {
+        padding-bottom: 32px;
     }
     
     /* Contact Page css */
@@ -6469,10 +6313,10 @@ body.contact-page {
 
 
     /* ========================================
-    HERO SECTION
+   Home Page CSS
     ======================================== */ 
     .hero-section {
-        padding-top: 113px;
+        padding-top: 106px;
     }
 
     .hero-grid .hero-content .hero-description {
@@ -6481,22 +6325,6 @@ body.contact-page {
 
     .hero-grid .hero-image {
         width: 100%;
-    }
-
-     /* -----------------------------------------
-       Heading Wrap
-    ----------------------------------------- */
-    .heading-wrap {
-        margin-bottom: 32px;
-        margin-inline: auto;
-    }
-
-    /*---------------------------------
-    Trust section 
-    ----------------------------*/
-
-      .trust-section {
-        padding: 35px 20px 30px;
     }
 
     .trust-container {
@@ -6513,12 +6341,8 @@ body.contact-page {
     }
 
     .trust-heading h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        letter-spacing: -0.3px;
         text-align: center;
     }
-
 
     .trust-card {
         width: 100%;
@@ -6538,9 +6362,17 @@ body.contact-page {
         margin: 0;
     }
 
-    /* =========================================
-    Client Section
-    ========================================= */
+    .research-brand {
+        top: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
     .client-cards {
         grid-template-columns: 1fr;
     }
@@ -6558,7 +6390,6 @@ body.contact-page {
         font-size: 13px;
     }
 
-
    .client-label {
         margin-bottom: 24px;
     } 
@@ -6571,13 +6402,7 @@ body.contact-page {
 
     .fortune-bar {
         width: 60px;
-    }
-
-    .company-chart .company-value {
-        font-size: 20px;
-    }
-
-    
+    }    
 
      /* Ai-native section */
 
@@ -6614,14 +6439,9 @@ body.contact-page {
     }
 
     .accordion-header {
-        min-height: 52px;
-        padding: 0 14px;
         font-size: 14px;
     }
 
-    .accordion-bordered .accordion-content p {
-        font-size: 16px;
-    }
 
     .accordion-bordered .accordion-header span:first-child {
         font-size: 20px;
@@ -6642,6 +6462,10 @@ body.contact-page {
 
     .info-card-grid {
         grid-template-columns: 1fr;
+    }
+
+    .info-card .info-card-title {
+        min-height: 67px;
     }
 
     .info-card-grid .info-card:last-child {
@@ -6681,7 +6505,9 @@ body.contact-page {
     /* =========================================
     SOLUTIONS SECTION
     ========================================= */
-
+    .solution-container {
+        padding-top: 48px;
+    }
     .solution-card .solution-card-header {
         flex-direction: column;
     }
@@ -6711,6 +6537,14 @@ body.contact-page {
        FOOTER
     ----------------------------------------- */
 
+    .site-footer .footer-tagline .footer-tagline-item {
+        gap: 24px;
+    }
+
+    .site-footer .footer-tagline span.footer-tagline-text {
+        font-size: 20px;
+    }
+
     .site-footer .footer-container {
         padding-left: 20px;
         padding-right: 20px;
@@ -6726,6 +6560,10 @@ body.contact-page {
         padding-inline: 0;
     }
 
+    .site-footer .footer-card {
+        padding: 24px 24px;
+    }
+
     .site-footer .footer-newsletter {
         grid-column: auto;
     }
@@ -6739,7 +6577,7 @@ body.contact-page {
     }
 
     .site-footer .footer-bottom {
-        margin-top: 36px;
+        margin-top: 8px;
         padding-top: 24px;
     }
 
@@ -6975,9 +6813,9 @@ body.contact-page {
         margin-bottom: 16px;
     }
 
-    .contact-form-title {
-        font-size: 28px;
-    }
+        .contact-form-title {
+            font-size: 24px;
+        }
 
     .privacy-checkbox input {
         margin-top: 4px !important;
