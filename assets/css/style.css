@@ -7760,6 +7760,11 @@ html:has(.media-content-popup-main:popover-open) {
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
+.site-header.sticky-header {
+    background: var(--color-pure-white);
+    box-shadow: 0 0 6px #ddd;
+}
+
 /* Keep the hero artwork feeling alive after its entrance. */
 .hero-image img {
     animation: iqHeroFloat 18s ease-in-out infinite alternate;
