@@ -632,8 +632,6 @@ h2,
   position: relative;
   border-radius: 8px;
   border: 1px solid var(--color-warm-gray) !important;
-    -webkit-backdrop-filter: blur(4.8px) brightness(1.06); /* fallback */
-      backdrop-filter: url(glass-effect-dark) blur(4.8px) brightness(1.06);
     box-shadow:
     inset 1.41px 1.41px 6px rgba(255, 255, 255, 0.28),
     inset -1.41px -1.41px 6px rgba(255, 255, 255, 0.1),
@@ -665,46 +663,23 @@ h2,
 }
 
 /* Modifier: White Glass */
-.has-glass-effect.is-white,
 .has-glass-white {
-  background-color: var(--color-pure-white-20, rgba(255, 255, 255, 0.2));
-}
-
-.has-glass-white {
-  position: relative;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(250, 250, 250, 0.2);
   backdrop-filter: url(#glass-effect-white) blur(4.8px) brightness(1.06);
-  -webkit-backdrop-filter: blur(4.8px) brightness(1.06); /* fallback */
-  box-shadow:
-    inset 1.41px 1.41px 6px rgba(255, 255, 255, 0.28),
-    inset -1.41px -1.41px 6px rgba(255, 255, 255, 0.1),
-    0 9px 26px rgba(0, 0, 0, 0.14);
 }
 
 .has-glass-white::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(255,255,255,0.4) 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
 }
 
 /* Modifier: Dark Glass (Figma me jo #3F4551 60% hai) */
-.has-glass-effect.is-dark,
 .has-glass-dark {
   background: rgba(34, 34, 34, 0.6);
-
+      -webkit-backdrop-filter: blur(4.8px) brightness(1.06); /* fallback */
+      backdrop-filter: url(#glass-effect-dark) blur(4.8px) brightness(1.06);
 }
 
-.has-glass-dark::before {
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-}
+
 
 /* Optional: Reusable Blur Helper Classes */
 .blur-xs { --glass-blur: 2px; }
