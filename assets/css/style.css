@@ -5939,7 +5939,15 @@ html:has(.media-content-popup-main:popover-open) {
 
     .iq-contact-diffrence,
     .testimonial {
-        margin-top: 80px;
+        margin-top: 70px;
+    }
+
+    .iq-contact-growth {
+        margin-top: 70px;
+    }
+
+    .iq-contact-content-section .sub-head-2 {
+        min-height: auto;
     }
 
     .iq-contact-section {
@@ -6083,7 +6091,7 @@ html:has(.media-content-popup-main:popover-open) {
     SECTION
     ======================================== */
     section {
-        padding: 70px 30px;
+        padding: 70px 30px !important; 
     }
 
     /* Home Page css */
