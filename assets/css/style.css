@@ -974,7 +974,8 @@ section {
         color 0.25s ease;
 }
 
-.site-header .main-navigation a:hover {
+.site-header .main-navigation a:hover,
+.site-header .main-navigation a.active {
     color: #111827;
     background: var(--color-pure-white);
 }
