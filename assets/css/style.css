@@ -4571,21 +4571,12 @@ body.contact-page {
     color: var(--color-slate-grey);
 }
 
-.trust-card-grid .trust-card-credit > strong ,
-.trust-card-grid .trust-card-banking > strong {
-    font-size: 64px;
-    line-height: 1.125;
-}
-
-.trust-card-grid .trust-card-credit > strong {
-    font-size: 64px;
-    line-height: 1.125;
-}
-
 .trust-card-grid .trust-card > strong {       
     margin-bottom: 22px;
     display: block;
     font-family: "neulis-neue", sans-serif;
+    font-weight: 900;
+
 }
 
 
@@ -5727,6 +5718,12 @@ html:has(.media-content-popup-main:popover-open) {
         padding-top: 0;
     }
 
+    /* Contact Page CSS */
+    .iq-contact-content-section {
+        padding-block: 80px;
+    }
+
+
     /* Aboutus Page CSS */
     .recognition-section {
         padding-block: 112px 100px;
@@ -5933,6 +5930,7 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     /* Contact Page css */
+
     .count-box .count-value {
         font-size: 60px;
     }
@@ -5951,15 +5949,11 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .iq-contact-section {
-        padding-top: 133px;
+        padding-block: 80px;
     }
 
     .contact-detail {
         margin-top: 34px;
-    }
-
-    .iq-contact-content-section {
-        padding-block:80px;
     }
 
     .trust-card-grid .trust-card-credit > strong, .trust-card-grid .trust-card-banking > strong {
@@ -7411,17 +7405,15 @@ html:has(.media-content-popup-main:popover-open) {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .iq-contact-diffrence, .testimonial {
-        margin-top: 60px;
+    .iq-contact-diffrence, .testimonial,
+        .iq-contact-growth  {
+        margin-top: 48px;
     }
 
     .testimonial-card .testimonial-quote-text {
         font-size: 20px;
     }
 
-    .iq-contact-growth {
-        margin-top: 60px;
-    }
     .iq-contact-growth .trust-card-grid {
         grid-template-columns: repeat(1, 1fr);
     }

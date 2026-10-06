@@ -88,7 +88,7 @@
         <!-- LEFT CONTENT -->
         <div class="iq-split-hero-left">
             <div class="iq-split-hero-header">
-            <h2 class="iq-split-hero-title iq-split-hero-title-light">
+            <h2 class="iq-split-hero-title iq-split-hero-title-light headline-2 ">
                 Let's Build Your<br>
                 <span class="highlight-text highlight-text-electric-blue">Impact</span> Story
             </h2>
@@ -107,8 +107,8 @@
                 </div>
 
                 <div class="detail-content">
-                    <h3 class="body-text-18">Address</h3>
-                    <p>111 Town Square Place</p>
+                    <h3 class="body-text-18 body-text-bold">Address</h3>
+                    <p class="body-text-14 body-text-mid">111 Town Square Place</p>
                 </div>
             </div>
 
@@ -119,8 +119,8 @@
                 </div>
 
                 <div class="detail-content">
-                    <h3 class="body-text-18">Email</h3>
-                    <div class="email-detail-wrap">
+                    <h3 class="body-text-18 body-text-bold">Email</h3>
+                    <div class="email-detail-wrap body-text-14 body-text-mid">
                         <p><a href="#">info@iquanti.com</a></p>
                         <p>For HR/recruitment queries</p>
                         <p><a href="#">HR@iquanti.com</a></p>
@@ -135,8 +135,8 @@
                 </div>
 
                 <div class="detail-content">
-                    <h3 class="body-text-18">Phone</h3>
-                    <p><a href="#">(201)633-2125</a></p>
+                    <h3 class="body-text-18 body-text-bold">Phone</h3>
+                    <p class="body-text-14 body-text-mid"><a href="#">(201)633-2125</a></p>
                 </div>
             </div>
           </div>
@@ -256,62 +256,75 @@
                                 </select>
 
                             </div>
-                    </div>
-                    <div class="privacy-message-wrap">
-                        <button type="button" class="add-message-btn">
-                            <span class="plus-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                                <path d="M9 7H16.5V9H9V16.5H7V9H0V7H7V0H9V7Z" fill="#FAFAFA"/>
-                                </svg>
-                            </span>
-                            <span class="btn-text body-text-14">Add message <span class="optional sm-text-12">(Optional)</span></span>
-                        </button>
-                        <!-- Privacy Checkbox -->
-                        <div class="privacy-checkbox">
-                            <div class="custom-check-box-wrap">
-                                <input type="checkbox"id="privacy"name="privacy" required>
-                                <span class="custom-check-box"></span>
+                        </div>
+                        <div class="privacy-message-wrap">
+                            <button type="button" class="add-message-btn">
+                                <span class="plus-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M9 7H16.5V9H9V16.5H7V9H0V7H7V0H9V7Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </span>
+                                <span class="btn-text body-text-14">Add message <span class="optional sm-text-12">(Optional)</span></span>
+                            </button>
+                            <!-- Privacy Checkbox -->
+                            <div class="privacy-checkbox">
+                                <div class="custom-check-box-wrap">
+                                    <input type="checkbox"id="privacy"name="privacy" required>
+                                    <span class="custom-check-box"></span>
+                                </div>
+                                <label for="privacy">
+                                    <span class="sm-text-12">I confirm I have read iQuanti's</span>
+                                    <span class="sm-text-12 privacy-policy-text">Privacy Policy.* </span>
+                                </label>
+        
                             </div>
-                            <label for="privacy">
-                                <span class="sm-text-12">I confirm I have read iQuanti's</span>
-                                <span class="sm-text-12 privacy-policy-text">Privacy Policy.* </span>
-                            </label>
-    
                         </div>
-                    </div>
 
 
-                    <!-- reCAPTCHA -->
-                    <div class="recaptcha-box">
+                        <!-- reCAPTCHA -->
+                        <div class="recaptcha-box">
 
-                        <div class="recaptcha-checkbox"></div>
+                            <div class="recaptcha-checkbox"></div>
 
-                        <div class="recaptcha-content">
+                            <div class="recaptcha-content">
 
-                            <p>
-                                I'm not a robot
-                            </p>
+                                <p>
+                                    I'm not a robot
+                                </p>
 
-                            <span>
-                                reCAPTCHA · Privacy · Terms
-                            </span>
+                                <span>
+                                    reCAPTCHA · Privacy · Terms
+                                </span>
+
+                            </div>
 
                         </div>
 
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            class="contact-submit cta-action cta-action-primary"
+                            disabled
+                        >
+                            Contact Us
+                        </button>
                     </div>
-
-
-                    <!-- Submit -->
-                    <button
-                        type="submit"
-                        class="contact-submit cta-action cta-action-primary"
-                        disabled
-                    >
-                        Contact Us
-                    </button>
-
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
+                            <feImage href="data:image/png;base64,…" x="0" y="0" width="300" height="200" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </form>
-
+            
             </div>
         </div>
       </div>
@@ -361,22 +374,36 @@
                                     </div>
                                 </div>
                                 <div class="solution-card-body">
-                                    <p class="solution-description body-text-16">
+                                    <p class="solution-description body-text-14 body-text-bold">
                                         Turning data into a clear, measurable read on what's actually working.
                                     </p>
             
                                     <div class="solution-tags">
-                                        <span>Media Analytics</span>
-                                        <span>Attribution Modeling</span>
-                                        <span>Analytics Strategy</span>
-                                        <span>Resource Augmentation</span>
+                                        <span class="body-text-14 body-text-reg">Media Analytics</span>
+                                        <span class="body-text-14 body-text-reg">Attribution Modeling</span>
+                                        <span class="body-text-14 body-text-reg">Analytics Strategy</span>
+                                        <span class="body-text-14 body-text-reg">Resource Augmentation</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                     </div>
 
-                                        <!-- Marketing Technology -->
+                    <!-- Marketing Technology -->
                     <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="240">
                         <div class="solution-card-inner">
                             <div class="solution-card-content">
@@ -391,22 +418,36 @@
                                     </div>
                                 </div>
                                 <div class="solution-card-body">
-                                    <p class="solution-description body-text-16">
+                                    <p class="solution-description body-text-14 body-text-bold">
                                         Full-funnel media that maximizes ROI across every owned and paid channel.
                                     </p>
             
                                     <div class="solution-tags">
-                                        <span>SEO</span>
-                                        <span>GEO/AIO</span>
-                                        <span>Paid Search</span>
-                                        <span>Paid Social</span>
-                                        <span>Programmatic</span>
-                                        <span>ASO</span>
+                                        <span class="body-text-14 body-text-reg">SEO</span>
+                                        <span class="body-text-14 body-text-reg">GEO/AIO</span>
+                                        <span class="body-text-14 body-text-reg">Paid Search</span>
+                                        <span class="body-text-14 body-text-reg">Paid Social</span>
+                                        <span class="body-text-14 body-text-reg">Programmatic</span>
+                                        <span class="body-text-14 body-text-reg">ASO</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                     </div>
+
                     <!-- Performance Marketing -->
                     <div class="solution-card no-hover-content has-content-side-left has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="750" data-aos-delay="120">
                         <div class="solution-card-inner">
@@ -427,15 +468,28 @@
                                     </p>
             
                                     <div class="solution-tags">
-                                        <span>CRO</span>
-                                        <span>Content Strategy</span>
-                                        <span>Creative Production</span>
-                                        <span>Landing Page Optimization</span>
-                                        <span>Website Design & Development</span>
+                                        <span class="body-text-14 body-text-reg">CRO</span>
+                                        <span class="body-text-14 body-text-reg">Content Strategy</span>
+                                        <span class="body-text-14 body-text-reg">Creative Production</span>
+                                        <span class="body-text-14 body-text-reg">Landing Page Optimization</span>
+                                        <span class="body-text-14 body-text-reg">Website Design & Development</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                     </div>
         
 
@@ -456,17 +510,17 @@
                                     </div>
                                 </div>
                                 <div class="solution-card-body">
-                                    <p class="solution-description body-text-16">
+                                    <p class="solution-description body-text-14 body-text-bold">
                                        MarTech and CDP infrastructure built to power personalization at scale.
                                     </p>
             
                                     <div class="solution-tags">
-                                        <span>CMS & App Development</span>
-                                        <span>CDP & Personalization</span>
-                                        <span>Content Strategy</span>
-                                        <span>Journey Orchestration</span>
-                                        <span>AI-led Personalization</span>
-                                        <span>Stack Strategy</span>
+                                        <span class="body-text-14 body-text-reg">CMS & App Development</span>
+                                        <span class="body-text-14 body-text-reg">CDP & Personalization</span>
+                                        <span class="body-text-14 body-text-reg">Content Strategy</span>
+                                        <span class="body-text-14 body-text-reg">Journey Orchestration</span>
+                                        <span class="body-text-14 body-text-reg">AI-led Personalization</span>
+                                        <span class="body-text-14 body-text-reg">Stack Strategy</span>
                                     </div>
                                 </div>
                             </div>
@@ -481,22 +535,74 @@
                        <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                             <div class="count-value">18+</div>
                             <div class="count-divider"></div>
-                            <p class="count-text body-text-20">Years in digital marketing</p>
+                            <p class="count-text body-text-20 body-text-mid">Years in digital marketing</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                        </div> 
                         <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                             <div class="count-value">250+</div>
                             <div class="count-divider"></div>
-                            <p class="count-text body-text-20">Clients empowered</p>
+                            <p class="count-text body-text-20 body-text-mid">Clients empowered</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                        </div> 
                         <div class="count-box has-glass-effect has-glass-white blur-sm"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                             <div class="count-value">10</div>
                             <div class="count-divider"></div>
-                            <p class="count-text body-text-20">Locations in the US and globally</p>
+                            <p class="count-text body-text-20 body-text-mid">Locations in the US and globally</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                        </div> 
                         <div class="count-box has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
                             <div class="count-value">11</div>
                             <div class="count-divider"></div>
-                            <p class="count-text body-text-20">Times in the Inc.5000 list</p>
+                            <p class="count-text body-text-20 body-text-mid">Times in the Inc.5000 list</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                        </div> 
                 </div>
             </div>
@@ -626,10 +732,23 @@
                     <!-- Credit Card -->
                     <div class="trust-card title-des-card  trust-card-credit has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-delay="100">
                         <span class="trust-card-title">Banking</span>
-                        <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
-                        <p>of the <strong>largest US banks</strong> partner with us for growth marketing </p>
+                        <strong class="highlight-text highlight-text-electric-blue headline-1">7/10</strong>
+                        <p class="body-text-16 body-text-reg">of the <strong>largest US banks</strong> partner with us for growth marketing </p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                     <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
-                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                    <rect x="0.2" y="0.5" width="100%" height="100%" rx="8" ry="8" pathLength="1">
                     </rect>
                 </svg>
                     </div>
@@ -637,10 +756,23 @@
                     <!-- Banking -->
                     <div class="trust-card  title-des-card trust-card-banking has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="200">
                         <span class="trust-card-title">Credit Card</span>
-                        <strong class="highlight-text highlight-text-electric-blue">7/10</strong>
-                        <p>of the <strong>leading US credit card issuers</strong> empowered to grow</p>
+                        <strong class="highlight-text highlight-text-electric-blue headline-1">7/10</strong>
+                        <p class="body-text-16 body-text-reg">of the <strong>leading US credit card issuers</strong> empowered to grow</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
                         <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
-                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                    <rect x="0.2" y="0.5" width="100%" height="100%" rx="8" ry="8" pathLength="1">
                     </rect>
                 </svg>
                     </div>
@@ -649,19 +781,46 @@
                     <!-- P&C Auto Dental -->
                         <div class="trust-card title-des-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="400">
                             <strong class="highlight-text highlight-text-electric-blue body-text-32 body-text-black">Global Reach</strong>
-                            <p>AMER · EMEA · APAC</p>
-                            <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
-                        <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
-                        </rect>
-                    </svg>
+                            <p class="body-text-16 body-text-reg">AMER · EMEA · APAC</p>
+                            <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>
+                           <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                    <rect x="0.2" y="0.5" width="100%" height="100%" rx="8" ry="8" pathLength="1">
+                    </rect>
+                </svg>
                     </div>
 
                     <!-- 6 Markets -->
                     <div class="trust-card title-des-card has-glass-effect has-glass-white blur-sm" data-aos="fade-up" data-aos-delay="300">
                         <strong class="highlight-text highlight-text-electric-blue body-text-32 body-text-black">P&amp;C · Auto ·  Dental</strong>
-                        <p>Trusted by leading US insurance providers</p>
-                        <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
-                    <rect x="1" y="1" width="290" height="226" rx="8" ry="8" pathLength="1">
+                        <p class="body-text-16 body-text-reg">Trusted by leading US insurance providers</p>
+                        <svg width="0" height="0" style="position:absolute">
+                                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                    <feImage href="data:image/png;base64,…" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                    <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                    <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                                </filter>
+                            </svg>   
+
+                       <svg class="card-border-fill" viewBox="0 0 292 228" preserveAspectRatio="none">
+                    <rect x="0.2" y="0.5" width="100%" height="100%" rx="8" ry="8" pathLength="1">
                     </rect>
                 </svg>
                     </div>
