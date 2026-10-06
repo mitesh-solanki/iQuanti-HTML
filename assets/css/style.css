@@ -1153,14 +1153,9 @@ section {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 133px;
+  padding-top: 197px;
   background-color: var(--color-pure-white);
   z-index: 0;
-}
-
-.hero-section {
-    position: relative;
-    overflow: hidden;
 }
 
 .grid-lines {
@@ -1337,6 +1332,7 @@ section {
 
 .hero-grid .hero-image img{
     width:100%;
+    margin-block: -50px -37px;
 }
 
 
@@ -1362,7 +1358,6 @@ section {
     width: fit-content;
     text-transform: uppercase; 
     font-weight: 800;
-    height: 32px;
     color: var(--color-electric-blue); 
 }
 
@@ -1399,10 +1394,10 @@ section {
 .section-label.has-white {
     background-color: #FAFAFA10;
     border-color: #FAFAFA20;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 .section-label.has-white span {
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 
@@ -1472,9 +1467,6 @@ section {
 
 .client-label {
     color: var(--color-pure-white);
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 32px;
     padding: 4px 12px;
@@ -1625,7 +1617,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 11px;
+    gap: 11px;
 }
 
 .company-chart .company-row {
@@ -1640,7 +1633,6 @@ section {
 .company-chart .company-row:not(:last-child) {
     padding-bottom: 20px;
     border-bottom: 1px solid #85838690;
-    margin-bottom: 20px;
 }
 
 .company-chart .company-row .company-row-col-left {
@@ -5145,10 +5137,22 @@ body.contact-page {
 
 
 /* Media Query Start Here */
+
+/* Media Query Start Here */
+@media (min-width: 1380px) {
+    .iq-profile-grid-lsiting-section .container > .heading-wrap{
+        margin-bottom: 200px;
+    }
+
+    .hero-section {
+        min-height: 789px;
+    }
+}
+
 @media (min-width: 1200px) {
 
     .hero-section {
-        padding-bottom: 80px;
+        padding-block:147px 90px;
     }
 
     .trust-section {
