@@ -41,6 +41,7 @@
     --color-warm-gray-75: #B8B6B575;
     --color-warm-gray-60: #B8B6B560;
     --color-steel-blue-gray: #9da4b465;
+    --color-neutral-gray : #5B5D61;
 
     /* ========================================
        BLUE
@@ -183,8 +184,8 @@ h2,
 }
 
 .sub-head-2 {
-    font-size: 32px;
-    line-height: 1.25;
+    font-size: 48px;
+    line-height: 1.167;
     font-weight: 700;
 }
 
@@ -337,6 +338,13 @@ h2,
   align-items: center !important;
 }
 
+.iq-content-start {
+    align-content: flex-start;
+}
+
+.iq-overflow-visible {
+    overflow: visible !important;
+}
 
 /* ========================================
    GLOBAL COMPONENTS 
@@ -575,6 +583,11 @@ h2,
     position: relative;
 }
 
+.call-to-action-blurb-left-top {
+    top: -100%;
+    left: 0;
+}
+
 .call-to-action-content {
     display: flex;
     flex-direction: column;
@@ -611,6 +624,10 @@ h2,
 
 .highlight-text.highlight-text-elevate-grey{
     color: var(--color-elevate-gray);
+}
+
+.highlight-text.highlight-text-orange {
+    color: var(--color-primary-orange) !important;
 }
 
 
@@ -701,6 +718,7 @@ h2,
 .blurb-bg {
     position:absolute;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* ========================================
@@ -902,11 +920,6 @@ section {
     gap: 30px;
 }
 
-.site-header.sticky-header {
-  background: var(--color-pure-white);
-  box-shadow: 0 0 6px #ddd;
-}
-
 /* ========================================
    LOGO
 ======================================== */
@@ -930,7 +943,6 @@ section {
     height: auto;
 }
 
-
 /* ========================================
    DESKTOP NAVIGATION
 ======================================== */
@@ -943,7 +955,7 @@ section {
     padding: 4px;
     background: var(--color-elevate-gray);
     border: 1px solid #F2F2F2;
-    gap: 4px;
+    gap: 5px;
     border-radius: 100px;
 }
 
@@ -960,16 +972,18 @@ section {
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 30px;
     transition:
         background-color 0.25s ease,
         color 0.25s ease;
 }
 
-.site-header .main-navigation a:hover {
+.site-header .main-navigation a:hover,
+.site-header .main-navigation a.active {
     color: #111827;
     background: var(--color-pure-white);
+    font-weight: 700;
 }
 
 .site-header .main-navigation a.active {
@@ -995,6 +1009,33 @@ section {
     color: var(--color-pure-white);
 }
 
+/* Header Dark Mode */
+.site-header.header-mode-dark .site-logo .site-logo-dark {
+    display: none;
+}
+
+.site-header.header-mode-dark .site-logo .site-logo-white {
+    display: block;
+}
+
+.site-header .site-logo .site-logo-white {
+    display: none;
+}
+
+.site-header.header-mode-dark .main-navigation ul {
+    background: var(--color-off-white);
+}
+
+.site-header.header-mode-dark .main-navigation a {
+    color: var(--color-neutral-gray);
+}
+
+ .site-header.header-mode-dark .main-navigation a:hover {
+    background: var(--color-elevate-gray);
+    color: var(--color-off-white);
+}
+
+
 
 /* ========================================
    MOBILE NAVIGATION
@@ -1013,7 +1054,7 @@ section {
     padding: 12px;
     transition: transform 0.3s ease-in-out;
     z-index: 9999;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
 .site-header .mobile-navigation nav {
@@ -1115,6 +1156,7 @@ section {
     opacity: 1;
     display: block;
     z-index: 9998;
+    min-height: 100vh;
 }
 
 
@@ -3074,12 +3116,17 @@ color: #FFFFFF;
     left: 0;
 }
 
+.recognition-blurb-top-right {
+    right: 0;
+    top: -70%;
+}
+
 .recognition-section .recognition-container {
     max-width: 1264px;
 }
 
 .recognition-section .recognition-heading {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 /* Cards Grid */
@@ -3216,6 +3263,24 @@ color: #FFFFFF;
      z-index: 1;
 }
 
+.contact-section .container {
+    position: relative;
+}
+
+.contact-section .iq-outline-vector {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 186px;
+    height: 148px;
+}
+
+.contact-section .iq-outline-vector img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .contact-section::before {
     background: url(../images/contact-sec-bg-image.jpg);
 }
@@ -3260,7 +3325,7 @@ color: #FFFFFF;
     display: grid;
     grid-template-columns: 42.7555% 51.7545%;
     align-items: start;
-    gap: 67px;
+    gap: 80px;
 }
 /* ========================================
    CONTACT CONTENT
@@ -3278,30 +3343,29 @@ color: #FFFFFF;
 }
 
 .contact-content {
-    padding-top: 52px;
+    padding-top: 40px;
 }
 
 .contact-title {
     margin: 0 0 24px;
-    color: var(--color-pure-white);
-    line-height: 1.25;
-    font-weight: 700;
-    text-shadow: -0.2px 0px 0px #FFFFFF, 0.2px 0px 0px #FFFFFF;
+    color: var(--color-pure-white);;
 }
 
 .heading-wrap.dark .contact-description {
     max-width: 520px;
     margin: 0;
-    color: var(--color-pure-white-80 );
 }
 
 
 /* ========================================
    CONTACT FORM WRAPPER
 ======================================== */
-
 .contact-form-wrapper {
     width: 100%;
+}
+
+.contact-section .contact-form-wrapper {
+    max-width: 511px;
 }
 
 
@@ -3316,7 +3380,7 @@ color: #FFFFFF;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -3357,7 +3421,7 @@ color: #FFFFFF;
 .contact-form-row {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 12px;
+    gap: 13px;
 }
 
 
@@ -3774,6 +3838,7 @@ color: #FFFFFF;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: 4px;
 }
 
 .contact-form .privacy-message-wrap button {
@@ -3802,7 +3867,7 @@ color: #FFFFFF;
     display: inline-block;
 }
 .contact-form .recaptcha-box {
-    margin-top: 6px;
+    margin-top: 4px;
 }
 /* ========================================
    RECAPTCHA
@@ -3866,7 +3931,7 @@ color: #FFFFFF;
 
 .contact-submit {
     width: 100%;
-    margin-top: 6px;
+    margin-top: 5px;
     position: relative;
     transition: all 0.25s ease;
 }
@@ -4501,21 +4566,12 @@ body.contact-page {
     color: var(--color-slate-grey);
 }
 
-.trust-card-grid .trust-card-credit > strong ,
-.trust-card-grid .trust-card-banking > strong {
-    font-size: 64px;
-    line-height: 1.125;
-}
-
-.trust-card-grid .trust-card-credit > strong {
-    font-size: 64px;
-    line-height: 1.125;
-}
-
 .trust-card-grid .trust-card > strong {       
     margin-bottom: 22px;
     display: block;
     font-family: "neulis-neue", sans-serif;
+    font-weight: 900;
+
 }
 
 
@@ -5121,21 +5177,502 @@ body.contact-page {
 }
 
 
+/* About us page */
+/* 28-09-2026 */
 
-/* Media Query Start Here */
-@media (min-width: 1024px) {
+.about-us-banner {
+    background-image: url("../images/about-us-banner.png");
+    background-position: bottom;
+} 
 
-    /* Our Works Filter Section */
-    .our-works-cta-section{
-        padding-block: 0 100px;
+.about-us-banner .banner-content {
+    max-width: 883px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.about-us-page .contact-section::before {
+    background:  url("../images/about-contact-banner.png");
+    background-position: right;
+}
+
+.about-us-call-to-action-section .call-to-action-content {
+    max-width: 967px;
+    width: 100%;
+    margin-inline: auto !important;
+}
+
+/* ==========================================
+   LEADERSHIP SECTION
+========================================== */
+
+.iq-profile-grid-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.iq-profile-grid-section .heading-wrap {
+   max-width: 954px;
+   width: 100%;
+}
+
+/* ==========================================
+   LEADERSHIP GRID
+========================================== */
+
+.iq-profile-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* ==========================================
+   LEADER CARD
+========================================== */
+
+.iq-profile-card {
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap:81px;
+    padding: 30px;
+    background: var(--color-off-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iq-profile-card:hover .iq-profile-card-badge {
+    background-color: var(--color-electric-blue);
+}
+
+.iq-profile-card::before {
+    content: "";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    z-index: 1;
+    opacity: 0;
+    display: none;
+}
+
+.iq-profile-card:hover::before {
+    opacity: 1;
+    display: block;
+}
+
+.popup-open-btn {
+    background: var(--color-elevate-gray);
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.iq-profile-card:hover .popup-open-btn {
+    opacity: 1;
+}
+
+button.popup-open-btn img {
+    margin-left: 1px;
+}
+
+.our-leadership-section .popup-open-btn {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* Media Content Popup */
+.media-content-popup-main{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 60px 0;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.media-content-popup-main:popover-open {
+  opacity: 1;
+  padding-right: 15px;
+  pointer-events: auto;
+}
+
+html:has(.media-content-popup-main:popover-open),
+body:has(.media-content-popup-main:popover-open) {
+  overflow: hidden;
+}
+
+body:has(.media-content-popup-main:popover-open) header.site-header {
+    width: calc(100% - 15px);
+}
+
+html:has(.media-content-popup-main:popover-open) {
+    padding-right:15px;
+}
+
+.media-content-popup.has-popup-hr {
+    display: grid;
+    grid-template-columns: 27.1% 68.7236%;
+    gap: 38px;
+}
+
+.media-content-popup {
+    width: 1006px;
+    max-width: calc(100% - 40px);
+    padding: 56px 42px 91px 46px;
+    backdrop-filter: blur(16px);
+    background: rgba(34, 34, 34, 0.6);
+    border: 0.5px solid var(--color-warm-gray);
+    border-radius: 8px;
+    align-items: start;
+    margin: auto;
+}
+
+.media-content-popup .media-content-popup-media {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 307px;
+}
+
+.media-content-popup .media-content-popup-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.media-content-popup.has-popup-dark .media-content-popup-content  *{
+    color: var(--color-pure-white);
+}
+
+.media-content-popup.has-popup-dark .media-content-popup-content p {
+    color: var(--color-off-white);
+}
+
+.media-content-popup.has-popup-dark .media-content-popup-content p:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.media-content-popup .media-content-popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.popup-close-btn {
+    width: 38px;
+    height: 38px;
+    background-color: #D9D9D920;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popup-close-btn img {
+    width: 19px;
+    height: 19px;
+}
+
+/* ==========================================
+   LEADER INFO
+========================================== */
+
+.iq-profile-card-badge {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 13px 23px;
+    background: rgba(34, 34, 34, 0.40);
+    border-radius: 999px;
+    text-align: center;
+}
+
+.iq-profile-card-badge h3 {
+    color: var(--color-pure-white);
+}
+
+.iq-profile-card-badge p {
+    color:var(--color-pure-white);
+}
+
+/* Core values section start */
+/* 28-09-2026 */
+
+.iq-feature-grid-section  {
+    position: relative;
+}
+
+.iq-feature-grid-section .heading-wrap {
+    max-width: 762px;
+    width: 100%;
+}
+
+.iq-feature-blurb-left-bottom  {
+    left: 0;
+    top: 20%;
+}
+
+/* ==========================================
+   CARDS GRID
+========================================== */
+
+.iq-feature-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.iq-feature-card {
+    padding: 41px;
+    border-radius: 8px;
+    border: 0.5px solid var(--EG-3, #B8B6B5);
+    background: rgba(250, 250, 250, 0.10);
+    backdrop-filter: blur(12px);
+}
+
+.iq-feature-card .iq-feature-card-icon {
+    margin-bottom: 46px;
+}
+
+.iq-feature-card h3 {
+    color: var(--color-electric-blue);
+    margin-bottom: 8px;
+}
+
+
+/* Marquee section start */
+
+.iq-marquee-section {
+    width: 100%;
+    overflow: hidden;
+    padding-inline: 0 !important;
+}
+
+.iq-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.iq-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: iqMarquee 12s linear infinite;
+    will-change: transform;
+}
+
+.iq-marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.iq-marquee-item {
+    width: 404px;
+    height: 350px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iq-marquee-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   INFINITE ANIMATION
+========================================== */
+
+@keyframes iqMarquee {
+    from {
+        transform: translateX(0);
     }
 
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================
+   HOVER PAUSE
+========================================== */
+
+.iq-marquee:hover .iq-marquee-track {
+    animation-play-state: paused;
+}
+
+/* our-legacy-section start */
+
+.our-legacy-section .heading-wrap {
+    max-width: 762px;
+}
+
+/* ==========================================
+ 
+   Profile Grid Block Extensions
+ 
+========================================== */
+ 
+
+.iq-profile-grid-wrapper.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+ 
+.iq-profile-grid-wrapper.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+ 
+.iq-profile-grid-wrapper.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+ 
+
+/* Staggered / Up-Down Layout */
+
+.iq-profile-grid-wrapper.is-staggered {
+    padding-bottom: 50px;
+}
+
+.iq-profile-grid-lsiting-blurb-top-left {
+    top: -10%;
+    left: 0;
+}
+
+/* Our Team Page css */
+.iq-profile-grid-lsiting-section {
+    position: relative;
+}
+
+.iq-profile-grid-lsiting-section .container {
+    position: relative;
+}
+
+.iq-profile-grid-lsiting-section .iq-profile-card {
+    height: 380px;
+    padding: 15px;
+    position: relative;
+}
+
+.iq-profile-grid-wrapper.columns-4.has-card-updown {
+    padding-bottom: 50px;
+}
+
+.iq-orbit-rings-vector {
+    position: absolute;
+    top: -3%;
+    right: 0;
+    z-index: -1;
+}
+
+
+/* 2-column staggered: 2nd column pushed down */
+
+.iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
+    top:50px;
+}
+
+/* 4-column staggered: 1st and 3rd columns pushed down */
+.iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
+    top:50px;
+} 
+
+/* 4-column staggered: 1st and 3rd columns pushed down */
+
+.iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
+.iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) { 
+    top:50px;
+}
+
+
+/* Media Query Start Here */
+
+/* Media Query Start Here */
+@media (min-width: 1380px) {
+    .iq-profile-grid-lsiting-section .container > .heading-wrap{
+        margin-bottom: 200px;
+    }
+
+    .hero-section {
+        min-height: 789px;
+    }
 }
 
 @media (min-width: 1200px) {
 
-    section.has-header-in-section {
-        padding-top: 162px;
+    .hero-section {
+        padding-block:147px 90px;
+    }
+
+    .trust-section {
+        padding-block: 78px;
+    }
+
+    .research-section {
+        padding-block: 50px 100px;
+    }
+
+    .insights-section {
+        padding-block: 62px 98px;
+    }
+
+    .recognition-section {
+        padding-block: 112px 100px;
     }
 
     .contact-section {
@@ -5155,6 +5692,11 @@ body.contact-page {
 
     .content-showcase-section {
         padding-block: 70px 110px;
+    }
+
+    /* Recognition & trust Section CSS  */
+    .recognition-section .recognition-heading {
+        margin-bottom: 60px;
     }
 
     /* Call To Action */
@@ -5180,31 +5722,50 @@ body.contact-page {
 }
 
 @media (min-width: 1380px) {
+        .hero-Q-blurb-bg {
+        top: 0;
+        right: 0%;
+    }
     .iq-profile-grid-lsiting-section .container > .heading-wrap{
         margin-bottom: 200px;
     }
-
-    .hero-section {
-        min-height: 772px;
-    }
-
-    section.has-header-in-section {
-        padding-top:202px;
-    }
-
+    
 
 }
 
-@media (min-width: 1536px) {
-    .hero-Q-blurb-bg {
-        top: -25%;;
-        right: 25%;
+@media (min-width: 1024px) {
+    .hero-section {
+        padding-bottom: 80px;
     }
 
-    .hero-Q-blurb-bg img {
-        width: 150%;
+    .trust-section {
+        padding-block: 78px;
     }
-    
+
+    .research-section {
+        padding-block: 50px 100px;
+    }
+
+    .insights-section {
+        padding-block: 62px 98px;
+    }
+
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+
+    .contact-section {
+        padding-block: 45px 52px;
+    }
+
+
+
+    /* Our Works Filter Section */
+    .our-works-cta-section{
+        padding-block: 0 100px;
+    }
+
+
 }
 
 
@@ -5234,7 +5795,7 @@ body.contact-page {
     }
 
     .sub-head-2 {
-        font-size: 30px;
+        font-size: 46px;
     }
 
     .body-text-32 {
@@ -5335,6 +5896,10 @@ body.contact-page {
         margin-bottom: 64px;
     }
 
+    .contact-grid {
+        gap: 64px;
+    }
+
     .site-footer .footer-grid {
         padding-inline: 30px;
     }
@@ -5348,25 +5913,30 @@ body.contact-page {
     }
 
     /* Contact Page css */
+
     .count-box .count-value {
         font-size: 60px;
     }
 
     .iq-contact-diffrence,
     .testimonial {
-        margin-top: 80px;
+        margin-top: 70px;
+    }
+
+    .iq-contact-growth {
+        margin-top: 70px;
+    }
+
+    .iq-contact-content-section .sub-head-2 {
+        min-height: auto;
     }
 
     .iq-contact-section {
-        padding-top: 133px;
+        padding-block: 80px;
     }
 
     .contact-detail {
         margin-top: 34px;
-    }
-
-    .iq-contact-content-section {
-        padding-block:80px;
     }
 
     .trust-card-grid .trust-card-credit > strong, .trust-card-grid .trust-card-banking > strong {
@@ -5411,7 +5981,7 @@ body.contact-page {
     }
 
     .sub-head-2 {
-        font-size: 28px;
+        font-size: 42px;
     }
 
     .body-text-32 {
@@ -5450,6 +6020,9 @@ body.contact-page {
     /* ========================================
     Global Utilities
     ======================================== */
+    .heading-wrap {
+        margin-bottom: 40px !important;
+    }
     .banner-main {
         min-height: 70vh;
     }
@@ -5494,7 +6067,7 @@ body.contact-page {
     }
 
     section {
-        padding: 70px 30px;
+        padding: 70px 30px !important; 
     }
 
     /* Home Page css */
@@ -5599,7 +6172,11 @@ body.contact-page {
         grid-template-columns:repeat(2, minmax(0, 1fr));
         gap: 40px;
     }
-
+    
+    .contact-section .iq-outline-vector {
+        width: 166px;
+        height: 128px;
+    }
 
 
     /* Our Works Page */
@@ -5682,8 +6259,90 @@ body.contact-page {
         text-align: center;
     }
 
+    /* Aboutus Page CSS  */
+
+    .spotlight-banner-section.iq-content-start {
+        align-content: center;
+    }
+
+    .core-feature-grid-section,
+    .about-marquee-section,
+    .our-legacy-section,
+    .our-leadership-section,
+    .about-recognition-section {
+        padding-bottom: 0;
+    }
+
+    .iq-feature-card {
+        padding: 24px;
+    }
+
+    .iq-feature-card .iq-feature-card-icon {
+        margin-bottom: 24px;
+    }
+
+    .iq-feature-card-content p br {
+        display: none;
+    }
+
+    .iq-feature-grid-action {
+        margin-top: 40px;
+    }
+
+    .iq-profile-card {
+        height: 400px;
+    }
+
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) {
+        top: 0;
+    }
+
+    /* Our Team Page css */
+    /* 4-column staggered: 2nd column pushed down */
+    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
+        top:50px !important;
+    }
+}
+
+
+
+
+/* =========================================
+   TABLET — 1024px and below
+========================================= */
+
+@media (max-width: 1024px) {
+
+    /* About us page */
+
+    .iq-marquee-item {
+        width: 350px;
+        height: 310px;
+    }
+
+    .iq-profile-grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }   
+
+    .iq-profile-card {
+        gap:30px;
+        padding:20px;
+    }
 
 }
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .iq-profile-grid-section  .sub-head-3 {
+        font-size: 18px;
+    } 
+}
+ 
 
 /* =========================================
    TABLET — 1023px and below
@@ -5702,6 +6361,55 @@ body.contact-page {
     .l1 {
         font-size: 8px;
     }
+
+
+
+    h1,
+  .headline-1 {
+    font-size: 42px;
+  }
+
+  h2,
+  .headline-2 {
+    font-size: 36px;
+  }
+
+  .sub-head-1 {
+    font-size: 32px;
+  }
+
+  .sub-head-2 {
+    font-size: 36px;
+  }
+
+  .body-text-32 {
+    font-size: 26px;
+  }
+
+  .body-text-24 {
+    font-size: 22px;
+  }
+
+  .body-text-20 {
+    font-size: 18px;
+  }
+
+  .body-text-18 {
+    font-size: 16px;
+  }
+
+  .body-text-16 {
+    font-size: 15px;
+  }
+
+  .body-text-14 {
+    font-size: 14px;
+  }
+
+  .body-text-12,
+  .sm-text {
+    font-size: 12px;
+  }
 
 
    /* ========================================
@@ -6024,13 +6732,17 @@ body.contact-page {
     .research-controls {
         display: none;
     }
-    
-    .solution-container {
-        padding-top: 64px;
+
+    .heading-wrap {
+        margin-bottom: 50px !important;
     }
 
     .case-studies-section .case-studies-container {
         gap: 0;
+    }
+
+    .contact-section .iq-outline-vector {
+        display: none;
     }
 
     .contact-grid {
@@ -6157,6 +6869,17 @@ body.contact-page {
         font-size: 24px;
     }
 
+    /* about us page css */
+
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .iq-marquee-item {
+        width: 280px;
+        height: 250px;
+    }
 
     /* Our Works Page css */
     .our-works-banner {
@@ -6230,6 +6953,39 @@ body.contact-page {
     .iq-webinar-slider-section .peek-slider-header {
         justify-content: center;
     }
+
+    /* Aboutus Page css */
+    .iq-feature-grid-cards {
+        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .iq-feature-grid-cards  >div:last-child {
+        grid-column: span 2;
+    }
+
+    .about-us-banner .banner-content {
+        max-width: 584px;
+    }
+
+
+    .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n) {
+        top: 0 !important;
+    }
+
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.columns-4.is-staggered> :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n + 1){
+        top: 50px !important;
+    }
+    
+    .iq-profile-grid-wrapper.columns-4.has-card-updown {
+        padding-bottom: 0;
+    }
+
 }
 
 
@@ -6258,7 +7014,7 @@ body.contact-page {
     }
 
     .sub-head-2 {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .body-text-32 {
@@ -6634,17 +7390,15 @@ body.contact-page {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .iq-contact-diffrence, .testimonial {
-        margin-top: 60px;
+    .iq-contact-diffrence, .testimonial,
+        .iq-contact-growth  {
+        margin-top: 48px;
     }
 
     .testimonial-card .testimonial-quote-text {
         font-size: 20px;
     }
 
-    .iq-contact-growth {
-        margin-top: 60px;
-    }
     .iq-contact-growth .trust-card-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -6666,6 +7420,47 @@ body.contact-page {
         padding: 60px 40px;
     }
 
+
+    /* about us page css */
+
+    .iq-feature-grid-cards {
+       grid-template-columns: 1fr;
+    }
+
+    .iq-feature-grid-cards .iq-feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iq-feature-grid-cards h3 {
+        text-align: center;
+    }
+
+    .iq-feature-grid-cards p {
+        text-align: center;
+    }
+
+    .recognition-blurb-top-right {
+        top:-35%;
+    }
+
+
+    .iq-feature-grid-cards >div:last-child {
+        grid-column: span 1;
+    }
+
+    .iq-feature-card .iq-feature-card-icon {
+        margin-bottom: 8px; 
+    }
+
+    .media-content-popup .media-content-popup-content {
+        gap: 16px;
+    }
+
+    .media-content-popup.has-popup-dark .media-content-popup-content p:not(:last-child) {
+        margin-bottom: 16px;
+    }
 
     .speaker-profile-card {
         flex-direction: column;
@@ -6752,9 +7547,36 @@ body.contact-page {
         margin-inline: auto;
     }
 
+    .media-content-popup.has-popup-hr {
+        grid-template-columns: 1fr;
+    }
+
+    .media-content-popup {
+        padding: 78px 24px 24px;
+    }
+
+    .popup-close-btn {
+        width: 32px;
+        height: 32px;
+
+    }
+
+    .iq-orbit-rings-vector {
+        position: absolute;
+        top: -1%;
+        z-index: -1;
+        left: 50%;
+        right: auto;
+        opacity: 1;
+        transform: translate(-50%);
+        opacity: 0.7;
+    }
+
+      .iq-orbit-rings-vector img {
+        width: 400px;
+      }
+
 }
-
-
 
 /* =========================================
    MOBILE — 575px and below
@@ -6781,6 +7603,10 @@ body.contact-page {
 
     .sub-head-2 {
         font-size: 22px;
+    }
+
+     .sub-head-3 {
+        font-size: 18px;
     }
 
     .body-text-32 {
@@ -6848,6 +7674,27 @@ body.contact-page {
     .trust-card p br {
         display: none;
     }
+
+
+    /* Our Team Page css */
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4,
+    .iq-profile-grid-wrapper.columns-3,
+    .iq-profile-grid-wrapper.columns-2 { 
+        grid-template-columns: 1fr;
+    }
+
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.columns-4.is-staggered> :nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(2n + 1),
+    .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n + 1){
+        top: 0 !important;
+    }
 }
 
 
@@ -6889,6 +7736,11 @@ body.contact-page {
     transform: translate3d(0, 0, 0);
     opacity: 1;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.site-header.sticky-header {
+    background: var(--color-pure-white);
+    box-shadow: 0 0 6px #ddd;
 }
 
 /* Keep the hero artwork feeling alive after its entrance. */
@@ -6950,225 +7802,7 @@ body.contact-page {
         transform: none !important;
         opacity: 1 !important;
     }
-}
-
-
-
-/* About us page */
-/* 28-09-2026 */
-
-.about-us-banner {
-    background-image: url("../images/about-us-banner.png");
-    align-content: flex-start;
-    background-position: bottom;
 } 
 
-.about-us-page .contact-section::before {
-    background:  url("../images/about-contact-banner.png");
-}
-
-/* ==========================================
-   LEADERSHIP SECTION
-========================================== */
-
-.iq-profile-grid-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.iq-profile-grid-section .heading-wrap {
-   max-width: 954px;
-   width: 100%;
-}
-
-/* ==========================================
-   LEADERSHIP GRID
-========================================== */
-
-.iq-profile-grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-/* ==========================================
-   LEADER CARD
-========================================== */
-
-.iq-profile-card {
-    position: relative;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap:81px;
-    padding: 30px;
-    background: var(--color-off-white);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* ==========================================
-   LEADER INFO
-========================================== */
-
-.iq-profile-card-badge {
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 23px;
-    background: rgba(34, 34, 34, 0.40);
-    border-radius: 999px;
-}
-
-.iq-profile-card-badge h3 {
-    color: var(--color-pure-white);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
-    white-space: nowrap;
-}
-
-.iq-profile-card-badge p {
-    color:var(--color-pure-white);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
-}
-
-/* ==========================================
-   CTA
-========================================== */
-
-.iq-profile-grid-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
-}
-
-/* Core values section start */
-/* 28-09-2026 */
-
-.iq-feature-grid-section .heading-wrap {
-    max-width: 762px;
-    width: 1005;
-}
-
-/* ==========================================
-   CARDS GRID
-========================================== */
-
-.iq-feature-grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-}
-
-/* ==========================================
-   CARD
-========================================== */
-
-.iq-feature-card {
-    padding: 41px;
-    border-radius: 8px;
-    border: 0.5px solid var(--EG-3, #B8B6B5);
-    background: rgba(250, 250, 250, 0.10);
-    backdrop-filter: blur(12px);
-}
-
-.iq-feature-card .iq-feature-card-icon {
-    margin-bottom: 46px;
-}
-
-.iq-feature-card h3 {
-    color: var(--color-electric-blue);
-    margin-bottom: 8px;
-}
-
-/* Cta button */
-
-.iq-feature-grid-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 46px;
-}
 
 
-/* Marquee section start */
-
-.iq-marquee-section {
-    width: 100%;
-    overflow: hidden;
-    padding-inline: 0 !important;
-}
-
-.iq-marquee {
-    width: 100%;
-    overflow: hidden;
-}
-
-.iq-marquee-track {
-    display: flex;
-    width: max-content;
-    animation: iqMarquee 10s linear infinite;
-    will-change: transform;
-}
-
-.iq-marquee-group {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-shrink: 0;
-    padding-right: 10px;
-}
-
-.iq-marquee-item {
-    width: 404px;
-    height: 350px;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.iq-marquee-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ==========================================
-   INFINITE ANIMATION
-========================================== */
-
-@keyframes iqMarquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/* ==========================================
-   HOVER PAUSE
-========================================== */
-
-.iq-marquee:hover .iq-marquee-track {
-    animation-play-state: paused;
-}
-
-/* our-legacy-section start */
-
-.our-legacy-section .heading-wrap {
-    max-width: 762px;
-}
