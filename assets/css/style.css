@@ -4320,6 +4320,7 @@ body.contact-page {
 
 .iq-split-hero-section {
     position: relative;
+    min-height: 766px;
     width: 100%;
     overflow: hidden; 
     background-size: cover;
@@ -4381,7 +4382,7 @@ body.contact-page {
 .contact-detail {
     display: flex;
     align-items: flex-start;
-    margin-top: 64px;
+    margin-top: 40px;
     gap: 24px;
 }
 
@@ -4413,8 +4414,8 @@ body.contact-page {
 }
 
 .contact-detail .detail-content h3 {
-    margin: 0 0 16px;
-    color: var(--color-primary-orange);
+    margin: 0 0 8px;
+    color: var(--color-electric-blue);
 }
 
 .contact-detail .detail-content p {
@@ -4422,7 +4423,7 @@ body.contact-page {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.214;
-    color: var(--color-pure-white)
+    color: var(--color-off-white)
 }
 
 .contact-detail  p  a {
@@ -4438,7 +4439,7 @@ body.contact-page {
 .contact-detail .email-detail-wrap {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 }
 
 
@@ -4459,7 +4460,7 @@ body.contact-page {
 }
 
 .iq-contact-content-right {
-    max-width: 649px;
+    max-width: 642px;
 }
 
 .contact-solutions-grid {
@@ -4467,7 +4468,11 @@ body.contact-page {
 }
 
 .contact-solutions-grid .solution-card .solution-card-content{
-    padding: 16px;
+    padding: 30px;
+}
+
+.contact-solutions-grid .solution-card .solution-card-header {
+    margin-bottom: 16px;
 }
 
 .contact-solutions-grid .solution-card .solution-title h3 {
@@ -4477,9 +4482,6 @@ body.contact-page {
 }
 
 .contact-solutions-grid .solution-card .solution-description {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.7145;
     color: #222222;
 }
 
@@ -5661,9 +5663,6 @@ html:has(.media-content-popup-main:popover-open) {
         padding-block: 0 120px;
     }
 
-    .insights-section {
-        padding-block: 62px 98px;
-    }
 
     .recognition-section {
         padding-block: 112px 100px;
@@ -5688,10 +5687,6 @@ html:has(.media-content-popup-main:popover-open) {
         padding-block:147px 90px;
     }
 
-    .insights-section {
-        padding-block: 62px 98px;
-    }
-
     .recognition-section {
         padding-block: 112px 100px;
     }
@@ -5703,7 +5698,7 @@ html:has(.media-content-popup-main:popover-open) {
 
     /* IQ Split Banner css */
     .iq-split-hero-section {
-        padding: 45px 42px
+        padding: 40px 47px
     }
 
     .iq-split-hero-section .speaker-profile-card {
