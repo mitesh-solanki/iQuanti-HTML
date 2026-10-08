@@ -15,6 +15,10 @@
         #2A2E75 92.99%
     );
 
+    /* ========================================
+       Black
+    ======================================== */
+    --color-dark-charcoal: #222222;
    /* ========================================
        White
     ======================================== */
@@ -51,7 +55,7 @@
     --color-electric-blue-75: #419BFC;
     --color-electric-blue-50: #80BCFE;
     --color-electric-blue-25: #BEDDFF;
-    --color-ice-blue: #A7D2FF;
+    --color-ice-blue: #C6E2FF;
 
 
     /* ========================================
@@ -212,7 +216,7 @@ h2,
 
 .body-text-24 {
     font-size: 24px;
-    line-height: 1.333;
+    line-height: 1.3335;
 }
 
 .body-text-20 {
@@ -291,7 +295,7 @@ h2,
    Small Text
 ======================================== */
 
-.sm-text {
+.sm-text-12 {
     font-size: 12px;
     line-height: 1.667;
 }
@@ -316,6 +320,11 @@ h2,
 /* ========================================
    GLOBAL Utilities 
 ======================================== */
+
+.has-nobody-bg-image {
+    background-image: none;
+}
+
 .bg-pure-white {
     background-color: var(--color-pure-white);
 }
@@ -2900,21 +2909,18 @@ color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px 5px;
+    gap: 8px;
 }
 
 .solution-tags span {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
-    color: rgb(14 18 22 / 80%);
-    font-family: area-normal, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    color: var(--color-dark-charcoal);
 }
 
 .solution-tags span::before {
@@ -3420,7 +3426,7 @@ color: #FFFFFF;
 .contact-form-row {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 13px;
+    gap: 12px;
 }
 
 
@@ -3930,7 +3936,7 @@ color: #FFFFFF;
 
 .contact-submit {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 4px;
     position: relative;
     transition: all 0.25s ease;
 }
@@ -4340,7 +4346,7 @@ body.contact-page {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 44.4444% 40.5556%;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
@@ -4376,19 +4382,21 @@ body.contact-page {
     color: var(--color-warm-gray);
 }
 
+.iq-split-hero-wrapper .contact-detail-wrapper {
+    margin-top: 64px;
+}   
 
+.contact-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 .contact-detail {
     display: flex;
     align-items: flex-start;
-    margin-top: 40px;
-    gap: 24px;
+    gap: 16px;
 }
-
-
-/* =========================================
-   ICON
-========================================= */
 
 .contact-detail .detail-icon {
     width: 40px;
@@ -4399,11 +4407,6 @@ body.contact-page {
     color: #087dff;
     font-size: 22px;
 }
-
-
-/* =========================================
-   DETAIL CONTENT
-========================================= */
 
 .contact-detail.detail-content {
     font-style: normal;
@@ -4418,17 +4421,14 @@ body.contact-page {
 }
 
 .contact-detail .detail-content p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.214;
     color: var(--color-off-white)
 }
 
-.contact-detail  p  a {
+.contact-detail p a {
     color: var(--color-pure-white) !important;
     text-decoration: none;
     transition: color 0.25s ease;
+    display: inline-block;
 }
 
 .contact-detail  p a:hover {
@@ -4438,7 +4438,7 @@ body.contact-page {
 .contact-detail .email-detail-wrap {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 }
 
 
@@ -4448,14 +4448,13 @@ body.contact-page {
 }
 
 .iq-contact-content-section .sub-head-2 {
-    min-height: 84px;
     align-content: center;
 }
 
 .iq-contact-solution {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 40px;
 }
 
 .iq-contact-content-right {
@@ -4467,21 +4466,16 @@ body.contact-page {
 }
 
 .contact-solutions-grid .solution-card .solution-card-content{
-    padding: 30px;
+    padding: 20px;
+    min-height: 260px;
 }
 
 .contact-solutions-grid .solution-card .solution-card-header {
     margin-bottom: 16px;
 }
 
-.contact-solutions-grid .solution-card .solution-title h3 {
-    font-size: 28px;
-    font-weight: 900;
-    line-height: 1.429;
-}
-
 .contact-solutions-grid .solution-card .solution-description {
-    color: #222222;
+    color: var(--color-dark-charcoal);
 }
 
 .contact-solutions-grid .solution-card .solution-tags {
@@ -4495,7 +4489,7 @@ body.contact-page {
 
 /* IQ Contact Diffrence */
 .iq-contact-diffrence {
-    margin-top: 110px;
+    margin-top: 117px;
 }
 
 .iq-contact-diffrence .sub-head-2 {
@@ -5203,6 +5197,10 @@ body.contact-page {
     gap:24px;
 }
 
+.about-us-banner .banner-content h1 {
+    color: var(--color-ice-blue);
+}
+
 .about-us-page .contact-section::before {
     background:  url("../images/about-contact-banner.png");
     background-position: right;
@@ -5212,6 +5210,10 @@ body.contact-page {
     max-width: 967px;
     width: 100%;
     margin-inline: auto !important;
+}
+
+.spotlight-banner-section.iq-content-start .spotlight-banner-content  {
+    margin-top: 30px;
 }
 
 /* ==========================================
@@ -5498,7 +5500,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 .iq-feature-card h3 {
     color: var(--color-electric-blue);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 
@@ -5671,7 +5673,9 @@ html:has(.media-content-popup-main:popover-open) {
         padding-block: 45px 52px;
     }
 
-
+    .iq-mb-lg-0 {
+        margin-bottom: 0;
+    }
 
     /* Our Works Filter Section */
     .our-works-cta-section{
@@ -5735,6 +5739,7 @@ html:has(.media-content-popup-main:popover-open) {
         padding-top: 0;
     }
 }
+
 @media (min-width: 1380px) {
     .iq-profile-grid-lsiting-section .container > .heading-wrap{
         margin-bottom: 200px;
@@ -5861,6 +5866,10 @@ html:has(.media-content-popup-main:popover-open) {
         min-height: 600px;
     }
 
+    .ai-native-section[data-ai-native-align-locked="1"] {
+        align-content: start;
+    }
+
     .ai-native-container {
         grid-template-columns: 1fr 1fr;
     }
@@ -5914,10 +5923,6 @@ html:has(.media-content-popup-main:popover-open) {
 
     .iq-contact-section {
         padding-block: 80px;
-    }
-
-    .contact-detail {
-        margin-top: 34px;
     }
 
     .trust-card-grid .trust-card-credit > strong, .trust-card-grid .trust-card-banking > strong {
@@ -6159,6 +6164,15 @@ html:has(.media-content-popup-main:popover-open) {
         height: 128px;
     }
 
+
+    /* Contact Page css */
+    .iq-split-hero-wrapper {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .iq-contact-solution {
+        gap: 0;
+    }
 
     /* Our Works Page */
     .our-works-content-showcase-section,
@@ -6468,7 +6482,7 @@ html:has(.media-content-popup-main:popover-open) {
        SECTION
     ----------------------------------------- */
     section {
-        padding: 64px 30px;
+        padding: 64px 30px !important;
     }
 
     section.has-header-in-section {
@@ -6807,6 +6821,11 @@ html:has(.media-content-popup-main:popover-open) {
         display: grid;
         grid-template-columns: repeat(3,1fr);
     }
+    
+    .iq-split-hero-wrapper .contact-detail-wrapper {
+        margin-top: 0;
+
+    }
 
     .contact-detail-wrapper > div {
         justify-content: flex-start;
@@ -7054,7 +7073,7 @@ html:has(.media-content-popup-main:popover-open) {
        SECTION
     ----------------------------------------- */
     section {
-        padding:48px 20px;
+        padding:48px 20px !important;
     }
 
     section.has-header-in-section {
