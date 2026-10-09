@@ -1869,10 +1869,15 @@ section {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
+    min-height: 220px;
 }
 
 .trust-card:has(.trust-card-title) {
     padding: 16px;
+}
+
+.trust-card:has(.trust-card-title) p {
+    color: var(--color-elevate-gray);
 }
 
 /* SVG */
@@ -1928,7 +1933,6 @@ section {
     line-height: 24px; /* 150% */
     text-transform: uppercase;
     display: inline-flex;
-    height: 32px;
     padding: 4px 12px;
     justify-content: center;
     align-items: center;
@@ -4451,7 +4455,9 @@ body.contact-page {
     align-content: center;
 }
 
-.iq-contact-solution {
+.iq-contact-solution,
+.iq-contact-diffrence,
+.iq-contact-growth {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -4459,6 +4465,10 @@ body.contact-page {
 
 .iq-contact-content-right {
     max-width: 642px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
 }
 
 .contact-solutions-grid {
@@ -4488,10 +4498,6 @@ body.contact-page {
 
 
 /* IQ Contact Diffrence */
-.iq-contact-diffrence {
-    margin-top: 117px;
-}
-
 .iq-contact-diffrence .sub-head-2 {
     margin-bottom: 40px;
 }
@@ -4504,9 +4510,10 @@ body.contact-page {
 }
 
 .count-box {
-    padding: 40px 28px 35px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
     align-items: center;
     text-align: center;
 }
@@ -4517,28 +4524,22 @@ body.contact-page {
     font-weight: 700;
     font-family: "neulis-neue", sans-serif;
     color: var(--color-electric-blue);
-    margin-bottom: 28px;
 }
 
 .count-box .count-divider {
     width: 100%;
     height: 1px;
-    background-color: var(--color-electric-blue);
+    background-color: #C6E2FF;
 }
+
 .count-box .count-text {
-    padding-top: 12px;
     max-width: 190px;
     font-weight: 500;
     color: var(--color-elevate-gray);
 }
 
 /* IQ Contact Growth */
-.iq-contact-growth {
-    margin-top: 87px;
-}
-
 .iq-contact-growth .sub-head-2{
-    margin-bottom: 40px;
     max-width: 600px;
 }
 
@@ -4549,29 +4550,17 @@ body.contact-page {
 }
 
 .trust-card-grid .trust-card {
-    padding: 12px 16px 20px;
-}
-
-.trust-card-grid  .trust-card {
+    padding: 16px;
     grid-column: auto;
     gap: 0;
 }
 
-.trust-card-grid .trust-card .trust-card-title{
-    padding: 0;
-    border: 0;
-    background: transparent;
-    margin-bottom: 9px;
-    font-size: 14px;
-    height: auto;
-}
-
-.trust-card-grid .trust-card p {
-    color: var(--color-slate-grey);
+.trust-card-grid  .trust-card .trust-card-title {
+    margin-bottom: 8px;
 }
 
 .trust-card-grid .trust-card > strong {       
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     display: block;
     font-family: "neulis-neue", sans-serif;
     font-weight: 900;
@@ -4580,10 +4569,6 @@ body.contact-page {
 
 
 /* IQ Testimonial Slider  */
-.iq-testimonial {
-    margin-top: 190px;
-}
-
 .contact-blurb-top-right {
     top: -21%;
     right: 0%;
@@ -4611,7 +4596,7 @@ body.contact-page {
 
 /* Testimonial Slider Widget */
 .testimonial {
-    padding: 46px 32px 24px;
+    padding: 48px 32px 24px;
     background-image: url('../images/testimonial-card-image.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -4646,7 +4631,7 @@ body.contact-page {
     font-size: 28px;
     font-weight: 600;
     line-height: 1.429;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .testimonial-card .testimonial-author {
@@ -4660,7 +4645,7 @@ body.contact-page {
     font-size: 20px;
     line-height: 1.4;
     font-weight: 900;
-    color: #FAFAFA;
+    color: var(--color-off-white);
     font-family: area-normal,sans-serif !important;
 }
 
@@ -5903,18 +5888,12 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     /* Contact Page css */
+    .iq-contact-content-right {
+        gap: 100px;
+    }
 
     .count-box .count-value {
         font-size: 60px;
-    }
-
-    .iq-contact-diffrence,
-    .testimonial {
-        margin-top: 70px;
-    }
-
-    .iq-contact-growth {
-        margin-top: 70px;
     }
 
     .iq-contact-content-section .sub-head-2 {
@@ -6174,6 +6153,10 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 0;
     }
 
+    .iq-contact-content-right {
+        gap: 70px;
+    }
+
     /* Our Works Page */
     .our-works-content-showcase-section,
     .our-works-stats-section    {
@@ -6357,59 +6340,6 @@ html:has(.media-content-popup-main:popover-open) {
         font-size: 8px;
     }
 
-
-
-        h1,
-    .headline-1 {
-        font-size: 42px;
-    }
-
-    h2,
-    .headline-2 {
-        font-size: 36px;
-    }
-
-    .sub-head-1 {
-        font-size: 32px;
-    }
-
-        .sub-head-2 {
-            font-size: 26px;
-        }
-
-    .body-text-32 {
-        font-size: 26px;
-    }
-
-    .body-text-24 {
-        font-size: 22px;
-    }
-
-    .body-text-20 {
-        font-size: 18px;
-    }
-
-    .body-text-18 {
-        font-size: 16px;
-    }
-
-    .body-text-16 {
-        font-size: 15px;
-    }
-
-    .body-text-14 {
-        font-size: 14px;
-    }
-
-    .body-text-12,
-    .sm-text {
-        font-size: 12px;
-    }
-
-
-   /* ========================================
-    Typography
-    ======================================== */
     h1,
     .headline-1 {
         font-size: 42px;
@@ -6840,6 +6770,7 @@ html:has(.media-content-popup-main:popover-open) {
 
     .iq-contact-content-right {
         max-width: 100%;
+        gap: 64px;
     }
 
     .solution-card .solution-card-header {
@@ -6855,13 +6786,9 @@ html:has(.media-content-popup-main:popover-open) {
         margin-inline: auto;
     }
 
-    .iq-contact-diffrence .sub-head-2,
-    .iq-contact-content-section .sub-head-2 {
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-    .iq-contact-solution {
+    .iq-contact-solution, 
+    .iq-contact-diffrence, 
+    .iq-contact-growth {
         gap: 0;
     }
 
@@ -7383,16 +7310,16 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 30px;
     }
 
+    .iq-contact-content-right {
+        gap: 48px;
+    }
+
     .contact-solutions-grid {
         grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     }
+
     .count-box-grid {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .iq-contact-diffrence, .testimonial,
-        .iq-contact-growth  {
-        margin-top: 48px;
     }
 
     .testimonial-card .testimonial-quote-text {
@@ -7401,6 +7328,19 @@ html:has(.media-content-popup-main:popover-open) {
 
     .iq-contact-growth .trust-card-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimonial {
+        padding: 24px;
+    }
+
+    .testimonial-card .testimonial-quote-icon {
+        width: 56px;
+        height: 46px;
+    }
+
+    .testimonial .testimonial-card {
+        margin-bottom: 32px;
     }
 
     /* Our Works Page css */
