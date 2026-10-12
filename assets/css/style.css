@@ -1464,7 +1464,7 @@ section {
 
 .client-section::before {
     content: "";
-    background-image: url(../images/client-section-bg.jpg);
+    background-image: url(../images/client-bg.png);
     background-position: center;
 }
 
@@ -1474,7 +1474,7 @@ section {
 ======================================== */
 
 .client-heading {
-    max-width: 828px;
+    max-width: 1140px;
     margin-bottom: 48px;
 }
 
@@ -1485,7 +1485,7 @@ section {
 
 .client-heading p {
     max-width: 760px;
-    margin: 0;
+    margin: 0 auto;
     opacity: 0.8 !important;
     color: var(--color-off-white) !important;
 }
@@ -2150,7 +2150,7 @@ justify-content: center;
 }
 
 .research-card::before {
-    background: url(../images/research-slide-bg.jpg);
+    background: url(../images/slider-bg.png);
     background-position: center;
 }
 
@@ -2170,8 +2170,8 @@ justify-content: center;
 
 .research-button {
     padding: 15px 20px;
-    background-color: var(--color-pure-white);
-    color: var(--color-electric-blue);
+    background-color: var(--color-primary-orange);
+    color: var(--color-off-white);
     font-weight: 900;
     line-height: 30px;
     font-size: 20px;
@@ -2311,7 +2311,7 @@ justify-content: center;
 }
 
 .ai-native-section::before {
-    background: url('../images/native-banner-image.jpg');
+    background: url(../images/ai-native-bg.png);
 }
 
 .ai-native-container {
@@ -2523,7 +2523,7 @@ Case Study Section =====================*/
 }
 
 .insights-section.has-bg-image::before {
-    background-image: url('../images/insights-section-bg.png');
+    background-image: url('../images/case-study-bg.png');
     background-position: center top;
 }
 
@@ -2902,6 +2902,7 @@ color: #FFFFFF;
     flex-wrap: wrap;
     align-items: center;
     gap: 4px 5px;
+    margin-bottom: 16px;
 }
 
 .solution-tags span {
