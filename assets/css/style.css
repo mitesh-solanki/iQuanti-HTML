@@ -84,6 +84,7 @@
     --color-q-purple: #928EFF;
     --color-q-purple-50: #B6B4FF;
     --color-q-purple-25: #DBD9FF;
+    --color-qunatum-purpule: #6E69FF;
     --color-indigo-light: #C9C7FF;
 
     /* ========================================
@@ -126,6 +127,15 @@ color: var(--color-elevate-gray);
 font-weight: 700;
 }
 
+h1[class*="body-text"],
+h2[class*="body-text"],
+h3[class*="body-text"],
+h4[class*="body-text"],
+h5[class*="body-text"],
+h6[class*="body-text"] {
+    font-family: "neulis-neue",sans-seerif;
+
+}
 
 p{
     font-family: area-normal,sans-serif;
@@ -246,6 +256,10 @@ h2,
 
 
 /* Font Style Override CSS */
+.body-text-14.body-text-reg {
+    line-height: 1.5715;
+}
+
 .body-text-14.body-text-bold {
     line-height: 1.429;
 }
@@ -305,7 +319,6 @@ h2,
     line-height: 1.111;
 } 
 
-
 /* ========================================
    Number Headline
 ======================================== */
@@ -316,6 +329,14 @@ h2,
     line-height: 0.89475;
 }
 
+/* ========================================
+   Number Headline
+======================================== */
+.pill-body-text-14-cap {
+    font-size: 14px;
+    line-height: 1.714;
+    text-transform: uppercase;
+}
 
 /* ========================================
    GLOBAL Utilities 
@@ -360,7 +381,7 @@ h2,
 }
 
 .iq-display-block {
-    display: block;
+    display: block !important;
 }
 
 /* ========================================
@@ -656,7 +677,7 @@ h2,
 .has-glass-effect {
   position: relative;
   border-radius: 8px;
-  border: 1px solid var(--color-warm-gray) !important;
+  border: 1px solid var(--color-elevate-gray) !important;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.28), inset -1.41px -1.41px 6px rgba(255, 255, 255, 0.1), 0 9px 26px rgba(0, 0, 0, 0.14);
 }
 
@@ -700,6 +721,11 @@ h2,
   background: rgba(34, 34, 34, 0.6);
       -webkit-backdrop-filter: blur(4.8px) brightness(1.06); /* fallback */
       backdrop-filter: url(#glass-effect-dark) blur(4.8px) brightness(1.06);
+}
+
+
+.has-glass-effect.has-glass-dark {
+    border: 1px solid var(--color-elevate-gray)!important;
 }
 
 
@@ -2914,14 +2940,16 @@ color: #FFFFFF;
    TAGS
 ========================================= */
 
-.solution-tags {
+.solution-tags,
+.key-tags {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
 }
 
-.solution-tags span {
+.solution-tags span,
+.key-tags span {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -2932,7 +2960,8 @@ color: #FFFFFF;
     color: var(--color-dark-charcoal);
 }
 
-.solution-tags span::before {
+.solution-tags span::before,
+.key-tags span::before {
     content: "";
     display: inline-block;
     width: 4px;
@@ -2940,6 +2969,10 @@ color: #FFFFFF;
     border-radius: 50%;
     background: var(--color-primary-orange);
     flex-shrink: 0;
+}
+
+.has-glass-dark .key-tags span {
+    color: var(--color-warm-gray);
 }
 
 
@@ -5678,6 +5711,184 @@ html:has(.media-content-popup-main:popover-open) {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.service-section {
+    background: url("../images/blue-radial-bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service-section-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+
+.service-card {
+    padding: 24px;
+    min-height: 438px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card h3 { 
+    margin-bottom: 8px;
+    text-wrap: balance;
+}
+
+.service-card.has-glass-dark  h3{
+     color: var(--color-pure-white);
+}
+
+.service-card .service-card-desc {
+    color: var(--color-warm-gray);
+}
+
+.service-card .service-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.service-card .service-card-header .section-label  {
+    margin-bottom: 0;
+}
+
+.service-card .service-card-header .section-label span {
+    color: var(--color-qunatum-purpule);
+}
+
+.service-card .service-card-divider {
+    border-color: var(--color-slate-grey);
+}
+
+.service-card .service-card-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
+}
+
+.service-card .service-card-body {
+    margin-bottom: 12px;
+}
+
+.service-card .service-card-footer .service-card-label { 
+    color: var(--color-qunatum-purpule);
+}
+
+.service-section-footer >  div {
+    color: var(--color-ice-blue);
+}
+
+.split-content-grid {
+    display: grid;
+    grid-template-columns: 49.5238% 49.04761%;
+    gap: 12px;
+}
+
+.how-it-works-section .heading-wrap  p {
+    max-width: 562px;
+}
+
+
+
+/* Vertical Timeline Section */
+.iq-verticle-tilmline .iq-verticle-section {
+    position: relative;
+    width: 100%;
+    min-height: 410px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #f9f8f6;
+}
+
+/* Timeline Wrapper */
+.iq-verticle-tilmline .iq-verticle-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 383px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Vertical Connecting Line */
+.iq-verticle-tilmline .iq-verticle-timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 15px;
+    width: 1px;
+    background-color: #aab2bd;
+        height: calc(100% - 62px);
+}
+
+/* Timeline Item */
+.iq-verticle-tilmline .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 71px;
+    padding-left: 55px;
+    box-sizing: border-box;
+}
+
+/* Default Gray Dot */
+.iq-verticle-tilmline .timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    z-index: 1;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #414955;
+    transform: translateY(-50%);
+}
+
+/* Timeline Label */
+.iq-verticle-tilmline .timeline-label {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #414955;
+}
+
+/* Active Timeline Item */
+.iq-verticle-tilmline .timeline-item.active .timeline-label {
+    color: #007bff;
+}
+
+/* Active Blue Indicator */
+.iq-verticle-tilmline .timeline-item.active .timeline-dot {
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    border: 5px solid #087cff;
+    outline: 1px solid #087cff;
+    outline-offset: 5px;
+    background-color: #087cff;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .iq-verticle-tilmline .iq-verticle-section {
+        padding-left: 20px;
+    }
+
+    .iq-verticle-tilmline .timeline-item {
+        padding-left: 45px;
+    }
+
+    .iq-verticle-tilmline .timeline-label {
+        font-size: 15px;
+    }
+}
+  
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
