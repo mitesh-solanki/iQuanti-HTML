@@ -251,7 +251,7 @@ h2,
 }
 
 .body-text-18.body-text-mid {
-    line-height: 1.444;
+    line-height: 1.4445;
 }
 
 .body-text-18.body-text-bold {
@@ -353,6 +353,14 @@ h2,
 
 .iq-overflow-visible {
     overflow: visible !important;
+}
+
+.iq-justify-content-center {
+    justify-content: center;
+}
+
+.iq-display-block {
+    display: block;
 }
 
 /* ========================================
@@ -617,6 +625,7 @@ h2,
 .highlight-text {
     font-family: "neulis-neue";
     font-weight: 700;
+    display: inline-block;
 }
 
 .highlight-text-area {
@@ -1219,6 +1228,10 @@ section {
   z-index: 0;
 }
 
+.hero-section .blurb-bg-right-center {
+    right: 0;
+    top: 0;
+}
 .grid-lines {
     position: absolute;
     inset: 0;
@@ -1303,9 +1316,6 @@ section {
   );
 }
 
-/* top-0 bottom-0 w-px
-   bg-gradient-to-b from-transparent via-primary/10 to-transparent */
-
 .hero-grid-line.vertical {
   top: 0;
   bottom: 0;
@@ -1369,13 +1379,11 @@ section {
     background: var(--color-primary-orange);
 }
 
-.hero-grid .hero-content .hero-title .highlight-text {
-    display: block;
-}
 
 .hero-grid .hero-content h1 {
     margin-bottom: 24px;
     letter-spacing: -1.8px;
+    line-height: 1.1875;
 }
 
 .hero-grid .hero-content .hero-description {
@@ -1392,6 +1400,20 @@ section {
     margin-block: -50px -37px;
 }
 
+
+.hero-grid.iq-justify-content-center .hero-content {
+    width: 100%;
+    max-width: 687px;
+    text-align: center;
+}
+
+.hero-grid.iq-justify-content-center .cta-action-group  {
+    justify-content: center;
+}
+
+.hero-grid.iq-justify-content-center .hero-description {
+    max-width: 100%;    
+} 
 
 /* ==========================================================
    Hero Mesh Elipse
@@ -3388,7 +3410,7 @@ color: #FFFFFF;
 
 .contact-form-title {
     margin: 0 0 8px;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
     font-size: 29px;
     line-height: 1.28;
 }
@@ -5650,8 +5672,12 @@ html:has(.media-content-popup-main:popover-open) {
     top:50px;
 }
 
-
-/* Media Query Start Here */
+/* IQ Impact Landing Page */
+.iq-impact-hero-section {
+    background: url("../images/big-radial-vector.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
