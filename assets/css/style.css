@@ -5857,8 +5857,6 @@ html:has(.media-content-popup-main:popover-open) {
     max-width: 562px;
 }
 
-
-
 /* Vertical Timeline Section */
 .iq-verticle-tilmline .iq-verticle-section {
     position: relative;
@@ -5871,78 +5869,6 @@ html:has(.media-content-popup-main:popover-open) {
 
 .split-content-grid .iq-verticle-tilmline {
     margin-top: 120px;
-}
-
-/* Timeline Wrapper */
-.iq-verticle-tilmline .iq-verticle-timeline {
-    position: relative;
-    width: 100%;
-    max-width: 383px;
-    padding-left: 16px;
-    margin: 0;
-}
-
-/* Vertical Connecting Line */
-.iq-verticle-tilmline .iq-verticle-timeline::before {
-    content: "";
-    position: absolute;
-    top: 14px;
-    bottom: 14px;
-    left: 15px;
-    width: 1px;
-    background-color: #90B0D0;
-}
-
-/* Timeline Item */
-.iq-verticle-tilmline .timeline-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    /* min-height: 71px; */
-    padding-left: 38px;
-    box-sizing: border-box;
-}
-
-.iq-verticle-tilmline .timeline-item:not(:last-child) { 
-    padding-bottom: 56px;
-}
-
-/* Default Gray Dot */
-.iq-verticle-tilmline .timeline-dot {
-    position: absolute;
-    top: 10px;
-    left: -5px;
-    z-index: 1;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--color-elevate-gray);
-    transform: translateY(-50%);
-}
-
-/* Timeline Label */
-.iq-verticle-tilmline .timeline-label {
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1.2728;
-    color: var(--color-elevate-gray);
-}
-
-/* Active Timeline Item */
-.iq-verticle-tilmline .timeline-item.active .timeline-label {
-    color: #007bff;
-}
-
-/* Active Blue Indicator */
-.iq-verticle-tilmline .timeline-item.active .timeline-dot {
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    border: 5px solid var(--color-electric-blue);
-    outline: 1px solid var(--color-electric-blue);
-    outline-offset: 5px;
-    background-color: var(--color-electric-blue);
 }
 
 .split-content-grid-section {
@@ -6042,10 +5968,121 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-impact-call-to-action-section {
     min-height: 596px;
 }
+
 .iq-impact-call-to-action-section .call-to-action-content {
     max-width: 869px;
 }
 
+/* new */
+.iq-vertical-timeline-curve-tab-widget {
+    max-width: 367px;
+}
+
+.iq-vertical-timeline-curve-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-grid {
+    position: relative;
+    width: 100%;
+    max-width: 383px;
+    padding-left: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    padding-bottom: 56px;
+    font-size: 20px;
+    color: var(--color-elevate-gray);
+    font-family: "neulis-neue", sans-serif;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item:last-child {
+    padding-bottom: 0;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
+    content: "";
+    background: url(../images/dashed-line-vector.webp);
+    background-repeat: no-repeat;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 40%;
+    left: 24px;
+    z-index: -1;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label {
+    text-decoration: none;
+    color: var(--color-elevate-gray);
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item .timeline-curve-tab-icon {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid var(--color-electric-blue);
+    border-radius: 50%;
+    background-color: var(--color-pure-white);
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
+    margin: -56px 0 0 24px;
+    border-block: 0;
+    position: relative;
+    padding-bottom: 0;
+    font-family: area-normal, system-ui, sans-serif;
+    padding: 48px 0px;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-icon {
+    display: none;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active::after,
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:last-child::after {
+    display: none;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    color: var(--color-electric-blue);
+    font-weight: bold;
+    padding-inline: 24px;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active::before {
+    content: "";
+    background: url("../images/curve-outside-tab-vector.webp");
+    position: absolute;
+    inset:0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:has(+ .active)::after {
+    display: none;
+}
+
+.how-it-works-section .iq-vertical-timeline-curve-tab-widget {
+    margin-top: 134px;
+}
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
