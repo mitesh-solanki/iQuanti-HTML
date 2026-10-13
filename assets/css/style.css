@@ -5958,16 +5958,6 @@ html:has(.media-content-popup-main:popover-open) {
     max-width: 415px;
 }
 
-
-.why-iq-impact-section .split-content-grid-right {
-    overflow-y: auto;
-    max-height: 950px;
-}
-
-.why-iq-impact-section .split-content-grid-right::-webkit-scrollbar {
-  display: none;              /* Chrome, Safari, Edge */
-}
-
 .why-iq-impact-section .heading-wrap.heading-wrap-left {
     position: sticky;
     top:120px;
