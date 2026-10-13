@@ -86,6 +86,8 @@
     --color-q-purple-25: #DBD9FF;
     --color-qunatum-purpule: #6E69FF;
     --color-indigo-light: #C9C7FF;
+    --color-q-purple-75: #B5B6FA;
+
 
     /* ========================================
        Others
@@ -689,7 +691,7 @@ h2,
 .has-glass-effect {
   position: relative;
   border-radius: 8px;
-  border: 1px solid var(--color-elevate-gray) !important;
+  border: 1px solid var(--color-warm-gray) !important;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.28), inset -1.41px -1.41px 6px rgba(255, 255, 255, 0.1), 0 9px 26px rgba(0, 0, 0, 0.14);
 }
 
@@ -922,7 +924,7 @@ section {
 }
 
 .heading-wrap.dark h2{
-    color: var(--color-off-white);
+    color: var(--color-pure-white);
 }
 
 .heading-wrap p{
@@ -1380,6 +1382,33 @@ section {
    bottom: 0;
 }
 
+.blurb-bg-right-bottom {
+    right: -10px;
+    top: -196px;
+    opacity: 0.8;
+}
+
+.blurb-bg-right-top  {
+    right: 0px;
+    top: 0;
+    opacity: 0.8;
+}    
+
+@media (max-width: 1440px) {
+
+.blurb-bg-right-bottom {
+    right: -130px;
+    top: -160px;
+    opacity: 0.8;
+}
+
+.blurb-bg-right-top {
+    right: -154px;
+    top: 0;
+    opacity: 0.8;
+}
+}
+
 
 /* ==========================================================
    CONTAINER
@@ -1405,7 +1434,7 @@ section {
 }
 
 .hero-grid .hero-content {
-  width: 51.9841%;
+  width: 57.33%;
   text-align: left;
 }
 
@@ -1511,10 +1540,10 @@ section {
 .section-label.has-white {
     background-color: #FAFAFA10;
     border-color: #FAFAFA20;
-    color: var(--color-off-white);
+    color: var(--color-q-purple-75);
 }
 .section-label.has-white span {
-    color: var(--color-off-white);
+    color: var(--color-q-purple-75);
 }
 
 
@@ -1533,7 +1562,7 @@ section {
 
 .client-section::before {
     content: "";
-    background-image: url(../images/client-section-bg.jpg);
+    background-image: url(../images/client-bg.png);
     background-position: center;
 }
 
@@ -1543,13 +1572,12 @@ section {
 ======================================== */
 
 .client-heading {
-    max-width: 828px;
+    max-width: 1140px;
     margin-bottom: 48px;
 }
 
 .client-heading h2 {
     margin: 0 0 24px;
-    color: var(--color-ice-blue) !important;
 }
 
 .client-heading p {
@@ -1955,7 +1983,7 @@ section {
 .card-border-fill rect {
     fill: none;
     stroke: #3c83f6;
-    stroke-width: 5;
+    stroke-width: 2;
 
     /* Using pathLength makes this 100% of the border */
     stroke-dasharray: 1;
@@ -2223,7 +2251,7 @@ justify-content: center;
 }
 
 .research-card::before {
-    background: url(../images/research-slide-bg.jpg);
+    background: url(../images/slider-bg.png);
     background-position: center;
 }
 
@@ -2243,8 +2271,8 @@ justify-content: center;
 
 .research-button {
     padding: 15px 20px;
-    background-color: var(--color-pure-white);
-    color: var(--color-electric-blue);
+    background-color: var(--color-primary-orange);
+    color: var(--color-off-white);
     font-weight: 900;
     line-height: 30px;
     font-size: 20px;
@@ -2384,7 +2412,7 @@ justify-content: center;
 }
 
 .ai-native-section::before {
-    background: url('../images/native-banner-image.jpg');
+    background: url(../images/ai-native-bg.png);
 }
 
 .ai-native-container {
@@ -2468,7 +2496,7 @@ justify-content: center;
 }
 
 .accordion-bordered .accordion-item.active span:first-child {
-      color: var(--color-indigo-light);
+      color: var(--color-q-purple-75);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
@@ -2589,7 +2617,7 @@ Case Study Section =====================*/
 }
 
 .insights-section.has-bg-image::before {
-    background-image: url('../images/insights-section-bg.png');
+    background-image: url('../images/case-study-bg.png');
     background-position: center top;
 }
 
@@ -2843,6 +2871,7 @@ color: #FFFFFF;
     box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    transform: translateY(-4px) scale(1.025) !important;
 }
 
 /* Per-card hover fills from Figma Card Hover variants */
@@ -2957,7 +2986,8 @@ color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
+    gap: 4px 5px;
+    margin-bottom: 16px;
 }
 
 .solution-tags span,
@@ -3018,10 +3048,7 @@ color: #FFFFFF;
     padding: 40px;
     border-radius: 8px;
     text-align: center;
-    background:
-        linear-gradient(rgba(0, 31, 171, 0.4), rgba(0, 31, 171, 0.4)),
-        url('../images/solutions-center-bg.jpg') center / cover no-repeat,
-        radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
+    background: url(../images/solutions-center-bg.jpg) center / cover no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
     box-shadow: none;
 }
 
@@ -3341,7 +3368,7 @@ color: #FFFFFF;
 }
 
 .contact-section::before {
-    background: url(../images/contact-sec-bg-image.jpg);
+    background: url(../images/contact-banner-image.jpg);
 }
 
 .contact-blurb-left-top  {
@@ -4080,13 +4107,13 @@ button:disabled {
     padding: 20px 0;
     display: flex;
     align-items: center;
-    gap: 37px;
+    gap: 40px;
 }
 
 .site-footer .footer-tagline .footer-tagline-item {
     display: flex;
     align-items: center;
-    gap: 37px;
+    gap: 40px;
 }
 
 .site-footer .footer-tagline .footer-tagline-item .footer-tagline-icon {
@@ -4174,8 +4201,8 @@ button:disabled {
     margin: 0 0 20px;
     color: var(--color-slate-grey);
     font-size: 14px;
-    line-height: 1.714;
-    font-weight: 700;
+    line-height: 22px;
+    font-weight: 400;
 }
 
 
@@ -6372,7 +6399,7 @@ html:has(.media-content-popup-main:popover-open) {
     SECTION
     ======================================== */
     section.has-header-in-section {
-        padding-top: 132px;
+        padding-top: 132px !important;
     }
 
     section {
@@ -6755,7 +6782,7 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     section.has-header-in-section {
-        padding-top: 118px;
+        padding-top: 118px !important;
     }
 
      /*  --Heading Wrap
@@ -7351,7 +7378,7 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     section.has-header-in-section {
-        padding-top: 102px;
+        padding-top: 102px !important;
     }
 
 
