@@ -364,6 +364,10 @@ h2,
     color: var(--color-pure-white);
 }
 
+.iq-text-ice-blue { 
+    color: var(--color-ice-blue) !important;
+} 
+
 .iq-items-center {
   align-items: center !important;
 }
@@ -382,6 +386,14 @@ h2,
 
 .iq-display-block {
     display: block !important;
+}
+
+.iq-grid-column-one {
+    grid-template-columns: 1fr;
+}
+
+.iq-bg-none {
+    background: none !important;
 }
 
 /* ========================================
@@ -5827,7 +5839,11 @@ html:has(.media-content-popup-main:popover-open) {
     min-height: 410px;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #f9f8f6;
+}
+
+
+.split-content-grid .iq-verticle-tilmline {
+    margin-top: 120px;
 }
 
 /* Timeline Wrapper */
@@ -5835,7 +5851,7 @@ html:has(.media-content-popup-main:popover-open) {
     position: relative;
     width: 100%;
     max-width: 383px;
-    padding: 0;
+    padding-left: 16px;
     margin: 0;
 }
 
@@ -5843,12 +5859,11 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-verticle-tilmline .iq-verticle-timeline::before {
     content: "";
     position: absolute;
-    top: 10px;
-    bottom: 10px;
+    top: 14px;
+    bottom: 14px;
     left: 15px;
     width: 1px;
-    background-color: #aab2bd;
-        height: calc(100% - 62px);
+    background-color: #90B0D0;
 }
 
 /* Timeline Item */
@@ -5856,31 +5871,35 @@ html:has(.media-content-popup-main:popover-open) {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 71px;
-    padding-left: 55px;
+    /* min-height: 71px; */
+    padding-left: 38px;
     box-sizing: border-box;
+}
+
+.iq-verticle-tilmline .timeline-item:not(:last-child) { 
+    padding-bottom: 56px;
 }
 
 /* Default Gray Dot */
 .iq-verticle-tilmline .timeline-dot {
     position: absolute;
-    top: 50%;
-    left: 11px;
+    top: 10px;
+    left: -5px;
     z-index: 1;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: #414955;
+    background-color: var(--color-elevate-gray);
     transform: translateY(-50%);
 }
 
 /* Timeline Label */
 .iq-verticle-tilmline .timeline-label {
     font-family: Arial, sans-serif;
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 1.4;
-    color: #414955;
+    line-height: 1.2728;
+    color: var(--color-elevate-gray);
 }
 
 /* Active Timeline Item */
@@ -5890,13 +5909,92 @@ html:has(.media-content-popup-main:popover-open) {
 
 /* Active Blue Indicator */
 .iq-verticle-tilmline .timeline-item.active .timeline-dot {
-    left: 6px;
+    left: -10px;
     width: 20px;
     height: 20px;
-    border: 5px solid #087cff;
-    outline: 1px solid #087cff;
+    border: 5px solid var(--color-electric-blue);
+    outline: 1px solid var(--color-electric-blue);
     outline-offset: 5px;
-    background-color: #087cff;
+    background-color: var(--color-electric-blue);
+}
+
+.split-content-grid-section {
+    position: relative;
+}
+
+.split-content-grid-right .image-box {
+    width: 100%;
+    height: 900px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.split-content-grid-right .image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-content-grid-sect-blurb-bottom-left {
+    bottom: -40%;
+    left: 0;
+}
+.split-content-grid-sect-blurb-bottom-right {
+    right: 0;
+    top: 0;
+}
+
+/* why IQ Impact section */
+.why-iq-impact-section {
+    background: url(../images/why-iq-impact-bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.why-iq-impact-section .split-content-grid-left .heading-wrap p {
+    max-width: 415px;
+}
+
+
+.display-card-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.display-card {
+    padding: 24px 24px 40px;
+    min-height: 350px;
+    position: relative;
+}
+
+.display-card.has-glass-dark h3 {
+    color: var(--color-pure-white);
+}
+
+.display-card p { 
+    color: var(--color-warm-gray);
+}
+
+.display-card .display-card-inner {
+    max-width: 343px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 284px
+}
+
+.display-card-vector {
+    position: absolute;
+}
+
+.icons-group-vector  {
+    top: 62px;
+    right: 72px;
+}
+.radial-target-vector {
+    top: 0;
+    right: 37px;
 }
 
 /* Responsive Styles */
@@ -6190,7 +6288,10 @@ html:has(.media-content-popup-main:popover-open) {
         margin-left: 30px;
     }
 
-
+    /* IQ Impact Page CSS */
+    .split-content-grid-right .image-box {
+        height: 800px;
+    }
 }
 
 
