@@ -398,6 +398,7 @@ h2,
     background: none !important;
 }
 
+
 /* ========================================
    GLOBAL COMPONENTS 
 ======================================== */
@@ -633,6 +634,7 @@ h2,
 .call-to-action-section {
     background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
     position: relative;
+    align-content: center;
 }
 
 .call-to-action-blurb-left-top {
@@ -646,13 +648,17 @@ h2,
     align-items: center;
     gap: 48px;
     text-align: center;
+    margin: auto;
 }
 
 .call-to-action-content h2 {
     margin-bottom: 24px;
 }
 
-
+.iq-impact-call-to-action-section .call-to-action-blurb-center-right.blurb-bg {
+    right:-16%;
+    top:0;
+}
 
 /* ========================================
    Higlight Text
@@ -1467,10 +1473,9 @@ section {
     margin-block: -50px -37px;
 }
 
-
 .hero-grid.iq-justify-content-center .hero-content {
     width: 100%;
-    max-width: 687px;
+    max-width: 677px;
     text-align: center;
 }
 
@@ -1546,8 +1551,25 @@ section {
     color: var(--color-q-purple-75);
 }
 
+.section-label-sup,
+.section-label-sup > * {
+    font-family: "neulis-neue", sans-serif;
+}
 
+.section-label-sup {
+    color: var(--color-elevate-gray);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block ;
+}
 
+.section-label-sup sup {
+    top: 3px;
+    position: relative;
+    left: -3px;
+    font-weight: 400;
+
+} 
 
 /* ========================================
    CLIENT SECTION
@@ -2993,13 +3015,17 @@ color: #FFFFFF;
 .solution-tags span,
 .key-tags span {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     color: var(--color-dark-charcoal);
+}
+
+.key-tags:last-child {
+    margin-bottom:0
 }
 
 .solution-tags span::before,
@@ -3011,6 +3037,8 @@ color: #FFFFFF;
     border-radius: 50%;
     background: var(--color-primary-orange);
     flex-shrink: 0;
+    top: 10px;
+    position: relative;
 }
 
 .has-glass-dark .key-tags span {
@@ -5749,6 +5777,7 @@ html:has(.media-content-popup-main:popover-open) {
     background: url("../images/big-radial-vector.webp");
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 772px;
 }
 
 .service-section {
@@ -5795,7 +5824,7 @@ html:has(.media-content-popup-main:popover-open) {
 }
 
 .service-card .service-card-header .section-label span {
-    color: var(--color-qunatum-purpule);
+    color: var(--color-q-purple-75);
 }
 
 .service-card .service-card-divider {
@@ -5803,7 +5832,6 @@ html:has(.media-content-popup-main:popover-open) {
 }
 
 .service-card .service-card-footer {
-    margin-top: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -5812,14 +5840,11 @@ html:has(.media-content-popup-main:popover-open) {
 
 .service-card .service-card-body {
     margin-bottom: 12px;
+    min-height: 144px;
 }
 
 .service-card .service-card-footer .service-card-label { 
-    color: var(--color-qunatum-purpule);
-}
-
-.service-section-footer >  div {
-    color: var(--color-ice-blue);
+    color: var(--color-electric-blue);
 }
 
 .split-content-grid {
@@ -5957,7 +5982,6 @@ html:has(.media-content-popup-main:popover-open) {
     max-width: 415px;
 }
 
-
 .display-card-grid {
     display: grid;
     gap: 24px;
@@ -5995,21 +6019,13 @@ html:has(.media-content-popup-main:popover-open) {
     pointer-events: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 480px) {
-    .iq-verticle-tilmline .iq-verticle-section {
-        padding-left: 20px;
-    }
-
-    .iq-verticle-tilmline .timeline-item {
-        padding-left: 45px;
-    }
-
-    .iq-verticle-tilmline .timeline-label {
-        font-size: 15px;
-    }
+.iq-impact-call-to-action-section {
+    min-height: 596px;
 }
-  
+.iq-impact-call-to-action-section .call-to-action-content {
+    max-width: 869px;
+}
+
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
@@ -6076,10 +6092,6 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     /* Call To Action */
-    .call-to-action-section {
-        padding-block: 66px 100px;
-    }
-
     .overview-section {
         padding-block: 71px 155px;
     }
@@ -8050,11 +8062,6 @@ html:has(.media-content-popup-main:popover-open) {
     transform: translate3d(0, 0, 0);
     opacity: 1;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.site-header.sticky-header {
-    background: var(--color-pure-white);
-    box-shadow: 0 0 6px #ddd;
 }
 
 /* Keep the hero artwork feeling alive after its entrance. */
