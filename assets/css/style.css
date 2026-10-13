@@ -5959,17 +5959,13 @@ html:has(.media-content-popup-main:popover-open) {
     min-height: 284px
 }
 
-.display-card-vector {
+.display-card-bg {
     position: absolute;
-}
-
-.icons-group-vector  {
-    top: 62px;
-    right: 72px;
-}
-.radial-target-vector {
-    top: 0;
-    right: 37px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Responsive Styles */
