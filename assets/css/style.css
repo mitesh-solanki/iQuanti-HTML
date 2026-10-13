@@ -86,6 +86,8 @@
     --color-q-purple-25: #DBD9FF;
     --color-qunatum-purpule: #6E69FF;
     --color-indigo-light: #C9C7FF;
+    --color-q-purple-75: #B5B6FA;
+
 
     /* ========================================
        Others
@@ -689,7 +691,7 @@ h2,
 .has-glass-effect {
   position: relative;
   border-radius: 8px;
-  border: 1px solid var(--color-elevate-gray) !important;
+  border: 1px solid var(--color-warm-gray) !important;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.28), inset -1.41px -1.41px 6px rgba(255, 255, 255, 0.1), 0 9px 26px rgba(0, 0, 0, 0.14);
 }
 
@@ -922,7 +924,7 @@ section {
 }
 
 .heading-wrap.dark h2{
-    color: var(--color-off-white);
+    color: var(--color-pure-white);
 }
 
 .heading-wrap p{
@@ -1538,10 +1540,10 @@ section {
 .section-label.has-white {
     background-color: #FAFAFA10;
     border-color: #FAFAFA20;
-    color: var(--color-off-white);
+    color: var(--color-q-purple-75);
 }
 .section-label.has-white span {
-    color: var(--color-off-white);
+    color: var(--color-q-purple-75);
 }
 
 
@@ -1576,7 +1578,6 @@ section {
 
 .client-heading h2 {
     margin: 0 0 24px;
-    color: var(--color-ice-blue) !important;
 }
 
 .client-heading p {
@@ -1982,7 +1983,7 @@ section {
 .card-border-fill rect {
     fill: none;
     stroke: #3c83f6;
-    stroke-width: 5;
+    stroke-width: 2;
 
     /* Using pathLength makes this 100% of the border */
     stroke-dasharray: 1;
@@ -2495,7 +2496,7 @@ justify-content: center;
 }
 
 .accordion-bordered .accordion-item.active span:first-child {
-      color: var(--color-indigo-light);
+      color: var(--color-q-purple-75);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
@@ -2870,6 +2871,7 @@ color: #FFFFFF;
     box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    transform: translateY(-4px) scale(1.025) !important;
 }
 
 /* Per-card hover fills from Figma Card Hover variants */
@@ -4105,13 +4107,13 @@ button:disabled {
     padding: 20px 0;
     display: flex;
     align-items: center;
-    gap: 37px;
+    gap: 40px;
 }
 
 .site-footer .footer-tagline .footer-tagline-item {
     display: flex;
     align-items: center;
-    gap: 37px;
+    gap: 40px;
 }
 
 .site-footer .footer-tagline .footer-tagline-item .footer-tagline-icon {
