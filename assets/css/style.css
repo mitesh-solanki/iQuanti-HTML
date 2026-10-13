@@ -5976,15 +5976,35 @@ html:has(.media-content-popup-main:popover-open) {
     background: url(../images/why-iq-impact-bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0;
 }
 
 .why-iq-impact-section .split-content-grid-left .heading-wrap p {
     max-width: 415px;
 }
 
+
+.why-iq-impact-section .split-content-grid-right {
+    overflow-y: auto;
+    max-height: 950px;
+}
+
+.why-iq-impact-section .split-content-grid-right::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge */
+}
+
+.why-iq-impact-section .heading-wrap.heading-wrap-left {
+    position: sticky;
+    top:120px;
+    padding-top: 120px;
+    margin-bottom: 80px;
+}
+
 .display-card-grid {
     display: grid;
     gap: 24px;
+    margin-top: 120px;
+    margin-bottom: 80px;
 }
 
 .display-card {
