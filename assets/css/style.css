@@ -4910,7 +4910,6 @@ body.contact-page {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     gap:24px 16px;
 }
 
@@ -7405,6 +7404,8 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-split-hero-section .speaker-profile-card {
         margin-top: 0;
         justify-content: center;
+        text-align: center;
+        align-items: center;
     }
 
     .webinar-hero-section .iq-split-hero-header {
@@ -8045,6 +8046,11 @@ html:has(.media-content-popup-main:popover-open) {
     .webinar-hero-section .contact-detail-wrapper {
         margin-top: 30px;
         gap: 24px;
+    }
+
+    .speaker-profile-card-grid {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .sticky-content-section .sticky-content-wrapper {
