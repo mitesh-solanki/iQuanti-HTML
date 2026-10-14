@@ -2518,7 +2518,7 @@ justify-content: center;
 }
 
 .accordion-bordered .accordion-item.active span:first-child {
-      color: var(--color-q-purple-75);
+     color: var(--color-qunatum-purpule);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
@@ -5777,7 +5777,6 @@ html:has(.media-content-popup-main:popover-open) {
     background: url("../images/big-radial-vector.webp");
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 772px;
 }
 
 .service-section {
@@ -5902,7 +5901,7 @@ html:has(.media-content-popup-main:popover-open) {
     background: url(../images/why-iq-impact-bg.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0;
+    padding-block: 0;
 }
 
 .why-iq-impact-section .split-content-grid-left .heading-wrap p {
@@ -5998,8 +5997,20 @@ html:has(.media-content-popup-main:popover-open) {
     font-family: "neulis-neue", sans-serif;
 }
 
+
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item:last-child {
-    padding-bottom: 0;
+    padding-bottom:0;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child {
+    padding-top: 10px;
+    margin-top: 0;
+    min-height: auto;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:last-child {
+    min-height: auto;
+    padding-block: 48px 12px;
 }
 
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
@@ -6013,6 +6024,17 @@ html:has(.media-content-popup-main:popover-open) {
     left: 24px;
     z-index: -1;
 }
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child::before {
+    background-image: url(../images/curve-outside-tab-first-item-vector.webp);
+    background-position: top;
+}
+
+.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:last-child::before {
+    background-image: url(../images/curve-outside-tab-last-item-vector.webp);
+    background-position: bottom;
+}
+
 
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label {
     text-decoration: none;
@@ -6117,6 +6139,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 
 }
+
 @media (min-width: 1200px) {
 
     .hero-section {
@@ -6185,6 +6208,10 @@ html:has(.media-content-popup-main:popover-open) {
 
     .iq-profile-grid-lsiting-section .container > .heading-wrap{
         margin-bottom: 200px;
+    }
+
+    .iq-impact-hero-section {
+        min-height: 772px;
     }
 }
 
@@ -6361,6 +6388,15 @@ html:has(.media-content-popup-main:popover-open) {
     /* IQ Impact Page CSS */
     .split-content-grid-right .image-box {
         height: 800px;
+    }
+
+    .how-it-works-section .iq-vertical-timeline-curve-tab-widget {
+        margin-top: 80px;
+    }
+
+    /* IQ Impact Page CSS */
+    .iq-impact-call-to-action-section {
+        min-height: 400px;
     }
 }
 
@@ -6724,6 +6760,7 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2) {
         top:50px !important;
     }
+
 }
 
 
