@@ -398,6 +398,13 @@ h2,
     background: none !important;
 }
 
+.iq-text-center {
+    text-align: center;
+}
+
+.iq-mx-auto {
+    margin-inline: auto;
+}
 
 /* ========================================
    GLOBAL COMPONENTS 
@@ -5107,6 +5114,7 @@ body.contact-page {
     position: relative;
     width: 100%;
     padding-inline: 0;
+    padding-top: 0;
 }
 
 .peek-slider-blurb-bottom-left {
@@ -5816,7 +5824,19 @@ html:has(.media-content-popup-main:popover-open) {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 24px;
+    gap: 8px;
 }
+
+.service-card .service-card-header .service-card-icon { 
+    width: 48px;
+    height: 48px;
+}
+
+.service-card .service-card-header .service-card-icon img { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} 
 
 .service-card .service-card-header .section-label  {
     margin-bottom: 0;
@@ -5874,17 +5894,17 @@ html:has(.media-content-popup-main:popover-open) {
     position: relative;
 }
 
-.split-content-grid-right .image-box {
+.split-content-grid .split-content-grid-right .image-box {
     width: 100%;
-    height: 900px;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.split-content-grid-right .image-box img{
+.split-content-grid .split-content-grid-right .image-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 617 / 900;
 }
 
 .split-content-grid-sect-blurb-bottom-left {
@@ -5903,6 +5923,11 @@ html:has(.media-content-popup-main:popover-open) {
     background-size: cover;
     padding-block: 0;
 }
+
+.why-iq-impact-section .split-content-grid {
+    gap: 24px;
+}
+
 
 .why-iq-impact-section .split-content-grid-left .heading-wrap p {
     max-width: 415px;
@@ -6386,10 +6411,6 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     /* IQ Impact Page CSS */
-    .split-content-grid-right .image-box {
-        height: 800px;
-    }
-
     .how-it-works-section .iq-vertical-timeline-curve-tab-widget {
         margin-top: 80px;
     }
@@ -6761,6 +6782,63 @@ html:has(.media-content-popup-main:popover-open) {
         top:50px !important;
     }
 
+    /* IQ Impact Page css */
+    .how-it-works-section .iq-vertical-timeline-curve-tab-widget {
+        margin-top: 0;
+    }
+
+    .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item {
+        padding-bottom: 40px;
+    }
+
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
+        margin: -40px 0 0 24px;
+    }
+
+
+    /*IQ Impact Page CSS */
+    .why-iq-impact-section .heading-wrap.heading-wrap-left {
+        padding-top: 0;
+    }
+
+
+    .service-card .service-card-header .service-card-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .split-content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .display-card-grid {
+        margin-block: 0;
+    }
+
+    .display-card {
+        min-height: 320px;
+    }
+
+    .display-card.has-glass-dark h3 {
+        max-width: 250px;
+    }
+
+    .display-card .display-card-inner {
+        justify-content: space-between;
+        min-height: 225px;
+    }
+
+    .display-card-bg {
+        object-fit: cover;
+    }
+
+    .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item,
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label  {
+        font-size: 18px;
+    }
+
+
+
 }
 
 
@@ -6881,6 +6959,11 @@ html:has(.media-content-popup-main:popover-open) {
 
     .has-header-space {
         margin-top: 74px;
+    }
+
+
+    .iq-mx-md-auto {
+        margin-inline: auto;
     }
 
     /* -----------------------------------------
@@ -7134,7 +7217,7 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .heading-wrap {
-        margin-bottom: 50px !important;
+        margin-bottom: 40px !important;
     }
 
     .case-studies-section .case-studies-container {
@@ -7146,10 +7229,10 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .contact-grid {
-        grid-template-columns: 1fr;
         gap: 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .contact-form-title {
@@ -7395,6 +7478,62 @@ html:has(.media-content-popup-main:popover-open) {
     .speaker-profile-card-grid {
         justify-content: center;
     }
+
+    /* IQ Impact Page css */
+    .service-section-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .split-content-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .iq-vertical-timeline-curve-tab-widget {
+        margin-inline: auto;
+    }
+
+    .split-content-grid .split-content-grid-right .image-box {
+        max-width: 80%;
+        margin-inline:auto;
+    }
+
+    .why-iq-impact-section .split-content-grid {
+        gap: 0;
+    }
+
+    .iq-impact-call-to-action-section {
+        min-height: 300px;
+    }
+
+    .display-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .display-card-bg {
+        object-fit: contain;
+        object-position: right;
+        height: auto;
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .display-card {
+        min-height: 280px;
+    }
+
+    .display-card .display-card-inner {
+        min-height: auto;
+    }
+
+    .display-card.has-glass-dark h3 {
+        max-width: 200px;
+    }
+
 
 }
 
@@ -7995,10 +8134,45 @@ html:has(.media-content-popup-main:popover-open) {
         opacity: 0.7;
     }
 
-      .iq-orbit-rings-vector img {
-        width: 400px;
-      }
+    .iq-orbit-rings-vector img {
+         width: 400px;
+    }
 
+    /* IQ Impact Page CSS */
+    .service-section-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .service-card .service-card-body {
+        min-height: auto;
+    }
+
+    .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item {
+        padding-bottom: 30px;
+    }
+
+    .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item, 
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label {
+        font-size: 17px;
+    }
+
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
+        margin: -30px 0 0 24px;
+    }
+
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
+        padding: 30px 0px;
+    }
+
+    .display-card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .display-card {
+        min-height: 250px;
+    }
+
+    
 }
 
 /* =========================================
@@ -8075,9 +8249,9 @@ html:has(.media-content-popup-main:popover-open) {
         margin-bottom: 16px;
     }
 
-        .contact-form-title {
-            font-size: 24px;
-        }
+    .contact-form-title {
+        font-size: 24px;
+    }
 
     .privacy-checkbox input {
         margin-top: 4px !important;
@@ -8118,6 +8292,14 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-profile-grid-wrapper.is-staggered.columns-2 > .iq-profile-card:nth-child(2n + 1){
         top: 0 !important;
     }
+
+    /* IQ Impact Page CSS */
+    .split-content-grid .split-content-grid-right .image-box {
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+
 }
 
 
