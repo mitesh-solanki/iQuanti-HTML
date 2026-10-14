@@ -8172,6 +8172,14 @@ html:has(.media-content-popup-main:popover-open) {
         min-height: 250px;
     }
 
+    .split-content-grid {
+        gap: 30px;
+    }
+
+    .section-footer {
+        margin-top: 30px !important;
+    }
+
     
 }
 
