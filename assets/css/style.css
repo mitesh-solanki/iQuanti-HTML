@@ -5911,17 +5911,11 @@ html:has(.media-content-popup-main:popover-open) {
 
 
 .why-iq-impact-section .split-content-grid-right {
-    overflow-y: auto;
-    max-height: 950px;
-}
-
-.why-iq-impact-section .split-content-grid-right::-webkit-scrollbar {
-  display: none;              /* Chrome, Safari, Edge */
+    overflow: visible;
+    max-height: none;
 }
 
 .why-iq-impact-section .heading-wrap.heading-wrap-left {
-    position: sticky;
-    top:120px;
     padding-top: 120px;
     margin-bottom: 80px;
 }
@@ -6110,6 +6104,15 @@ html:has(.media-content-popup-main:popover-open) {
     /* Our Works Filter Section */
     .our-works-cta-section{
         padding-block: 0 100px;
+    }
+
+    .why-iq-impact-section .split-content-grid {
+        align-items: start;
+    }
+
+    .why-iq-impact-section .split-content-grid-left {
+        position: sticky;
+        top: 120px;
     }
 
 
