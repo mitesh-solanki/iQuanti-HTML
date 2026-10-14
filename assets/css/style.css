@@ -428,6 +428,7 @@ h2,
     gap: 10px;
     cursor: pointer;
     width: fit-content;
+    font-family: "neulis-neue", sans-seerif;
 }
 
 .cta-action svg,
@@ -1516,7 +1517,7 @@ section {
     border-radius: 100px;
     width: fit-content;
     text-transform: uppercase; 
-    font-weight: 800;
+    font-weight: 600;
     color: var(--color-electric-blue); 
 }
 
@@ -1541,7 +1542,7 @@ section {
 .section-label span {
   font-size: 16px;
   line-height: 1.5; 
-  font-weight: 800; 
+  font-weight: 600; 
   text-transform: uppercase; 
   color:var(--color-electric-blue);
 }
@@ -2048,7 +2049,7 @@ section {
     color:  #007BFF;
     font-size: 16px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 24px; /* 150% */
     text-transform: uppercase;
     display: inline-flex;
@@ -2310,7 +2311,6 @@ justify-content: center;
 .research-tag {
     margin-bottom: 20px;
     font-size: 16px;
-    font-weight: 800;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -3205,7 +3205,6 @@ color: #FFFFFF;
 
 .info-card .info-card-title {
     margin: 0 0 16px;
-    font-family: area-normal, sans-serif !important;
     color: var(--color-off-white);
     min-height: 89px;
     align-content: center;
