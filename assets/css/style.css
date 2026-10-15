@@ -5813,12 +5813,6 @@ html:has(.media-content-popup-main:popover-open) {
     background-position: center;
 }
 
-.service-section {
-    background: url("../images/blue-radial-bg.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .service-section-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
