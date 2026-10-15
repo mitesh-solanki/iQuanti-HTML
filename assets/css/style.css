@@ -2519,7 +2519,7 @@ justify-content: center;
 .accordion-bordered  .accordion-header span:first-child {
     color: var(--color-off-white);
     font-weight: 700;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.32;
     font-family: "neulis-neue";
 }
@@ -3923,8 +3923,12 @@ color: #FFFFFF;
 
 .privacy-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
+}
+
+.privacy-checkbox .custom-check-box-wrap{
+    margin-top: 1px;
 }
 
 .privacy-checkbox input {
@@ -3945,7 +3949,8 @@ color: #FFFFFF;
     font-size: 15px;
     line-height: 18px;
     color: var(--color-off-white);
-   cursor: pointer;
+     cursor: pointer;
+     width: 100%;
 }
 
 .privacy-checkbox label span {
@@ -4391,6 +4396,17 @@ button:disabled {
         0 0 0 3px rgba(255, 128, 0, 0.1);
 }
 
+.iquanti-subscribe .news-letter-response-newsletter,
+ .site-footer .news-letter-response-newsletter {
+    flex: 1 0 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-primary-orange);
+}
+
+.news-letter-response-newsletter p {
+    color: var(--color-primary-orange);
+}
 
 /* ========================================
    FOOTER BOTTOM
@@ -4418,6 +4434,8 @@ button:disabled {
 .site-footer .footer-bottom a:hover {
     color: var(--color-rich-black);
 }
+
+
 
 
 /* Contact Page CSS */
@@ -6023,12 +6041,11 @@ html:has(.media-content-popup-main:popover-open) {
     font-family: "neulis-neue", sans-serif;
 }
 
-
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item:last-child {
     padding-bottom:0;
 }
 
-.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child {
+/* .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child {
     padding-top: 10px;
     margin-top: 0;
     min-height: auto;
@@ -6037,7 +6054,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:last-child {
     min-height: auto;
     padding-block: 48px 12px;
-}
+} */
 
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
     content: "";
@@ -6051,7 +6068,7 @@ html:has(.media-content-popup-main:popover-open) {
     z-index: -1;
 }
 
-.iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child::before {
+/* .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:first-child::before {
     background-image: url(../images/curve-outside-tab-first-item-vector.webp);
     background-position: top;
 }
@@ -6059,7 +6076,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item.active:last-child::before {
     background-image: url(../images/curve-outside-tab-last-item-vector.webp);
     background-position: bottom;
-}
+} */
 
 
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label {
@@ -6078,7 +6095,7 @@ html:has(.media-content-popup-main:popover-open) {
     background-color: var(--color-pure-white);
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active {
     margin: -56px 0 0 24px;
     border-block: 0;
     position: relative;
@@ -6087,26 +6104,35 @@ html:has(.media-content-popup-main:popover-open) {
     padding: 48px 0px;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-icon {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active .timeline-curve-tab-icon {
     display: none;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active::after,
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active::after,
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:last-child::after {
     display: none;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item .timeline-curve-tab-label {
+    font-family: "neulis-neue", sans-serif;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active .timeline-curve-tab-label {
     display: block;
     width: 100%;
     text-align: right;
     font-size: 20px;
-    color: var(--color-electric-blue);
-    font-weight: bold;
+    font-weight: 400;
+    line-height: 1.4;
     padding-inline: 24px;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active::before {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label {
+    color: var(--color-electric-blue);
+    font-weight: 700;
+}
+
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active::before {
     content: "";
     background: url("../images/curve-outside-tab-vector.webp");
     position: absolute;
@@ -6118,13 +6144,16 @@ html:has(.media-content-popup-main:popover-open) {
     z-index: -1;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:has(+ .active)::after {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:has(+ .curve-active)::after {
     display: none;
 }
 
 .how-it-works-section .iq-vertical-timeline-curve-tab-widget {
     margin-top: 134px;
 }
+
+
+
 
 /* Media Query Start Here */
 @media (min-width: 1024px) {
@@ -6784,6 +6813,10 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     /* IQ Impact Page css */
+    .iq-impact-hero-section {
+        background-size: 100%;
+    }   
+
     .how-it-works-section .iq-vertical-timeline-curve-tab-widget {
         margin-top: 0;
     }
@@ -7246,10 +7279,14 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .privacy-checkbox label span {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         gap: 8px;
         font-size: 12px;
+    }
+
+    .privacy-checkbox .custom-check-box-wrap {
+        margin-top: 2px;
     }
 
     .privacy-checkbox label span.privacy-policy-text {
@@ -8282,6 +8319,15 @@ html:has(.media-content-popup-main:popover-open) {
 
     .contact-form {
         padding: 28px 20px !important;
+    }
+
+    .privacy-checkbox label span {
+        font-size: 11px;
+    }
+    
+    .custom-check-box-wrap .custom-check-box {
+        width: 18px;
+        height: 18px;
     }
 
     .trust-card p br {
