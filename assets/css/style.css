@@ -4452,10 +4452,9 @@ body.contact-page {
     background: var(--color-pure-white);
 }
 
-
 /* iQ Split Hero Section  */
 .iq-contact-section {
-   background-image: url("../images/contact-banner-image.jpg");
+   background-image: url("../images/iq-contact-banner-image.webp");
 }
 
 .iq-split-hero-section {
