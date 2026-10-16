@@ -4893,7 +4893,7 @@ body.contact-page {
 /* Webinar Page CSS */
 /* Contact Banner section */
 .webinar-hero-section {
-    background-image: url("../images/webinar-banner-image.jpg");
+    background-image: url("../images/webinar-banner-image.webp");
 }
 
 .webinar-hero-section .iq-split-hero-wrapper {
@@ -5041,8 +5041,8 @@ body.contact-page {
 }
 
 .sticky-content-bottom-left.blurb-bg {
-    left: -40%;
-    top: 50%;
+    left: -14%;
+    top: -25%;
 }
 
 .sticky-content-top-right.blurb-bg {
@@ -5129,7 +5129,7 @@ body.contact-page {
 
 .peek-slider-blurb-bottom-left {
     right: -40%;
-    bottom: -70%;
+    bottom: 25%;
 }
 
 .peek-slider-header {
