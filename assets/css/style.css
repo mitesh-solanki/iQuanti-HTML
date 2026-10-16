@@ -1591,11 +1591,6 @@ section {
     z-index: 0;
 }
 
-.client-section::before {
-    content: "";
-    background-image: url(../images/client-bg.png);
-    background-position: center;
-}
 
 
 /* ========================================
@@ -2440,9 +2435,7 @@ justify-content: center;
     z-index: 0;
 }
 
-.ai-native-section::before {
-    background: url(../images/ai-native-bg.png);
-}
+
 
 .ai-native-container {
     width: 100%;
@@ -2643,11 +2636,6 @@ Case Study Section =====================*/
     background: #111;
     overflow: hidden;
     z-index: 0;
-}
-
-.insights-section.has-bg-image::before {
-    background-image: url('../images/case-study-bg.png');
-    background-position: center top;
 }
 
 .insights-section .insights-container {
