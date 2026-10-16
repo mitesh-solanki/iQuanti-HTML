@@ -1277,7 +1277,6 @@ section {
    ========================================================== */
 
 .hero-section {
-  position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1607,7 +1606,6 @@ section {
 .client-section {
     width: 100%;
     background: #111111;
-    position: relative;
     z-index: 0;
 }
 
@@ -1938,12 +1936,9 @@ section {
 .trust-section {
     width: 100%;
     background: rgba(242, 248, 255, 0.00);
-    box-sizing: border-box;
-    position: relative;
 }
 
 .trust-blur-vector-right {
-    position: absolute;
     right: 0;
     top: -70%;
     pointer-events: none;
@@ -1953,7 +1948,6 @@ section {
 }
 
 .trust-blur-vector-left {
-    position: absolute;
     left: 0;
     top: 30%;
     pointer-events: none;
@@ -2153,8 +2147,6 @@ section {
 .research-section {
     width: 100%;
     background: rgba(252, 250, 246, 1);
-    box-sizing: border-box;
-    position: relative;
     z-index: 0;
     padding-top: 0;
 }
@@ -2177,12 +2169,19 @@ section {
     right: 0;
     transform: scaleX(-1);
     z-index: -1;
+    width: 614px;
+    height: 1284px;
+    background: url("../images/research-blurb-bg-right-center.svg");
 }
+
 .research-blurb-bg-left-center {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     z-index: -1;
+    width: 614px;
+    height: 1279px;
+    background: url("../images/research-blurb-bg-left-center.svg");
 }
 
 /* ========================================
@@ -2456,7 +2455,6 @@ justify-content: center;
     box-sizing: border-box;
     min-height: 784px;
     align-content: center;
-    position: relative;
     z-index: 0;
 }
 
@@ -2598,11 +2596,18 @@ Case Study Section =====================*/
 .case-studies-section .case-studies-blurb-left-center{
     left: 0;
     bottom: -22%;
+    width: 939px;
+    height: 1200px;
+    background: url("../images/case-studies-blurb-left-center.png");
 }
+
 .case-studies-section .case-studies-blurb-top-right{
     top:-55%;
     right: 0;
     opacity: 80%;
+    width: 647px;
+    height: 1200px;
+    background: url("../images/case-studies-blurb-top-right.png");
 }
 
 .case-studies-section .case-studies-container {
@@ -2655,7 +2660,6 @@ Case Study Section =====================*/
 ======================================== */
 
 .insights-section {
-    position: relative;
     background: #111;
     overflow: hidden;
     z-index: 0;
@@ -3234,7 +3238,6 @@ color: #FFFFFF;
 ================================ */
 
 .recognition-section {
-    position: relative;
     overflow: hidden;
     z-index: 0;
 }
@@ -3242,6 +3245,9 @@ color: #FFFFFF;
 .recognition-section .recognition-blurb-top-left {
     top: -45%;
     left: 0;
+    background-image: url("../images/recognition-blurb-top-left.png");
+    width: 799px;
+    height: 1200px;
 }
 
 .recognition-blurb-top-right {
@@ -3384,11 +3390,10 @@ color: #FFFFFF;
 ======================================== */
 
 .contact-section {
-     width: 100%;
+    width: 100%;
     background: #222222;
-     position: relative;
-     overflow: hidden;
-     z-index: 1;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .contact-section .container {
