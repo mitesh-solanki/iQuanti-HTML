@@ -1402,6 +1402,7 @@ section {
     background-image: url(../images/blurb-bg-bottom-left.png);
 }
 
+
 .blurb-bg-center-bottom {
    right: 0;
    bottom: 0;
@@ -1946,6 +1947,9 @@ section {
     right: 0;
     top: -70%;
     pointer-events: none;
+    width: 599px;
+    height: 1178px;
+    background-image: url("../images/trust-blurb-vector-right.png");
 }
 
 .trust-blur-vector-left {
@@ -1953,6 +1957,9 @@ section {
     left: 0;
     top: 30%;
     pointer-events: none;
+    width: 372px;
+    height: 479px;
+    background-image: url("../images/blur-effect-left.png");
 }
  
 .trust-container {
