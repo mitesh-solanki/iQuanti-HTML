@@ -1290,6 +1290,7 @@ section {
     right: 0;
     top: 0;
 }
+
 .grid-lines {
     position: absolute;
     inset: 0;
@@ -5989,6 +5990,16 @@ html:has(.media-content-popup-main:popover-open) {
 
 .iq-impact-call-to-action-section {
     min-height: 596px;
+}
+
+.iq-impact-call-to-action-section .call-to-action-blurb-center-left {
+    left: 0;
+    top: -35%;
+}
+
+.iq-impact-call-to-action-section .call-to-action-blurb-center-right.blurb-bg {
+    right: 0%;
+    top: -50%;
 }
 
 .iq-impact-call-to-action-section .call-to-action-content {
