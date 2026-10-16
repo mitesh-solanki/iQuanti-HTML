@@ -4470,13 +4470,6 @@ body.contact-page {
     z-index: 0;
 }
 
-.iq-split-hero-blurb-center-left {
-    position:absolute;
-    top: 40%;
-    left:-10%;
-    transform: translateY(-50%)
-}
-
 .iq-split-hero-wrapper {
     position: relative;
     z-index: 3;
