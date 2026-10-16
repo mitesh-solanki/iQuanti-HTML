@@ -649,6 +649,9 @@ h2,
 .call-to-action-blurb-left-top {
     top: -100%;
     left: 0;
+    background-image: url("../images/careers-cta-blurb-left-top.png");
+    width: 627px;
+    height: 1272px;
 }
 
 .call-to-action-content {
@@ -3253,6 +3256,9 @@ color: #FFFFFF;
 .recognition-blurb-top-right {
     right: 0;
     top: -70%;
+    background-image: url("../images/recognition-trust-blurb-top-right.png");
+    width: 662px;
+    height: 1229px;
 }
 
 .recognition-section .recognition-container {
@@ -5628,6 +5634,9 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-feature-blurb-left-bottom  {
     left: 0;
     top: 20%;
+    width: 597px;
+    height: 1190px;
+    background-image: url(../images/our-core-blurb-left-bottom.png);
 }
 
 /* ==========================================
