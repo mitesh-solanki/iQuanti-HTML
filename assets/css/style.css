@@ -5745,8 +5745,13 @@ html:has(.media-content-popup-main:popover-open) {
 }
 
 .iq-profile-grid-lsiting-blurb-top-left {
-    top: -10%;
+    top: -3%;
     left: 0;
+}
+
+.iq-profile-grid-lsiting-blurb-top-right {
+    right: 0;
+    top: 10%;
 }
 
 /* Our Team Page css */
