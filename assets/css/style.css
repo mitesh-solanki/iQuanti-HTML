@@ -1291,6 +1291,11 @@ section {
     top: 0;
 }
 
+.hero-section .section-label-sup sup {
+    top: 2px;
+    letter-spacing: 0.5px;
+}
+
 .grid-lines {
     position: absolute;
     inset: 0;
@@ -1564,24 +1569,22 @@ section {
     color: var(--color-q-purple-75);
 }
 
-.section-label-sup,
-.section-label-sup > * {
+.section-label-sup {
     font-family: "neulis-neue", sans-serif;
 }
 
 .section-label-sup {
     color: var(--color-elevate-gray);
-    text-transform: uppercase;
     margin-bottom: 12px;
     display: inline-block ;
 }
 
 .section-label-sup sup {
-    top: 3px;
     position: relative;
     left: -3px;
     font-weight: 400;
-
+    font-size: 10px;
+    letter-spacing: 1px;
 } 
 
 /* ========================================
@@ -2150,7 +2153,7 @@ section {
 .research-section .grid-lines .grid-horizontal-lines {
   grid-template-rows: repeat(22, 1fr);
 }
-
+.feature-card
 .research-blurb-bg-right-center {
     top: -8%;
     right: 0;
@@ -3074,6 +3077,11 @@ color: #FFFFFF;
     text-align: center;
     background: url(../images/solutions-center-bg.webp) center / cover no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
     box-shadow: none;
+}
+
+.impact-badge .section-label-sup sup {
+    font-size: 12px;
+    top: 0;
 }
 
 .feature-card::before {
