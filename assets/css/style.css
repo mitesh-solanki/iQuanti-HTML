@@ -1291,6 +1291,10 @@ section {
     top: 0;
 }
 
+.hero-section .section-label-sup {
+    margin-bottom: 12px;
+}
+
 .hero-section .section-label-sup sup {
     top: 2px;
     letter-spacing: 0.5px;
@@ -1575,7 +1579,6 @@ section {
 
 .section-label-sup {
     color: var(--color-elevate-gray);
-    margin-bottom: 12px;
     display: inline-block ;
 }
 
