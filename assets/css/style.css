@@ -107,7 +107,7 @@ html {
 
 body {
     background: #FCFAF6;
-     background-image: url('../images/checked-line.png');
+     /* background-image: url('../images/checked-line.png'); */
      background-size: cover;
      overflow-x: clip;
 }
@@ -359,6 +359,11 @@ h2,
 
 .has-header-space {
     margin-top: 82px;
+}
+
+.has-chceks-line-bg {
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /* CSS Classes */
@@ -1928,7 +1933,8 @@ section {
 
 .trust-section {
     width: 100%;
-    background: rgba(242, 248, 255, 0.00);
+    background-image: url("../images/trust-section-chceks-line-bg.svg");
+    background-color: rgba(242, 248, 255, 0.00);
     box-sizing: border-box;
     position: relative;
 }
@@ -2137,7 +2143,8 @@ section {
 
 .research-section {
     width: 100%;
-    background: rgba(252, 250, 246, 1);
+    background-image: url("../images/research-section-chceks-line-bg.svg");
+    background-color: rgba(252, 250, 246, 1);
     box-sizing: border-box;
     position: relative;
     z-index: 0;
