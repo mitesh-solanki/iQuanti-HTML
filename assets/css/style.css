@@ -102,7 +102,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: clip;
+    overflow-x: hidden;
 }
 
 body {
@@ -362,7 +362,7 @@ h2,
 }
 
 .has-checks-line-bg {
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -1288,6 +1288,7 @@ section {
   align-items: center;
   overflow: hidden;
   background-color: var(--color-pure-white);
+  /* background-image: url("../images/hero-banner-checks-line-bg.svg"); */
   z-index: 0;
 }
 
@@ -2177,6 +2178,11 @@ section {
     z-index: -1;
 }
 
+.research-blurb-bg-right-center {
+    right: 0;
+    top: 0;
+}
+
 /* ========================================
    SECTION HEADER
 ======================================== */
@@ -2589,6 +2595,10 @@ justify-content: center;
 /* =======================================
 Case Study Section =====================*/
 
+.case-studies-section  {
+    background-image: url("../images/case-study-checks-line-bg.svg");
+}
+
 .case-studies-section .case-studies-blurb-left-center{
     left: 0;
     bottom: -12%;
@@ -2639,7 +2649,6 @@ Case Study Section =====================*/
     height: 15px;
     display: block;
     flex-shrink: 0;
-    margin-top: 4px;
 }
 
 
@@ -3236,6 +3245,7 @@ color: #FFFFFF;
     position: relative;
     overflow: hidden;
     z-index: 0;
+    background-image: url("../images/recognition-trust-checks-line-bg.svg");
 }
 
 .recognition-section .recognition-blurb-top-left {
@@ -5902,6 +5912,10 @@ html:has(.media-content-popup-main:popover-open) {
     grid-template-columns: 49.5238% 49.04761%;
     gap: 12px;
 }
+
+.how-it-works-section {
+    background-image: url("../images/how-it-works-checks-line-bg.svg");
+} 
 
 .how-it-works-section .heading-wrap  p {
     max-width: 562px;
