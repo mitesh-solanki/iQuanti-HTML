@@ -6168,6 +6168,10 @@ html:has(.media-content-popup-main:popover-open) {
     z-index: -1;
 }
 
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(2):after {
+    background: none;
+}
+
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) {
     margin-left: 24px;
     padding-block: 115px 0px;
