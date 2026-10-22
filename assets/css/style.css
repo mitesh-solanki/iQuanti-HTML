@@ -102,12 +102,12 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
     background: #FCFAF6;
-     /* background-image: url('../images/checked-line.png'); */
+     background-image: url('../images/checked-line.png');
      background-size: cover;
      overflow-x: clip;
 }
@@ -359,11 +359,6 @@ h2,
 
 .has-header-space {
     margin-top: 82px;
-}
-
-.has-checks-line-bg {
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* CSS Classes */
@@ -1288,7 +1283,6 @@ section {
   align-items: center;
   overflow: hidden;
   background-color: var(--color-pure-white);
-  /* background-image: url("../images/hero-banner-checks-line-bg.svg"); */
   z-index: 0;
 }
 
@@ -1934,8 +1928,7 @@ section {
 
 .trust-section {
     width: 100%;
-    background-image: url("../images/trust-section-chceks-line-bg.svg");
-    background-color: rgba(242, 248, 255, 0.00);
+    background: rgba(242, 248, 255, 0.00);
     box-sizing: border-box;
     position: relative;
 }
@@ -2144,8 +2137,7 @@ section {
 
 .research-section {
     width: 100%;
-    background-image: url("../images/research-section-chceks-line-bg.svg");
-    background-color: rgba(252, 250, 246, 1);
+    background: rgba(252, 250, 246, 1);
     box-sizing: border-box;
     position: relative;
     z-index: 0;
@@ -2176,11 +2168,6 @@ section {
     left: -4%;
     transform: translateY(-50%);
     z-index: -1;
-}
-
-.research-blurb-bg-right-center {
-    right: 0;
-    top: 0;
 }
 
 /* ========================================
@@ -2595,10 +2582,6 @@ justify-content: center;
 /* =======================================
 Case Study Section =====================*/
 
-.case-studies-section  {
-    background-image: url("../images/case-study-checks-line-bg.svg");
-}
-
 .case-studies-section .case-studies-blurb-left-center{
     left: 0;
     bottom: -12%;
@@ -2649,6 +2632,7 @@ Case Study Section =====================*/
     height: 15px;
     display: block;
     flex-shrink: 0;
+    margin-top: 4px;
 }
 
 
@@ -3245,7 +3229,6 @@ color: #FFFFFF;
     position: relative;
     overflow: hidden;
     z-index: 0;
-    background-image: url("../images/recognition-trust-checks-line-bg.svg");
 }
 
 .recognition-section .recognition-blurb-top-left {
@@ -5913,10 +5896,6 @@ html:has(.media-content-popup-main:popover-open) {
     gap: 12px;
 }
 
-.how-it-works-section {
-    background-image: url("../images/how-it-works-checks-line-bg.svg");
-} 
-
 .how-it-works-section .heading-wrap  p {
     max-width: 562px;
 }
@@ -6066,7 +6045,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item{
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 0;
     position: relative;
     padding-bottom: 56px;
     font-size: 20px;
@@ -6092,7 +6071,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
     content: "";
     background: url(../images/dashed-line-vector.webp);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 1px;
     height: 100%;
     position: absolute;
@@ -6126,9 +6105,10 @@ html:has(.media-content-popup-main:popover-open) {
     border:1px solid var(--color-electric-blue);
     border-radius: 50%;
     background-color: var(--color-pure-white);
+    margin-right: 24px;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) {
     margin: -56px 0 0 24px;
     border-block: 0;
     position: relative;
@@ -6137,11 +6117,11 @@ html:has(.media-content-popup-main:popover-open) {
     padding: 48px 0px;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active .timeline-curve-tab-icon {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-icon {
     display: none;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active::after,
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n)::after,
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:last-child::after {
     display: none;
 }
@@ -6150,7 +6130,7 @@ html:has(.media-content-popup-main:popover-open) {
     font-family: "neulis-neue", sans-serif;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active .timeline-curve-tab-label {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-label {
     display: block;
     width: 100%;
     text-align: right;
@@ -6165,7 +6145,15 @@ html:has(.media-content-popup-main:popover-open) {
     font-weight: 700;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item.curve-active::before {
+span.timeline-curve-tab-label-description {
+    display: none;
+    position: absolute;
+}
+.curve-active span.timeline-curve-tab-label-description {
+    display: block;
+    color: var(--color-elevate-gray);
+}
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n)::before {
     content: "";
     background: url("../images/curve-outside-tab-vector.webp");
     position: absolute;
@@ -6177,7 +6165,7 @@ html:has(.media-content-popup-main:popover-open) {
     z-index: -1;
 }
 
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:has(+ .curve-active)::after {
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:has(+ :nth-child(3n))::after {
     display: none;
 }
 
@@ -6858,10 +6846,6 @@ html:has(.media-content-popup-main:popover-open) {
         padding-bottom: 40px;
     }
 
-    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active {
-        margin: -40px 0 0 24px;
-    }
-
 
     /*IQ Impact Page CSS */
     .why-iq-impact-section .heading-wrap.heading-wrap-left {
@@ -6900,7 +6884,8 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item,
-    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label  {
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label,
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-label  {
         font-size: 18px;
     }
 

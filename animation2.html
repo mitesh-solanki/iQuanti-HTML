@@ -1,0 +1,510 @@
+<div id="iq-scroll-app">
+    <section class="iq-stage" id="iq-stage">
+    <div class="iq-copy">
+    <span class="iq-eyebrow">HOW IT WORKS</span>
+    <h2>One connected system,<br>
+    <span>from signal to result</span>
+    </h2>
+    <p id="iq-description">
+            iQ.Impact connects cross-surface signals to audience
+            intelligence, agentic activation, and measurable results,
+            so insight never gets lost between planning and execution.
+    </p>
+     
+          <nav class="iq-tabs" aria-label="Process steps">
+    <button class="iq-tab active" data-step="0" type="button">
+    <span class="iq-number">01</span>
+    <span>Data &amp; Signals</span>
+    </button>
+    <button class="iq-tab" data-step="1" type="button">
+    <span class="iq-number">02</span>
+    <span>Audience Intelligence</span>
+    </button>
+    <button class="iq-tab" data-step="2" type="button">
+    <span class="iq-number">03</span>
+    <span>Planning &amp; Prioritization</span>
+    </button>
+    <button class="iq-tab" data-step="3" type="button">
+    <span class="iq-number">04</span>
+    <span>Agentic Activation</span>
+    </button>
+    <button class="iq-tab" data-step="4" type="button">
+    <span class="iq-number">05</span>
+    <span>Optimization</span>
+    </button>
+    </nav>
+     
+          <div class="iq-counter" id="iq-counter">STEP 01 / 05</div>
+    </div>
+     
+        <div class="iq-visual">
+    <div id="iq-lottie"></div>
+    <div id="iq-error" role="status"></div>
+    </div>
+    </section>
+    </div>
+     
+    <style>
+      #iq-scroll-app {
+        --iq-blue: #087cff;
+        --iq-dark: #424854;
+        --iq-muted: #777d86;
+        width: 100%;
+        color: var(--iq-dark);
+        font-family: Inter, Arial, sans-serif;
+      }
+     
+      #iq-scroll-app * {
+        box-sizing: border-box;
+      }
+     
+      #iq-scroll-app .iq-stage {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        align-items: center;
+        gap: clamp(28px, 5vw, 80px);
+        padding: clamp(24px, 5vw, 72px);
+        background:
+          linear-gradient(90deg, #fbfaf8, #fbfaf8 65%, #eef5ff);
+        overflow: visible;
+      }
+     
+      #iq-scroll-app .iq-copy {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+      }
+     
+      #iq-scroll-app .iq-eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 30px;
+        background: #e8f3ff;
+        color: var(--iq-blue);
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+     
+      #iq-scroll-app h2 {
+        font-size: clamp(30px, 3.3vw, 48px);
+        line-height: 1.12;
+        letter-spacing: -1.2px;
+        font-weight: 700;
+        margin: 0 0 18px;
+        color: var(--iq-dark);
+      }
+     
+      #iq-scroll-app h2 span {
+        color: var(--iq-blue);
+      }
+     
+      #iq-scroll-app #iq-description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--iq-muted);
+        margin: 0 0 30px;
+        max-width: 460px;
+      }
+     
+      #iq-scroll-app .iq-tabs {
+        display: grid;
+        gap: 8px;
+      }
+     
+      #iq-scroll-app .iq-tab {
+        width: 100%;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 7px 12px 7px 0;
+        border: 0;
+        border-radius: 10px;
+        background: transparent;
+        color: var(--iq-dark);
+        text-align: left;
+        font: inherit;
+        font-size: 14px;
+        cursor: pointer;
+        transition: color .25s, background .25s;
+      }
+     
+      #iq-scroll-app .iq-tab:hover {
+        background: #edf5ff;
+      }
+     
+      #iq-scroll-app .iq-number {
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+        border: 1px solid #91c5ff;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--iq-blue);
+        display: grid;
+        place-items: center;
+        font-size: 11px;
+        font-weight: 600;
+        transition: all .25s;
+      }
+     
+      #iq-scroll-app .iq-tab.active {
+        color: var(--iq-blue);
+        font-weight: 700;
+      }
+     
+      #iq-scroll-app .iq-tab.active .iq-number {
+        color: #fff;
+        background: var(--iq-blue);
+        border-color: var(--iq-blue);
+        box-shadow: 0 0 0 5px #e6f2ff;
+      }
+     
+      #iq-scroll-app .iq-counter {
+        margin-top: 22px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: var(--iq-muted);
+      }
+     
+      #iq-scroll-app .iq-visual {
+        width: 100%;
+        height: min(76vh, 760px);
+        height: min(76svh, 760px);
+        min-height: 360px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+     
+      #iq-scroll-app #iq-lottie {
+        width: 100%;
+        height: 100%;
+      }
+     
+      #iq-scroll-app #iq-lottie svg {
+        width: 100% !important;
+        height: 100% !important;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+     
+      #iq-scroll-app #iq-error {
+        display: none;
+        position: absolute;
+        inset: 0;
+        padding: 24px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+        align-items: center;
+        justify-content: center;
+      }
+     
+      @media (max-width: 767px) {
+        #iq-scroll-app .iq-stage {
+          min-height: auto;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 24px;
+          padding: 32px 20px;
+        }
+     
+        #iq-scroll-app h2 {
+          font-size: clamp(29px, 8vw, 38px);
+        }
+     
+        #iq-scroll-app #iq-description {
+          font-size: 14px;
+          margin-bottom: 18px;
+        }
+     
+        #iq-scroll-app .iq-tabs {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: 5px 8px;
+        }
+     
+        #iq-scroll-app .iq-tab {
+          gap: 8px;
+          font-size: 12px;
+          padding: 8px 3px;
+        }
+     
+        #iq-scroll-app .iq-number {
+          flex-basis: 27px;
+          width: 27px;
+          height: 27px;
+          font-size: 10px;
+        }
+     
+        #iq-scroll-app .iq-visual {
+          height: 48vh;
+          height: 48svh;
+          min-height: 270px;
+        }
+     
+        #iq-scroll-app .iq-counter {
+          margin-top: 14px;
+        }
+      }
+     
+      @media (prefers-reduced-motion: reduce) {
+        #iq-scroll-app .iq-tab,
+        #iq-scroll-app .iq-number {
+          transition: none;
+        }
+      }
+    </style>
+     
+    <!-- Load libraries only if they are not already available. -->
+    <script>
+    (function () {
+      "use strict";
+     
+      const root = document.getElementById("iq-scroll-app");
+      if (!root || root.dataset.initialized === "true") return;
+      root.dataset.initialized = "true";
+     
+      const errorBox = root.querySelector("#iq-error");
+      const lottieBox = root.querySelector("#iq-lottie");
+      const stage = root.querySelector("#iq-stage");
+      const tabs = Array.from(root.querySelectorAll(".iq-tab"));
+      const description = root.querySelector("#iq-description");
+      const counter = root.querySelector("#iq-counter");
+     
+      /*
+       * IMPORTANT:
+       * Replace this URL with the public URL of your animation.json.
+       */
+      const ANIMATION_URL =
+        "http://localhost/iQuanti-HTML/FULL_PAGE.json";
+     
+      const descriptions = [
+        "Collect signals across channels and bring them into one connected system.",
+        "Turn fragmented signals into a clearer understanding of your audience.",
+        "Translate audience intelligence into focused plans and priorities.",
+        "Activate the plan across the right channels, content, and experiences.",
+        "Measure outcomes, learn from performance, and continuously optimize."
+      ];
+     
+      let animation = null;
+      let scrollTween = null;
+      let trigger = null;
+      let activeStep = -1;
+      let initialized = false;
+      const playhead = { frame: 0 };
+     
+      function showError(message) {
+        errorBox.style.display = "flex";
+        errorBox.textContent = message;
+        console.error("[IQ Lottie]", message);
+      }
+     
+      function setActiveStep(index) {
+        index = Math.max(0, Math.min(4, index));
+        if (activeStep === index) return;
+     
+        activeStep = index;
+     
+        tabs.forEach(function (tab, i) {
+          const active = i === index;
+          tab.classList.toggle("active", active);
+     
+          if (active) {
+            tab.setAttribute("aria-current", "step");
+          } else {
+            tab.removeAttribute("aria-current");
+          }
+        });
+     
+        description.textContent = descriptions[index];
+        counter.textContent =
+          "STEP " + String(index + 1).padStart(2, "0") + " / 05";
+      }
+     
+      function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+          const existing = Array.from(document.scripts).find(function (s) {
+            return s.src === src;
+          });
+     
+          if (existing) {
+            if (existing.dataset.loaded === "true") {
+              resolve();
+              return;
+            }
+     
+            existing.addEventListener("load", resolve, { once: true });
+            existing.addEventListener(
+              "error",
+              function () { reject(new Error("Could not load " + src)); },
+              { once: true }
+            );
+            return;
+          }
+     
+          const script = document.createElement("script");
+          script.src = src;
+          script.async = true;
+          script.onload = function () {
+            script.dataset.loaded = "true";
+            resolve();
+          };
+          script.onerror = function () {
+            reject(new Error("Could not load library: " + src));
+          };
+          document.head.appendChild(script);
+        });
+      }
+     
+      function navigateToStep(index) {
+        if (!trigger || !window.gsap) return;
+     
+        const progress = index / 4;
+        const destination =
+          trigger.start + (trigger.end - trigger.start) * progress;
+     
+        window.gsap.to(window, {
+          duration: 0.8,
+          ease: "power2.inOut",
+          scrollTo: {
+            y: destination,
+            autoKill: true
+          },
+          overwrite: "auto"
+        });
+      }
+     
+      async function initialize() {
+        if (initialized) return;
+     
+        try {
+          await loadScript(
+            "https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"
+          );
+          await loadScript(
+            "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+          );
+          await loadScript(
+            "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+          );
+          await loadScript(
+            "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"
+          );
+     
+          if (!window.lottie || !window.gsap || !window.ScrollTrigger) {
+            throw new Error("Lottie or GSAP failed to initialize.");
+          }
+     
+          if (
+            ANIMATION_URL.includes("YOUR-DOMAIN.com") ||
+            !/^https?:\/\//i.test(ANIMATION_URL)
+          ) {
+            throw new Error(
+              "Replace ANIMATION_URL in this widget with your actual public animation.json URL."
+            );
+          }
+     
+          window.gsap.registerPlugin(
+            window.ScrollTrigger,
+            window.ScrollToPlugin
+          );
+     
+          animation = window.lottie.loadAnimation({
+            container: lottieBox,
+            renderer: "svg",
+            loop: false,
+            autoplay: false,
+            path: ANIMATION_URL,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid meet"
+            }
+          });
+     
+          animation.addEventListener("data_failed", function () {
+            showError(
+              "Animation JSON could not be loaded. Check the JSON URL, file permissions, and browser Network console."
+            );
+          });
+     
+          animation.addEventListener("DOMLoaded", function () {
+            if (initialized) return;
+            initialized = true;
+     
+            const lastFrame = Math.max(0, animation.totalFrames - 1);
+            animation.goToAndStop(0, true);
+     
+            scrollTween = window.gsap.to(playhead, {
+              frame: lastFrame,
+              ease: "none",
+              onUpdate: function () {
+                animation.goToAndStop(Math.round(playhead.frame), true);
+              },
+              scrollTrigger: {
+                trigger: root,
+                start: "top top",
+                end: function () {
+                  return "+=" + (window.innerHeight * 4);
+                },
+                pin: stage,
+                pinSpacing: true,
+                scrub: 0.5,
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+                onUpdate: function (self) {
+                  setActiveStep(Math.round(self.progress * 4));
+                }
+              }
+            });
+     
+            trigger = scrollTween.scrollTrigger;
+            setActiveStep(0);
+            window.ScrollTrigger.refresh();
+          });
+     
+          animation.addEventListener("data_ready", function () {
+            errorBox.style.display = "none";
+          });
+     
+        } catch (error) {
+          showError(error.message || "The animation could not be initialized.");
+        }
+      }
+     
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          navigateToStep(Number(tab.dataset.step));
+        });
+      });
+     
+      /*
+       * Start only when this widget is visible.
+       * Also supports Elementor frontend rendering.
+       */
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) {
+            return entry.isIntersecting;
+          })) {
+            initialize();
+            observer.disconnect();
+          }
+        }, { rootMargin: "300px" });
+     
+        observer.observe(root);
+      } else {
+        initialize();
+      }
+     
+      window.addEventListener("load", function () {
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      });
+     
+    })();
+    </script>
