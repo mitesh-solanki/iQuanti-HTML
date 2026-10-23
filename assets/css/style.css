@@ -107,7 +107,7 @@ html {
 
 body {
     background: #FCFAF6;
-     background-image: url('../images/checked-line.png');
+     /* background-image: url('../images/checked-line.png'); */
      background-size: cover;
      overflow-x: clip;
 }
@@ -361,6 +361,11 @@ h2,
     margin-top: 82px;
 }
 
+.has-checks-line-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* CSS Classes */
 
 .iq-text-white {
@@ -411,6 +416,9 @@ h2,
     display: none;
 }
 
+.iq-p-0 {
+    padding: 0 !important;
+}
 
 /* ========================================
    GLOBAL COMPONENTS 
@@ -646,7 +654,6 @@ h2,
 
 /* Call To Action Section */
 .call-to-action-section {
-    background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
     position: relative;
     align-content: center;
 }
@@ -671,6 +678,7 @@ h2,
 .call-to-action-content h2 {
     margin-bottom: 24px;
 }
+
 
 .iq-impact-call-to-action-section .call-to-action-blurb-center-right.blurb-bg {
     right:-16%;
@@ -1288,6 +1296,7 @@ section {
   align-items: center;
   overflow: hidden;
   background-color: var(--color-pure-white);
+  background-image: url("../images/hero-banner-checks-line-bg.svg");
   z-index: 0;
 }
 
@@ -1933,7 +1942,8 @@ section {
 
 .trust-section {
     width: 100%;
-    background: rgba(242, 248, 255, 0.00);
+    background-image: url("../images/trust-section-chceks-line-bg.svg");
+    background-color: rgba(242, 248, 255, 0.00);
     box-sizing: border-box;
     position: relative;
 }
@@ -2142,7 +2152,8 @@ section {
 
 .research-section {
     width: 100%;
-    background: rgba(252, 250, 246, 1);
+    background-image: url("../images/research-section-chceks-line-bg.svg");
+    background-color: rgba(252, 250, 246, 1);
     box-sizing: border-box;
     position: relative;
     z-index: 0;
@@ -2173,6 +2184,11 @@ section {
     left: -4%;
     transform: translateY(-50%);
     z-index: -1;
+}
+
+.research-blurb-bg-right-center {
+    right: 0;
+    top: 0;
 }
 
 /* ========================================
@@ -2587,10 +2603,15 @@ justify-content: center;
 /* =======================================
 Case Study Section =====================*/
 
+.case-studies-section  {
+    background-image: url("../images/case-study-checks-line-bg.svg");
+}
+
 .case-studies-section .case-studies-blurb-left-center{
     left: 0;
     bottom: -12%;
 }
+
 .case-studies-section .case-studies-blurb-top-right{
     top:-55%;
     right: 0;
@@ -3229,6 +3250,7 @@ color: #FFFFFF;
     position: relative;
     overflow: hidden;
     z-index: 0;
+    background-image: url("../images/recognition-trust-checks-line-bg.svg");
 }
 
 .recognition-section .recognition-blurb-top-left {
@@ -4802,6 +4824,11 @@ body.contact-page {
 
 
 /* Our Works Page */
+.our-wroks-checks-line-bg-sec-wrap {
+    background-image: url("../images/our-wroks-sec-wrap-checks-line-bg.svg");
+    background-position: right;
+}
+
 .has-content-light > * {
     color: var(--color-pure-white);
 }
@@ -4854,6 +4881,7 @@ body.contact-page {
 }
 
 /* Our Works Stats */
+
 .stats-bar-box {
     display: flex;
     align-items: center;
@@ -4899,7 +4927,6 @@ body.contact-page {
     left: 0;
     bottom: -130%;
 }
-
 
 
 /* Webinar Page CSS */
@@ -4977,6 +5004,10 @@ body.contact-page {
     background-color: var(--color-primary-orange);
 }
 
+
+.webinar-checks-line-bg-sec-wrap {
+    background-image: url("../images/webinar-sec-wrap-checks-line-bg.svg");
+}
 
 /* overview section css */
 
@@ -5135,8 +5166,6 @@ body.contact-page {
 .peek-slider-section {
     position: relative;
     width: 100%;
-    padding-inline: 0;
-    padding-top: 0;
 }
 
 .peek-slider-blurb-bottom-left {
@@ -5319,6 +5348,9 @@ body.contact-page {
     background-color: var(--color-primary-orange);
 }
 
+.webinar-call-to-action-section {
+      background: url("../images/cta-content-vector-bg.svg") no-repeat top/100%;
+}
 
 /* About us page */
 /* 28-09-2026 */
@@ -5768,6 +5800,8 @@ html:has(.media-content-popup-main:popover-open) {
 /* Our Team Page css */
 .iq-profile-grid-lsiting-section {
     position: relative;
+    background-image: url("../images/iq-profile-grid-lsiting-sec-checks-line-bg.svg");
+    background-position: bottom right;
 }
 
 .iq-profile-grid-lsiting-section .container {
@@ -5812,7 +5846,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 /* IQ Impact Landing Page */
 .iq-impact-hero-section {
-    background: url("../images/big-radial-vector.webp");
+    background: url("../images/big-radial-vector.webp"),url("../images/hero-banner-checks-line-bg.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -5895,6 +5929,10 @@ html:has(.media-content-popup-main:popover-open) {
     grid-template-columns: 49.5238% 49.04761%;
     gap: 12px;
 }
+
+.how-it-works-section {
+    background-image: url("../images/how-it-works-checks-line-bg.svg");
+} 
 
 .how-it-works-section .heading-wrap  p {
     max-width: 562px;
@@ -6006,6 +6044,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 .iq-impact-call-to-action-section {
     min-height: 596px;
+    background-image: url(../images/iq-impact-call-to-action-checks-line-bg.svg) !important;
 }
 
 .iq-impact-call-to-action-section .call-to-action-blurb-center-left {
@@ -6075,7 +6114,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
     content: "";
     background: url(../images/dashed-line-vector.webp);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     width: 1px;
     height: 100%;
     position: absolute;
@@ -6319,7 +6358,7 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .webinar-call-to-action-section.call-to-action-section {
-        padding-block: 0 104px;
+        padding-bottom: 104px;
     }
 
     .our-works-stats-section {
