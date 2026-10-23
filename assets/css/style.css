@@ -8364,6 +8364,10 @@ html:has(.media-content-popup-main:popover-open) {
         display: none;
     }
 
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3)::before {
+        display: none;
+    }
+
     .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item, 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active .timeline-curve-tab-label,
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item .timeline-curve-tab-label {
