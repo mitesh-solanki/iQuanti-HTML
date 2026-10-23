@@ -2698,11 +2698,6 @@ Case Study Section =====================*/
     flex-shrink: 0;
 }
 
-.insights-section .section-footer button svg,
-.insights-section .insights-more-btn svg {
-    display: none;
-}
-
 
 /* Info Card Light */
 .info-card.info-card-light  .info-card-description {
@@ -8308,12 +8303,16 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-icon {
-        display: block;
+        display: flex;
     }
 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-content {
         padding: 0;
         margin: 0;
+    }
+
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-label {
+        font-size: 20px;    
     }
 
     .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label {
@@ -8337,6 +8336,11 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .key-tags {
         margin-top: 8px;
     }
+
+    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-label {
+        position: static;
+    }
+
 
     .how-it-works-section .split-content-grid .split-content-grid-left .image-box {
         margin-bottom: 24px;
