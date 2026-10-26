@@ -344,6 +344,10 @@ h2,
 /* ========================================
    GLOBAL Utilities 
 ======================================== */
+.font-neulis-neue {
+    font-family: "neulis-neue", sans-serif;
+}
+
 
 .has-nobody-bg-image {
     background-image: none;
@@ -1544,7 +1548,7 @@ section {
     border-radius: 100px;
     width: fit-content;
     text-transform: uppercase; 
-    font-weight: 600;
+    font-weight: 800;
     color: var(--color-electric-blue); 
 }
 
@@ -1569,7 +1573,7 @@ section {
 .section-label span {
   font-size: 16px;
   line-height: 1.5; 
-  font-weight: 600; 
+  font-weight: 800; 
   text-transform: uppercase; 
   color:var(--color-electric-blue);
 }
@@ -3625,7 +3629,7 @@ color: #FFFFFF;
 .form-group select:not([multiple]) {
     height: 46px;
     padding: 0 12px;
-    background-color: var(--color-pure-white);
+    background-color: var(--color-off-white);
 }
 
 
@@ -3950,7 +3954,7 @@ color: #FFFFFF;
 .privacy-checkbox {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
 }
 
 .privacy-checkbox .custom-check-box-wrap{
@@ -4532,7 +4536,7 @@ body.contact-page {
 .iq-split-hero-section .iq-split-hero-header {
     display: flex;
     flex-direction: column;
-    gap:16px;
+    gap: 24px;
 }
 
 .iq-split-hero-title-light {
@@ -4732,8 +4736,8 @@ body.contact-page {
 }
 
 .contact-blurb-bottom-right {
-    bottom: -15%;
-    right: -5%;
+    bottom: 0;
+    right: 0;
 }
 
 .contact-blurb-center-right {
@@ -4747,7 +4751,7 @@ body.contact-page {
 }
 
 .contact-blurb-center-bottom {
-    top: 45%;
+    top: 42%;
     right: 0;
 }
 
@@ -4809,7 +4813,7 @@ body.contact-page {
 .testimonial-card .testimonial-author .testimonial-company-title {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 700;
     color: #ECBF87;
 }
 
@@ -6331,7 +6335,7 @@ html:has(.media-content-popup-main:popover-open) {
 
     /* IQ Split Banner css */
     .iq-split-hero-section {
-        padding: 40px 47px
+        padding: 64px 47px
     }
 
     .iq-split-hero-section .speaker-profile-card-grid {
