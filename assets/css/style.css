@@ -345,7 +345,7 @@ h2,
    GLOBAL Utilities 
 ======================================== */
 .font-neulis-neue {
-    font-family: "neulis-neue", sans-serif;
+    font-family: "neulis-neue", sans-serif !important;
 }
 
 
@@ -543,7 +543,7 @@ h2,
 .pill-switch .cta-action:not(.cta-action-primary) {
     background: transparent;
     color: var(--color-elevate-gray);
-    font-weight: 900;
+    font-weight: 700;
     line-height: 20px;
     border-radius: 8px;
 }
@@ -620,7 +620,7 @@ h2,
 }
 
 .media-content-card .media-content-card-body {
-    padding: 30px;
+    padding: 24px 30px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -4834,7 +4834,7 @@ body.contact-page {
 }
 
 .has-content-light > * {
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .our-works-banner {
@@ -4844,12 +4844,17 @@ body.contact-page {
 
 .our-works-banner .banner-content {
     max-width: 748px;
-    gap: 40px;
+    gap: 24px;
 }
 
 .our-works-banner .banner-content p {
     max-width: 647px;
 }
+
+.our-works-banner .banner-content .cta-action { 
+    margin-top: 16px;
+}
+
 
 /* Our Works Filters */
 .content-showcase-section {
@@ -4873,7 +4878,7 @@ body.contact-page {
 /* Media Content Card Grid & Component */
 .content-showcase-section .media-content-card-grid {
     width: 100%;
-    margin-top: 43px;
+    margin-top: 32px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 24px;
@@ -7534,7 +7539,9 @@ html:has(.media-content-popup-main:popover-open) {
     .our-works-banner .banner-content {
         gap: 30px;
     }
-
+    .our-works-banner .banner-content .cta-action {
+        margin-top: 0px;
+    }
     .content-showcase-section .media-content-card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
