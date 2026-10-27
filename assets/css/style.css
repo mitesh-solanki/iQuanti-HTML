@@ -4613,6 +4613,7 @@ body.contact-page {
 /* IQ Contact Content Section */
 .iq-contact-content-section {
     position: relative;
+    z-index: -1;
 }
 
 .iq-contact-content-section .sub-head-2 {
