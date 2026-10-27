@@ -424,6 +424,9 @@ h2,
     padding: 0 !important;
 }
 
+.iq-pt-0 {
+    padding-top: 0 !important;
+}
 /* ========================================
    GLOBAL COMPONENTS 
 ======================================== */
@@ -6347,10 +6350,6 @@ html:has(.media-content-popup-main:popover-open) {
         margin-top: 80px;
     }
 
-
-    .content-showcase-section {
-        padding-block: 70px 110px;
-    }
 
     /* Recognition & trust Section CSS  */
     .recognition-section .recognition-heading {
