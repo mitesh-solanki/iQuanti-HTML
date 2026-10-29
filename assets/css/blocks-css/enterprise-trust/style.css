@@ -1,0 +1,416 @@
+/**
+ * Enterprise Trust Block Styles
+ * Handles enterprise BFSI credibility cards, layout modes, hover draw animations, and responsive layouts.
+ *
+ * @package IQuanti
+ */
+
+/* ========================================
+   TRUST SECTION
+======================================== */
+
+.trust-section {
+    width: 100%;
+    background-image: url("../../../images/trust-section-chceks-line-bg.svg");
+    background-color: rgba(242, 248, 255, 0.00);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.trust-blur-vector-right {
+    position: absolute;
+    right: 0;
+    top: -70%;
+    pointer-events: none;
+}
+
+.trust-blur-vector-left {
+    position: absolute;
+    left: 0;
+    top: -54%;
+    pointer-events: none;
+}
+
+.trust-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 228px 220px;
+    gap: 24px;
+}
+
+.trust-container-no-header {
+    grid-template-rows: 228px;
+    grid-auto-rows: 198px;
+}
+
+body.contact-page .iq-contact-growth .trust-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 228px 198px;
+    gap: 20px;
+}
+
+.trust-container-no-header .trust-card-credit {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.trust-container-no-header .trust-card-banking {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.trust-heading {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trust-heading h2 {
+    margin: 0;
+    max-width: 588px;
+    color: #3F4551;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.trust-card {
+    border-radius: 8px;
+    padding: 26px 16px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.trust-card:has(.trust-card-title) {
+    padding: 16px;
+}
+
+.trust-card:has(.trust-card-title) p {
+    color: var(--color-elevate-gray);
+}
+
+/* SVG Border Drawing */
+.card-border-fill {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+/* Border hidden initially */
+.card-border-fill rect {
+    fill: none;
+    stroke: #3c83f6;
+    stroke-width: 2;
+
+    /* Using pathLength makes this 100% of the border */
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+
+    transition: none;
+}
+
+/* Animate ONLY on hover */
+.trust-card:hover .card-border-fill rect {
+    animation: drawBorder 1s ease-out forwards;
+}
+
+@keyframes drawBorder {
+    from {
+        stroke-dashoffset: 1;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Reset when mouse leaves */
+.trust-card:not(:hover) .card-border-fill rect {
+    stroke-dashoffset: 1;
+    animation: none;
+}
+
+.trust-card-title {
+    color: #007BFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: inline-flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 0.5px solid #C5D9E6;
+    background: #E6F2FF;
+    margin-bottom: 12px;
+}
+
+.trust-card > strong {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: var(--color-electric-blue);
+}
+
+.trust-card>strong.headline-1 {
+    margin-bottom: 8px;
+}
+
+.trust-card.title-des-card > strong {
+    font-family: area-normal, sans-serif;
+}
+
+.trust-card p {
+    margin-top: auto;
+    color: var(--color-elevate-gray);
+    max-width: 228px;
+}
+
+/* ========================================
+   TOP CARDS
+======================================== */
+
+.trust-card-credit {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.trust-card-banking {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.trust-card-banking ~ .trust-card > strong {
+    margin-bottom: 14px;
+}
+
+/* ========================================
+   BOTTOM CARDS
+======================================== */
+
+.trust-card:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(5) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(6) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.trust-card:nth-of-type(7) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+/* ========================================
+   EMPTY PREVIEW
+======================================== */
+
+
+.trust-block-empty-preview {
+    margin: 0;
+    padding: 48px 24px;
+    color: var(--color-elevate-gray-75);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   CONTACT GROWTH LAYOUT
+======================================== */
+
+.iq-contact-growth .sub-head-2 {
+    max-width: 600px;
+}
+
+.iq-contact-growth .trust-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.trust-card-grid .trust-card {
+    padding: 16px;
+    grid-column: auto;
+    gap: 0;
+}
+
+.trust-card-grid .trust-card .trust-card-title {
+    margin-bottom: 8px;
+}
+
+.trust-card-grid .trust-card > strong {
+    margin-bottom: 16px;
+    display: block;
+    font-family: "neulis-neue", sans-serif;
+    font-weight: 900;
+}
+
+/* ========================================
+   RESPONSIVE (MEDIA QUERIES)
+======================================== */
+
+@media (max-width: 1380px) {
+    .trust-card-grid .trust-card-credit > strong,
+    .trust-card-grid .trust-card-banking > strong {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .trust-card:hover .card-border-fill rect {
+        animation: none;
+    }
+
+    .trust-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        gap: 16px;
+    }
+
+    .trust-container-no-header .trust-card-credit,
+    .trust-container-no-header .trust-card-banking {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    /* Heading takes full width */
+    .trust-heading {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        padding-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trust-heading h2 {
+        text-align: center;
+    }
+
+    .trust-heading h2>br {
+        display: none;
+    }
+
+    .trust-heading p {
+        text-align: center;
+    }
+
+    .trust-heading p>br {
+        display: none;
+    }
+
+    /* Reset desktop positioning */
+    .trust-card-credit,
+    .trust-card-banking,
+    .trust-card:nth-of-type(4),
+    .trust-card:nth-of-type(5),
+    .trust-card:nth-of-type(6),
+    .trust-card:nth-of-type(7) {
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .trust-card {
+        min-height: 190px;
+        padding: 22px;
+    }
+
+    .trust-card p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .trust-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 14px;
+    }
+
+    /* Heading full width */
+    .trust-heading {
+        grid-column: 1;
+        grid-row: auto;
+        padding-bottom: 8px;
+    }
+
+    .trust-heading h2 {
+        text-align: center;
+    }
+
+    .trust-card {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        gap: 6px;
+    }
+
+    .trust-card-title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .trust-card p {
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0;
+    }
+
+    .iq-contact-growth .trust-card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .trust-card p br {
+        display: none;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION & PAUSED ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .trust-card:hover .card-border-fill rect {
+        animation: none !important;
+        stroke-dashoffset: 0 !important;
+    }
+}
+
+html.motion-paused .trust-card:hover .card-border-fill rect {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+}

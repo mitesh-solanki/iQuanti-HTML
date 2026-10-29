@@ -1,0 +1,109 @@
+/* ========================================
+   CALL TO ACTION BLOCK
+======================================== */
+
+.call-to-action-section {
+    position: relative;
+    align-content: center;
+}
+
+.call-to-action-blurb-left-top {
+    top: -100%;
+    left: 0;
+    background-image: url("../../../assets/images/careers-cta-blurb-left-top.png");
+    width: 627px;
+    height: 1272px;
+}
+
+.call-to-action-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    text-align: center;
+    margin: auto;
+}
+
+.call-to-action-content h2 {
+    margin-bottom: 24px;
+}
+
+.iq-impact-call-to-action-section .call-to-action-blurb-center-right.blurb-bg {
+    right: -16%;
+    top: 0;
+}
+
+/* Our Works Call To Action */
+.call-to-action-blurb-left-bottom {
+    left: 0;
+    bottom: -130%;
+}
+
+.iq-pt-0 {
+    padding-top: 0 !important;
+}
+
+.webinar-call-to-action-section {
+    background: url("../../../assets/images/cta-content-vector-bg.svg") no-repeat top/100%;
+}
+
+.about-us-call-to-action-section .call-to-action-content {
+    max-width: 967px;
+    width: 100%;
+    margin-inline: auto !important;
+}
+
+.iq-impact-call-to-action-section {
+    min-height: 596px;
+    background-image: url(../../../assets/images/iq-impact-call-to-action-checks-line-bg.svg) !important;
+}
+
+.iq-impact-call-to-action-section .call-to-action-blurb-center-left {
+    left: 0;
+    top: -35%;
+}
+
+.iq-impact-call-to-action-section .call-to-action-blurb-center-right.blurb-bg {
+    right: 0%;
+    top: -50%;
+}
+
+.iq-impact-call-to-action-section .call-to-action-content {
+    max-width: 869px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (min-width: 1024px) {
+    /* Our Works Filter Section */
+    .our-works-cta-section {
+        padding-block: 0 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .webinar-call-to-action-section.call-to-action-section {
+        padding-bottom: 104px;
+    }
+}
+
+@media (max-width: 1380px) {
+    /* IQ Impact Page CSS */
+    .iq-impact-call-to-action-section {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .iq-impact-call-to-action-section {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .call-to-action-content {
+        gap: 32px;
+    }
+}

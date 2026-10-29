@@ -1,0 +1,39 @@
+/* ========================================
+   IMAGE SLIDER BLOCK
+======================================== */
+
+.research-section.image-slider-section .research-heading .body-text-18 {
+    margin-top: 12px;
+    max-width: 640px;
+}
+
+.research-slide-link {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Keyboard focus: outline on slide so overflow:hidden on the link does not clip it */
+.research-slide:has(> .research-slide-link:focus-visible) {
+    outline: 2px solid var(--color-electric-blue, #087dff);
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+.research-slide-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.research-track{
+    gap: 0;
+}
+
+.image_slider .section-label span {
+    text-transform: none;
+}

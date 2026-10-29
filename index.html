@@ -10,7 +10,22 @@
     <!-- 2. Third-party Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- 3. Custom Main CSS (Last, taaki agar library ya base style override karni ho toh easily ho jaye) -->
+    <!-- 3. Block CSS  -->
+    <link rel="stylesheet" href="assets/css/blocks-css/hero/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/page-banner/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/chart/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/enterprise-trust/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/research/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/image-slider/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/solutions/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/ai-native/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/information/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/insights/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/recognition/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/contact-form/style.css">
+    <link rel="stylesheet" href="assets/css/blocks-css/custom-section/editor.css">
+
+    <!-- 4. Custom Main CSS  -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -30,6 +45,7 @@
             <ul>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
+                <li class="cls-superscript"><a href="iq-impact.html">iQ.IMPACT<span class="superscript">TM</span></a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="our-works.html">Our Work</a></li>
                 <li><a href="#insights">Insights</a></li>
@@ -102,7 +118,7 @@
 
                 <h1 class="hero-title headline-1"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     Transform Every Consumer Signal Into
-                    <span class="highlight-text highlight-text-electric-blue">Enterprise Growth</span>
+                    <span class="highlight-text highlight-text-orange">Enterprise Growth</span>
                 </h1>
 
                 <p class="hero-description body-text-18 body-text-reg"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
@@ -110,7 +126,7 @@
                 </p>
                 <div class="cta-action-group"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
                     <a href="#" class="cta-action cta-action-primary">Explore Solutions</a>
-                     <a href="#" class="cta-action cta-action-outline">Our Work
+                     <a href="#" class="cta-action cta-action-secondary">Our Work
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
                         <path d="M1 6.36395C0.447715 6.36395 4.82823e-08 6.81167 0 7.36395C-4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 7.36395L1 6.36395ZM16.7071 8.07106C17.0976 7.68054 17.0976 7.04737 16.7071 6.65685L10.3431 0.292886C9.95262 -0.0976388 9.31946 -0.0976388 8.92893 0.292886C8.53841 0.68341 8.53841 1.31657 8.92893 1.7071L14.5858 7.36395L8.92893 13.0208C8.53841 13.4113 8.53841 14.0445 8.92893 14.435C9.31946 14.8255 9.95262 14.8255 10.3431 14.435L16.7071 8.07106ZM1 7.36395L1 8.36395L16 8.36395L16 7.36395L16 6.36395L1 6.36395L1 7.36395Z" fill="#007BFF"/>
                         </svg>
@@ -120,7 +136,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="./assets/images/Q element-img.svg" alt="Hero Image">
+                <img src="./assets/images/iQ-hero-gif.svg" alt="Hero Image">
             </div>
             
         </div>
@@ -138,11 +154,8 @@
                 Built for complex industries where expertise and precision define outcomes.
             </h2>
 
-            <p class="body-text-18 body-text-reg" data-aos="fade-up" data-aos-duration="600">
-               Our data science and analytics core has a proven track record with organizations where marketing must deliver the highest precision and accountability.  Precision is the point, so every move counts.
-            </p>
+            <p class="body-text-18 body-text-reg" data-aos="fade-up" data-aos-duration="600">Our proven track record spans organizations where marketing must deliver the highest precision and accountability. Precision is the point, so every move counts.</p>
         </div>
-
 
         <!-- Cards -->
         <div class="client-cards">
@@ -160,27 +173,23 @@
 
                     <!-- Chart Area -->
                     <div class="fortune-chart-area">
-
-
                         <div class="fortune-bars">
-
-
                             
                             <!-- Fortune 100 -->
                             <div class="fortune-bar-item">
-
-                                <div
-                                class="fortune-bar fortune-bar-gold"
-                                style="height: 35px;">
-                                <div class="fortune-value body-text-20 body-text-bold">19%</div>
+                                <div class="fortune-bar fortune-bar-gold" style="height: 35px">
+                                    <div class="fortune-value body-text-20 body-text-bold">19%</div>
                                 </div>
 
-                                <div class="fortune-name body-text-14 body-text-reg">
-                                    Fortune 100
+                                <div class="fortune-name body-text-14 body-text-reg">Fortune 100</div>
+                                <div class="chart-note">
+                                    <span class="note-icon" aria-hidden="true">▱</span>
+                                    <span>Note: Fortune 100s coverage, each company is counted once, in the highest tier.</span>
                                 </div>
                             </div>
 
-                                                            <!-- Fortune 500 -->
+
+                            <!-- Fortune 500 -->
                             <div class="fortune-bar-item">
                                 <div
                                     class="fortune-bar fortune-bar-orange"
@@ -207,11 +216,6 @@
                                     Others
                                 </div>
                             </div>
-
-
-
-
-
 
                         </div>
 
@@ -408,6 +412,11 @@
 
         </div>
     </div>
+    <div class="glow-bg" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 </section>
 <!-- Client Section End -->
 
@@ -629,7 +638,7 @@ organizations trust  above all others. </h2>
                                <span> The Future of AI </span> Search in Financial
                                 Services
                             </h3>
-                            <a href="#" class="research-button cta-action">
+                            <a href="#" class="research-button cta-action cta-action-primary">
                                 Read More
                             </a>
                         </div>
@@ -1586,7 +1595,7 @@ organizations trust  above all others. </h2>
 
         <!-- More Insights -->
         <div class="section-footer dark"  data-aos="fade-up"  data-aos-delay="200">
-            <button type="button" class="insights-more-btn cta-action cta-action-white">
+            <button type="button" class="insights-more-btn cta-action cta-action-secondary cta-action-secondary-dark-mode">
                 More Insights
                 <img src="assets/images/insights-arrow-blue.svg" alt="" width="15" height="15" aria-hidden="true">
             </button>

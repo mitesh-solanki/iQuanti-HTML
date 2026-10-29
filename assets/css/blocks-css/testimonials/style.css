@@ -1,0 +1,163 @@
+/* ========================================
+   TESTIMONIALS BLOCK
+======================================== */
+
+/* Testimonial Slider Widget */
+.testimonial {
+    padding: 48px 32px 24px;
+    background-image: url('../../../assets/images/testimonial-card-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.testimonial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000020;
+    z-index: -1;
+} 
+
+.testimonial .testimonial-card {
+    margin-bottom: 46px;
+}
+
+.testimonial-card .testimonial-quote-icon {
+    width: 66px;
+    height: 56px;
+    margin-bottom: 18px;
+}
+
+.testimonial-card .testimonial-quote-text {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.429;
+    color: var(--color-off-white);
+}
+
+.testimonial-card .testimonial-author {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.testimonial-card .testimonial-author .testimonial-author-title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 900;
+    color: var(--color-off-white);
+    font-family: area-normal,sans-serif !important;
+}
+
+.testimonial-card .testimonial-author .testimonial-company-title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #ECBF87;
+}
+
+.testimonial .slick-dots li button {
+    width: 5px;
+    height: 5px;
+}
+.testimonial .slick-dots li.slick-active button {
+    width: 20px;
+    height: 5px;
+}
+
+/* Testimonials: native track (style.css .slick-dots) */
+.testimonial .testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+    touch-action: pan-y;
+}
+
+.testimonial .testimonial-track {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform;
+}
+
+.testimonial .testimonial-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Match HTML: kill inline-img baseline gap (~5px) under the quote icon */
+.testimonial .testimonial-quote-icon {
+    display: block;
+}
+
+.testimonial .slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 0;
+}
+
+.testimonial .slick-dots li {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 0;
+    font-size: 0;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+.testimonial .slick-dots li button {
+    display: block;
+    border: 0;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1023px) {
+    .testimonial-card .testimonial-quote-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-card .testimonial-quote-text {
+        font-size: 20px;
+    }
+
+    .testimonial {
+        padding: 24px;
+    }
+
+    .testimonial-card .testimonial-quote-icon {
+        width: 56px;
+        height: 46px;
+    }
+
+    .testimonial .testimonial-card {
+        margin-bottom: 32px;
+    }
+}

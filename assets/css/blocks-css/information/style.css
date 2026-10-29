@@ -1,0 +1,78 @@
+/* =======================================
+Case Study Section =====================*/
+
+.case-studies-section {
+    background-image: url("../../../assets/images/case-study-checks-line-bg.svg");
+}
+
+.case-studies-section .case-studies-blurb-left-center {
+    left: 0;
+    bottom: -12%;
+}
+
+.case-studies-section .case-studies-blurb-top-right {
+    top: -55%;
+    right: 0;
+    opacity: 80%;
+}
+
+.case-studies-section .case-studies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1250px;
+}
+
+.case-studies-section .insights-header {
+    max-width: 532px;
+    text-align: center;
+}
+
+/* Info Card Light Widget */
+
+.info-card.info-card-dark .info-card-innner .info-card-title {
+    margin: 0 0 16px;
+    max-height: 88px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: var(--color-elevate-gray);
+}
+
+.case-studies-section .info-card-title .highlight-text {
+    font-family: area-normal, sans-serif !important;
+    font-weight: 900;
+}
+
+.case-studies-section .info-card .info-card-description {
+    max-height: 72px;
+}
+
+.case-studies-section .case-studies-more-btn img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+======================================== */
+
+@media (max-width: 1199px) {
+    .case-studies-section .info-card-grid {
+        gap: 24px;
+    }
+
+    .case-studies-section .case-studies-container {
+        gap: 0;
+    } 
+}
+
+@media (max-width: 1023px) {
+    .case-studies-section .case-studies-container {
+        gap: 0;
+    }
+}

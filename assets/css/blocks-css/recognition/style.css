@@ -1,0 +1,240 @@
+/**
+ * Recognition Block Styles
+ *
+ * @package IQuanti
+ */
+
+/* ========================================
+   RECOGNITION & TRUST SECTION
+======================================== */
+
+.recognition-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url("../../../assets/images/recognition-trust-checks-line-bg.svg");
+}
+
+.recognition-section .recognition-blurb-top-left {
+    top: -75%;
+    left: 0;
+}
+
+.recognition-blurb-top-right {
+    right: 0;
+    top: -70%;
+    background-image: url("../../../assets/images/recognition-trust-blurb-top-right.png");
+    width: 662px;
+    height: 1229px;
+}
+
+.recognition-section .recognition-container {
+    max-width: 1264px;
+}
+
+.recognition-section .recognition-heading {
+    margin-bottom: 60px;
+}
+
+/* ========================================
+   CARDS GRID
+======================================== */
+
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.recognition-card-wrap {
+    width: 100%;
+}
+
+.recognition-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    height: 100%;
+    min-height: 253px;
+    padding: 25px;
+    text-align: center;
+    cursor: default;
+    border: 0.5px solid var(--color-warm-gray-75);
+    border-radius: 8px;
+    transition: transform 0.3s ease !important;
+}
+
+.recognition-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Icon */
+.recognition-card .recognition-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+    transition: none;
+}
+
+.recognition-card .recognition-icon img {
+    object-fit: contain;
+    height: auto;
+}
+
+.recognition-card-wrap:nth-child(1) .recognition-card .recognition-icon img {
+    width: 78px;
+}
+
+.recognition-card-wrap:nth-child(2) .recognition-card .recognition-icon img {
+    width: 56px;
+}
+
+.recognition-card-wrap:nth-child(3) .recognition-card .recognition-icon img {
+    width: 36px;
+}
+
+.recognition-card h3 {
+    margin: 0 0 12px;
+    font-family: area-normal, sans-serif !important;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.556;
+    color: var(--color-elevate-gray);
+}
+
+.recognition-card p {
+    font-size: 14.5px;
+    line-height: 1.5695;
+    color: var(--color-dim-gray);
+}
+
+/* ========================================
+   CERTIFICATIONS
+======================================== */
+
+.certifications-wrap {
+    width: 100%;
+}
+
+.certifications-card {
+    position: relative;
+    padding: 26px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.certifications-card.recognition-card {
+    min-height: 100px;
+    height: auto;
+}
+
+.certifications-card .certifications-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 488px;
+}
+
+.certifications-card .certifications-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.429;
+    color: var(--color-rich-black);
+}
+
+.certifications-card .certifications-list {
+    line-height: 1.3795;
+}
+
+.recognition-block-empty-preview {
+    margin: 0;
+    padding: 48px 24px;
+    color: var(--color-elevate-gray-75);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (min-width: 1024px) {
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+
+    .recognition-section .recognition-heading {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .recognition-section .recognition-heading {
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .recognition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .recognition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .recognition-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .recognition-blurb-top-right {
+        top: -35%;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .recognition-card {
+        transition: none !important;
+    }
+}
+
+html.motion-paused .recognition-card {
+    transition: none !important;
+}

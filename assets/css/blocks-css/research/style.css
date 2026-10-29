@@ -1,0 +1,450 @@
+/**
+ * Research Block Styles (Insights, Research & Results)
+ *
+ * @package IQuanti
+ */
+
+/* ========================================
+   RESEARCH SECTION
+======================================== */
+
+.research-section {
+    width: 100%;
+    background-image: url("../../../assets/images/research-section-chceks-line-bg.svg");
+    background-color: rgba(252, 250, 246, 1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    padding-top: 0;
+}
+
+.research-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.research-section .grid-lines {
+    display: none;
+    top: -96px;
+}
+
+.research-section .grid-lines .grid-horizontal-lines {
+    grid-template-rows: repeat(22, 1fr);
+}
+
+.research-blurb-bg-right-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.research-blurb-bg-left-center {
+    position: absolute;
+    top: 43%;
+    left: -4%;
+    transform: translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.research-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.research-heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.research-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 9px;
+    color: #565656;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+}
+
+.research-line {
+    width: 30px;
+    height: 1px;
+    display: block;
+    background: #777777;
+}
+
+/* ========================================
+   SLIDER CONTROLS
+======================================== */
+
+.research-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.research-arrow {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background: #FDFCF8;
+    mix-blend-mode: normal;
+    border: 1px solid #DCD7CD;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-arrow:hover {
+    background: #f4f2ee;
+    border-color: #cfcac1;
+}
+
+.research-arrow:active {
+    transform: scale(0.94);
+}
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.research-slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.research-track {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.research-slide {
+    width: 100%;
+    min-width: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.research-slide-link:focus-visible {
+    outline: 2px solid var(--color-electric-blue-75, #419BFC);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   CARD
+======================================== */
+
+.research-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 8px;
+    background: linear-gradient(93.01deg, #000000 0.87%, #FF8000 98.9%);
+}
+
+.research-card::before {
+    background: url("../../../assets/images/slider-bg.png");
+    background-position: center;
+}
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.research-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 580px;
+}
+
+.research-button {
+    padding: 15px 20px;
+    background-color: var(--color-primary-orange);
+    color: var(--color-off-white);
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.research-tag {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.research-content h3 {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.184;
+    color: var(--color-pure-white-90);
+    margin-bottom: 20px;
+}
+
+.research-content h3 > span {
+    font-weight: 400;
+}
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.research-side {
+    z-index: 2;
+    min-width: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.research-brand {
+    color: var(--color-pure-white);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 32px;
+    right: 32px;
+    width: 53px;
+    height: 42px;
+}
+
+.research-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.research-button span {
+    font-size: 16px;
+}
+
+/* ========================================
+   SLIDE VARIATIONS
+======================================== */
+
+.research-card-green {
+    background:
+        linear-gradient(
+            90deg,
+            #07110d 0%,
+            #102b1c 40%,
+            #24603b 100%
+        );
+}
+
+.research-card-blue {
+    background:
+        linear-gradient(
+            90deg,
+            #080914 0%,
+            #152349 45%,
+            #294c82 100%
+        );
+}
+
+.research-card-red {
+    background:
+        linear-gradient(
+            90deg,
+            #160808 0%,
+            #3b1515 45%,
+            #702b18 100%
+        );
+}
+
+/* ========================================
+   PAGINATION & CONTROLS
+======================================== */
+
+.research-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.research-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #DCD7CD;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.research-dot::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+}
+
+.research-dot.active {
+    width: 32px;
+    border-radius: 10px;
+    background: #ED7000;
+}
+
+.research-pause {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    padding: 0;
+    border: 1px solid rgba(14, 18, 22, 0.35);
+    border-radius: 999px;
+    background: rgba(252, 250, 246, 0.9);
+    color: #0E1216;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.research-pause-icon {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background:
+        linear-gradient(currentColor, currentColor) left / 3px 100% no-repeat,
+        linear-gradient(currentColor, currentColor) right / 3px 100% no-repeat;
+}
+
+.research-pause.is-paused .research-pause-icon,
+.research-pause[aria-pressed="true"] .research-pause-icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 9px;
+    border-color: transparent transparent transparent currentColor;
+    background: none;
+}
+
+.research-block-empty-preview {
+    margin: 0;
+    padding: 48px 24px;
+    color: var(--color-elevate-gray-75);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (min-width: 1024px) {
+    .research-section {
+        padding-block: 0 120px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .research-content h3 {
+        font-size: 32px;
+    }
+
+    .research-button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .research-top {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .research-card {
+        flex-direction: column;
+    }
+
+    .research-content {
+        align-items: center;
+    }
+
+    .research-content h3 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .research-button {
+        margin-top: 16px;
+    }
+
+    .research-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .research-brand {
+        top: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .research-content h3 {
+        font-size: 24px;
+    }
+
+    .research-card {
+        padding: 48px 48px;
+    }
+
+    .research-heading h2 {
+        text-align: center;
+    }
+
+    .research-button {
+        font-size: 16px;
+        padding: 12px 26px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .research-track {
+        transition: none !important;
+    }
+}
+
+html.motion-paused .research-track {
+    transition: none !important;
+}

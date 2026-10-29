@@ -1,0 +1,283 @@
+/**
+ * AI Native Block Styles
+ *
+ * @package IQuanti
+ */
+
+/* ========================================
+   AI NATIVE ACCORDION SECTION
+======================================== */
+
+.ai-native-section {
+    width: 100%;
+    background: #030920;
+    box-sizing: border-box;
+    min-height: 784px;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.ai-native-section > .container,
+.ai-native-section .ai-native-container {
+    position: relative;
+    z-index: 1;
+}
+
+.ai-native-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 41.5873% 51.5873%;
+    column-gap: 86px;
+    align-items: start;
+}
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.ai-native-content {
+    padding-top: 1px;
+}
+
+.ai-native-section .ai-native-content h2,
+.ai-native-content.heading-wrap h2,
+.ai-native-content h2 {
+    margin: 0 0 20px;
+    color: var(--color-pure-white);
+}
+
+.ai-native-section .ai-native-content p,
+.ai-native-content.heading-wrap p,
+.ai-native-content p {
+    color: var(--color-off-white);
+    line-height: 1.556 !important;
+}
+
+/* ========================================
+   ACCORDION
+======================================== */
+
+.accordion-bordered {
+    width: 100%;
+    padding: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-bordered .accordion-item {
+    width: 100%;
+}
+
+.accordion-bordered .accordion-item:not(:first-child) {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid #545454;
+}
+
+.accordion-bordered .accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-bordered .accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s all ease;
+}
+
+.accordion-bordered .accordion-header span:first-child {
+    color: var(--color-off-white);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.32;
+    font-family: "neulis-neue";
+}
+
+.accordion-bordered .accordion-item.active span:first-child {
+    color: var(--color-qunatum-purpule);
+}
+
+.accordion-bordered .accordion-header .accordion-icon {
+    font-size: 15px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+    transform: rotate(-90deg);
+}
+
+.accordion-bordered .accordion-header .accordion-icon svg {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(7399%) hue-rotate(191deg) brightness(107%) contrast(102%);
+}
+
+.accordion-bordered .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition:
+        max-height 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+    width: 90%;
+}
+
+.accordion-bordered .accordion-item.active .accordion-content {
+    max-height: none;
+    opacity: 1;
+}
+
+.accordion-bordered .accordion-content[hidden] {
+    display: none;
+}
+
+.accordion-bordered .accordion-content .accordion-content-inner {
+    padding-top: 16px;
+}
+
+.accordion-bordered .accordion-content p {
+    margin: 0;
+    color: var(--color-off-white);
+}
+
+.accordion-bordered .accordion-item.active .accordion-icon {
+    transform: rotate(0deg);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1440px) {
+    .ai-native-section {
+        min-height: 600px;
+    }
+
+    .ai-native-section[data-ai-native-align-locked="1"] {
+        align-content: start;
+    }
+
+    .ai-native-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ai-native-container {
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .ai-native-section {
+        padding: 55px 40px;
+    }
+
+    .ai-native-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-native-section .ai-native-content h2,
+.ai-native-content.heading-wrap h2,
+.ai-native-content h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .ai-native-content h2>br {
+        display: none;
+    }
+
+    .ai-native-section .ai-native-content p,
+.ai-native-content.heading-wrap p,
+.ai-native-content p {
+        text-align: center;
+    }
+
+    .accordion-bordered {
+        padding: 32px;
+    }
+
+    .accordion-bordered .accordion-header span:first-child {
+        font-size: 24px;
+    }
+
+    .accordion-bordered .accordion-item:not(:first-child) {
+        padding-top: 24px;
+        margin-top: 24px;
+        border-top: 1px solid #545454;
+    }
+}
+
+@media (max-width: 767px) {
+    .ai-native-section {
+        padding: 50px 24px;
+    }
+
+    .ai-native-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-native-section .ai-native-content h2,
+.ai-native-content.heading-wrap h2,
+.ai-native-content h2 {
+        margin-bottom: 18px;
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .ai-native-section .ai-native-content p,
+.ai-native-content.heading-wrap p,
+.ai-native-content p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .accordion-bordered {
+        padding: 24px;
+    }
+
+    .accordion-header {
+        font-size: 14px;
+    }
+
+    .accordion-bordered .accordion-header span:first-child {
+        font-size: 20px;
+    }
+
+    .accordion-bordered .accordion-item:not(:first-child) {
+        padding-top: 16px;
+        margin-top: 16px;
+        border-top: 1px solid #545454;
+    }
+
+    .accordion-bordered .accordion-content .accordion-content-inner {
+        padding-top: 8px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-bordered .accordion-content,
+    .accordion-bordered .accordion-header .accordion-icon {
+        transition: none !important;
+    }
+}
+
+html.motion-paused .accordion-bordered .accordion-content,
+html.motion-paused .accordion-bordered .accordion-header .accordion-icon {
+    transition: none !important;
+}

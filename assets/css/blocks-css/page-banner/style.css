@@ -1,0 +1,119 @@
+/* ========================================
+   PAGE BANNER BLOCK
+======================================== */
+
+.banner-main {
+    min-height: 766px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-main .banner-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-works-banner {
+    background-image: url("../../../assets/images/our-works-banner.jpg");
+    align-content: center;
+}
+
+.our-works-banner .banner-content {
+    max-width: 748px;
+    gap: 40px;
+}
+
+.our-works-banner .banner-content p {
+    max-width: 647px;
+}
+
+.our-works-banner .banner-content .cta-action {
+    margin-top: 16px;
+}
+
+.about-us-banner {
+    background-image: url("../../../assets/images/about-us-banner.png");
+    background-position: bottom;
+}
+
+.about-us-banner .banner-content {
+    max-width: 883px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-us-banner .banner-content h1 {
+    color: var(--color-ice-blue);
+}
+
+.spotlight-banner-section.iq-content-start .spotlight-banner-content {
+    margin-top: 30px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1380px) {
+    .banner-main {
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 1199px) {
+    .banner-main {
+        min-height: 70vh;
+    }
+
+    .our-works-banner .banner-content {
+        max-width: 568px;
+    }
+
+    .spotlight-banner-section.iq-content-start {
+        align-content: center;
+    }
+}
+
+@media (max-width: 1023px) {
+    .banner-main {
+        min-height: 50vh;
+    }
+
+    .banner-main .banner-content {
+        margin-inline: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .spotlight-banner-section.iq-content-start .spotlight-banner-content {
+        margin-top: 0;
+    }
+
+    .our-works-banner {
+        background-position: right 50% center;
+    }
+
+    .our-works-banner .banner-content {
+        gap: 30px;
+    }
+
+    .our-works-banner .banner-content .cta-action {
+        margin-top: 0px;
+    }
+
+    .about-us-banner .banner-content {
+        max-width: 584px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-main {
+        min-height: 500px;
+    }
+
+    .our-works-banner .banner-content {
+        gap: 24px;
+    }
+}

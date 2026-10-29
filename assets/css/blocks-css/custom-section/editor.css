@@ -1,0 +1,75 @@
+/**
+ * Editor styles for the Custom Section wrapper block.
+ */
+
+.editor-styles-wrapper .iquanti-custom-section,
+.acf-block-preview .iquanti-custom-section,
+.block-editor-block-list__block[data-type="acf/custom-section"] .iquanti-custom-section {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 80px;
+    outline: 1px dashed #9aa5b1;
+    outline-offset: -1px;
+    padding: 16px;
+    background: rgba(252, 250, 246, 0.65);
+}
+
+.editor-styles-wrapper .iquanti-custom-section__inner,
+.acf-block-preview .iquanti-custom-section__inner {
+    position: relative;
+    z-index: 1;
+    min-height: 48px;
+}
+
+.editor-styles-wrapper .iquanti-custom-section.research-section,
+.acf-block-preview .iquanti-custom-section.research-section {
+    background: rgba(252, 250, 246, 1);
+}
+
+.editor-styles-wrapper .iquanti-custom-section.iq-contact-content-section,
+.acf-block-preview .iquanti-custom-section.iq-contact-content-section {
+    outline: 1px dashed #c5c9cf;
+    background: #fff;
+    padding: 24px 16px;
+    overflow: hidden;
+}
+
+.editor-styles-wrapper .iq-contact-content-section .iq-contact-content-right,
+.acf-block-preview .iq-contact-content-section .iq-contact-content-right {
+    max-width: 642px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.editor-styles-wrapper .iq-contact-content-section .blurb-bg,
+.acf-block-preview .iq-contact-content-section .blurb-bg {
+    pointer-events: none;
+}
+
+.editor-styles-wrapper .iq-contact-content-section > .container > .iq-contact-content-right > .acf-innerblocks-container,
+.acf-block-preview .iq-contact-content-section > .container > .iq-contact-content-right > .acf-innerblocks-container {
+    display: contents;
+}
+
+.editor-styles-wrapper .iq-contact-solution,
+.acf-block-preview .iq-contact-solution {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.editor-styles-wrapper .contact-solutions-grid,
+.acf-block-preview .contact-solutions-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
+.editor-styles-wrapper .contact-solutions-grid .solution-card .solution-card-content,
+.acf-block-preview .contact-solutions-grid .solution-card .solution-card-content {
+    padding: 20px;
+    min-height: 260px;
+}
+
+.editor-styles-wrapper .iq-contact-diffrence,
+.acf-block-preview .iq-contact-diffrence {
+    margin-top: 117px;
+}

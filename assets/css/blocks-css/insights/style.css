@@ -1,0 +1,262 @@
+/**
+ * Insights Block Styles
+ *
+ * @package IQuanti
+ */
+
+/* ========================================
+   INSIGHTS SECTION
+======================================== */
+
+.insights-section {
+    position: relative;
+    background: #111;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.insights-section > .container,
+.insights-section .insights-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insights-section .insights-header {
+    max-width: 532px;
+    text-align: center;
+}
+
+.insights-header {
+    max-width: 635px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+/* ========================================
+   INSIGHTS GRID
+======================================== */
+
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+/* ========================================
+   INSIGHT CARD
+======================================== */
+
+.info-card {
+    position: relative;
+    height: 100%;
+    border: 1px solid var(--color-warm-gray-75);
+    border-radius: 8px;
+    transition-behavior: normal !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease !important;
+}
+
+.insights-section .info-card {
+    overflow: hidden;
+    background-color: rgb(63 69 81 / 60%);
+}
+
+.info-card:hover {
+    transform: translateY(-4px) scale(1.025) !important;
+}
+
+.insight-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+                0 8px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+.info-card .info-card-innner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+    transition: 0.3s all ease-in-out !important;
+}
+
+.insights-section .info-card .info-card-innner {
+    gap: 0;
+    padding: 24px;
+}
+
+/* Card Tag */
+.info-card .info-tag {
+    margin-bottom: 12px;
+}
+
+.insights-section .info-card .info-tag {
+    margin-bottom: 12px;
+    height: 32px;
+}
+
+/* Card Content */
+.info-card .info-card-title {
+    margin: 0 0 16px;
+    color: var(--color-off-white);
+    min-height: 89px;
+    align-content: center;
+}
+
+.info-card .info-card-description {
+    margin: 0 0 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    color: var(--color-slate-grey);
+}
+
+.insights-section .info-card .info-card-description {
+    max-height: 72px;
+}
+
+.info-card.info-card-light .info-card-description {
+    color: var(--color-warm-gray);
+}
+
+/* Read More & Action */
+.insights-section .info-card-read-more.cta-action {
+    margin-top: auto;
+    width: fit-content;
+    align-self: flex-start;
+    gap: 10px;
+}
+
+.insights-section .info-card-read-more img,
+.insights-section .insights-more-btn img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Whole-card hit target & focus visible */
+.info-card:has(.info-card-read-more) {
+    position: relative;
+}
+
+.info-card .info-card-read-more::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.info-card:has(.info-card-read-more:focus-visible) {
+    outline: 2px solid var(--color-electric-blue-75, #419BFC);
+    outline-offset: 3px;
+}
+
+.insights-more-btn:focus-visible {
+    outline: 2px solid var(--color-electric-blue-75, #419BFC);
+    outline-offset: 2px;
+}
+
+.insights-block-empty-preview {
+    margin: 0;
+    padding: 48px 24px;
+    color: var(--color-elevate-gray-75);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1199px) {
+    .insights-section .insights-container {
+        gap: 0;
+    }
+
+    .info-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .info-card-grid > div:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 12px);
+    }
+
+    .insights-section .info-card-grid {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .insights-section {
+        padding: 55px 30px;
+    }
+
+    .insights-section .insights-container {
+        gap: 0;
+    }
+
+    .insights-section .insights-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+    }
+
+    .insights-section .insights-description {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .insights-section {
+        padding: 50px 20px;
+    }
+
+    .info-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card .info-card-title {
+        min-height: 67px;
+    }
+
+    .info-card-grid .info-card:last-child {
+        width: 100%;
+    }
+
+    .info-card-grid > div:last-child {
+        width: 100%;
+        grid-column: auto;
+        justify-self: stretch;
+    }
+
+    .insights-section .insights-container {
+        gap: 0;
+    }
+
+    .insights-section .insights-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .insights-section .info-card:hover {
+        transform: none !important;
+    }
+}
+
+html.motion-paused .insights-section .info-card:hover {
+    transform: none !important;
+}
