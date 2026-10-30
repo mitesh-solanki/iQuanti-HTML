@@ -10,11 +10,6 @@
 
 .research-section {
     width: 100%;
-    background-image: url("../../../assets/images/research-section-chceks-line-bg.svg");
-    background-color: rgba(252, 250, 246, 1);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
     position: relative;
     z-index: 0;
     padding-top: 0;
@@ -36,7 +31,7 @@
 
 .research-blurb-bg-right-center {
     position: absolute;
-    top: 0;
+    top: -20%;
     right: 0;
     z-index: -1;
     pointer-events: none;
@@ -44,8 +39,8 @@
 
 .research-blurb-bg-left-center {
     position: absolute;
-    top: 43%;
-    left: -4%;
+    top: 24%;
+    left: 0;
     transform: translateY(-50%);
     z-index: -1;
     pointer-events: none;
@@ -57,15 +52,15 @@
 
 .research-top {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 24px;
 }
 
 .research-heading {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    padding-bottom: 20px;
 }
 
 .research-label {
@@ -109,6 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .research-arrow:hover {
@@ -143,6 +139,7 @@
     min-width: 100%;
     flex: 0 0 100%;
     box-sizing: border-box;
+    margin-right: 24px;
 }
 
 .research-slide-link:focus-visible {
@@ -169,7 +166,7 @@
 }
 
 .research-card::before {
-    background: url("../../../assets/images/slider-bg.png");
+    background: url("../../../images/slider-bg.webp");
     background-position: center;
 }
 
@@ -182,8 +179,9 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
+    gap: 24px;
     align-items: flex-start;
-    max-width: 580px;
+    max-width: 672px;
 }
 
 .research-button {
@@ -202,16 +200,16 @@
 }
 
 .research-content h3 {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 38px;
     line-height: 1.184;
     color: var(--color-pure-white-90);
-    margin-bottom: 20px;
 }
 
 .research-content h3 > span {
     font-weight: 400;
 }
+
 
 /* ========================================
    RIGHT SIDE
@@ -231,10 +229,10 @@
     position: absolute;
     display: flex;
     align-items: center;
-    top: 32px;
-    right: 32px;
-    width: 53px;
-    height: 42px;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 38px;
 }
 
 .research-brand img {
@@ -247,6 +245,11 @@
     font-size: 16px;
 }
 
+.research-slide-float-text {
+    position: absolute;
+    right: 24px;
+    bottom: 27px;
+}
 /* ========================================
    SLIDE VARIATIONS
 ======================================== */
@@ -315,7 +318,7 @@
 .research-dot.active {
     width: 32px;
     border-radius: 10px;
-    background: #ED7000;
+    background: var(--color-primary-orange);
 }
 
 .research-pause {
@@ -407,6 +410,11 @@
     .research-controls {
         display: none;
     }
+
+    .research-slide-float-text {
+        position: static;
+        margin-top: 40px !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -432,7 +440,13 @@
     .research-button {
         font-size: 16px;
         padding: 12px 26px;
+        margin-top: 0;
     }
+
+    .research-slide-float-text {
+        margin-top: 30px !important;
+    }
+
 }
 
 /* ========================================

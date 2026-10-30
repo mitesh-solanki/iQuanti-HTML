@@ -59,7 +59,7 @@
 .client-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 24px;
 }
 
 .client-cards .client-card:first-child {
@@ -67,112 +67,86 @@
 }
 
 .client-card {
-    padding: 26px 24px 46px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
 }
 
 /* ========================================
-   CARD CONTENT
+   BY FORTUNE REACH
 ======================================== */
-
-.client-label {
-    color: var(--color-pure-white);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    padding: 4px 12px;
-    display: inline-block;
-    width: fit-content;
-    background-color: #FAFAFA10;
-    border: 0.5px solid #FAFAFA20;
-    border-radius: 100px;
-}
 
 .client-card h3 {
-    margin: 0 0 4px;
     color: var(--color-pure-white);
-    font-size: 22px;
-    line-height: 1.4;
 }
 
-.client-description {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
-    line-height: 2;
-    margin-bottom: 16px;
+.client-card .q-donut-chart {
+    text-align: center;
 }
+
+.client-card .q-donut-chart img {
+    max-width: 449px;
+    width: 100%;
+    height: auto;
+}
+
+.client-card .chart-note {
+    color: var(--color-off-white);
+}
+
+.client-card .chart-note span {
+    line-height: 1.5715;
+    display: inline-block;
+}
+
+.ai-core-box-wrap {
+    padding: 24px;
+    background-color: var(--color-elevate-gray-20);
+    border: 1px solid var(--color-elevate-gray-40);
+    border-radius: 8px;
+    margin-top: 14px;
+}
+
+.ai-core-box-wrap .ai-core-box-desc {
+    color: var(--color-smoke-white);
+    margin-top: 4px;
+}
+
 
 /* ========================================
-   FORTUNE CHART
+  COMPANY OVERVIEW CARD
 ======================================== */
-
-
-/* ========================================
-   COMPANY SIZE CHART
-======================================== */
-
-.company-chart {
-    flex: 1;
+.company-overview {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 11px;
-    gap: 11px;
+    margin-top: 46px;
 }
 
-.company-chart .company-row {
+.company-overview > .company-overview-item {
     display: flex;
-    grid-template-columns: auto 1fr 34px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.company-chart .company-row:not(:last-child) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #85838690;
-}
-
-.company-chart .company-row .company-row-col-left {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    justify-content: space-between;
 }
 
-.company-chart .company-name {
-    color: var(--color-pure-white);
-}
-
-.company-chart .company-bar-wrapper {
-    height: 20px;
+.company-overview > .company-overview-item .company-overview-content{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.company-chart .company-bar {
-    height: 27px;
-    border-radius: 0 4px 4px 0;
+.company-overview > .company-overview-item .company-overview-content p { 
+    color: var(--color-off-white);
 }
 
-.company-chart .company-bar-orange {
-    background: #F08B34;
+.company-overview > .company-overview-item:first-child {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--color-elevate-gray-40);
 }
 
-.company-chart .company-bar-blue {
-    background: #307DF7;
-}
-
-.company-bar-gold {
-    background: #B8A271;
-}
-
-.company-chart .company-value {
-    font-family: "neulis-neue";
-    color: var(--color-pure-white);
-    font-weight: 600;
+.company-overview > .company-overview-item .company-overview-value {
+    color: var(--color-off-white);
 }
 
 /* ========================================
@@ -189,6 +163,7 @@
 
 .industry-item {
     width: 100%;
+    font-family: "neulis-neue", sans-seerif;
 }
 
 .industry-top {
@@ -205,7 +180,7 @@
 
 .industry-track {
     width: 100%;
-    height: 6px;
+    height: 7px;
     overflow: hidden;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
@@ -221,7 +196,7 @@
 }
 
 .industry-blue {
-    background: #307DF7;
+    background: #007BFF;
 }
 
 .industry-cyan {
@@ -236,6 +211,18 @@
     background: var(--color-elevate-gray-50);
 }
 
+.industry-quantum-purple {
+    background: var(--color-qunatum-purpule);
+}
+
+.industry-periwinkle {
+    background: #4359B9;
+}
+
+.industry-quick-silver {
+    background: #989B9F;
+}
+
 /* ========================================
    CHART ANIMATIONS & TRANSITIONS
 ======================================== */
@@ -243,15 +230,6 @@
 .client-section:not(.is-chart-visible) .fortune-bar {
     transform: scaleY(0);
 }
-
-.fortune-bar {
-    transform-origin: bottom center;
-    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.client-section.is-chart-visible .fortune-bar-item:nth-child(1) .fortune-bar { transition-delay: 0.05s; }
-.client-section.is-chart-visible .fortune-bar-item:nth-child(2) .fortune-bar { transition-delay: 0.15s; }
-.client-section.is-chart-visible .fortune-bar-item:nth-child(3) .fortune-bar { transition-delay: 0.25s; }
 
 .client-section:not(.is-chart-visible) .industry-progress {
     transform: scaleX(0);
@@ -272,25 +250,20 @@
 ======================================== */
 
 @media (max-width: 1199px) {
-    .client-cards {
-        gap: 24px;
-        grid-template-columns: repeat(2, 1fr);
+    .client-cards .client-card:first-child {
+        grid-row: auto;
+        grid-column: span 2;
     }
 
-    .client-card:last-child {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 1023px) {
-    .fortune-bars {
-        gap: 24px;
-    }
 }
 
 @media (max-width: 767px) {
     .client-cards {
         grid-template-columns: 1fr;
+    }
+
+    .client-cards .client-card:first-child {
+        grid-column: auto;
     }
 
     .client-card {
@@ -300,10 +273,6 @@
 
     .client-card h3 {
         font-size: 18px;
-    }
-
-    .company-chart .company-name {
-        font-size: 13px;
     }
 
     .client-label {

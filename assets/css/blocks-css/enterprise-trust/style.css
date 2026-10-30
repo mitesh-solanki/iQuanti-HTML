@@ -11,11 +11,7 @@
 
 .trust-section {
     width: 100%;
-    background-image: url("../../../images/trust-section-chceks-line-bg.svg");
     background-color: rgba(242, 248, 255, 0.00);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -37,7 +33,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: 228px 220px;
+    grid-template-rows: 228px 240px;
     gap: 24px;
 }
 
@@ -109,6 +105,11 @@ body.contact-page .iq-contact-growth .trust-card-grid {
     color: var(--color-elevate-gray);
 }
 
+.trust-card > strong:first-child {
+    min-height: 112.5px;
+    align-items: flex-end;
+}
+
 /* SVG Border Drawing */
 .card-border-fill {
     position: absolute;
@@ -154,27 +155,14 @@ body.contact-page .iq-contact-growth .trust-card-grid {
 }
 
 .trust-card-title {
-    color: #007BFF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    text-transform: uppercase;
-    display: inline-flex;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 100px;
-    border: 0.5px solid #C5D9E6;
-    background: #E6F2FF;
-    margin-bottom: 12px;
+
 }
 
 .trust-card > strong {
     font-style: normal;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    gap: 6px;
     color: var(--color-electric-blue);
 }
 
@@ -187,9 +175,7 @@ body.contact-page .iq-contact-growth .trust-card-grid {
 }
 
 .trust-card p {
-    margin-top: auto;
     color: var(--color-elevate-gray);
-    max-width: 228px;
 }
 
 /* ========================================
@@ -207,7 +193,7 @@ body.contact-page .iq-contact-growth .trust-card-grid {
 }
 
 .trust-card-banking ~ .trust-card > strong {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 /* ========================================
@@ -287,9 +273,16 @@ body.contact-page .iq-contact-growth .trust-card-grid {
     .trust-card-grid .trust-card-banking > strong {
         font-size: 44px;
     }
+
+    .trust-container {
+        grid-template-rows: 228px 300px;
+    }
 }
 
 @media (max-width: 1023px) {
+    .trust-card > strong:first-child {
+        min-height: auto;
+    }
     .trust-card:hover .card-border-fill rect {
         animation: none;
     }
@@ -357,6 +350,14 @@ body.contact-page .iq-contact-growth .trust-card-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 14px;
+    }
+
+    .trust-card-banking ~ .trust-card > strong {
+        margin-bottom: 0;
+    }
+
+    .trust-card-banking ~ .trust-card > strong br {
+        display: none;
     }
 
     /* Heading full width */
