@@ -370,7 +370,7 @@
 
 @media (min-width: 1024px) {
     .research-section {
-        padding-block: 0 120px;
+        padding-bottom: 120px;
     }
 }
 

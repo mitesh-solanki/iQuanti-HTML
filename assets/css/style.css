@@ -52,7 +52,7 @@
     --color-steel-blue-gray: #9da4b465;
     --color-neutral-gray : #5B5D61;
     --color-dim-gray : #51565B;
-
+    --color-cool-gray : #CCCDCF;
     /* ========================================
        BLUE
     ======================================== */
@@ -276,6 +276,10 @@ h2,
 /* Font Style Override CSS */
 .body-text-14.body-text-reg {
     line-height: 1.5715;
+}
+
+.body-text-14.body-text-reg.font-neulis-neue {
+    line-height: 1.57143;
 }
 
 .body-text-14.body-text-bold {
@@ -587,10 +591,90 @@ body.motion-paused .glow-bg span {
     padding: 0 !important;
 }
 
+.iq-pt-0 {
+    padding-top: 0 !important;
+}
+
 .iq-mb-0 {
     margin-bottom: 0 !important;
 } 
 
+
+
+/* ========================================
+   From Global CSS
+======================================== */
+/* Form Inputs */
+form input,
+form select,
+form textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--color-cool-gray);
+    border-radius: 8px;
+    color: var(--color-rich-black);
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-group input,
+.form-group select:not([multiple]) {
+    height: 46px;
+    padding: 0 12px;
+    background-color: var(--color-off-white);
+}
+
+.form-group select:not([multiple]) {
+    appearance: none;
+    cursor: pointer;
+    background-image:
+        url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAALlJREFUeAHt0DsOgkAUheEzsiM1htKdiIUoWAgrUDtLSjpZinYkPuIOjAvRccZISbzjFFqcrz6X/AxARET0B+Iku8bzfORyk5i9vZPuO5KR1ljjoas4zZaS/TTNF3ez79g7oUAyOh/rS7cf3hRQ9AYhTod637Z9xWpsTMS4LIsKQqIQacw7YuUa4RTyKcYnwjmkLcY3wlL40mSWRUphq4Gd+cjQJ8JyfpFG8zLmV6JAI/GJICIiol94Ap/6ZjH/MaJ4AAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 38px;
+    padding-block: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #6D798F;
+}
+
+.form-group select[multiple] {
+    height: auto;
+    min-height: 112px;
+    padding: 6px 8px;
+    background-color: var(--color-pure-white);
+    background-image: none;
+    appearance: auto;
+    overflow-y: auto;
+    font-size: 12px;
+    color: var(--color-rich-black);
+}
+
+.form-group select[multiple] option {
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: var(--color-rich-black);
+    cursor: pointer;
+}
+
+.form-group select[multiple] option:checked {
+    background: var(--color-primary-orange) linear-gradient(0deg, var(--color-primary-orange) 0%, var(--color-primary-orange) 100%);
+    color: var(--color-pure-white);
+}
+
+form select::placeholder
+form input::placeholder {
+    color: var(--color-slate-gray);
+}
 /* ========================================
    GLOBAL COMPONENTS 
 ======================================== */
@@ -1383,10 +1467,10 @@ body .cls-superscript .superscript {
 .section-label.has-white {
     background-color: var(--color-dark-charcoal-60);
     border-color: rgba(67, 89, 185, 0.4);
-    color: var(--color-q-purple-75);
+    color: var(--color-q-purple);
 }
 .section-label.has-white span {
-    color: var(--color-q-purple-75);
+    color: var(--color-q-purple);
 }
 
 .section-label-sup {
@@ -1493,7 +1577,7 @@ body .cls-superscript .superscript {
    FOOTER TAGLINE
 ======================================== */
 .site-footer .footer-tagline-wrap {
-    background: #007BFF;
+    background: var(--color-electric-blue);
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -1518,8 +1602,8 @@ body .cls-superscript .superscript {
 
 .site-footer .footer-tagline .footer-tagline-item .footer-tagline-icon {
     line-height: 1;
-    width: 36px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .site-footer .footer-tagline .footer-tagline-item .footer-tagline-icon img {
@@ -1531,8 +1615,8 @@ body .cls-superscript .superscript {
 .site-footer .footer-tagline span.footer-tagline-text {
     margin: 0;
     text-align: center;
-    font-size: 24px;
-    line-height: 1.167;
+    font-size: 28px;
+    line-height: 1;
     font-weight: 900;
     color: var(--color-pure-white);
 }
@@ -1559,7 +1643,7 @@ body .cls-superscript .superscript {
         minmax(0, 1fr)
         minmax(0, 2fr);
     gap: 16px;
-    padding-block: 28px 16px;
+    padding-block: 24px;
 }
 
 
@@ -1584,15 +1668,15 @@ body .cls-superscript .superscript {
 .site-footer .footer-logo {
     display: inline-flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-decoration: none;
 }
 
 .site-footer .footer-logo img {
     display: block;
-    width: 178px;
+    width: 157px;
     height: auto;
-    max-width: 178px;
+    max-width: 157px;
     object-fit: contain;
 }
 
@@ -1601,7 +1685,7 @@ body .cls-superscript .superscript {
     margin: 0 0 20px;
     color: var(--color-slate-grey);
     font-size: 14px;
-    line-height: 22px;
+    line-height: 1.57143;
     font-weight: 400;
 }
 
@@ -1723,16 +1807,14 @@ body .cls-superscript .superscript {
     display: flex;
     width: 100%;
     max-width: 448px;
-    gap: 8px;
+    gap: 16px;
 }
 
 .site-footer .newsletter-form input {
     flex: 1;
     min-width: 0;
     padding: 15px 12px;
-    border: 1px solid #E8E4DD;
     border-radius: 6px;
-    background: var(--color-pure-white);
     color: var(--color-rich-black);
     font-size: 16px;
     outline: none;
@@ -1771,8 +1853,8 @@ body .cls-superscript .superscript {
 ======================================== */
 
 .site-footer .footer-bottom {
-    padding-block: 24px 44px;
-    border-top: 0.5px solid var(--color-steel-blue-gray);
+    padding-block: 8px 43px;
+    border-top: 0.5px solid var(--color-cool-gray);
 }
 
 .site-footer .footer-bottom p {
@@ -2674,6 +2756,21 @@ html:has(.media-content-popup-main:popover-open) {
         padding: 10px 12px;
     }
 
+
+    /* Footer CSS */
+    .site-footer .footer-tagline .footer-tagline-item {
+        gap: 24px;
+    }
+    
+    .site-footer .footer-tagline .footer-tagline-item .footer-tagline-icon {
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+    }
+        
+    .site-footer .footer-tagline span.footer-tagline-text {
+        font-size: 24px;
+    }
     /* Aboutus Page CSS  */
 
     .core-feature-grid-section,

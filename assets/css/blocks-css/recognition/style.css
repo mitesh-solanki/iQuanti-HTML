@@ -12,20 +12,18 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
-    background-image: url("../../../assets/images/recognition-trust-checks-line-bg.svg");
+    background-image: url("../../../images/recognition-trust-checks-line-bg.svg");
 }
 
-.recognition-section .recognition-blurb-top-left {
-    top: -75%;
-    left: 0;
+.recognition-section .recognition-blurb-center-left {
+    top: -55%;
+    left: 0%;
 }
 
 .recognition-blurb-top-right {
     right: 0;
-    top: -70%;
+    top: -80%;
     background-image: url("../../../assets/images/recognition-trust-blurb-top-right.png");
-    width: 662px;
-    height: 1229px;
 }
 
 .recognition-section .recognition-container {
@@ -43,9 +41,8 @@
 .recognition-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 40px;
+    gap: 24px;
     width: 100%;
-    margin-bottom: 40px;
 }
 
 .recognition-card-wrap {
@@ -58,7 +55,7 @@
     isolation: isolate;
     height: 100%;
     min-height: 253px;
-    padding: 25px;
+    padding: 24px;
     text-align: center;
     cursor: default;
     border: 0.5px solid var(--color-warm-gray-75);
@@ -80,7 +77,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     border-radius: 0;
     background-color: transparent;
     color: inherit;
@@ -105,11 +102,7 @@
 }
 
 .recognition-card h3 {
-    margin: 0 0 12px;
-    font-family: area-normal, sans-serif !important;
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 1.556;
+    margin: 0 0 16px;
     color: var(--color-elevate-gray);
 }
 
@@ -119,51 +112,6 @@
     color: var(--color-dim-gray);
 }
 
-/* ========================================
-   CERTIFICATIONS
-======================================== */
-
-.certifications-wrap {
-    width: 100%;
-}
-
-.certifications-card {
-    position: relative;
-    padding: 26px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.certifications-card.recognition-card {
-    min-height: 100px;
-    height: auto;
-}
-
-.certifications-card .certifications-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    max-width: 488px;
-}
-
-.certifications-card .certifications-title {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.429;
-    color: var(--color-rich-black);
-}
-
-.certifications-card .certifications-list {
-    line-height: 1.3795;
-}
-
 .recognition-block-empty-preview {
     margin: 0;
     padding: 48px 24px;
@@ -171,6 +119,49 @@
     font-size: 14px;
     text-align: center;
 }
+
+
+
+/* 5 Columns for Compact Grid */
+.recognition-grid-compact {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+.recognition-grid-compact .recognition-card-compact {
+    min-height: 166px !important;
+}
+
+/* Compact Card Content Alignment */
+.recognition-grid-compact .recognition-card-compact .recognition-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.recognition-grid-compact .recognition-card-compact .recognition-icon {
+    margin-bottom: 16px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recognition-card-compact .recognition-icon img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: contain;
+}
+
+.recognition-card-compact:last-child .recognition-icon {
+    width: 118px;
+    height: 60px;
+}
+
+
 
 /* ========================================
    RESPONSIVE
@@ -204,6 +195,13 @@
         gap: 24px;
         margin-bottom: 24px;
     }
+
+    .recognition-grid-compact .recognition-card-wrap:last-child {
+        grid-column: 1/-1;
+        width: calc(50% - 12px);
+        justify-self: center;
+    }
+
 }
 
 @media (max-width: 1023px) {
@@ -211,6 +209,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -222,6 +221,14 @@
 
     .recognition-blurb-top-right {
         top: -35%;
+    }
+
+    .recognition-grid-compact {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-grid-compact .recognition-card-wrap:last-child { 
+        width: 100%;
     }
 }
 
