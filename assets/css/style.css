@@ -254,7 +254,7 @@ h2,
 
 .body-text-18 {
     font-size: 18px;
-    line-height: 1.556;
+    line-height: 1.4445;
 }
 
 .body-text-16 {
@@ -976,11 +976,17 @@ form input::placeholder {
 .slick-dotted.slick-slider {
     margin-bottom: 0;
 }
+
+.slick-slider {
+    width: auto !important;
+    margin-inline: -12px;
+}
+
 .slick-dots {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
     position: static;
 }
 
@@ -1905,11 +1911,8 @@ body.contact-page {
 /* IQ Contact Content Section */
 .iq-contact-content-section {
     position: relative;
-    z-index: -1;
-}
-
-.iq-contact-content-section .sub-head-2 {
-    align-content: center;
+    /* z-index: -1; */
+    background-image: url("../images/contact-us-chceks-line-bg.svg");
 }
 
 .iq-contact-solution,
@@ -3075,15 +3078,6 @@ html:has(.media-content-popup-main:popover-open) {
         max-width: 100%;
     }
 
-    .contact-detail-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .iq-split-hero-wrapper .contact-detail-wrapper {
-        margin-top: 0;
-    }
-
     .contact-detail-wrapper > div {
         justify-content: flex-start;
         flex-direction: column;
@@ -3098,13 +3092,6 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-contact-content-right {
         max-width: 100%;
         gap: 64px;
-    }
-
-
-
-    .iq-contact-content-section .sub-head-2 {
-        min-height: auto;
-        margin-inline: auto;
     }
 
     .iq-contact-solution, 

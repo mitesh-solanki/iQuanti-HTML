@@ -242,6 +242,21 @@
     max-width: 100%;    
 }
 
+.hero-grid .hero-image .hero-lottie-bg-slider .hero-lottie-bg-slide img,
+.hero-lottie-bg-slide img {
+    min-width: 100%;
+}
+
+.hero-grid .hero-media.has-lottie {
+    transform: scale(1.75);       /* Makes it larger */
+}
+
+.hero-lottie-bg-slider {
+    left: 44.2% !important;
+    top: 37.4% !important;
+    width: 22.8% !important;
+}
+
 /* IQ Impact Landing Page Hero */
 .iq-impact-hero-section {
     background: url("../../assets/images/big-radial-vector.webp"), url("../../../assets/images/hero-banner-checks-line-bg.svg");

@@ -42,13 +42,6 @@
     grid-auto-rows: 198px;
 }
 
-body.contact-page .iq-contact-growth .trust-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 228px 198px;
-    gap: 20px;
-}
-
 .trust-container-no-header .trust-card-credit {
     grid-column: 1;
     grid-row: 1;
@@ -154,13 +147,9 @@ body.contact-page .iq-contact-growth .trust-card-grid {
     animation: none;
 }
 
-.trust-card-title {
-
-}
-
 .trust-card > strong {
     font-style: normal;
-    display: flex;
+    display: flex !important;
     align-items: baseline;
     gap: 6px;
     color: var(--color-electric-blue);
@@ -237,24 +226,21 @@ body.contact-page .iq-contact-growth .trust-card-grid {
    CONTACT GROWTH LAYOUT
 ======================================== */
 
-.iq-contact-growth .sub-head-2 {
-    max-width: 600px;
-}
 
-.iq-contact-growth .trust-card-grid {
+.trust-card-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 228px 240px;
+    gap: 24px;
 }
 
 .trust-card-grid .trust-card {
-    padding: 16px;
     grid-column: auto;
-    gap: 0;
 }
 
-.trust-card-grid .trust-card .trust-card-title {
-    margin-bottom: 8px;
+.trust-card-grid .trust-card{
+    grid-column: unset;
+    grid-row: unset
 }
 
 .trust-card-grid .trust-card > strong {
@@ -352,8 +338,8 @@ body.contact-page .iq-contact-growth .trust-card-grid {
         gap: 14px;
     }
 
-    .trust-card-banking ~ .trust-card > strong {
-        margin-bottom: 0;
+    .trust-card > strong {
+        margin-bottom: 0 !important;
     }
 
     .trust-card-banking ~ .trust-card > strong br {
@@ -389,8 +375,9 @@ body.contact-page .iq-contact-growth .trust-card-grid {
         margin: 0;
     }
 
-    .iq-contact-growth .trust-card-grid {
+    .trust-card-grid {
         grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto;
     }
 }
 

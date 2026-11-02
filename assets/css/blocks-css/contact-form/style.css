@@ -50,9 +50,6 @@
     top: 0;
 }
 
-body.contact-page .contact-blurb-bottom-right.blurb-bg {
-    display: none !important;
-}
 
 /* Contact Vector */
 .contact-vector {
@@ -640,7 +637,7 @@ button:disabled {
 ======================================== */
 
 .iq-contact-section {
-    background-image: url("../../../assets/images/iq-contact-banner-image.webp");
+    background-image: url("../../../images/iq-contact-banner-image.webp");
 }
 
 .iq-split-hero-section {
@@ -659,7 +656,7 @@ button:disabled {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 44.4444% 40.5556%;
+    grid-template-columns: 39.3650% 40.5556%;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
@@ -684,7 +681,7 @@ button:disabled {
 .iq-split-hero-section .iq-split-hero-header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 
 .iq-split-hero-title-light {
@@ -692,7 +689,7 @@ button:disabled {
 }
 
 .iq-split-hero-desc {
-    color: var(--color-warm-gray);
+    color: var(--color-off-white);
 }
 
 .iq-split-hero-wrapper .contact-detail-wrapper {
@@ -702,7 +699,7 @@ button:disabled {
 .contact-detail-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 18px;
 }
 
 .contact-detail {
@@ -730,7 +727,7 @@ button:disabled {
 
 .contact-detail .detail-content h3 {
     margin: 0 0 8px;
-    color: var(--color-electric-blue);
+    color: var(--color-primary-orange);
 }
 
 .contact-detail .detail-content p {
@@ -738,7 +735,7 @@ button:disabled {
 }
 
 .contact-detail p a {
-    color: var(--color-pure-white) !important;
+    color: var(--color-off-white) !important;
     text-decoration: none;
     transition: color 0.25s ease;
     display: inline-block;
@@ -964,7 +961,7 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     }
 
     .iq-split-hero-section {
-        padding: 40px 47px;
+        padding-block: 80px;
     }
 
     .iq-split-hero-section .speaker-profile-card-grid {
