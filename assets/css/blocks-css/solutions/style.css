@@ -191,8 +191,56 @@ body.contact-page .solution-card .solution-card-inner {
     padding: 40px;
     border-radius: 14px;
     text-align: center;
-    background: url("../../../images/solutions-center-bg.webp") center / cover no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
+    background: url("../../../images/solutions-center-bg.webp")  no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
+    background-size: auto;
     box-shadow: none;
+    background-position: center , 50%;
+    animation: parallax-move linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+    z-index: 0;
+}
+.feature-card .feature-content {
+    position: relative;
+}
+
+.feature-glow {
+    position: absolute;
+    inset: 0;
+}
+.feature-card::before,
+.feature-glow::before,
+.feature-glow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+.feature-card::before {
+    mix-blend-mode: color;
+    background:#001FAB;
+    z-index: 1;
+}
+.feature-glow::before {
+    content: "";
+    position: absolute;
+    inset:0;
+    background: rgba(0, 31, 171, 0.55);
+    z-index: 1;
+}
+
+/* .feature-glow::after {
+     background: rgba(0, 31, 171, 0.75);   
+} */
+
+@keyframes parallax-move {
+    from {
+        background-position-y: 40%;
+    }
+
+    to {
+        background-position-y: 55%;
+    }
 }
 
 .impact-badge .section-label-sup sup {
