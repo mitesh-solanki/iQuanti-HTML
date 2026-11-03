@@ -734,13 +734,12 @@ h2,
 }
 
 /* Light rim, follows the light angle */
-.has-glass-effect::before {
+/* .has-glass-effect::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   padding: 1.5px;
-  /* background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(255,255,255,0.4) 100%); */
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -748,7 +747,7 @@ h2,
   height: 100%;
   inset: 0;
   z-index: -1;  
-}
+} */
 
 .has-glass-effect > svg {
     width: 100%;
@@ -3211,7 +3210,8 @@ color: #FFFFFF;
     flex-direction: column;
     height: 100%;
     padding: 24px;
-    transition: 0.3s all ease-in-out !important;
+    /* transition: 0.3s all ease-in-out !important; */
+    tansition: none !important;
 }
 
  .info-card:hover {
@@ -8584,7 +8584,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 [data-aos] {
     transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
-    will-change: opacity, transform;
+    /* will-change: opacity, transform; */
 }
 
 /* Header enters from above on the first paint, matching the prototype. */

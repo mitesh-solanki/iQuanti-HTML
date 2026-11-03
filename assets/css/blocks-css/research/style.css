@@ -292,19 +292,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 16px;
     margin-top: 24px;
 }
 
 .research-dot {
     position: relative;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     border: 0;
     border-radius: 50%;
-    background: #DCD7CD;
+    background: var(--color-slate-grey);
     cursor: pointer;
     transition: 0.25s ease;
 }
@@ -316,7 +316,8 @@
 }
 
 .research-dot.active {
-    width: 32px;
+    width: 48px;
+    height: 12px;
     border-radius: 10px;
     background: var(--color-primary-orange);
 }
@@ -447,6 +448,13 @@
         margin-top: 30px !important;
     }
 
+    .research-pagination {
+        gap: 8px;
+    }
+
+    .research-dot.active {
+        width: 32px;
+    }
 }
 
 /* ========================================

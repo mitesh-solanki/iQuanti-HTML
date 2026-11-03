@@ -3,6 +3,7 @@ Case Study Section =====================*/
 
 .case-studies-section {
     background-image: url("../../../images/case-study-checks-line-bg.svg");
+    overflow: hidden;
 }
 
 .case-studies-section .case-studies-blurb-left-top {

@@ -60,7 +60,7 @@
 
 .solution-card:hover {
     transform: translateY(-8px) scale(1.03) !important;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     transition: 0.3s ease;
 }
 .solution-card .solution-card-inner {
@@ -73,7 +73,10 @@ body.contact-page .solution-card .solution-card-inner {
     position: relative;
     z-index: 1;
     height: 100%;
+    min-height: 260px;
     width: 100%;
+    max-width: 642px;
+    min-width: 642px;
 }
 
 .solution-card .solution-card-content {
@@ -176,9 +179,22 @@ body.contact-page .solution-card .solution-card-inner {
    CENTER FEATURE CARD
 ======================================== */
 
+/*
+ * View timeline must run on the static card (not the transforming glow).
+ * Animating transform on the same element as view() causes feedback jumps.
+ */
+@property --feature-parallax-y {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+
 .feature-card {
+    --feature-parallax-y: 0%;
     position: relative;
+    isolation: isolate;
     overflow: hidden;
+    overflow-anchor: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,56 +204,75 @@ body.contact-page .solution-card .solution-card-inner {
     padding: 40px;
     border-radius: 14px;
     text-align: center;
-    background: url("../../../images/solutions-center-bg.webp")  no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
-    background-size: auto;
+    background: radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
     box-shadow: none;
-    background-position: center , 50%;
-    animation: parallax-move linear both;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
     z-index: 0;
 }
+
+/* CSS scroll-timeline fallback when JS is unavailable */
+@supports (animation-timeline: view()) {
+    .feature-card {
+        animation: feature-parallax linear both;
+        animation-timeline: view();
+        animation-range: cover;
+    }
+}
+
+@keyframes feature-parallax {
+    from {
+        --feature-parallax-y: -14%;
+    }
+
+    to {
+        --feature-parallax-y: 14%;
+    }
+}
+
 .feature-card .feature-content {
     position: relative;
 }
 
+/*
+ * Parallax image layer — JS sets transform; overlays stay on the card
+ * (never transform with the image — avoids blend-mode flicker/jumps).
+ */
 .feature-glow {
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
+    top: -35%;
+    bottom: -35%;
+    z-index: 0;
+    pointer-events: none;
+    background: url("../../../images/solutions-center-bg.webp") center center / cover no-repeat;
+    transform: translate3d(0, var(--feature-parallax-y, 0%), 0);
+    backface-visibility: hidden;
+    will-change: transform;
 }
+
+/* Static overlays — do not live on the transforming glow */
 .feature-card::before,
+.feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.feature-card::before {
+    background: rgba(0, 31, 171, 0.55);
+}
+
+.feature-card::after {
+    mix-blend-mode: color;
+    background: #001FAB;
+}
+
 .feature-glow::before,
 .feature-glow::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-.feature-card::before {
-    mix-blend-mode: color;
-    background:#001FAB;
-    z-index: 1;
-}
-.feature-glow::before {
-    content: "";
-    position: absolute;
-    inset:0;
-    background: rgba(0, 31, 171, 0.55);
-    z-index: 1;
-}
-
-/* .feature-glow::after {
-     background: rgba(0, 31, 171, 0.75);   
-} */
-
-@keyframes parallax-move {
-    from {
-        background-position-y: 40%;
-    }
-
-    to {
-        background-position-y: 55%;
-    }
+    content: none;
+    display: none;
 }
 
 .impact-badge .section-label-sup sup {
@@ -251,11 +286,6 @@ body.contact-page .solution-card .solution-card-inner {
     top: -8%;
     right: 0;
     z-index: -1;
-}
-
-.feature-card::after {
-    content: none;
-    display: none;
 }
 
 .feature-card .feature-content {
@@ -308,13 +338,25 @@ body.contact-page .solution-card .solution-card-inner {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
-
-.solution-card.has-content-side-left .solution-card-header {
-    margin-bottom: 24px;
+.contact-solutions-grid .solution-card .solution-card-content {
+    padding: 20px;
+    min-height: 260px;
 }
 
-.solution-card.has-content-side-left .solution-title {
-    gap: 12px;
+.contact-solutions-grid .solution-card .solution-card-header {
+    margin-bottom: 16px;
+}
+
+.contact-solutions-grid .solution-card .solution-description {
+    color: var(--color-dark-charcoal);
+}
+
+.contact-solutions-grid .solution-card .solution-tags {
+    max-width: 500px;
+}
+
+.contact-solutions-grid .solution-card .solution-tags span {
+    font-weight: 400;
 }
 
 .solutions-block-empty-preview {
@@ -426,8 +468,30 @@ body.contact-page .solution-card .solution-card-inner {
     .solution-card:hover {
         transform: none !important;
     }
+
+    .feature-card {
+        animation: none !important;
+        --feature-parallax-y: 0%;
+    }
+
+    .feature-glow {
+        top: 0;
+        bottom: 0;
+        transform: none !important;
+    }
 }
 
 html.motion-paused .solution-card:hover {
+    transform: none !important;
+}
+
+html.motion-paused .feature-card {
+    animation: none !important;
+    --feature-parallax-y: 0%;
+}
+
+html.motion-paused .feature-glow {
+    top: 0;
+    bottom: 0;
     transform: none !important;
 }
