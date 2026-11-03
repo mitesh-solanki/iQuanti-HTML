@@ -79,7 +79,7 @@
 
 .trust-card {
     border-radius: 8px;
-    padding: 26px 16px 24px;
+    padding: 10px 16px 22px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@
 }
 
 .trust-card > strong:first-child {
-    min-height: 112.5px;
+    min-height: 124.5px;
     align-items: flex-end;
 }
 
@@ -111,6 +111,7 @@
     height: 100%;
     pointer-events: none;
     overflow: visible;
+    z-index: 0 !important;
 }
 
 /* Border hidden initially */
@@ -151,7 +152,6 @@
     font-style: normal;
     display: flex !important;
     align-items: baseline;
-    gap: 6px;
     color: var(--color-electric-blue);
 }
 
