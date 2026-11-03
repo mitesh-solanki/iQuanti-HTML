@@ -1913,8 +1913,8 @@ body.contact-page {
 /* IQ Contact Content Section */
 .iq-contact-content-section {
     position: relative;
-    /* z-index: -1; */
     background-image: url("../images/contact-us-chceks-line-bg.svg");
+    overflow: hidden;
 }
 
 .iq-contact-solution,

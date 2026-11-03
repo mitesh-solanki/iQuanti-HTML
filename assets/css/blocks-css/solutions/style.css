@@ -73,10 +73,7 @@ body.contact-page .solution-card .solution-card-inner {
     position: relative;
     z-index: 1;
     height: 100%;
-    min-height: 260px;
     width: 100%;
-    max-width: 642px;
-    min-width: 642px;
 }
 
 .solution-card .solution-card-content {
@@ -338,25 +335,12 @@ body.contact-page .solution-card .solution-card-inner {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
-.contact-solutions-grid .solution-card .solution-card-content {
-    padding: 20px;
-    min-height: 260px;
+.solution-card.has-content-side-left .solution-card-header {
+    margin-bottom: 24px;
 }
 
-.contact-solutions-grid .solution-card .solution-card-header {
-    margin-bottom: 16px;
-}
-
-.contact-solutions-grid .solution-card .solution-description {
-    color: var(--color-dark-charcoal);
-}
-
-.contact-solutions-grid .solution-card .solution-tags {
-    max-width: 500px;
-}
-
-.contact-solutions-grid .solution-card .solution-tags span {
-    font-weight: 400;
+.solution-card.has-content-side-left .solution-title {
+    gap: 12px;
 }
 
 .solutions-block-empty-preview {
