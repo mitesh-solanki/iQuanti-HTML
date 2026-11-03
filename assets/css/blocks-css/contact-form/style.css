@@ -92,10 +92,6 @@
     object-fit: contain;
 }
 
-.contact-content {
-    padding-top: 40px;
-}
-
 .contact-title {
     margin: 0 0 24px;
     color: var(--color-pure-white);
@@ -950,15 +946,10 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
 ======================================== */
 
 @media (min-width: 1024px) {
-    .contact-section {
-        padding-block: 45px 52px;
-    }
+
 }
 
 @media (min-width: 1200px) {
-    .contact-section {
-        padding-block: 45px 52px;
-    }
 
     .iq-split-hero-section {
         padding-block: 80px;
@@ -969,6 +960,11 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     }
 }
 
+@media (min-width: 1381px) { 
+    .contact-section {
+        padding-block: 80px;
+    }
+}
 @media (max-width: 1380px) {
     .contact-grid {
         gap: 64px;

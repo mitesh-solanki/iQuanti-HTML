@@ -167,21 +167,19 @@
    RESPONSIVE
 ======================================== */
 
-@media (min-width: 1024px) {
-    .recognition-section {
-        padding-block: 112px 100px;
-    }
-}
 
 @media (min-width: 1200px) {
-    .recognition-section {
-        padding-block: 112px 100px;
-    }
-
     .recognition-section .recognition-heading {
         margin-bottom: 60px;
     }
 }
+
+@media (min-width: 1381px) {
+    .recognition-section {
+        padding-block: 112px 100px;
+    }
+}
+
 
 @media (max-width: 1380px) {
     .recognition-section .recognition-heading {

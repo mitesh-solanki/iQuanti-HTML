@@ -2554,7 +2554,7 @@ html:has(.media-content-popup-main:popover-open) {
 @media (min-width: 1200px) {
 }
 
-@media (min-width: 1380px) {
+@media (min-width: 1381px) {
     .iq-profile-grid-lsiting-section .container > .heading-wrap{
         margin-bottom: 200px;
     }
