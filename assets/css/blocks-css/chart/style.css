@@ -167,6 +167,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .company-overview > .company-overview-item .company-overview-content{
@@ -187,6 +188,7 @@
 
 .company-overview > .company-overview-item .company-overview-value {
     color: var(--color-off-white);
+    text-align: right;
 }
 
 /* ========================================
@@ -298,6 +300,30 @@
 /* ========================================
    RESPONSIVE (MEDIA QUERIES)
 ======================================== */
+@media(min-width : 1440px) {
+.client-card .section-label {
+    margin-bottom:0;
+    height: 32px;
+}
+
+.industry-chart {
+    margin-top: 16px
+} 
+    
+.client-card .q-donut-chart.fortune-reach-chart {
+    top: -24px;
+}
+
+.client-card .q-donut-chart.fortune-reach-chart svg {
+    top: 10px;
+    left: 9px;
+}
+.client-card .q-donut-chart.fortune-reach-chart .completion-art {
+    width: 449px;
+    height: 467px;
+}
+}
+
 
 @media (max-width: 1199px) {
     .client-cards .client-card:first-child {
@@ -337,6 +363,9 @@
 
     .fortune-bar {
         width: 60px;
+    }
+    .company-overview {
+        margin-top: 0;
     }
 }
 
