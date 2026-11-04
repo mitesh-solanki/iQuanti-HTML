@@ -631,6 +631,9 @@ body.motion-paused .glow-bg span {
     padding-top: 120px !important;
 }
 
+.iq-pblk-default {
+    padding-block: 120px !important;
+}
 /* ========================================
    From Global CSS
 ======================================== */
@@ -2673,6 +2676,10 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-pt-default {
         padding-top: 100px !important;
     }
+
+    .iq-pblk-default {
+        padding-block: 100px !important;
+    }
     
     .section-footer {
         margin-top: 64px;
@@ -3001,7 +3008,9 @@ html:has(.media-content-popup-main:popover-open) {
         padding-top: 64px !important;
     }
 
-
+    .iq-pblk-default {
+        padding-block: 64px !important;
+    }
      /*  --Heading Wrap
     ----------------------------------------- */
     .heading-wrap {
@@ -3308,14 +3317,9 @@ html:has(.media-content-popup-main:popover-open) {
         padding-top: 48px !important;
     }
 
-
-
-
-
-    
-
-
-
+    .iq-pblk-default {
+        padding-block: 48px !important;
+    }
 
     .section-label {
         margin-bottom: 16px;

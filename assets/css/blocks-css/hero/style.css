@@ -228,6 +228,97 @@
     background: 0 0;
 }
 
+/* Hero Lottie Animation */
+.hero-grid .hero-media.has-lottie,
+.hero-media.has-lottie {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-lottie-bg-slider {
+    position: absolute;
+    left: 40.35%;
+    top: 23.85%;
+    width: 37.98%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+    background: transparent;
+}
+
+.hero-lottie-bg-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: none;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+}
+
+.hero-lottie-bg-slide.is-active {
+    opacity: 1;
+    transform: none;
+    z-index: 2;
+}
+
+.hero-lottie-bg-slide.is-prev {
+    opacity: 0;
+    transform: none;
+    z-index: 1;
+}
+
+.hero-lottie-bg-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 !important;
+    padding: 0;
+    max-width: none;
+    transform: none !important;
+}
+
+.hero-grid .hero-lottie,
+.hero-lottie {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    line-height: 0;
+}
+
+.hero-grid .hero-lottie svg,
+.hero-lottie svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-lottie-error {
+    position: relative;
+    z-index: 4;
+    display: none;
+    color: var(--color-error, #c0392b);
+    font-size: 0.85rem;
+    padding: 8px;
+    text-align: center;
+}
+
+.hero-lottie-error:not([hidden]) {
+    display: block;
+}
+
 .hero-grid.iq-justify-content-center .hero-content {
     width: 100%;
     max-width: 677px;
