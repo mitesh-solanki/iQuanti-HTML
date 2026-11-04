@@ -1956,7 +1956,12 @@ body.contact-page {
     gap: 40px;
 }
 
-.iq-contact-content-right {
+.iq-contact-content-grid {
+    display: flex;
+    gap: 67px;
+}
+
+.iq-contact-content-left {
     max-width: 642px;
     width: 100%;
     display: flex;
@@ -1964,7 +1969,15 @@ body.contact-page {
     gap: 120px;
 }
 
-
+.iq-contact-content-right {
+    background: url(../images/contact-right-bg.webp) no-repeat;
+    height: auto;
+    max-width: 551px;
+    width: 100%;
+    background-size: cover;
+    flex: 1;
+    border-radius: 8px;
+}
 
 
 /* Stats block styles moved to acf-blocks/stats/style.css for isolated loading */
@@ -2677,7 +2690,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 
     /* Contact Page css */
-    .iq-contact-content-right {
+    .iq-contact-content-left {
         gap: 100px;
     }
 
@@ -3120,7 +3133,7 @@ html:has(.media-content-popup-main:popover-open) {
         margin-top: 0;
     }
 
-    .iq-contact-content-right {
+    .iq-contact-content-left {
         max-width: 100%;
         gap: 64px;
     }
@@ -3403,7 +3416,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 
 
-    .iq-contact-content-right {
+    .iq-contact-content-left {
         gap: 48px;
     }
 
