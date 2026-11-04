@@ -623,7 +623,13 @@ body.motion-paused .glow-bg span {
     margin-bottom: 0 !important;
 } 
 
+.iq-pb-default {
+    padding-bottom: 120px !important;
+}
 
+.iq-pt-default {
+    padding-top: 120px !important;
+}
 
 /* ========================================
    From Global CSS
@@ -2647,20 +2653,17 @@ html:has(.media-content-popup-main:popover-open) {
     }   
 
     /* Global Utilities */
+    .iq-pb-default {
+        padding-bottom: 100px !important;
+    }
+
+    .iq-pt-default {
+        padding-top: 100px !important;
+    }
+    
     .section-footer {
         margin-top: 64px;
     }
-
-
-
-
-
-
-
-
-
-    
-
 
 
     .site-footer .footer-grid {
@@ -2678,16 +2681,9 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 100px;
     }
 
-
-
     .iq-contact-content-section .sub-head-2 {
         min-height: auto;
     }
-
-
-
-
-
 
 }
 
@@ -2983,6 +2979,14 @@ html:has(.media-content-popup-main:popover-open) {
         padding: 64px 30px !important;
     }
 
+    /* Global Utilities */
+    .iq-pb-default {
+        padding-bottom: 64px !important;
+    }
+
+    .iq-pt-default {
+        padding-top: 64px !important;
+    }
 
 
      /*  --Heading Wrap
@@ -3282,6 +3286,14 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
 
+    /* Global Utilities */
+    .iq-pb-default {
+        padding-bottom: 48px !important;
+    }
+
+    .iq-pt-default {
+        padding-top: 48px !important;
+    }
 
 
 

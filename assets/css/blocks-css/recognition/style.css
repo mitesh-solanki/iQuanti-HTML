@@ -22,8 +22,7 @@
 
 .recognition-blurb-top-right {
     right: 0;
-    top: -80%;
-    background-image: url("../../../assets/images/recognition-trust-blurb-top-right.png");
+    top: -40%;
 }
 
 .recognition-section .recognition-container {
@@ -173,13 +172,6 @@
         margin-bottom: 60px;
     }
 }
-
-@media (min-width: 1381px) {
-    .recognition-section {
-        padding-block: 112px 100px;
-    }
-}
-
 
 @media (max-width: 1380px) {
     .recognition-section .recognition-heading {

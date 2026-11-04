@@ -1952,6 +1952,7 @@ section {
     background-color: rgba(242, 248, 255, 0.00);
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 
 .trust-blur-vector-right {

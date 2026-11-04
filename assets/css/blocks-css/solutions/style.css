@@ -69,13 +69,6 @@
     height: 100%;
 }
 
-body.contact-page .solution-card .solution-card-inner {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-}
-
 .solution-card .solution-card-content {
     display: flex;
     flex-direction: column;
