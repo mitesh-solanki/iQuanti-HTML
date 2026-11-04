@@ -85,10 +85,41 @@
     text-align: center;
 }
 
-.client-card .q-donut-chart img {
+.client-card .q-donut-chart.fortune-reach-chart {
+    position: relative;
     max-width: 449px;
     width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+    background: transparent;
+}
+
+.client-card .q-donut-chart.fortune-reach-chart svg {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
     height: auto;
+}
+
+.client-card .q-donut-chart.fortune-reach-chart .completion-art {
+    position: absolute;
+    inset: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    object-fit: fill;
+    opacity: 0;
+    transition: opacity 900ms ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.client-card .q-donut-chart.fortune-reach-chart.is-complete .completion-art {
+    opacity: 1;
+}
+
+.client-card .q-donut-chart.fortune-reach-chart text {
+    font-family: inherit;
 }
 
 .client-card .chart-note {
@@ -163,7 +194,7 @@
 
 .industry-item {
     width: 100%;
-    font-family: "neulis-neue", sans-seerif;
+    font-family: "neulis-neue", sans-serif;
 }
 
 .industry-top {
@@ -231,19 +262,29 @@
     transform: scaleY(0);
 }
 
-.client-section:not(.is-chart-visible) .industry-progress {
-    transform: scaleX(0);
+@keyframes industryProgressGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 
 .industry-progress {
     transform-origin: left center;
-    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: scaleX(0);
 }
 
-.client-section.is-chart-visible .industry-item:nth-child(1) .industry-progress { transition-delay: 0.05s; }
-.client-section.is-chart-visible .industry-item:nth-child(2) .industry-progress { transition-delay: 0.15s; }
-.client-section.is-chart-visible .industry-item:nth-child(3) .industry-progress { transition-delay: 0.25s; }
-.client-section.is-chart-visible .industry-item:nth-child(4) .industry-progress { transition-delay: 0.35s; }
+.industry-chart.is-chart-visible .industry-progress {
+    animation: industryProgressGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.industry-chart.is-chart-visible .industry-item:nth-child(1) .industry-progress { animation-delay: 0.15s; }
+.industry-chart.is-chart-visible .industry-item:nth-child(2) .industry-progress { animation-delay: 0.27s; }
+.industry-chart.is-chart-visible .industry-item:nth-child(3) .industry-progress { animation-delay: 0.39s; }
+.industry-chart.is-chart-visible .industry-item:nth-child(4) .industry-progress { animation-delay: 0.51s; }
+.industry-chart.is-chart-visible .industry-item:nth-child(5) .industry-progress { animation-delay: 0.63s; }
 
 /* ========================================
    RESPONSIVE (MEDIA QUERIES)
@@ -300,6 +341,14 @@
         animation: none !important;
         transition: none !important;
         transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .client-card .q-donut-chart.fortune-reach-chart .completion-art {
+        transition: none !important;
+    }
+
+    .client-card .q-donut-chart.fortune-reach-chart.is-complete .completion-art {
         opacity: 1 !important;
     }
 }

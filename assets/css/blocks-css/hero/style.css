@@ -10,7 +10,7 @@
     overflow: hidden;
     overflow-x: clip;
     background-color: var(--color-pure-white, #ffffff);
-    background-image: url("/../../../assets/images/hero-banner-checks-line-bg.svg");
+    background-image: url("../../../images/hero-banner-checks-line-bg.svg");
     z-index: 0;
 }
 

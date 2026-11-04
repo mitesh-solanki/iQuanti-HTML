@@ -404,13 +404,16 @@ h2,
     isolation: isolate;
     pointer-events: none;
     z-index: 0;
+    /* Keep expensive blur paint inside the section so Lenis scroll stays smooth. */
+    contain: paint;
+    transform: translateZ(0);
 }
 
 .glow-bg span {
     position: absolute;
     border-radius: 50%;
-    /* will-change: transform, opacity; */
     pointer-events: none;
+    will-change: auto;
 }
 
 .glow-bg span:nth-child(1) {
@@ -444,6 +447,28 @@ h2,
     filter: blur(95px);
     opacity: 0.5;
     animation: glow-center-drift var(--loop) ease-in-out infinite;
+}
+
+/*
+ * Must follow `animation:` shorthand (it resets play-state to running) and
+ * match :nth-child specificity so these win over the animation declarations.
+ */
+.glow-bg span:nth-child(1),
+.glow-bg span:nth-child(2),
+.glow-bg span:nth-child(3) {
+    animation-play-state: paused;
+}
+
+.glow-bg.is-glow-active span:nth-child(1),
+.glow-bg.is-glow-active span:nth-child(2),
+.glow-bg.is-glow-active span:nth-child(3) {
+    animation-play-state: running;
+}
+
+html.is-scrolling .glow-bg.is-glow-active span:nth-child(1),
+html.is-scrolling .glow-bg.is-glow-active span:nth-child(2),
+html.is-scrolling .glow-bg.is-glow-active span:nth-child(3) {
+    animation-play-state: paused;
 }
 
 @keyframes glow-top-left {
@@ -524,12 +549,12 @@ h2,
 
 @media (prefers-reduced-motion:reduce) {
     .glow-bg span {
-        animation: none
+        animation: none;
     }
 }
 
 body.motion-paused .glow-bg span {
-    animation: none
+    animation: none;
 }
 
 /* CSS Classes */
