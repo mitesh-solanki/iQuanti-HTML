@@ -1970,6 +1970,7 @@ body.contact-page {
     gap: 67px;
 }
 
+.acf-innerblocks-container, 
 .iq-contact-content-left {
     max-width: 642px;
     width: 100%;
@@ -2703,6 +2704,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 
     /* Contact Page css */
+    .acf-innerblocks-container,
     .iq-contact-content-left {
         gap: 100px;
     }
@@ -2711,7 +2713,7 @@ html:has(.media-content-popup-main:popover-open) {
         min-height: auto;
     }
 
-
+    .acf-innerblocks-container,
     .iq-contact-content-left {
         max-width: 522px;
         flex-shrink: 1;
@@ -3159,6 +3161,7 @@ html:has(.media-content-popup-main:popover-open) {
         margin-top: 0;
     }
 
+    .acf-innerblocks-container,
     .iq-contact-content-left {
         max-width: 100%;
         gap: 64px;
@@ -3439,7 +3442,7 @@ html:has(.media-content-popup-main:popover-open) {
 
 
 
-
+    .acf-innerblocks-container, 
     .iq-contact-content-left {
         gap: 48px;
     }

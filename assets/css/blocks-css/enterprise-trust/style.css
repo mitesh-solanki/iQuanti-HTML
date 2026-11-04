@@ -265,6 +265,11 @@
     }
 }
 
+@media (max-width: 1199px) {
+    .trust-card-grid {
+       grid-template-rows: 228px 300px;
+}
+}
 @media (max-width: 1023px) {
     .trust-card > strong:first-child {
         min-height: auto;
