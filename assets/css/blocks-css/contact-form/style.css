@@ -636,6 +636,10 @@ button:disabled {
     background-image: url("../../../images/iq-contact-banner-image.webp");
 }
 
+.iq-split-hero-right {
+    padding-right: 6%;
+}
+
 .iq-split-hero-section {
     position: relative;
     min-height: 766px;
