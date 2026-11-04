@@ -636,7 +636,7 @@ button:disabled {
     background-image: url("../../../images/iq-contact-banner-image.webp");
 }
 
-.iq-split-hero-right {
+.iq-contact-section .iq-split-hero-right {
     padding-right: 6%;
 }
 
@@ -647,7 +647,7 @@ button:disabled {
     overflow: visible;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
+    z-index: 1;
 }
 
 .iq-split-hero-wrapper {
@@ -977,6 +977,15 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     .iq-contact-section {
         min-height: 700px;
     }
+
+    .iq-split-hero-section .contact-form-wrapper {
+        display: flex;
+        justify-content: end;
+    }
+
+    .iq-contact-section .iq-split-hero-wrapper .iq-split-hero-right{
+        padding-right: 5%;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -1068,6 +1077,11 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
 
     .sticky-contact-form-slot {
         display: none !important;
+    }
+
+
+    .iq-contact-section .iq-split-hero-wrapper .iq-split-hero-right{
+        padding-right: 0%;
     }
 }
 

@@ -1951,6 +1951,12 @@ body.contact-page {
     overflow: hidden;
 }
 
+.iq-contact-content-section .iq-contact-content-left .acf-innerblocks-container {
+    display: flex;
+    gap: 120px;
+    flex-direction: column;
+}
+
 .iq-contact-solution,
 .iq-contact-diffrence,
 .iq-contact-growth {
@@ -2705,6 +2711,17 @@ html:has(.media-content-popup-main:popover-open) {
         min-height: auto;
     }
 
+
+    .iq-contact-content-left {
+        max-width: 522px;
+        flex-shrink: 1;
+    }
+
+    .iq-contact-content-right {
+        max-width: 442px;
+        flex-shrink: 0;
+    }
+
 }
 
 
@@ -3331,17 +3348,20 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
 
-
-
-
-
-
-
-
     .heading-wrap {
         margin-bottom: 30px !important;
     }
 
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+      .site-header.header-mode-dark .site-logo .site-logo-dark{
+        display: block;
+    }
+    .site-header.header-mode-dark .site-logo .site-logo-white{
+        display: none;
+    }
 
 
     /* -----------------------------------------

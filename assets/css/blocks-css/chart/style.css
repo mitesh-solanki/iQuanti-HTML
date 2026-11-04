@@ -136,6 +136,10 @@
     display: inline-block;
 }
 
+.client-card .q-donut-chart.fortune-reach-chart .segments {
+  transform: translate(0px, -5px);
+}
+
 .ai-core-box-wrap {
     padding: 24px;
     background-color: var(--color-elevate-gray-20);
