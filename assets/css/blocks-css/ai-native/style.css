@@ -93,7 +93,7 @@
 }
 
 .accordion-bordered .accordion-header span:first-child {
-    color: var(--color-off-white);
+    color: var(--color-cool-gray);
     font-weight: 700;
     font-size: 24px;
     line-height: 1.32;
@@ -101,7 +101,7 @@
 }
 
 .accordion-bordered .accordion-item.active span:first-child {
-    color: var(--color-cool-gray);
+     color: var(--color-q-purple);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
