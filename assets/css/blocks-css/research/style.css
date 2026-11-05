@@ -13,7 +13,23 @@
     position: relative;
     z-index: 0;
     padding-top: 0;
-    overflow: hidden;
+}
+
+.iquanti-custom-section.research-section .trust-blur-vector-left {
+    top: -28%;
+}
+
+.iquanti-custom-section.research-section .research-blurb-bg-right-center {
+    top: 12%;
+}
+
+.research-blurb-bg-left-center {
+    top: 40%;
+}
+
+.research-blurb-right-bottom {
+    right: 0;
+    bottom: -25%;
 }
 
 .research-container {

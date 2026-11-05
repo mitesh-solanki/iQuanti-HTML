@@ -315,9 +315,11 @@
 }
 
 .client-card .q-donut-chart.fortune-reach-chart svg {
-    top: 10px;
-    left: 9px;
+    top: 18px;
+    left: 12px;
+    scale: 1.05;
 }
+
 .client-card .q-donut-chart.fortune-reach-chart .completion-art {
     width: 449px;
     height: 467px;
