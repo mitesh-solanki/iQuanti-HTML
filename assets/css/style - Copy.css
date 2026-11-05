@@ -52,7 +52,7 @@
        BLUE
     ======================================== */
 
-    --color-electric-blue: #007BFF;
+    --color-electric-blue: #0070E3;
     --color-electric-blue-75: #419BFC;
     --color-electric-blue-50: #80BCFE;
     --color-electric-blue-25: #BEDDFF;
@@ -2073,7 +2073,7 @@ section {
 
 
 .trust-card-title {
-    color:  #007BFF;
+    color:  #0070E3;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -3106,7 +3106,7 @@ color: #FFFFFF;
     padding: 40px;
     border-radius: 8px;
     text-align: center;
-    background: url(../images/solutions-center-bg.webp) center / cover no-repeat, radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
+    background: url(../images/solutions-center-bg.webp) center / cover no-repeat, radial-gradient(50% 50% at 50% 50%, #0070E3 0%, #001FAB 100%);
     box-shadow: none;
 }
 
@@ -4181,7 +4181,7 @@ button:disabled {
    FOOTER TAGLINE
 ======================================== */
 .site-footer .footer-tagline-wrap {
-    background: #007BFF;
+    background: #0070E3;
     display: flex;
     justify-content: flex-end;
 }

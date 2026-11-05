@@ -194,7 +194,7 @@
     padding: 40px;
     border-radius: 14px;
     text-align: center;
-    background: radial-gradient(50% 50% at 50% 50%, #007BFF 0%, #001FAB 100%);
+    background: radial-gradient(50% 50% at 50% 50%, var(--color-electric-blue) 0%, #001FAB 100%);
     box-shadow: none;
     z-index: 0;
 }

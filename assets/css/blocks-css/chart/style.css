@@ -238,7 +238,7 @@
 }
 
 .industry-blue {
-    background: #007BFF;
+    background: var(--color-electric-blue);
 }
 
 .industry-cyan {

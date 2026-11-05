@@ -3,7 +3,7 @@
 <circle opacity="0.4" cx="326.547" cy="326.548" r="171.259" transform="rotate(15 326.547 326.548)" stroke="url(#paint1_linear_60_2317)" stroke-width="2"/>
 <circle opacity="0.4" cx="326.55" cy="326.55" r="265.627" transform="rotate(15 326.55 326.55)" stroke="url(#paint2_linear_60_2317)" stroke-width="2"/>
 <circle cx="250.006" cy="71.1003" r="9.23638" transform="rotate(15 250.006 71.1003)" fill="#FF8500" stroke="url(#paint3_linear_60_2317)"/>
-<circle cx="157.382" cy="306.814" r="9.23638" transform="rotate(15 157.382 306.814)" fill="#007BFF" stroke="url(#paint4_linear_60_2317)"/>
+<circle cx="157.382" cy="306.814" r="9.23638" transform="rotate(15 157.382 306.814)" fill="#0070E3" stroke="url(#paint4_linear_60_2317)"/>
 <circle cx="486.84" cy="269.48" r="9.23638" transform="rotate(15 486.84 269.48)" fill="#001FAB" stroke="url(#paint5_linear_60_2317)"/>
 <defs>
 <linearGradient id="paint0_linear_60_2317" x1="326.556" y1="232.191" x2="326.556" y2="420.926" gradientUnits="userSpaceOnUse">

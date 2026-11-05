@@ -156,7 +156,7 @@
 }
 
 .info-highlight-card-label span {
-    color: #007BFF;
+    color: var(--color-electric-blue);
 }
 
 .info-highlight-card-content p {
