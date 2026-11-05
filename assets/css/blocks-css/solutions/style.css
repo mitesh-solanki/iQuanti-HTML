@@ -234,7 +234,7 @@
     bottom: -35%;
     z-index: 0;
     pointer-events: none;
-    background: url("../../../images/solutions-center-bg.webp") center center / cover no-repeat;
+    background: url("../../../images/solutions-center-bg.webp") center center / auto no-repeat;
     transform: translate3d(0, var(--feature-parallax-y, 0%), 0);
     backface-visibility: hidden;
     will-change: transform;

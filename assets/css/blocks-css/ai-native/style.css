@@ -101,7 +101,7 @@
 }
 
 .accordion-bordered .accordion-item.active span:first-child {
-    color: var(--color-q-purple);
+    color: var(--color-cool-gray);
 }
 
 .accordion-bordered .accordion-header .accordion-icon {
