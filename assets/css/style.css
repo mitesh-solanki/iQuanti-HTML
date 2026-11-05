@@ -57,7 +57,7 @@
        BLUE
     ======================================== */
 
-    --color-electric-blue: ##0070E3;
+    --color-electric-blue: #0070E3;
     --color-electric-blue-75: #419BFC;
     --color-electric-blue-50: #80BCFE;
     --color-electric-blue-25: #BEDDFF;
@@ -749,7 +749,7 @@ form input::placeholder {
 }
 
 .cta-action-primary:hover {
-   background-color: #0069d9;
+   background-color: #025ec2;
 }
 
 .cta-action-white {
@@ -793,11 +793,11 @@ form input::placeholder {
     color: var(--color-electric-blue);
 }
 .cta-action-secondary:hover {
-    color: #0069d9;
+    color: #025ec2;
 }
 
 .cta-action-secondary:hover :where(img,svg) {
-    filter: brightness(0) saturate(100%) invert(31%) sepia(99%) saturate(4277%) hue-rotate(200deg) brightness(92%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(21%) sepia(70%) saturate(3189%) hue-rotate(201deg) brightness(95%) contrast(98%);
 }
 
 .cta-action-secondary.cta-action-secondary-dark-mode {
