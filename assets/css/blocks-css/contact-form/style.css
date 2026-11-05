@@ -946,6 +946,10 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     display: none;
 }
 
+.sticky-contact-end {
+    margin-top: -120px;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */
@@ -1121,6 +1125,10 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
 
     .iq-contact-section .iq-split-hero-wrapper .iq-split-hero-right .contact-form {
         width: 100%;
+    }
+
+    .sticky-contact-end {
+        display: none;
     }
 }
 
