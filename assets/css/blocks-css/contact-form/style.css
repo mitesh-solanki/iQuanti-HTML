@@ -994,6 +994,7 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
 
     .iq-contact-section .iq-split-hero-wrapper .iq-split-hero-right{
         padding-right: 6%;
+        margin:0 !important;
     }
 
     .iq-contact-content-grid {
@@ -1003,8 +1004,13 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     .iq-contact-content-left {
         max-width: 100%;
     }
+    
     .iq-contact-content-right {
         flex: auto;
+    }
+
+    .sticky-contact-end {
+        margin-top: -100px;
     }
 
 }
