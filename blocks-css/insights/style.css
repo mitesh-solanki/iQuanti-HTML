@@ -73,7 +73,7 @@
                 0 8px 10px -6px rgba(0, 0, 0, 0.2);
 }
 
-.info-card .info-card-innner {
+.info-card .info-card-inner {
     position: relative;
     z-index: 1;
     display: flex;
@@ -83,7 +83,7 @@
     transition: 0.3s all ease-in-out !important;
 }
 
-.insights-section .info-card .info-card-innner {
+.insights-section .info-card .info-card-inner {
     gap: 0;
     padding: 24px;
 }
