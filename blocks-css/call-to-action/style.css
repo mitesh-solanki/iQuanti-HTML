@@ -10,7 +10,7 @@
 .call-to-action-blurb-left-top {
     top: -100%;
     left: 0;
-    background-image: url("../../../assets/images/careers-cta-blurb-left-top.png");
+    background-image: url("../../assets/images/careers-cta-blurb-left-top.png");
     width: 627px;
     height: 1272px;
 }
@@ -44,7 +44,7 @@
 }
 
 .webinar-call-to-action-section {
-    background: url("../../../assets/images/cta-content-vector-bg.svg") no-repeat top/100%;
+    background: url("../../assets/images/cta-content-vector-bg.svg") no-repeat top/100%;
 }
 
 .about-us-call-to-action-section .call-to-action-content {
@@ -55,7 +55,7 @@
 
 .iq-impact-call-to-action-section {
     min-height: 596px;
-    background-image: url(../../../assets/images/iq-impact-call-to-action-checks-line-bg.svg) !important;
+    background-image: url(../../assets/images/iq-impact-call-to-action-checks-line-bg.svg) !important;
 }
 
 .iq-impact-call-to-action-section .call-to-action-blurb-center-left {

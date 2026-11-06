@@ -183,7 +183,7 @@
 }
 
 .research-card::before {
-    background: url("../../../images/slider-bg.webp");
+    background: url("../../assets/images/slider-bg.webp");
     background-position: center;
 }
 

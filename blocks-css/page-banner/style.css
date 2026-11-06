@@ -14,7 +14,7 @@
 }
 
 .our-works-banner {
-    background-image: url("../../../assets/images/our-works-banner.jpg");
+    background-image: url("../../assets/images/our-works-banner.jpg");
     align-content: center;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .about-us-banner {
-    background-image: url("../../../assets/images/about-us-banner.png");
+    background-image: url("../../assets/images/about-us-banner.png");
     background-position: bottom;
 }
 
