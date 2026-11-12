@@ -11,83 +11,303 @@ jQuery(document).ready(function ($) {
 });
 
 // Mobile Menu Js 
+
 jQuery(function ($) {
 
     var $header = $('.site-header');
     var $menuToggle = $('.menu-toggle');
     var $mobileNavigation = $('.mobile-navigation');
+    var $menuClose = $('.menu-close');
+    var $overlay = $('.overlay');
 
-    // Close menu function
-    function closeMenu() {
-        $header.removeClass('menu-open');
+    var panel = $mobileNavigation[0];
+    var isMenuOpen = false;
 
-        $mobileNavigation
-            .stop(true, true)
-            .slideUp(250);
+    // Display value used when the panel is shown (change to 'block' if the
+    // layout looks different from before)
+    var PANEL_DISPLAY = 'flex';
+    var SLIDE_DURATION = 250;
 
-        $menuToggle.attr('aria-expanded', 'false');
+    // Header children that must be inert while the menu is open
+    var HEADER_BACKGROUND = '.site-logo, .main-navigation, .header-contact, .menu-toggle';
+
+    // ========================================
+    // SLIDE ANIMATION (native, no jQuery effects)
+    // jQuery 4 slim has no .slideDown() / .slideUp() / .stop()
+    // ========================================
+
+    var currentAnimation = null;
+
+    function getDuration() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? 0
+            : SLIDE_DURATION;
     }
 
+    function cancelAnimation() {
+        if (currentAnimation) {
+            currentAnimation.cancel();
+            currentAnimation = null;
+        }
+    }
 
-    // Open / Close menu
-    $menuToggle.on('click', function () {
+    function slideDown() {
+        cancelAnimation();
 
-        if ($header.hasClass('menu-open')) {
-            closeMenu();
-        } else {
+        // Visible and focusable immediately
+        panel.style.display = PANEL_DISPLAY;
 
-            $header.addClass('menu-open');
+        var duration = getDuration();
+        if (!duration || !panel.animate) return;
 
-            $mobileNavigation
-                .stop(true, true)
-                .slideDown(250);
+        var height = panel.scrollHeight;
+        panel.style.overflow = 'hidden';
 
-            $menuToggle.attr('aria-expanded', 'true');
+        var animation = panel.animate(
+            [{ height: '0px' }, { height: height + 'px' }],
+            { duration: duration, easing: 'ease' }
+        );
+
+        currentAnimation = animation;
+        animation.onfinish = function () {
+            panel.style.overflow = '';
+            currentAnimation = null;
+        };
+    }
+
+    function slideUp() {
+        cancelAnimation();
+
+        var duration = getDuration();
+        if (!duration || !panel.animate) {
+            panel.style.display = 'none';
+            return;
         }
 
+        var height = panel.offsetHeight;
+        panel.style.overflow = 'hidden';
+
+        var animation = panel.animate(
+            [{ height: height + 'px' }, { height: '0px' }],
+            { duration: duration, easing: 'ease' }
+        );
+
+        currentAnimation = animation;
+        animation.onfinish = function () {
+            panel.style.display = 'none';
+            panel.style.overflow = '';
+            currentAnimation = null;
+        };
+    }
+
+    // ========================================
+    // INITIAL STATE (menu closed)
+    // ========================================
+
+    $mobileNavigation
+        .attr('aria-hidden', 'true')
+        .prop('inert', true);
+
+    // ========================================
+    // HELPERS
+    // ========================================
+
+    // Keyboard-focusable, visible elements inside the panel
+    function getFocusableElements() {
+        return $mobileNavigation.find(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ).filter(':visible');
+    }
+
+    // Elements we made inert (so we only undo our own changes)
+    var inertedElements = [];
+
+    // Make everything behind the panel inert.
+    // Walks up from the header to <body> and inerts every SIBLING along the
+    // way, so it works even when the header sits inside a page wrapper
+    // (the wrapper itself must NOT be inert, or the panel would be too).
+    function disableBackground() {
+        inertedElements = [];
+
+        var node = $header[0];
+        while (node && node !== document.body && node.parentNode) {
+            Array.prototype.forEach.call(node.parentNode.children, function (sibling) {
+                if (sibling !== node && !sibling.inert) {
+                    sibling.inert = true;
+                    inertedElements.push(sibling);
+                }
+            });
+            node = node.parentNode;
+        }
+
+        // Header parts other than the mobile panel / overlay
+        $header.find(HEADER_BACKGROUND).each(function () {
+            if (!this.inert) {
+                this.inert = true;
+                inertedElements.push(this);
+            }
+        });
+    }
+
+    function enableBackground() {
+        inertedElements.forEach(function (el) {
+            el.inert = false;
+        });
+        inertedElements = [];
+    }
+
+    // ========================================
+    // OPEN MENU
+    // ========================================
+
+    function openMenu() {
+        if (isMenuOpen) return;
+        isMenuOpen = true;
+
+        $header.addClass('menu-open');
+        $('body').addClass('mobile-menu-active');
+
+        // Background first, so nothing behind the panel can take focus
+        disableBackground();
+
+        // Expose the panel to keyboard and screen readers, then show it
+        $mobileNavigation
+            .prop('inert', false)
+            .attr('aria-hidden', 'false');
+
+        slideDown();
+
+        // aria-expanded carries the state, so the label stays "Open menu"
+        $menuToggle.attr('aria-expanded', 'true');
+
+        // Move focus into the panel (retry briefly in case CSS delays it)
+        var attempts = 0;
+        (function focusClose() {
+            if (!isMenuOpen) return;
+
+            $menuClose[0].focus({ preventScroll: true });
+
+            if (document.activeElement !== $menuClose[0] && attempts < 20) {
+                attempts++;
+                setTimeout(focusClose, 50);
+            }
+        })();
+    }
+
+    // ========================================
+    // CLOSE MENU
+    // ========================================
+
+    function closeMenu(restoreFocus) {
+        if (restoreFocus === undefined) restoreFocus = true;
+        if (!isMenuOpen) return;
+        isMenuOpen = false;
+
+        $header.removeClass('menu-open');
+        $('body').removeClass('mobile-menu-active');
+
+        $menuToggle.attr('aria-expanded', 'false');
+
+        // 1. Re-enable the background so the toggle can take focus
+        enableBackground();
+
+        // 2. Move focus OUT of the panel before hiding it
+        //    (aria-hidden / inert on a focused element drops focus to <body>)
+        if (restoreFocus) {
+            $menuToggle[0].focus({ preventScroll: true });
+        }
+
+        // 3. Now hide the panel from keyboard and screen readers
+        $mobileNavigation
+            .attr('aria-hidden', 'true')
+            .prop('inert', true);
+
+        slideUp();
+    }
+
+    // ========================================
+    // CLICK HANDLERS
+    // ========================================
+
+    $menuToggle.on('click', openMenu);
+
+    $menuClose.on('click', function () {
+        closeMenu();
     });
 
+    $overlay.on('click', function () {
+        closeMenu();
+    });
 
-    // Close menu when mobile link is clicked
     $mobileNavigation.find('a').on('click', function () {
         closeMenu();
     });
 
+    // ========================================
+    // KEYBOARD: ESCAPE + FOCUS TRAP
+    // ========================================
 
-    // Close menu when .menu-close or .overlay is clicked
-    $('.menu-close, .overlay').on('click', function () {
-        closeMenu();
-    });
+    $(document).on('keydown', function (event) {
+        if (!isMenuOpen) return;
 
-
-    // Close menu when clicking outside header
-    $(document).on('click', function (event) {
-
-        if (
-            $header.hasClass('menu-open') &&
-            !$(event.target).closest('.site-header').length
-        ) {
+        // Escape closes the menu
+        if (event.key === 'Escape') {
+            event.preventDefault();
             closeMenu();
+            return;
         }
 
+        // Tab / Shift+Tab stay inside the panel
+        if (event.key === 'Tab') {
+            var $focusable = getFocusableElements();
+
+            if (!$focusable.length) {
+                event.preventDefault();
+                $menuClose[0].focus();
+                return;
+            }
+
+            var first = $focusable[0];
+            var last = $focusable[$focusable.length - 1];
+            var active = document.activeElement;
+
+            // Focus is outside the panel for any reason: pull it back in
+            if (!$.contains(panel, active)) {
+                event.preventDefault();
+                (event.shiftKey ? last : first).focus();
+                return;
+            }
+
+            if (event.shiftKey && active === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && active === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        }
     });
 
-
-    // Reset menu on desktop
-    $(window).on('resize', function () {
-
-        if (window.innerWidth > 991) {
-
-            $header.removeClass('menu-open');
-
-            $mobileNavigation
-                .stop(true, true)
-                .removeAttr('style')
-                .hide();
-
-            $menuToggle.attr('aria-expanded', 'false');
+    // Safety net: if focus ever lands outside the panel, bring it back
+    $(document).on('focusin', function (event) {
+        if (
+            isMenuOpen &&
+            !$.contains(panel, event.target) &&
+            event.target !== panel
+        ) {
+            $menuClose[0].focus();
         }
+    });
 
+    // ========================================
+    // RESET ON DESKTOP
+    // ========================================
+
+    $(window).on('resize', function () {
+        if (window.innerWidth > 991 && isMenuOpen) {
+            // Don't steal focus on resize; the toggle is hidden on desktop
+            closeMenu(false);
+        }
     });
 
 });
@@ -251,8 +471,6 @@ jQuery(function ($) {
     });
 
 });
-
-
 
 
 // Vercel prototype motion parity.

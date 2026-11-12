@@ -234,7 +234,7 @@
 }
 
 .industry-orange {
-    background: #F08B34;
+    background: var(--color-primary-orange);
 }
 
 .industry-blue {

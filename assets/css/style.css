@@ -68,7 +68,7 @@
        PRIMARY ORANGE
     ======================================== */
 
-    --color-primary-orange: #FF8500;
+    --color-primary-orange: #EC6000;
     --color-primary-orange-75: #FDA341;
     --color-primary-orange-50: #FFC281;
     --color-primary-orange-25: #FFE1BF;
@@ -366,6 +366,19 @@ h2,
 }
 
 /* ========================================
+   GLOBAL CSS
+======================================== */
+.add-message-btn:focus-visible, .contact-submit:focus-visible, .cta-action:focus-visible, .footer-tagline-toggle:focus-visible, .info-card-read-more:focus-visible, .insights-more-btn:focus-visible, .menu-toggle:focus-visible {
+    outline: 2px solid var(--color-electric-blue-75, #419BFC);
+    outline-offset: 2px;
+}
+
+[tabindex]:focus-visible, a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--color-electric-blue-75, #419BFC);
+    outline-offset: 2px;
+}
+
+/* ========================================
    GLOBAL Utilities 
 ======================================== */
 
@@ -547,9 +560,9 @@ html.is-scrolling .glow-bg.is-glow-active span:nth-child(3) {
     }
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
     .glow-bg span {
-        animation: none;
+        animation: none !important;
     }
 }
 
@@ -2528,16 +2541,19 @@ html:has(.media-content-popup-main:popover-open) {
     gap: 12px;
 }
 
-/* How It Works block styles moved to acf-blocks/how-it-works/style.css for isolated loading */
 
-/* Why iQ Impact block styles moved to acf-blocks/why-iq-impact/style.css for isolated loading */
-
-
-
-/* Timeline Curve Tab styles moved to acf-blocks/how-it-works/style.css */
-
-
-
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* Media Query Start Here */
 
@@ -3688,8 +3704,14 @@ html:has(.media-content-popup-main:popover-open) {
     .site-header.is-motion-ready {
         animation: none !important;
         transition: none !important;
-        transform: none !important;
-        opacity: 1 !important;
+    }
+
+    /* Jab reduced motion on ho aur scroll par header-hidden class lage */
+    .site-header.header-hidden,
+    .site-header.is-motion-ready.header-hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
 } 
 

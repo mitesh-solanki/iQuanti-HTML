@@ -57,7 +57,7 @@
         <a href="contact.html" class="header-contact cta-action cta-action-primary">Contact Us</a>
 
         <!-- Mobile Toggle -->
-        <button class="menu-toggle" type="button" aria-label="Toggle menu">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" aria-haspopup="dialog">
             <span></span>
             <span></span>
             <span></span>
@@ -66,12 +66,12 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-navigation">
-        <button class="menu-close" type="button" aria-label="close menu">
+    <div class="mobile-navigation" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Main navigation" aria-hidden="true" inert>
+        <button class="menu-close" type="button" aria-label="Close menu">
             <span></span>
             <span></span>
         </button>
-        <nav>
+        <nav aria-label="Mobile navigation">
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
@@ -543,7 +543,7 @@
     <!-- Research section start-->
     <section id="news" class="research-section iq-pt-0">
     
-        <div class="research-container container">
+        <div class="research-container container" role="group" aria-roledescription="carousel" aria-label="Insights, research & results">
     
             <!-- Section Header -->
             <div class="research-top">
@@ -620,7 +620,79 @@
     
     
                     <!-- Slide 2 -->
-                   <div class="research-slide">
+                      <div class="research-slide">
+                            <div class="research-card has-bg-image">
+        
+                                <div class="research-content">
+                                    <span class="research-tag section-label has-white iq-mb-0">
+                                        INSIGHTS
+                                    </span>
+        
+                                    <h3>
+                                    iQuanti's Vision on AI,<br>Consumers, and What Comes Next 
+                                    </h3>
+                                    <a href="#" class="research-button cta-action cta-action-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+        
+                            </div>
+                            <div class="research-side">
+                                <span class="research-brand">
+                                <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
+                                </span>
+                                <div class="research-slide-float-image-wrap">
+                                    <div class="research-slide-float-image">
+                                        <img src="assets/images/memeber-showcase-img-1.webp" alt="">
+                                        <div class="research-slide-float-image-info">
+                                            <span class="showcase-member-name">Arnab Sen</span>
+                                            <span class="showcase-member-pos">Chief Executive Officer</span>
+                                    </div>
+                                    <div class="research-slide-float-image">
+                                        <img src="assets/images/memeber-showcase-img-2.webp" alt="">
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="research-slide">
+                            <div class="research-card has-bg-image">
+        
+                                <div class="research-content">
+                                    <span class="research-tag section-label has-white iq-mb-0">
+                                        INSIGHTS
+                                    </span>
+        
+                                      <h3>
+                                     Performance Marketing Report <br>
+                                    for Banking & Financial Services
+                                    </h3>
+                                    <a href="#" class="research-button cta-action cta-action-primary">
+                                        Learn More
+                                    </a>
+                                </div>
+        
+                                <div class="research-side">
+        
+                                    <span class="research-brand">
+                                       <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
+                                    </span>
+                                    <span class="research-slide-float-text body-text-20 body-text-bold font-neulis-neue iq-text-white">
+                                        Q3 2026 EDITION
+                                    </span>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        <!-- Slide 4 -->
+                        <div class="research-slide">
                         <div class="research-card has-bg-image">
     
                             <div class="research-content">
@@ -628,8 +700,8 @@
                                     INSIGHTS
                                 </span>
     
-                                  <h3>
-                                 Performance Marketing Report <br>
+                                    <h3>
+                                    Performance Marketing Report <br>
                                 for Banking & Financial Services
                                 </h3>
                                 <a href="#" class="research-button cta-action cta-action-primary">
@@ -640,7 +712,7 @@
                             <div class="research-side">
     
                                 <span class="research-brand">
-                                   <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
+                                    <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
                                 </span>
                                 <span class="research-slide-float-text body-text-20 body-text-bold font-neulis-neue iq-text-white">
                                     Q3 2026 EDITION
@@ -648,69 +720,6 @@
                             </div>
     
                         </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="research-slide">
-                        <div class="research-card has-bg-image">
-    
-                            <div class="research-content">
-                                <span class="research-tag section-label has-white iq-mb-0">
-                                    INSIGHTS
-                                </span>
-    
-                                  <h3>
-                                 Performance Marketing Report <br>
-                                for Banking & Financial Services
-                                </h3>
-                                <a href="#" class="research-button cta-action cta-action-primary">
-                                    Learn More
-                                </a>
-                            </div>
-    
-                            <div class="research-side">
-    
-                                <span class="research-brand">
-                                   <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
-                                </span>
-                                <span class="research-slide-float-text body-text-20 body-text-bold font-neulis-neue iq-text-white">
-                                    Q3 2026 EDITION
-                                </span>
-                            </div>
-    
-                        </div>
-                    </div>
-    
-                    <!-- Slide 4 -->
-                       <div class="research-slide">
-                        <div class="research-card has-bg-image">
-    
-                            <div class="research-content">
-                                <span class="research-tag section-label has-white iq-mb-0">
-                                    INSIGHTS
-                                </span>
-    
-                                  <h3>
-                                 Performance Marketing Report <br>
-                                for Banking & Financial Services
-                                </h3>
-                                <a href="#" class="research-button cta-action cta-action-primary">
-                                    Learn More
-                                </a>
-                            </div>
-    
-                            <div class="research-side">
-    
-                                <span class="research-brand">
-                                   <img src="./assets/images/white-IQ-symbol.svg" alt="iquanti">
-                                </span>
-                                <span class="research-slide-float-text body-text-20 body-text-bold font-neulis-neue iq-text-white">
-                                    Q3 2026 EDITION
-                                </span>
-                            </div>
-    
-                        </div>
-                    </div>
     
                 </div>
             </div>
@@ -1346,100 +1355,100 @@ Our experience and industry experts improve every journey so it stays compliant,
         </div>
 
         <!-- Insight Cards -->
-        <div class="info-card-grid">
-            <!-- Card 1 -->
-            <div class="info-card info-card-dark has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="100">
-                    <div class="info-card-inner">
-                        <span class="info-tag section-label">Uniform Services</span>
-    
-                        <h3 class="info-card-title body-text-20 body-text-bold">How UniFirst Drove <span class="highlight-text highlight-text-electric-blue">3.7X More Leads</span> with Smarter Paid Search Aligned to Business Demand</h3>
-    
-                        <p class="info-card-description body-text-14 body-text-reg">
-                            UniFirst's paid search program underwent a strategic transformation to support performance goals during a key business cycle.
-                        </p>
-    
-                        <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                            Read case study
-                            <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                        </a>
-                    </div>
-            <svg width="0" height="0" style="position:absolute">
-                <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                    <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"/>
-                    <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                    <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                    <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                    <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                    <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                    <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                    <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                    <feBlend in="rg" in2="b" mode="screen"/>
-                </filter>
-            </svg>
-            </div>
+  <div class="info-card-grid">
+    <!-- Card 1 -->
+    <div class="info-card info-card-dark has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-card-inner">
+            <span class="info-tag section-label">Uniform Services</span>
 
-            <!-- Card 2 -->
-            <div class="info-card info-card-dark has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-card-inner">
-                    <span class="info-tag section-label">Digital Banking</span>
+            <h3 class="info-card-title body-text-20 body-text-bold">How UniFirst Drove <span class="highlight-text highlight-text-electric-blue">3.7X More Leads</span> with Smarter Paid Search Aligned to Business Demand</h3>
 
-                    <h3 class="info-card-title body-text-20 body-text-bold"><span class="highlight-text highlight-text-electric-blue">152% Uplift</span> in Form Fill Starts for Laurel Road Achieved Through AI-Led LEAP Optimization Framework</h3>
+            <p class="info-card-description body-text-14 body-text-reg">
+                UniFirst's paid search program underwent a strategic transformation to support performance goals during a key business cycle.
+            </p>
 
-                    <p class="info-card-description body-text-14 body-text-reg">
-                       Laurel Road, a digital banking platform and a subsidiary of KeyBank, partnered with iQuanti to improve conversion performance.
-                    </p>
-
-                    <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                        Read case study
-                        <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                    </a>
-                </div>
-               <svg width="0" height="0" style="position:absolute">
-                   <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                       <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                       <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                       <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                       <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                       <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                       <feBlend in="rg" in2="b" mode="screen"/>
-                   </filter>
-               </svg>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="info-card info-card-dark has-glass-effect has-glass-white" data-aos="fade-up" data-aos-delay="300">
-                <div class="info-card-inner">
-                    <span class="info-tag section-label">Healthcare Finance</span>
-
-                    <h3 class="info-card-title body-text-20 body-text-bold">How Laurel Road <span class="highlight-text highlight-text-electric-blue">Reimagined Banking and Finance</span> for Healthcare Professionals</h3>
-
-                    <p class="info-card-description body-text-14 body-text-reg">
-                       A digital experience tailor-made for healthcare professionals, built around the unique financial needs of the profession.
-                    </p>
-
-                    <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                        Read case study
-                        <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                    </a>
-                </div>
-                   <svg width="0" height="0" style="position:absolute">
-                       <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                           <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"/>
-                           <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                           <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                           <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                           <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                           <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                           <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                           <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                           <feBlend in="rg" in2="b" mode="screen"/>
-                       </filter>
-                   </svg>
-            </div>
+            <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                Read case study<span class="sr-only">on how UniFirst drove 3.7X more leads with smarter paid search aligned to business demand</span>
+                <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+            </a>
         </div>
+        <svg width="0" height="0" style="position:absolute">
+            <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                <feBlend in="rg" in2="b" mode="screen"></feBlend>
+            </filter>
+        </svg>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="info-card info-card-dark has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-card-inner">
+            <span class="info-tag section-label">Digital Banking</span>
+
+            <h3 class="info-card-title body-text-20 body-text-bold"><span class="highlight-text highlight-text-electric-blue">152% Uplift</span> in Form Fill Starts for Laurel Road Achieved Through AI-Led LEAP Optimization Framework</h3>
+
+            <p class="info-card-description body-text-14 body-text-reg">
+                Laurel Road, a digital banking platform and a subsidiary of KeyBank, partnered with iQuanti to improve conversion performance.
+            </p>
+
+            <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                Read case study<span class="sr-only">on 152% uplift in form fill starts for Laurel Road achieved through AI-led LEAP optimization framework</span>
+                <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+            </a>
+        </div>
+        <svg width="0" height="0" style="position:absolute">
+            <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                <feBlend in="rg" in2="b" mode="screen"></feBlend>
+            </filter>
+        </svg>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="info-card info-card-dark has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+        <div class="info-card-inner">
+            <span class="info-tag section-label">Healthcare Finance</span>
+
+            <h3 class="info-card-title body-text-20 body-text-bold">How Laurel Road <span class="highlight-text highlight-text-electric-blue">Reimagined Banking and Finance</span> for Healthcare Professionals</h3>
+
+            <p class="info-card-description body-text-14 body-text-reg">
+                A digital experience tailor-made for healthcare professionals, built around the unique financial needs of the profession.
+            </p>
+
+            <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                Read case study<span class="sr-only">on how Laurel Road reimagined banking and finance for healthcare professionals</span>
+                <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+            </a>
+        </div>
+        <svg width="0" height="0" style="position:absolute">
+            <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                <feBlend in="rg" in2="b" mode="screen"></feBlend>
+            </filter>
+        </svg>
+    </div>
+</div>
 
         <!-- More Case Studies -->
         <div class="section-footer dark" data-aos="fade-up" data-aos-delay="200">
@@ -1474,103 +1483,103 @@ Our experience and industry experts improve every journey so it stays compliant,
         </div>
 
         <!-- Insight Cards -->
-        <div class="info-card-grid">
-            <!-- Card 1 -->
-            <div class="info-card info-card-light has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-card-inner">
-                    <span class="info-tag section-label has-white">For dark BG</span>
+            <div class="info-card-grid">
+                <!-- Card 1 -->
+                <div class="info-card info-card-light has-glass-effect has-glass-dark aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card-inner">
+                        <span class="info-tag section-label has-white">For dark BG</span>
 
-                    <h3 class="info-card-title body-text-20 body-text-bold">AI Visibility Is the New Competitive Advantage for Banks</h3>
+                        <h3 class="info-card-title body-text-20 body-text-bold">AI Visibility Is the New Competitive Advantage for Banks</h3>
 
-                    <p class="info-card-description body-text-14 body-text-reg">
-                       A new playbook for financial institutions: how to build AI-ready content, strengthen entity authority, earn trusted
-                       citations, and improve visibility in AI search.
-                    </p>
+                        <p class="info-card-description body-text-14 body-text-reg">
+                            A new playbook for financial institutions: how to build AI-ready content, strengthen entity authority, earn trusted
+                            citations, and improve visibility in AI search.
+                        </p>
 
-                    <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                        Read More
-                        <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                    </a>
+                        <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                            Read More<span class="sr-only"> about AI Visibility Is the New Competitive Advantage for Banks</span>
+                            <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+                        </a>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0" y="0" width="300" height="200" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
-                   <svg width="0" height="0" style="position:absolute">
-                   <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
-                       <feImage href="#" x="0" y="0" width="300" height="200" result="map"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                       <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                       <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                       <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                       <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                       <feBlend in="rg" in2="b" mode="screen"/>
-                   </filter>
-               </svg>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="info-card info-card-light has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="200">
-                <div class="info-card-inner">
-                    <span class="info-tag section-label has-white">Report</span>
+                <!-- Card 2 -->
+                <div class="info-card info-card-light has-glass-effect has-glass-dark aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-card-inner">
+                        <span class="info-tag section-label has-white">Report</span>
 
-                    <h3 class="info-card-title body-text-20 body-text-bold">Performance Marketing in the Age of AI: Q2 2026 Trends</h3>
+                        <h3 class="info-card-title body-text-20 body-text-bold">Performance Marketing in the Age of AI: Q2 2026 Trends</h3>
 
-                    <p class="info-card-description body-text-14 body-text-reg">
-                        AI search, social media, video, and advertising insights from the Q2 2026 Performance Marketing
-                        Report to strengthen customer acquisition.
-                    </p>
+                        <p class="info-card-description body-text-14 body-text-reg">
+                            AI search, social media, video, and advertising insights from the Q2 2026 Performance Marketing
+                            Report to strengthen customer acquisition.
+                        </p>
 
-                    <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                        Read More
-                        <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                    </a>
+                        <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                            Read More<span class="sr-only"> about Performance Marketing in the Age of AI: Q2 2026 Trends</span>
+                            <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+                        </a>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0" y="0" width="300" height="200" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
-               <svg width="0" height="0" style="position:absolute">
-                   <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
-                       <feImage href="#" x="0" y="0" width="300" height="200" result="map"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                       <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                       <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                       <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                       <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                       <feBlend in="rg" in2="b" mode="screen"/>
-                   </filter>
-               </svg>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="info-card info-card-light has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-delay="300">
-                <div class="info-card-inner">
-                    <span class="info-tag section-label has-white">Perspective</span>
+                <!-- Card 3 -->
+                <div class="info-card info-card-light has-glass-effect has-glass-dark aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-card-inner">
+                        <span class="info-tag section-label has-white">Perspective</span>
 
-                    <h3 class="info-card-title body-text-20 body-text-bold">Follow the Consumer: AI and the New Rules of Marketing</h3>
+                        <h3 class="info-card-title body-text-20 body-text-bold">Follow the Consumer: AI and the New Rules of Marketing</h3>
 
-                    <p class="info-card-description body-text-14 body-text-reg">
-                       How AI is reshaping marketing as consumer behavior evolves — iQuanti's Arnab Sen and Jonathan Gagliano discuss the new
-                       rules of engagement.
-                    </p>
+                        <p class="info-card-description body-text-14 body-text-reg">
+                            How AI is reshaping marketing as consumer behavior evolves — iQuanti's Arnab Sen and Jonathan Gagliano discuss the new
+                            rules of engagement.
+                        </p>
 
-                    <a href="#" class="info-card-read-more cta-action cta-action-primary">
-                        Read More
-                        <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
-                    </a>
+                        <a href="#" class="info-card-read-more cta-action cta-action-primary">
+                            Read More<span class="sr-only"> about Follow the Consumer: AI and the New Rules of Marketing</span>
+                            <img src="assets/images/insights-arrow-white.svg" alt="" width="15" height="15" aria-hidden="true">
+                        </a>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0" y="0" width="300" height="200" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
-                  <svg width="0" height="0" style="position:absolute">
-                   <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
-                       <feImage href="#" x="0" y="0" width="300" height="200" result="map"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"/>
-                       <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"/>
-                       <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
-                       <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
-                       <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
-                       <feBlend in="r" in2="g" mode="screen" result="rg"/>
-                       <feBlend in="rg" in2="b" mode="screen"/>
-                   </filter>
-               </svg>
             </div>
-        </div>
 
         <!-- More Insights -->
         <div class="section-footer dark"  data-aos="fade-up"  data-aos-delay="200">
@@ -2142,7 +2151,7 @@ Our experience and industry experts improve every journey so it stays compliant,
 
                 <!-- Social Links -->
                 <div class="footer-social">
-                    <a href="#" aria-label="Facebook">
+                    <a href="https://in.linkedin.com/company/iquanti-inc" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M21.9955 22.238L22.0005 22.2372V14.9022C22.0005 11.3139 21.228 8.5498 17.0331 8.5498C15.0164 8.5498 13.6631 9.65646 13.1106 10.7056H13.0523V8.8848H9.07481V22.2372H13.2164V15.6256C13.2164 13.8848 13.5464 12.2014 15.7023 12.2014C17.8264 12.2014 17.8581 14.1881 17.8581 15.7372V22.238H21.9955Z" fill="#3F4551"/>
                         <path d="M2.33071 8.88574H6.47734V22.2381H2.33071V8.88574Z" fill="#3F4551"/>
@@ -2150,7 +2159,7 @@ Our experience and industry experts improve every journey so it stays compliant,
                         </svg>
                     </a>
 
-                    <a href="#" aria-label="Instagram">
+                    <a href="https://www.instagram.com/iquanti.inc/" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M17 2.23828H7C4.24 2.23828 2 4.47828 2 7.23828V17.2383C2 19.9983 4.24 22.2383 7 22.2383H17C19.76 22.2383 22 19.9983 22 17.2383V7.23828C22 4.47828 19.76 2.23828 17 2.23828ZM12 17.2383C9.24 17.2383 7 14.9983 7 12.2383C7 9.47828 9.24 7.23828 12 7.23828C14.76 7.23828 17 9.47828 17 12.2383C17 14.9983 14.76 17.2383 12 17.2383ZM17.35 7.85828C16.8 7.85828 16.35 7.40828 16.35 6.85828C16.35 6.30828 16.8 5.85828 17.35 5.85828C17.9 5.85828 18.35 6.30828 18.35 6.85828C18.35 7.40828 17.9 7.85828 17.35 7.85828Z" fill="#3F4551"/>
                         <path d="M12 15.2383C13.6569 15.2383 15 13.8951 15 12.2383C15 10.5814 13.6569 9.23828 12 9.23828C10.3431 9.23828 9 10.5814 9 12.2383C9 13.8951 10.3431 15.2383 12 15.2383Z" fill="#3F4551"/>
@@ -2216,7 +2225,7 @@ Our experience and industry experts improve every journey so it stays compliant,
 
                     <button type="submit" class="cta-action cta-action-primary">Subscribe</button>
                 </form>
-                <svg width="0" height="0" style="position:absolute">
+                     <svg width="0" height="0" style="position:absolute">
                         <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
                             <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"/>
                             <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"/>

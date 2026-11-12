@@ -505,6 +505,7 @@ body .contact-container .contact-form-wrapper {
 .privacy-checkbox label span.privacy-policy-text {
     color: var(--color-cool-gray);
     margin-left: 8px;
+    text-decoration: underline;
 }
 
 .contact-form .privacy-message-wrap {

@@ -187,6 +187,10 @@
     background-position: center;
 }
 
+.research-slide:nth-child(2) .research-card::before {
+    background: url("../../assets/images/insight-slide-bg-2.webp");
+    background-position: center;
+}
 /* ========================================
    CARD CONTENT
 ======================================== */
@@ -266,6 +270,36 @@
     position: absolute;
     right: 24px;
     bottom: 27px;
+}
+
+
+.research-slide-float-image-wrap {
+    display:flex;
+    align-items:flex-end;
+    position: absolute;
+    bottom: -10px;
+}
+
+.research-slide-float-image-wrap .research-slide-float-image:first-child {
+    margin-right: -90px;
+}
+
+.research-slide-float-image-info {
+    padding: 9px 8px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-elevate-gray);
+    position: absolute;
+    border-radius: 5px;
+}
+.research-slide-float-image-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-elevate-gray-60);
+    z-index: -1;
+    mix-blend-mode: multiply;
 }
 /* ========================================
    SLIDE VARIATIONS
