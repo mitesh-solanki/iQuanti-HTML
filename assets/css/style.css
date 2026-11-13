@@ -179,7 +179,8 @@ h2,
 .headline-2,
 .sub-head-1,
 .sub-head-2,
-.number-headline {
+.number-headline,
+.pill-body-text-14-cap {
     font-family: "neulis-neue", sans-serif;
     margin: 0;
 }
@@ -361,8 +362,9 @@ h2,
 ======================================== */
 .pill-body-text-14-cap {
     font-size: 14px;
-    line-height: 1.714;
+    line-height: 1.7145 !important;
     text-transform: uppercase;
+    font-family: "neulis-neue", sans-serif;
 }
 
 /* ========================================
@@ -416,7 +418,7 @@ h2,
     overflow: hidden;
     isolation: isolate;
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
     /* Keep expensive blur paint inside the section so Lenis scroll stays smooth. */
     contain: paint;
     transform: translateZ(0);
@@ -646,6 +648,12 @@ body.motion-paused .glow-bg span {
 
 .iq-pblk-default {
     padding-block: 120px !important;
+}
+.iq-overflow-hidden {
+    overflow: hidden !important;
+}
+.iq-overflow-clip {
+    overflow: clip !important;
 }
 /* ========================================
    From Global CSS
@@ -944,7 +952,14 @@ form input::placeholder {
     border: 1px solid rgba(63, 69, 81, 0.4) !important;
 }
 
+.has-glass-effect.has-glass-charcoal-60 {
+    background: rgba(34, 34, 34, 0.6);
+    border: 1px solid var(--color-elevate-gray) !important;
+}
 
+.has-glass-effect.has-glass-charcoal-40 {
+    background: rgba(34, 34, 34, 0.4);
+}
 
 /* Optional: Reusable Blur Helper Classes */
 .blur-xs { --glass-blur: 2px; }
@@ -1152,12 +1167,9 @@ section {
     font-weight: 700;
 }
 
-.heading-wrap.heading-wrap-dark h2{
-    color: var(--color-pure-white);
-}
 
 .heading-wrap.heading-wrap-dark p{
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 /* ========================================
    HEADER
@@ -1252,15 +1264,9 @@ body .cls-superscript .superscript {
 
 .site-header .main-navigation a:hover,
 .site-header .main-navigation a.active {
-    color: var(--color-elevate-gray);
-    background: var(--color-pure-white);
-    font-weight: 700;
-}
-
-.site-header .main-navigation a.active {
-    color: #0E1216;
-    background: var(--color-pure-white);
-    font-weight: 500;
+    color: var(--color-electric-blue);
+    background: var(--color-off-white);
+    font-weight: 600;
 }
 
 
@@ -1588,7 +1594,8 @@ body .cls-superscript .superscript {
     margin-bottom: 0;
 }
 
-.key-tags span:not(:last-child)::after {
+.key-tags span:not(:last-child)::after,
+.key-tags.key-tags-dots-left span::before {
     content: "";
     display: inline-block;
     width: 4px;
@@ -1601,9 +1608,13 @@ body .cls-superscript .superscript {
 }
 
 .has-glass-dark .key-tags span {
-    color: var(--color-warm-gray);
+    color: var(--color-cool-gray);
 }
 
+
+.key-tags.key-tags-dots-left span::after {
+    display: none;
+}
 
 
 
@@ -2576,7 +2587,7 @@ html:has(.media-content-popup-main:popover-open) {
 
     /* Sticky Header Light Mode*/
     .site-header.sticky-header > .container{
-        padding: 5px 0 4px 24px;
+        padding: 5px 5px 5px 24px;
         background-color: var(--color-elevate-gray);
         border-radius: 112px;
         max-width: 900px;
@@ -2606,12 +2617,9 @@ html:has(.media-content-popup-main:popover-open) {
     }
 
     .site-header.sticky-header .header-contact {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
         font-size: 19px;
         line-height: 28px;
+        padding: 6px 17px;
     }
 
     /* Sticky Header Dark Mode*/

@@ -1,3 +1,8 @@
+.service-section {
+    position: relative;
+}
+
+
 /* ========================================
    SERVICE SECTION & GRID
 ======================================== */
@@ -29,7 +34,7 @@
 }
 
 .service-card .service-card-desc {
-    color: var(--color-warm-gray);
+    color: var(--color-cool-gray);
 }
 
 .service-card .service-card-header {
@@ -77,6 +82,10 @@
 
 .service-card .service-card-footer .service-card-label { 
     color: var(--color-electric-blue);
+}
+
+.service-card .key-tags {
+    row-gap: 4px;
 }
 
 /* ========================================

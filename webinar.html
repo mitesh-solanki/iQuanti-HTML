@@ -20,7 +20,7 @@
 </head>
 <body class="contact-page">
 <!-- Header Section Start -->
-<header class="site-header contact-page-header">
+<header class="site-header">
     <div class="header-container container">
 
         <!-- Logo -->
@@ -34,10 +34,11 @@
             <ul>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
+                <li class="cls-superscript"><a href="iq-impact.html">iQ.IMPACT<span class="superscript">TM</span></a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="our-works.html">Our Work</a></li>
                 <li><a href="#insights">Insights</a></li>
-                <li><a href="webinar.html" class="active">Careers</a></li>
+                <li><a href="webinar.html">Careers</a></li>
             </ul>
         </nav>
 
@@ -45,7 +46,7 @@
         <a href="contact.html" class="header-contact cta-action cta-action-primary">Contact Us</a>
 
         <!-- Mobile Toggle -->
-        <button class="menu-toggle" type="button" aria-label="Toggle menu">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" aria-haspopup="dialog">
             <span></span>
             <span></span>
             <span></span>
@@ -54,12 +55,12 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-navigation">
-        <button class="menu-close" type="button" aria-label="close menu">
+    <div class="mobile-navigation" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Main navigation" aria-hidden="true" inert>
+        <button class="menu-close" type="button" aria-label="Close menu">
             <span></span>
             <span></span>
         </button>
-        <nav>
+        <nav aria-label="Mobile navigation">
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
@@ -75,7 +76,6 @@
     <div class="overlay"></div>
 </header>
 <!-- Header Section End -->
-
 <!--webinar hero section start-->
 <section class="iq-split-hero-section webinar-hero-section has-header-space">
 
@@ -540,22 +540,6 @@
     AOS.init({
     });
   </script>
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-        document.querySelectorAll('[data-aos]').forEach(function (element, index) {
-            element.setAttribute('data-aos-delay', index * 200);
-        });
-
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out-cubic',
-            offset: 0
-        });
-
-    });
-  </script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="assets/js/custom.js"></script>

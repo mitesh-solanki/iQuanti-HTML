@@ -15,31 +15,33 @@
 </head>
 <body class="about-us-page bg-pure-white">
 <!-- Header Section Start -->
-<header class="site-header contact-page-header has-header-white">
+<header class="site-header">
     <div class="header-container container">
 
         <!-- Logo -->
-        <a href="#" class="site-logo">
-        <img src="assets/images/Iquanti-logo.svg" alt="">
+        <a href="index.html" class="site-logo">
+            <img class="site-logo-dark" src="assets/images/Iquanti-logo.svg" alt="Iquanti logo dark">
+            <img class="site-logo-white" src="assets/images/IQ-logo-main-white.svg" alt="Iquanti logo white">
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="main-navigation">
             <ul>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
+                <li class="cls-superscript"><a href="iq-impact.html">iQ.IMPACT<span class="superscript">TM</span></a></li>
                 <li><a href="#products">Products</a></li>
-                <li><a href="#our-work">Our Work</a></li>
+                <li><a href="our-works.html">Our Work</a></li>
                 <li><a href="#insights">Insights</a></li>
-                <li><a href="#careers">Careers</a></li>
+                <li><a href="webinar.html">Careers</a></li>
             </ul>
         </nav>
 
         <!-- Contact Button -->
-        <a href="#contact" class="header-contact cta-action cta-action-primary">Contact Us</a>
+        <a href="contact.html" class="header-contact cta-action cta-action-primary">Contact Us</a>
 
         <!-- Mobile Toggle -->
-        <button class="menu-toggle" type="button" aria-label="Toggle menu">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" aria-haspopup="dialog">
             <span></span>
             <span></span>
             <span></span>
@@ -48,12 +50,12 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-navigation">
-        <button class="menu-close" type="button" aria-label="close menu">
+    <div class="mobile-navigation" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Main navigation" aria-hidden="true" inert>
+        <button class="menu-close" type="button" aria-label="Close menu">
             <span></span>
             <span></span>
         </button>
-        <nav>
+        <nav aria-label="Mobile navigation">
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#solutions">Solutions</a></li>
@@ -63,7 +65,7 @@
                 <li><a href="#careers">Careers</a></li>
             </ul>
 
-            <a href="#" class="mobile-contact cta-action cta-primary">Contact Us</a>
+            <a href="#" class="mobile-contact cta-action cta-action-primary">Contact Us</a>
         </nav>
     </div>
     <div class="overlay"></div>
