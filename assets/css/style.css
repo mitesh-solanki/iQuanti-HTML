@@ -1228,7 +1228,7 @@ section {
     margin: 0;
     padding: 4px;
     background: var(--color-elevate-gray);
-    gap: 5px;
+    gap: 4px;
     border-radius: 100px;
 }
 
