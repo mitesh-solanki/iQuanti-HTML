@@ -20,7 +20,8 @@
 }
 
 .hero-section .section-label-sup {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    line-height: 1.246;
 }
 
 .hero-section .section-label-sup sup {
@@ -197,7 +198,6 @@
 .hero-grid .hero-content h1 {
     margin-bottom: 24px;
     letter-spacing: -1.8px;
-    line-height: 1.1875;
 }
 
 .hero-grid .hero-content .hero-description {
@@ -321,7 +321,7 @@
 
 .hero-grid.iq-justify-content-center .hero-content {
     width: 100%;
-    max-width: 677px;
+    max-width: 699px;
     text-align: center;
 }
 
@@ -363,6 +363,8 @@
     display: block;
     position: absolute;
     background-size: contain;
+    bottom: 0;
+    left: 0;
 }
 /* Hero Artwork Floating Animation */
 
@@ -403,6 +405,7 @@
     .hero-section {
         padding-block: 147px 90px;
     }
+
 }
 
 @media (min-width: 1380px) {
@@ -416,8 +419,11 @@
     }
 
     .iq-impact-hero-section {
-        min-height: 772px;
+        min-height: 800px;
+        align-items: flex-start;
+        padding-block: 208px 90px;
     }
+
 }
 
 @media (max-width: 1380px) {

@@ -13,6 +13,10 @@
     flex-direction: column;
 }
 
+.home-hero-section .hero-grid .hero-content h1 {
+    line-height: 1.1875;
+}
+
 .our-works-banner {
     background-image: url("../../assets/images/our-works-banner.jpg");
     align-content: center;
