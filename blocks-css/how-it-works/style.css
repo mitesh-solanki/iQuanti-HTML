@@ -162,7 +162,7 @@
     border-block: 0;
     position: relative;
     font-family: area-normal, system-ui, sans-serif;
-    padding: 28px 0px;
+    padding: 48px 0px;
 }
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3)::before {
@@ -210,7 +210,7 @@
 }
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active:nth-child(3):has(.timeline-curve-tab-label-description)::before {
-    background-image: url("../../assets/images/curve-outside-tab-vector-rec.svg");
+    background-image: url("../../assets/images/curve-outside-tab-vector-rec-test.svg")
 }
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-icon {
@@ -327,7 +327,7 @@
 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) {
         padding: 40px 0;
-        margin: -32px 0 0 24px;
+        margin: -32px 0 0 24px !important;
     }
 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-label {
@@ -408,6 +408,10 @@
         border: 1px solid var(--color-warm-gray) !important;
         border-radius: 8px;
         display: grid !important;
+    }
+    
+     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n){
+        margin: 0 !important;
     }
 
     .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label-description {
