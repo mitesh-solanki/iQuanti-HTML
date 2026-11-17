@@ -391,6 +391,12 @@
     text-align: center;
 }
 
+
+/* Our Woks Hero Section CSS*/
+.our-works-hero-section .hero-grid .hero-content {
+    width: 58.3333%;
+}
+
 /* ==========================================================
    RESPONSIVE / MEDIA QUERIES
    ========================================================== */
@@ -410,7 +416,7 @@
 
 @media (min-width: 1380px) {
     .hero-section {
-        min-height: 789px;
+        min-height: 800px;
     }
 
     .hero-Q-blurb-bg {
@@ -419,7 +425,6 @@
     }
 
     .iq-impact-hero-section {
-        min-height: 800px;
         align-items: flex-start;
         padding-block: 208px 90px;
     }

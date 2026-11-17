@@ -8,9 +8,7 @@
     align-items: center;
     gap: 12px;
     padding: 12px;
-    border: 1px solid var(--color-warm-gray);
-    border-radius: 100px;
-    background: var(--color-off-white);
+    border-radius: 100px !important;
 }
 
 .pill-switch .cta-action {
@@ -49,11 +47,11 @@
     align-items: center;
     justify-content: center;
     padding: 8px 24px;
-    border: 1px solid var(--color-warm-gray);
+    border: 1px solid var(--color-elevate-gray-40);
     border-radius: 100px;
     background: transparent;
     font-family: area-normal, sans-serif;
-    color: #5B5D61;
+    color: var(--color-slate-grey);
     cursor: pointer;
     transition: all 0.25s ease;
 }
@@ -96,14 +94,14 @@
 }
 
 .media-content-card .media-content-card-body {
-    padding: 30px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
 .media-content-card .media-content-card-title {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -153,7 +151,7 @@
 /* Media Content Card Grid & Component */
 .content-showcase-section .media-content-card-grid {
     width: 100%;
-    margin-top: 43px;
+    margin-top: 32px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 24px;
@@ -161,7 +159,7 @@
 
 .content-showcase-section .section-footer {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 16px;
 }
 
 /* ========================================
@@ -169,9 +167,7 @@
 ======================================== */
 
 @media (min-width: 1200px) {
-    .content-showcase-section {
-        padding-block: 70px 110px;
-    }
+
 }
 
 @media (max-width: 1199px) {

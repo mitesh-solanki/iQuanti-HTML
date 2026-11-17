@@ -535,7 +535,7 @@ h2,
     gap: 12px;
     padding: 12px;
     border: 1px solid var(--color-warm-gray);
-    border-radius: 100px;
+    border-radius: 100px !important;
     background: var(--color-off-white);
 }
 
