@@ -317,18 +317,10 @@
         margin-top: 16px;
     }
 
-    .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item {
-        padding-bottom: 32px;
-    }
-
     .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
         left: 20px;
     }
 
-    .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) {
-        padding: 40px 0;
-        margin: -32px 0 0 24px !important;
-    }
 
     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n) .timeline-curve-tab-label {
         font-size: 18px;
@@ -410,9 +402,6 @@
         display: grid !important;
     }
     
-     .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3n){
-        margin: 0 !important;
-    }
 
     .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item .timeline-curve-tab-label-description {
         display: block;

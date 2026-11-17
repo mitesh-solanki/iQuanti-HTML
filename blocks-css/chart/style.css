@@ -78,7 +78,7 @@
 ======================================== */
 
 .client-card h3 {
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .client-card .q-donut-chart {
@@ -128,7 +128,7 @@
 }
 
 .client-card .chart-note {
-    color: var(--color-off-white);
+    color: var(--color-smoke-white);
 }
 
 .client-card .chart-note span {
@@ -177,7 +177,7 @@
 }
 
 .company-overview > .company-overview-item .company-overview-content p { 
-    color: var(--color-off-white);
+    color: var(--color-smoke-white);
 }
 
 .company-overview > .company-overview-item:first-child {
@@ -213,11 +213,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .industry-top span:last-child {
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .industry-track {

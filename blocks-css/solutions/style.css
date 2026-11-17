@@ -293,7 +293,7 @@
 .feature-card .feature-powered {
     margin: 0 0 20px;
     font-family: area-normal, sans-serif;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 .feature-card .impact-badge {

@@ -4553,7 +4553,12 @@ body.contact-page {
 
 .iq-split-hero-wrapper .contact-detail-wrapper {
     margin-top: 64px;
-}   
+}
+
+
+.iq-contact-section {
+    grid-template-columns: 39.365% 43.73016%;
+}
 
 .contact-detail-wrapper {
     display: flex;

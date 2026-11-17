@@ -27,17 +27,6 @@ Case Study Section =====================*/
     text-align: center;
 }
 
-/* Info Card Light Widget */
-
-.info-card.info-card-dark .info-card-inner .info-card-title {
-    margin: 0 0 16px;
-    max-height: 88px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    color: var(--color-elevate-gray);
-}
 
 .case-studies-section .info-card .info-card-description {
     max-height: 72px;

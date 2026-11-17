@@ -502,7 +502,7 @@ body .contact-container .contact-form-wrapper {
     color: var(--color-off-white);
 }
 
-.privacy-checkbox label span.privacy-policy-text {
+.privacy-checkbox label .privacy-policy-text {
     color: var(--color-cool-gray);
     margin-left: 8px;
     text-decoration: underline;

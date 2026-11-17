@@ -332,7 +332,6 @@ jQuery(function ($) {
 
 
 // Slider js //
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const sliderTrack = document.querySelector(".research-track");
@@ -425,9 +424,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
-
-
 
 
 // Our Works Filters

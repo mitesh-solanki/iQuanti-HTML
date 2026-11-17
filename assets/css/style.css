@@ -760,6 +760,11 @@ form input::placeholder {
     font-family: "neulis-neue", sans-seerif;
 }
 
+
+.cta-action span {
+    font-family: "neulis-neue", sans-seerif;
+}
+
 .cta-action svg,
 .cta-action img {
     position: relative;
@@ -1615,7 +1620,7 @@ body .cls-superscript .superscript {
 }
 
 .has-glass-dark .key-tags span {
-    color: var(--color-cool-gray);
+    color: var(--color-smoke-white);
 }
 
 
