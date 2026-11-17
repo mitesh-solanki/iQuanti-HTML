@@ -2016,7 +2016,6 @@ body.contact-page {
 }
 
 .iq-contact-content-right {
-    background: url(../images/contact-right-bg.webp) no-repeat;
     height: auto;
     max-width: 551px;
     width: 100%;
@@ -2764,12 +2763,12 @@ html:has(.media-content-popup-main:popover-open) {
 
     .acf-innerblocks-container,
     .iq-contact-content-left {
-        max-width: 522px;
+        max-width: 53%;
         flex-shrink: 1;
     }
 
     .iq-contact-content-right {
-        max-width: 442px;
+        max-width: none;
         flex-shrink: 0;
     }
 

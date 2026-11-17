@@ -730,3 +730,321 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })(window);
  
+
+
+// Sticky Contact Form JS 
+(function (window, document) {
+    'use strict';
+
+    var MQ = '(min-width: 1024px)';
+    var TOP_GAP = 24;
+    var BOTTOM_GAP = 0; // Bottom ki extra space hatane ke liye 0 kiya gaya hai
+    var END_CLASS = 'sticky-contact-end';
+    var HEADER_MOTION_MS = 350;
+
+    function initStickyContactForm(form) {
+        if (!form || form.getAttribute('data-sticky-contact-init') === 'true') {
+            return;
+        }
+
+        form.setAttribute('data-sticky-contact-init', 'true');
+
+        var footer = document.querySelector('.site-footer');
+        var header = document.querySelector('.site-header');
+        var media = window.matchMedia(MQ);
+        var slot = document.createElement('div');
+        slot.className = 'sticky-contact-form-slot';
+        slot.setAttribute('aria-hidden', 'true');
+        form.parentNode.insertBefore(slot, form);
+
+        var metrics = {
+            top: 0,
+            left: 0,
+            width: 0,
+            height: 0
+        };
+        var ticking = false;
+        var headerMotionUntil = 0;
+        var headerMotionRaf = 0;
+        var lenisBound = false;
+
+        function clearPinned() {
+            form.classList.remove('is-sticky-fixed', 'is-sticky-bottom', 'has-scroll-bg');
+            form.style.position = '';
+            form.style.top = '';
+            form.style.left = '';
+            form.style.width = '';
+            form.style.marginLeft = '';
+            form.style.maxHeight = '';
+            slot.style.display = '';
+            slot.style.height = '';
+            slot.style.width = '';
+        }
+
+        function headerOffset() {
+            if (!header) {
+                header = document.querySelector('.site-header');
+            }
+            if (!header) {
+                return TOP_GAP;
+            }
+
+            if (
+                header.classList.contains('header-hidden') &&
+                performance.now() >= headerMotionUntil
+            ) {
+                return TOP_GAP;
+            }
+
+            var bottom = Math.ceil(header.getBoundingClientRect().bottom);
+            if (bottom <= 0) {
+                return TOP_GAP;
+            }
+
+            return bottom + 12;
+        }
+
+        function boundaryStopY(el, formHeight, scrollY, useBottom, gap) {
+            if (!el) {
+                return Number.POSITIVE_INFINITY;
+            }
+            var rect = el.getBoundingClientRect();
+            var edgeY = useBottom
+                ? rect.bottom + scrollY
+                : rect.top + scrollY;
+            return edgeY - formHeight - gap;
+        }
+
+        function resolveStopY(formHeight, scrollY, startY) {
+            var stopY = Number.POSITIVE_INFINITY;
+            var customSel = form.getAttribute('data-sticky-end');
+
+            if (customSel) {
+                try {
+                    var customEl = document.querySelector(customSel);
+                    var candidate = boundaryStopY(
+                        customEl,
+                        formHeight,
+                        scrollY,
+                        true,
+                        BOTTOM_GAP
+                    );
+                    if (candidate > startY) {
+                        stopY = Math.min(stopY, candidate);
+                    }
+                } catch (err) {
+                    // Invalid selector
+                }
+            }
+
+            var endNodes = document.querySelectorAll('.' + END_CLASS);
+            for (var i = 0; i < endNodes.length; i++) {
+                var candidateEnd = boundaryStopY(
+                    endNodes[i],
+                    formHeight,
+                    scrollY,
+                    true,
+                    BOTTOM_GAP
+                );
+                if (candidateEnd > startY) {
+                    stopY = Math.min(stopY, candidateEnd);
+                }
+            }
+
+            // Footer ke upar thoda gap (TOP_GAP) banaye rakhega
+            var candidateFooter = boundaryStopY(
+                footer,
+                formHeight,
+                scrollY,
+                false,
+                TOP_GAP
+            );
+            if (candidateFooter > startY) {
+                stopY = Math.min(stopY, candidateFooter);
+            }
+
+            return stopY;
+        }
+
+        function measure() {
+            clearPinned();
+            if (!media.matches) {
+                return;
+            }
+
+            var rect = form.getBoundingClientRect();
+            metrics.top = rect.top + window.pageYOffset;
+            metrics.left = rect.left + window.pageXOffset;
+            metrics.width = rect.width;
+            metrics.height = rect.height;
+        }
+
+        function update() {
+            if (!media.matches) {
+                clearPinned();
+                return;
+            }
+
+            var scrollY = window.pageYOffset;
+            if (
+                window.iquantiLenis &&
+                typeof window.iquantiLenis.scroll === 'number'
+            ) {
+                scrollY = Math.max(0, window.iquantiLenis.scroll);
+            }
+
+            var topOffset = headerOffset();
+            var heroSection = form.closest('.iq-split-hero-section, .iq-contact-section');
+            var nextSection = document.querySelector('.iq-contact-content-section') || (heroSection ? heroSection.nextElementSibling : null);
+            var inNextSection = false;
+
+            if (nextSection) {
+                var nextRect = nextSection.getBoundingClientRect();
+                if (nextRect.top <= topOffset + 60) {
+                    inNextSection = true;
+                }
+            } else if (heroSection) {
+                var heroRect = heroSection.getBoundingClientRect();
+                if (heroRect.bottom <= topOffset + (metrics.height / 2)) {
+                    inNextSection = true;
+                }
+            }
+
+            var pad = 20;
+            var padX = inNextSection ? pad : 0;
+
+            if (inNextSection) {
+                form.classList.add('has-scroll-bg');
+            } else {
+                form.classList.remove('has-scroll-bg');
+            }
+
+            var start = metrics.top - topOffset;
+
+            if (scrollY < start) {
+                clearPinned();
+                return;
+            }
+
+            slot.style.display = 'block';
+            slot.style.height = metrics.height + 'px';
+            slot.style.width = metrics.width + 'px';
+
+            form.classList.add('is-sticky-fixed');
+            form.style.position = 'fixed';
+            form.style.left = (metrics.left - padX) + 'px';
+            form.style.width = (metrics.width + (padX * 2)) + 'px';
+            form.style.marginLeft = '0';
+            form.style.maxHeight =
+                'calc(100vh - ' + (topOffset + TOP_GAP) + 'px)';
+
+            // has-scroll-bg lagne ke baad actual rendered height measure karein
+            var formHeight = form.getBoundingClientRect().height || metrics.height;
+            var stopY = resolveStopY(formHeight, scrollY, start);
+
+            if (scrollY + topOffset >= stopY) {
+                form.classList.add('is-sticky-bottom');
+                form.style.top = (stopY - scrollY) + 'px';
+            } else {
+                form.classList.remove('is-sticky-bottom');
+                form.style.top = topOffset + 'px';
+            }
+        }
+
+        function requestUpdate() {
+            if (ticking) {
+                return;
+            }
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                ticking = false;
+                update();
+            });
+        }
+
+        function followHeaderMotion() {
+            headerMotionUntil = performance.now() + HEADER_MOTION_MS;
+            if (headerMotionRaf) {
+                return;
+            }
+
+            function tick() {
+                update();
+                if (performance.now() < headerMotionUntil) {
+                    headerMotionRaf = window.requestAnimationFrame(tick);
+                } else {
+                    headerMotionRaf = 0;
+                    update();
+                }
+            }
+
+            headerMotionRaf = window.requestAnimationFrame(tick);
+        }
+
+        function onResize() {
+            measure();
+            update();
+        }
+
+        function onHeaderClassChange() {
+            followHeaderMotion();
+        }
+
+        function bindLenisScroll() {
+            if (
+                lenisBound ||
+                !window.iquantiLenis ||
+                typeof window.iquantiLenis.on !== 'function'
+            ) {
+                return !!lenisBound;
+            }
+            window.iquantiLenis.on('scroll', requestUpdate);
+            lenisBound = true;
+            return true;
+        }
+
+        function watchLenis() {
+            if (bindLenisScroll()) {
+                return;
+            }
+
+            document.addEventListener('iquanti:lenisready', function onReady() {
+                document.removeEventListener('iquanti:lenisready', onReady);
+                bindLenisScroll();
+            });
+        }
+
+        measure();
+        update();
+        watchLenis();
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('resize', onResize);
+        if (typeof media.addEventListener === 'function') {
+            media.addEventListener('change', onResize);
+        } else if (typeof media.addListener === 'function') {
+            media.addListener(onResize);
+        }
+
+        if (header && typeof window.MutationObserver === 'function') {
+            var observer = new window.MutationObserver(onHeaderClassChange);
+            observer.observe(header, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+        }
+    }
+
+    function boot() {
+        var forms = document.querySelectorAll('.sticky-contact-form');
+        for (var i = 0; i < forms.length; i++) {
+            initStickyContactForm(forms[i]);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot);
+    } else {
+        boot();
+    }
+})(window, document);
