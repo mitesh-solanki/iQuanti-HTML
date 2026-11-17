@@ -364,7 +364,7 @@
     .how-it-works-section.how-it-works-scroll {
         height: auto;
         min-height: auto;
-        overflow: visible;
+        overflow: clip;
     }
 
     .how-it-works-section.how-it-works-scroll .container[data-how-it-works-stage] {

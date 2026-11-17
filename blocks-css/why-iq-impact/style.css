@@ -113,6 +113,7 @@
     .split-content-grid-right .display-card.has-lottie:nth-child(4) .display-card-lottie svg {
         width: 85% !important;
         height: 85% !important;
+        margin-left: auto;
     }
 }
 
