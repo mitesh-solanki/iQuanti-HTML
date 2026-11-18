@@ -37,3 +37,9 @@
 .image_slider .section-label span {
     text-transform: none;
 }
+
+.research-slide-picture {
+    display: block;
+    width: 100%;
+    line-height: 0;
+}

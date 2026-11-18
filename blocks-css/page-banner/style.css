@@ -52,9 +52,98 @@
     color: var(--color-ice-blue);
 }
 
+.spotlight-banner-section  {
+    min-height: 800px;
+    overflow: hidden;
+}
+
 .spotlight-banner-section.iq-content-start .spotlight-banner-content {
     margin-top: 30px;
 }
+
+.spotlight-banner-section .iq-outline-vector {
+    width: 244px;
+    height: 192px;
+    position: absolute;
+    right: 30%;
+    bottom: 10%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.spotlight-banner-section .iq-outline-vector img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Our Woks Hero Section CSS*/
+.our-works-hero-section {
+    position: relative;
+}
+
+.our-works-hero-section::before,
+.spotlight-banner-section .iq-outline-vector {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.our-works-hero-section::before {
+    content: "";
+    width: 866px;
+    height: 861px;
+    background-image: url("../../assets/images/our-works-orbit-animation-bg.webp");
+    right: -25%;
+    top: -25%;
+}
+
+
+.our-works-hero-section .blurb-bg-center-center {
+    left: 0;
+}
+
+.our-works-hero-section .spotlight-banner-content {
+    width: 58.3333%;
+}
+
+.our-works-hero-section .blurb-bg-right-center {
+    right: 0;
+    top: 0;
+}
+
+.our-works-hero-section .spotlight-banner-content > h1 {
+    margin-bottom: 24px;
+}
+
+.our-works-hero-section .spotlight-banner-content p {
+    max-width: 647px;
+}
+.our-works-hero-section .spotlight-banner-content .cta-action {
+    margin-top: 40px;
+}
+
+body.our-works-page {
+    position: relative;
+}
+
+body.our-works-page::before {
+    content: "";
+    background: url(../../assets/images/our-works-checks-line-bg.svg);
+    background-color: #FFF;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.62;
+}
+
+
 
 /* ========================================
    RESPONSIVE
@@ -63,6 +152,18 @@
 @media (max-width: 1380px) {
     .banner-main {
         min-height: 90vh;
+    }
+    
+    .our-works-hero-section::before {
+        width: 52%;
+    }
+
+    .spotlight-banner-section .iq-outline-vector {
+        width: 204px;
+        height: 152px;
+    }
+    .spotlight-banner-section {
+        min-height: auto;
     }
 }
 
@@ -95,6 +196,12 @@
         margin-top: 0;
     }
 
+    .spotlight-banner-section .iq-outline-vector::after {
+        width: 25%;
+        height: 25%;
+        right: 0;
+    }
+
     .our-works-banner {
         background-position: right 50% center;
     }
@@ -110,6 +217,21 @@
     .about-us-banner .banner-content {
         max-width: 584px;
     }
+
+    
+    .our-works-hero-section .spotlight-banner-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .our-works-hero-section .spotlight-banner-content > * {
+        text-align: center;
+    }
+
+    .our-works-hero-section::before {
+        display: none;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -120,4 +242,16 @@
     .our-works-banner .banner-content {
         gap: 24px;
     }
+    
+    .spotlight-banner-section .iq-outline-vector::after {
+        width: 35%;
+        height: 35%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        bottom: auto;
+        right: auto;
+        opacity: 0.7;
+    }
+
 }

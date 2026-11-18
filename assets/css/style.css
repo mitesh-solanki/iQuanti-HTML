@@ -609,6 +609,10 @@ body.motion-paused .glow-bg span {
     justify-content: center;
 }
 
+.iq-align-content-center {
+    align-content: center;
+}
+
 .iq-display-block {
     display: block !important;
 }
@@ -954,6 +958,11 @@ form input::placeholder {
 .has-glass-white::before {
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   box-shadow: inset 5px 6px 16px #f2f2f2, inset -10px -10px 5px #ffffff;
+}
+
+
+.cta-action-white.has-glass-effect::before {
+    box-shadow: inset 5px 6px 16px #f2f2f2, inset 0px 0 5px #ffffff;
 }
 
 /* Modifier: Dark Glass (Figma me jo #3F4551 60% hai) */
@@ -2061,11 +2070,6 @@ body.contact-page {
 
 
 /* Our Works Page */
-.our-wroks-checks-line-bg-sec-wrap {
-    background-image: url("../images/our-wroks-sec-wrap-checks-line-bg.svg");
-    background-position: right;
-}
-
 .has-content-light > * {
     color: var(--color-pure-white);
 }

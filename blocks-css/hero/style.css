@@ -392,44 +392,7 @@
 }
 
 
-/* Our Woks Hero Section CSS*/
-.our-works-hero-section {
-    position: relative;
-}
 
-.our-works-hero-section::before,
-.our-works-hero-section::after {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-}
-
-.our-works-hero-section::before {
-    content: "";
-    width: 866px;
-    height: 861px;
-    background-image: url("../../assets/images/our-works-orbit-animation-bg.webp");
-    right: -25%;
-    top: -25%;
-}
-
-.our-works-hero-section::after {
-    width: 244px;
-    height: 192px;
-    background-image: url("../../assets/images/Iq-outline-gray-vector.webp");
-    right: 30%;
-    bottom: 10%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.our-works-hero-section .blurb-bg-center-center {
-    left: 0;
-}
-
-.our-works-hero-section .hero-grid .hero-content {
-    width: 58.3333%;
-}
 
 /* ==========================================================
    RESPONSIVE / MEDIA QUERIES
@@ -492,14 +455,6 @@
         transform: translate3d(0, 10px, 0) !important;
     }
 
-    .our-works-hero-section::before {
-        width: 52%;
-    }
-
-    .our-works-hero-section::after {
-        width: 204px;
-        height: 152px;
-    }
 }
 
 @media (max-width: 1199px) {
@@ -570,19 +525,6 @@
         margin-inline: auto;
     }
 
-    .our-works-hero-section .hero-grid .hero-content {
-        width: 100%;
-    }
-
-    .our-works-hero-section::before {
-        display: none;
-    }
-
-    .our-works-hero-section::after {
-        width: 25%;
-        height: 25%;
-        right: 0;
-    }
 }
 
 @media (max-width: 767px) {
@@ -603,16 +545,7 @@
         width: 100%;
     }
 
-        .our-works-hero-section::after {
-        width: 35%;
-        height: 35%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        bottom: auto;
-        right: auto;
-        opacity: 0.7;
-    }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
