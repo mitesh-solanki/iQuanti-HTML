@@ -4526,11 +4526,6 @@ body.contact-page {
     margin-left: auto;
 }
 
-.iq-split-hero-section .contact-form-wrapper.sticky-contact-form {
-    position: sticky;
-    top:0;
-}
-
 .iq-split-contact-form.contact-form {
     background-color: #22222260;
     backdrop-filter: blur(8px);

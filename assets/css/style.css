@@ -70,6 +70,7 @@
     ======================================== */
 
     --color-primary-orange: #EC6000;
+    --color-primary-light-orange: #FF8500;
     --color-primary-orange-75: #FDA341;
     --color-primary-orange-50: #FFC281;
     --color-primary-orange-25: #FFE1BF;
@@ -1605,14 +1606,12 @@ body .cls-superscript .superscript {
 }
 
 .key-tags span {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 8px;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     color: var(--color-dark-charcoal);
+    display: contents;
 }
 
 .key-tags:last-child {
@@ -1628,14 +1627,13 @@ body .cls-superscript .superscript {
     border-radius: 50%;
     background: var(--color-primary-orange);
     flex-shrink: 0;
-    top: 10px;
+    top: 3px;
     position: relative;
 }
 
 .has-glass-dark .key-tags span {
     color: var(--color-smoke-white);
 }
-
 
 .key-tags.key-tags-dots-left span::after {
     display: none;
@@ -2595,6 +2593,16 @@ html:has(.media-content-popup-main:popover-open) {
     -webkit-line-clamp: 3;
     color: var(--color-elevate-gray);
 }
+
+ .has-dark-bg .key-tags span:not(:last-child)::after,
+ .has-dark-bg .key-tags .key-tags-dots-left span::before {
+    background-color: var(--color-primary-light-orange);
+ }
+
+ .has-dark-bg .highlight-text-orange,
+  .dark-bg-orange-text {
+    color: var(--color-primary-light-orange) !important;
+ }
 
 
 

@@ -126,6 +126,9 @@ body .contact-container .contact-form-wrapper {
     overflow: hidden;
 }
 
+.contact-form.has-glass-effect {
+    backdrop-filter: blur(2.8px) brightness(1.06);
+}
 /* Form Header */
 .contact-form-header {
     margin-bottom: 0;
