@@ -76,10 +76,14 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     display: grid;
+    height: 100%;
 }
+
 .media-content-card-front {
     z-index: 2;
     transform: rotateY(0deg);
+    display: flex;
+    flex-direction: column;
 }
 
 .media-content-card-back {
