@@ -77,6 +77,11 @@
     height: 100%;
 }
 
+.spotlight-banner-section .blurb-bg-top-left {
+    top: 0;
+    left: 0;
+}
+
 
 /* Our Woks Hero Section CSS*/
 .our-works-hero-section {
