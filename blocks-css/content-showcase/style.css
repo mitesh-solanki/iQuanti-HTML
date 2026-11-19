@@ -91,6 +91,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .3s ease-in-out;
+}
+
+
+.media-content-card:hover .media-content-card-media img {
+    transform:scale(1.2);
 }
 
 .media-content-card .media-content-card-body {
