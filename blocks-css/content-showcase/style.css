@@ -65,28 +65,59 @@
 
 /* Media Content Card Widget */
 .media-content-card {
-    overflow: hidden;
-    border-color: var(--color-warm-gray);
-    background: rgba(250, 250, 250, 0.2);
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
+    perspective: 1400px;
+}
+
+.media-content-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: grid;
+}
+.media-content-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.media-content-card-back {
+    transform: rotateY(180deg);
+    padding: 24px 22px 22px;
+    justify-content: space-between;
+}
+
+.media-content-card:hover .media-content-card-inner,
+.media-content-card:focus-within .media-content-card-inner,
+.media-content-card.is-flipped .media-content-card-inner {
+    transform: rotateY(180deg);
+}
+
+.media-content-card-front, 
+.media-content-card-back {
+    grid-area: 1/1;
+    backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
+}
+
+.media-content-card:hover .media-content-card-front,
+.media-content-card:hover .media-content-card-back {
+     box-shadow: 0 10px 16px rgba(0,0,0,0.1)
 }
 
 .media-content-card:hover {
     transform: none !important;
-    box-shadow: 0 10px 16px rgba(0,0,0,0.1)
 }
 
-.media-content-card-media {
+.media-content-card-front-media {
     width: 100%;
     height: 244px;
     overflow: hidden;
     border-radius: 7px 7px 0 0;
 }
 
-.media-content-card-media img {
+.media-content-card-front-media img {
     display: block;
     width: 100%;
     height: 100%;
@@ -94,19 +125,18 @@
     transition: .3s ease-in-out;
 }
 
-
-.media-content-card:hover .media-content-card-media img {
+.media-content-card:hover .media-content-card-front-media img {
     transform:scale(1.2);
 }
 
-.media-content-card .media-content-card-body {
+.media-content-card .media-content-card-front-body {
     padding: 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.media-content-card .media-content-card-title {
+.media-content-card .media-content-card-front-title {
     margin-bottom: 24px;
     overflow: hidden;
     display: -webkit-box;
@@ -114,7 +144,7 @@
     -webkit-line-clamp: 3;
 }
 
-.media-content-card .media-content-card-actions {
+.media-content-card .media-content-card-front-actions {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -122,17 +152,65 @@
     margin-top: auto;
 }
 
-.media-content-card .media-content-card-actions .cta-action {
+.media-content-card .media-content-card-front-actions .cta-action {
     width: 100%;
 }
 
-.media-content-card .media-content-card-link.cta-action {
+.media-content-card .media-content-card-front-link.cta-action {
     background: var(--color-electric-blue);
     color: #FCFCFC;
 }
 
-.media-content-card .media-content-card-link.cta-action:hover {
+.media-content-card .media-content-card-front-link.cta-action:hover {
     background: #0066d6;
+}
+
+.media-content-card-back {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+} 
+
+.media-content-card-back .media-content-card-back-head { 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.media-content-card-back .media-content-card-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.media-content-card-back .media-content-card-kicker {
+    color: var(--color-elevate-gray);
+}
+
+.media-content-card-back .media-content-card-stat {
+    color: var(--color-electric-blue);
+} 
+
+.media-content-card-back .media-content-card-close {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: var(--color-cool-gray);
+    border: 1px solid var(--color-smoke-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.media-content-card-back .media-content-card-close svg {
+    width: 16px;
+    height: 16px;
+}
+
+.media-content-card-back .media-content-card-actions {
+    margin-top: 24px;
 }
 
 /* Our Works Filters */
@@ -182,11 +260,11 @@
     }
 
     /* Media Content Card Widget */
-    .media-content-card .media-content-card-body {
+    .media-content-card .media-content-card-front-body {
         padding: 24px;
     }
 
-    .media-content-card .media-content-card-title {
+    .media-content-card .media-content-card-front-title {
         margin-bottom: 24px;
     }
 

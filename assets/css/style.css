@@ -171,6 +171,10 @@ p{
     line-height: 150%;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* ========================================
    Typography Base
 ======================================== */
@@ -661,11 +665,17 @@ body.motion-paused .glow-bg span {
 .iq-pblk-default {
     padding-block: 120px !important;
 }
+
 .iq-overflow-hidden {
     overflow: hidden !important;
 }
+
 .iq-overflow-clip {
     overflow: clip !important;
+}
+
+.iq-w-full {
+    width: 100% !important;
 }
 /* ========================================
    From Global CSS
