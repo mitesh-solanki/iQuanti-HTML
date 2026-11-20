@@ -1262,7 +1262,7 @@ section {
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 4px;
+    padding: 6px 5px;
     background: var(--color-elevate-gray);
     gap: 4px;
     border-radius: 100px;
@@ -1316,6 +1316,7 @@ body .cls-superscript .superscript {
 .site-header .header-contact,
 .site-header .mobile-contact {
     text-decoration: none;
+    padding: 12px 16px;
 }
 
 
@@ -1721,7 +1722,7 @@ body .cls-superscript .superscript {
     font-size: 28px;
     line-height: 1;
     font-weight: 900;
-    color: var(--color-pure-white);
+    color: var(--color-off-white);
 }
 
 
@@ -1773,9 +1774,9 @@ body .cls-superscript .superscript {
 
 .site-footer .footer-logo img {
     display: block;
-    width: 157px;
+    width: 165px;
     height: auto;
-    max-width: 157px;
+    max-width: 165px;
     object-fit: contain;
 }
 

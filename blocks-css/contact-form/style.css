@@ -127,8 +127,11 @@ body .contact-container .contact-form-wrapper {
 }
 
 .contact-form.has-glass-effect {
-    backdrop-filter: blur(2.8px) brightness(1.06);
+    background: rgba(24, 26, 30, 0.5);
+    -webkit-backdrop-filter: blur(12px) brightness(1.06);
+    backdrop-filter: blur(12px) brightness(1.06);
 }
+
 /* Form Header */
 .contact-form-header {
     margin-bottom: 0;
@@ -509,6 +512,7 @@ body .contact-container .contact-form-wrapper {
     color: var(--color-cool-gray);
     margin-left: 8px;
     text-decoration: underline;
+    font-weight: 400;
 }
 
 .contact-form .privacy-message-wrap {
@@ -638,11 +642,6 @@ button:disabled {
     line-height: 1.4;
     color: var(--color-electric-blue, #4ade80);
     font-weight: 600;
-}
-
-.privacy-checkbox label .privacy-policy-text {
-    color: var(--color-warm-gray);
-    margin-left: 8px;
 }
 
 .contact-form .lead-response.is-success {
