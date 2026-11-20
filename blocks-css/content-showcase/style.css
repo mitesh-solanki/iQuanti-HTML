@@ -92,9 +92,7 @@
     justify-content: space-between;
 }
 
-.media-content-card:hover .media-content-card-inner,
-.media-content-card:focus-within .media-content-card-inner,
-.media-content-card.is-flipped .media-content-card-inner {
+.media-content-card.flipped .media-content-card-inner {
     transform: rotateY(180deg);
 }
 

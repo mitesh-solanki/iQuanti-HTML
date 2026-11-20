@@ -1,11 +1,22 @@
-// Sticky Header Js
 jQuery(document).ready(function ($) {
+    // Sticky Header Js
     jQuery(window).on('scroll', function () {
         if (jQuery(window).scrollTop() > 50) {
             jQuery('.site-header').addClass('sticky-header');
         } else {
             jQuery('.site-header').removeClass('sticky-header');
         }
+    });
+
+    // Flipping Blog Card JS
+    $(document).on('click', '.media-content-card-front-btn', function(e) {
+        e.preventDefault();
+        $(this).closest('.media-content-card').addClass('flipped');
+    });
+
+    $(document).on('click', '.media-content-card-close', function(e) {
+        e.preventDefault();
+        $(this).closest('.media-content-card').removeClass('flipped');
     });
 
 });
@@ -1048,3 +1059,5 @@ document.addEventListener('DOMContentLoaded', function () {
         boot();
     }
 })(window, document);
+
+
