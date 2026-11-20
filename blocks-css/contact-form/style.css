@@ -960,11 +960,8 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
     overflow-y: auto;
 }
 
-.iq-split-hero-section .contact-form-wrapper.sticky-contact-form.has-scroll-bg {
-    padding: 20px;
-    background: url("../../assets/images/sticky-contact-form-bg.webp");
-    transition: 0.2s;
-    border-radius: 8px;
+.iq-split-hero-section .contact-form-wrapper.is-sticky-fixed.is-passed-hero .contact-form {
+    background: rgba(24, 26, 30, 0.8);
 }
 
 .sticky-contact-form-slot {
