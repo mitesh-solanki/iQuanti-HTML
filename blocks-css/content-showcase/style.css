@@ -68,6 +68,7 @@
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     perspective: 1400px;
 }
@@ -84,6 +85,7 @@
     transform: rotateY(0deg);
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .media-content-card-back {
@@ -92,7 +94,9 @@
     justify-content: space-between;
 }
 
-.media-content-card.flipped .media-content-card-inner {
+
+.media-content-card.is-flipped .media-content-card-inner,
+.media-content-card-inner.is-flipped {
     transform: rotateY(180deg);
 }
 
@@ -213,6 +217,13 @@
 
 .media-content-card-back .media-content-card-actions {
     margin-top: 24px;
+}
+
+.media-content-card-grid > div,
+.content-showcase-section .media-content-card-grid > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Our Works Filters */

@@ -9,15 +9,44 @@ jQuery(document).ready(function ($) {
     });
 
     // Flipping Blog Card JS
-    $(document).on('click', '.media-content-card-front-btn', function(e) {
-        e.preventDefault();
-        $(this).closest('.media-content-card').addClass('flipped');
-    });
+    var $section = $(document);
 
-    $(document).on('click', '.media-content-card-close', function(e) {
-        e.preventDefault();
-        $(this).closest('.media-content-card').removeClass('flipped');
-    });
+    // ==========================================
+    // Flip Card Interaction (Click "See Key Results" to flip, Click "X" to close)
+    // ==========================================
+    $section.off('click.worksFlipOpen', '.media-content-card-front-btn, .js-flip-open')
+        .on('click.worksFlipOpen', '.media-content-card-front-btn, .js-flip-open', function (e) {
+            e.preventDefault();
+            var $card = $(this).closest('.media-content-card');
+            $card.addClass('is-flipped');
+            $card.find('.media-content-card-inner').addClass('is-flipped');
+            $(this).attr('aria-expanded', 'true');
+        });
+
+    $section.off('click.worksFlipClose', '.media-content-card-close, .js-flip-close')
+        .on('click.worksFlipClose', '.media-content-card-close, .js-flip-close', function (e) {
+            e.preventDefault();
+            var $card = $(this).closest('.media-content-card');
+            $card.removeClass('is-flipped');
+            $card.find('.media-content-card-inner').removeClass('is-flipped');
+            $card.find('.media-content-card-front-btn, .js-flip-open').attr('aria-expanded', 'false');
+        });
+
+    $section.off('keydown.worksFlipEsc', '.media-content-card')
+        .on('keydown.worksFlipEsc', '.media-content-card', function (e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                var $card = $(this);
+                if ($card.hasClass('is-flipped')) {
+                    $card.removeClass('is-flipped');
+                    $card.find('.media-content-card-inner').removeClass('is-flipped');
+                    $card.find('.media-content-card-front-btn, .js-flip-open').attr('aria-expanded', 'false').focus();
+                }
+            }
+        });
+
+
+
+    
 
 });
 
