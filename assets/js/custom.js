@@ -45,7 +45,57 @@ jQuery(document).ready(function ($) {
         });
 
 
+        // Expand profile card inline on click
+    $(document).on('click', '.iq-profile-card-item', function (e) {
+        if ($(e.target).closest('.js-profile-close').length) {
+            return;
+        }
 
+        var $cardItem = $(this);
+        if ($cardItem.hasClass('is-expanded')) {
+            return;
+        }
+
+        var $wrapper = $cardItem.closest('.iq-profile-grid-wrapper');
+        if (!$wrapper.length) {
+            return;
+        }
+
+        $wrapper.find('.iq-profile-card-item')
+            .removeClass('is-expanded')
+            .find('.js-profile-expand')
+            .attr('aria-expanded', 'false');
+
+        $wrapper.addClass('has-expanded-card');
+        $cardItem.addClass('is-expanded')
+            .find('.js-profile-expand')
+            .attr('aria-expanded', 'true');
+    });
+
+    // Close expanded profile card on X button click
+    $(document).on('click', '.js-profile-close', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $cardItem = $(this).closest('.iq-profile-card-item');
+        var $wrapper = $cardItem.closest('.iq-profile-grid-wrapper');
+
+        $cardItem.removeClass('is-expanded')
+            .find('.js-profile-expand')
+            .attr('aria-expanded', 'false');
+
+        $wrapper.removeClass('has-expanded-card');
+    });
+
+    // Escape key to close expanded card
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape' || e.keyCode === 27) {
+            var $expandedItem = $('.iq-profile-card-item.is-expanded');
+            if ($expandedItem.length) {
+                $expandedItem.find('.js-profile-close').trigger('click');
+            }
+        }
+    });
     
 
 });

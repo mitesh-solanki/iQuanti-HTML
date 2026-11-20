@@ -2103,15 +2103,6 @@ body.contact-page {
 
 /* Webinar Slider block styles moved to acf-blocks/webinar-slider/style.css for isolated loading */
 
-
-
-/* About us page */
-/* 28-09-2026 */
-.about-recognition-section.about-recognition-section {
-    padding-top: 0;
-}
-
-
 /* ==========================================
    LEADERSHIP SECTION
 ========================================== */
@@ -2139,6 +2130,82 @@ body.contact-page {
     gap: 24px;
 }
 
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details{
+    display: none;
+    padding: 28px 26px 76px 134px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details .iq-profile-details-bio{
+    margin-top: 24px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details .iq-profile-close-btn  {
+    width: 39px;
+    height: 39px;
+    background-color: rgb(217 217 217 / 25%);
+    border-radius: 50%;
+    border: 0;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details .iq-profile-close-btn:hover  { 
+    opacity: 0.8;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background-color: #323232;
+    border-radius: 8px;
+    border: 1px solid rgb(102 105 112 / 20%);
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: span 2;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card-details .iq-profile-details-body :where(h3,p){
+    color: var(--color-off-white);
+} 
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card-details .iq-profile-details-body h3 {
+    margin-bottom: 8px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details .iq-profile-details-bio > p  {
+    color: var(--color-smoke-white) !important;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details .iq-profile-details-bio p:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card::before {
+    display: none;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    border: none !important;
+}
+
+.iq-profile-grid-wrapper.has-expanded-card .iq-profile-card-item:not(.is-expanded) {
+    display: none;
+}
+
+.iq-profile-card-item.is-expanded {
+    grid-column: 1 / -1;
+}
+
 .iq-profile-grid-wrapper .iq-profile-card-image {
     width: 100%;
     height: 100%;
@@ -2152,6 +2219,62 @@ body.contact-page {
     object-fit: cover;
     object-position: top;
 }
+
+/* Default pseudo-element setup taaki transition smoothly chale */
+.iq-profile-grid-wrapper .iq-profile-card-item {
+    position: relative;
+    z-index: 0;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #323232;
+    border-radius: 12px;
+    z-index: 0;
+    opacity: 0;
+    transform-origin: left center;
+    transition: opacity 0.4s ease, transform 0.45s ease-out;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded {
+    animation: profileCardExpand 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded::after {
+    opacity: 1;
+}
+
+/* Right side details content ka smooth slide-in */
+.iq-profile-card-item.is-expanded .iq-profile-card-details {
+    animation: profileDetailsSlide 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
+}
+
+@keyframes profileCardExpand {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes profileDetailsSlide {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 /* ==========================================
    LEADER CARD
@@ -2168,25 +2291,11 @@ body.contact-page {
     padding: 30px;
     border-radius: 8px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .iq-profile-card:hover .iq-profile-card-badge {
     background-color: var(--color-electric-blue);
-}
-
-.iq-profile-card::before {
-    content: "";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.5);
-    z-index: 1;
-    opacity: 0;
-    display: none;
-}
-
-.iq-profile-card:hover::before {
-    opacity: 1;
-    display: block;
 }
 
 .popup-open-btn {
@@ -2799,6 +2908,11 @@ html:has(.media-content-popup-main:popover-open) {
         flex-shrink: 0;
     }
 
+    /* IQ profile Cards CSS */
+    .iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details {
+        padding: 28px 26px 76px 28px;
+    }
+
 }
 
 
@@ -3163,19 +3277,9 @@ html:has(.media-content-popup-main:popover-open) {
         display: none;
      }
 
-
-
      .section-label {
         justify-content: center;
      }
-
-
-
-
-
-
-
-
 
 
     .section-label.section-label-left {
@@ -3185,23 +3289,14 @@ html:has(.media-content-popup-main:popover-open) {
         margin-inline: auto;
     }
 
-
-
-
-
     .heading-wrap {
         margin-bottom: 40px !important;
     }
-
-
-
-
 
     .site-footer .footer-bottom {
         padding-bottom: 32px;
     }
     
-
     .iq-split-hero-section .iq-split-hero-header {
         max-width: 500px;
         margin: 0 auto 40px;
@@ -3248,10 +3343,7 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 0;
     }
 
-
-
     /* about us page css */
-
     .iq-profile-grid-wrapper,
     .iq-profile-grid-wrapper.columns-4 {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -3262,13 +3354,6 @@ html:has(.media-content-popup-main:popover-open) {
         height: 250px;
     }
 
-
-
-
-
-
-
-
     /* Aboutus Page css */
     .iq-feature-grid-cards {
         gap: 24px;
@@ -3278,8 +3363,6 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-feature-grid-cards  >div:last-child {
         grid-column: span 2;
     }
-
-
 
     .iq-profile-grid-wrapper.columns-4.is-staggered > :nth-child(3n + 2),
     .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2),
@@ -3298,16 +3381,20 @@ html:has(.media-content-popup-main:popover-open) {
         padding-bottom: 0;
     }
 
-
-
     .split-content-grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 40px;
     }
 
+    /* IQ Profile Cards CSS  */
 
+    .iq-profile-grid-wrapper .iq-profile-card-item.is-expanded {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-
+    .iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card-details {
+        grid-column: auto;
+    }
 
 
 
@@ -3515,14 +3602,10 @@ html:has(.media-content-popup-main:popover-open) {
         line-height: 24px;
     }
 
-
-
     .acf-innerblocks-container, 
     .iq-contact-content-left {
         gap: 48px !important;
     }
-
-
 
     /* about us page css */
 
@@ -3544,9 +3627,6 @@ html:has(.media-content-popup-main:popover-open) {
         text-align: center;
     }
 
-
-
-
     .iq-feature-grid-cards >div:last-child {
         grid-column: span 1;
     }
@@ -3563,7 +3643,6 @@ html:has(.media-content-popup-main:popover-open) {
         margin-bottom: 16px;
     }
 
-
     .media-content-popup.has-popup-hr {
         grid-template-columns: 1fr;
     }
@@ -3575,7 +3654,6 @@ html:has(.media-content-popup-main:popover-open) {
     .popup-close-btn {
         width: 32px;
         height: 32px;
-
     }
 
     .iq-orbit-rings-vector {
@@ -3608,6 +3686,19 @@ html:has(.media-content-popup-main:popover-open) {
     .slick-dots {
         gap: 8px;
     }
+
+    .iq-profile-grid-wrapper,
+    .iq-profile-grid-wrapper.columns-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* IQ Profile Cards CSS  */
+    .iq-profile-grid-wrapper .iq-profile-card-item.is-expanded {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    
 }
 
 /* =========================================
@@ -3686,11 +3777,6 @@ html:has(.media-content-popup-main:popover-open) {
     .iq-profile-grid-wrapper.columns-3,
     .iq-profile-grid-wrapper.columns-2 { 
         grid-template-columns: 1fr;
-    }
-
-    .iq-profile-grid-wrapper,
-    .iq-profile-grid-wrapper.columns-4 {
-        grid-template-columns: 1fr !important;
     }
     
     .iq-profile-grid-wrapper.is-staggered > :nth-child(2n + 1),

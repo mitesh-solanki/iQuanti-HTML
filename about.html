@@ -10,6 +10,13 @@
     <!-- 2. Third-party Library CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- 3. Block CSS  -->
+    <link rel="stylesheet" href="blocks-css/page-banner/style.css">
+    <link rel="stylesheet" href="blocks-css/stats-bar/style.css">
+    <link rel="stylesheet" href="blocks-css/recognition/style.css">
+    <link rel="stylesheet" href="blocks-css/contact-form/style.css">
+    <link rel="stylesheet" href="blocks-css/call-to-action/style.css">
+
     <!-- 3. Custom Main CSS  -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -84,8 +91,9 @@
 <div class="section-wrap our-wroks-checks-line-bg-sec-wrap has-checks-line-bg">
     
 </div>
+
 <!--Core values section start-->
-<section class="iq-feature-grid-section core-feature-grid-section">
+<section class="iq-feature-grid-section core-feature-grid-section iq-overflow-clip">
     <div class="iq-feature-blurb-left-bottom blurb-bg"></div>
    <div class="container">
      <div class="heading-wrap heading-wrap-center aos-init aos-animate" data-aos="fade-up data-aos-duration=">
@@ -310,98 +318,125 @@
 
         <!-- Leadership Cards -->
         <div class="iq-profile-grid-wrapper">
-            <div class="has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">    
-                <!-- Card 1 -->
-                <div class="iq-profile-card">
-                    <div class="iq-profile-card-image">
-                        <img src="./assets/images/leaders-card-1.webp" alt="leader-image">
-                    </div>
+                <div class="iq-profile-card-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                        <div class="iq-profile-card has-glass-effect has-glass-white">
+                            <div class="iq-profile-card-image">
+                                <img src="./assets/images/leaders-card-1.webp" alt="leader-image">
+                            </div>
 
-                    <div class="iq-profile-card-badge">
-                        <h3 class="sub-head-3">Vish Sastry Rachakonda</h3>
-                        <p class="body-text-14 body-text-reg">Founder &amp; Executive Chairman</p>
-                    </div>
+                            <div class="iq-profile-card-badge">
+                                <h3 class="sub-head-3">Vish Sastry Rachakonda</h3>
+                                <p class="body-text-14 body-text-reg">Founder &amp; Executive Chairman</p>
+                            </div>
 
-                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
-                        <img src="./assets/images/resize-icon.svg" alt="Resize icon">
-                    </button>
+                        </div>
+
+                        <div class="iq-profile-card-details">
+                            <button type="button" class="iq-profile-close-btn js-profile-close" aria-label="Close profile details">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                    <path d="M0.671875 17.7486L17.7486 0.671875" stroke-width="1.89741" stroke="#CCCDCF"/>
+                                    <path d="M17.75 17.7486L0.673269 0.671875" stroke-width="1.89741" stroke="#CCCDCF"/>
+                                </svg>
+                            </button>
+                            <div class="iq-profile-details-body">
+                                <h3 class="body-text-24 body-text-bold">Vish Sastry Rachakonda</h3>
+                                <p class="iq-profile-details-role body-text-16 body-text-bold">VP, Search &amp; Site Experience</p>
+                                <div class="iq-profile-details-bio body-text-16 body-text-reg">
+                                    <p class="body-text-16 body-text-reg">Sastry founded iQuanti in 2008 and as CEO has grown it into a trusted performance marketing partner for some of the world's leading brands, particularly in banking and financial services. Now as Executive Chairman (and Chief Cheerleader!) Sastry continues to champion iQuanti's mission of driving superior digital performance through data-led capabilities. He is a zealous guardian of the company's values, and remains actively engaged in shaping strategic direction and culture.</p>
+                                    <p class="body-text-16 body-text-reg">Before starting iQuanti, Sastry worked at Discover and American Express, where he built deep expertise in marketing. He lives with his wife Meena and their dog Bruno in Jersey City.</p>
+                                </div>
+                            </div>                        
+                        </div>
+
                 </div>
 
-                <svg width="0" height="0" style="position:absolute">
-                    <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                        <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
-                        <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
-                        <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
-                        <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
-                        <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
-                        <feBlend in="rg" in2="b" mode="screen"></feBlend>
-                    </filter>
-                </svg>
-            </div>
+                <div class="iq-profile-card-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                        <div class="iq-profile-card has-glass-effect has-glass-white">
+                            <div class="iq-profile-card-image">
+                                <img src="./assets/images/leaders-card-2.webp" alt="leader-image">
+                            </div>
 
-            <div class="has-glass-effect has-glass-white" data-aos="fade-up" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
-                <!-- Card 2 -->
-                <div class="iq-profile-card" >
-                    <div class="iq-profile-card-image">
-                        <img src="./assets/images/leaders-card-2.webp" alt="leader-image">
-                    </div>
-    
-                    <div class="iq-profile-card-badge">
-                        <h3 class="sub-head-3">Arnab Sen</h3>
-                        <p class="body-text-14 body-text-reg">Chief Executive Officer</p>
-                    </div>
-                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
-                        <img src="./assets/images/resize-icon.svg" alt="Resize icon">
-                    </button>
+                            <div class="iq-profile-card-badge">
+                                <h3 class="sub-head-3">Arnab Sen</h3>
+                                <p class="body-text-14 body-text-reg">Chief Executive Officer</p>
+                            </div>
+                        </div>
+
+                        <div class="iq-profile-card-details">
+                            <button type="button" class="iq-profile-close-btn js-profile-close" aria-label="Close profile details">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                    <path d="M0.671875 17.7486L17.7486 0.671875" stroke-width="1.89741" stroke="#CCCDCF"></path>
+                                    <path d="M17.75 17.7486L0.673269 0.671875" stroke-width="1.89741" stroke="#CCCDCF"></path>
+                                </svg>
+                            </button>
+                            <div class="iq-profile-details-body">
+                                <h3 class="body-text-24 body-text-bold">Arnab Sen</h3>
+                                <p class="iq-profile-details-role body-text-16 body-text-bold">Chief Executive Officer</p>
+                                <div class="iq-profile-details-bio body-text-16 body-text-reg">
+                                    <p class="body-text-16 body-text-reg">Arnab leads iQuanti's global operations and growth strategy, helping enterprise brands scale customer acquisition through data science and performance marketing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <svg width="0" height="0" style="position:absolute">
+                            <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                            </filter>
+                        </svg>
                 </div>
-                <svg width="0" height="0" style="position:absolute">
-                    <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                        <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
-                        <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
-                        <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
-                        <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
-                        <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
-                        <feBlend in="rg" in2="b" mode="screen"></feBlend>
-                    </filter>
-                </svg>
-            </div>
+                    
+                <div class="iq-profile-card-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="iq-profile-card has-glass-effect has-glass-white">
+                            <div class="iq-profile-card-image">
+                                <img src="./assets/images/leaders-card-3.webp" alt="leader-image">
+                            </div>
 
-            <div class="has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
-                <!-- Card 3 -->
-                <div class="iq-profile-card">
-                    <div class="iq-profile-card-image">
-                         <img src="./assets/images/leaders-card-3.webp" alt="leader-image">
-                    </div>
-    
-                    <div class="iq-profile-card-badge">
-                        <h3 class="sub-head-3">Jonathan Gagliano</h3>
-                        <p class="body-text-14 body-text-reg">Chief Growth Officer</p>
-                    </div>
-                    <button  popovertarget="mediaContentPopup" class="popup-open-btn">
-                        <img src="./assets/images/resize-icon.svg" alt="Resize icon">
-                    </button>
+                            <div class="iq-profile-card-badge">
+                                <h3 class="sub-head-3">Jonathan Gagliano</h3>
+                                <p class="body-text-14 body-text-reg">Chief Growth Officer</p>
+                            </div>
+
+                        </div>
+
+                        <div class="iq-profile-card-details">
+                             <button type="button" class="iq-profile-close-btn js-profile-close" aria-label="Close profile details">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                    <path d="M0.671875 17.7486L17.7486 0.671875" stroke-width="1.89741" stroke="#CCCDCF"></path>
+                                    <path d="M17.75 17.7486L0.673269 0.671875" stroke-width="1.89741" stroke="#CCCDCF"></path>
+                                </svg>
+                            </button>
+                            <div class="iq-profile-details-body">
+                                <h3 class="body-text-24 body-text-bold">Jonathan Gagliano</h3>
+                                <p class="iq-profile-details-role body-text-16 body-text-bold">Chief Growth Officer</p>
+                                <div class="iq-profile-details-bio body-text-14 body-text-reg">
+                                    <p class="body-text-16 body-text-reg">Jonathan drives client partnerships and revenue expansion across North America and global markets, bringing deep expertise in enterprise digital transformation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <svg width="0" height="0" style="position:absolute">
+                            <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                                <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                                <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                                <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                            </filter>
+                        </svg>
                 </div>
-                <svg width="0" height="0" style="position:absolute">
-                    <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-                        <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
-                        <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
-                        <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
-                        <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
-                        <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
-                        <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
-                        <feBlend in="rg" in2="b" mode="screen"></feBlend>
-                    </filter>
-                </svg>
-            </div>
-
         </div>
 
         <!-- CTA -->
@@ -451,46 +486,67 @@
 <!--Leadership section end-->
 
 <!-- Recognition & trust Section Start -->
- <section id="our-work" class="recognition-section about-recognition-section iq-overflow-visible has-blurb-bg">
-    <div class="recognition-blurb-top-right blurb-bg"></div>
+
+  <section id="our-work" class="recognition-section has-checks-line-bg">
+    <div class="recognition-blurb-center-left blurb-bg">
+        <img src="assets/images/recognition-blurb-center-left.svg" alt="Recognition blurb top left">
+    </div>
+    <div class="recognition-blurb-top-right blurb-bg">
+        <img src="assets/images/recognition-blurb-top-right.svg" alt="Recognition blurb top left">
+    </div>
     <div class="recognition-container container">
 
-        <div class="recognition-heading heading-wrap heading-wrap-left"  data-aos="fade-up" data-aos-duration="800">
-            <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">Recognition &amp; trust</h2>
+        <div class="recognition-heading heading-wrap heading-wrap-left aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="headline-2 aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">Recognition &amp; trust</h2>
+            <p class="insights-description case-studies-description body-text-18 body-text-mid aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                Earned recognition of our culture, processes, and performance across nearly two decades.&nbsp;
+            </p>
         </div>
 
         <div class="recognition-grid">
 
             <!-- Inc. 5000 -->
-            <div class="recognition-card-wrap" data-aos="fade-up" data-aos-delay="100">
-                <div class="recognition-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="recognition-card has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
                             <img src="assets/images/recognition-inc5000.png" alt="Inc. 5000">
                         </div>
 
-                        <h3>Inc. 5000</h3>
+                        <h3 class="body-text-20 body-text-bold">Inc. 5000</h3>
 
                         <p>
-                            Named one of America's fastest-growing companies
-                            10 consecutive times.
+                            Named one of America's fastest-growing companies 11 times.
                         </p>
 
                     </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
             </div>
 
             <!-- Industry Awards -->
-            <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="200" >
-                <div class="recognition-card has-glass-effect has-glass-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div class="recognition-card has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
                             <img src="assets/images/recognition-awards.png" alt="Industry Awards">
                         </div>
 
-                        <h3>Industry Awards</h3>
+                        <h3 class="body-text-20 body-text-bold">Industry Awards</h3>
 
                         <p>
                             Consistently recognized at the industry's most
@@ -498,19 +554,32 @@
                         </p>
 
                     </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
             </div>
 
             <!-- Great Place To Work -->
-            <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="300">
-                <div class="recognition-card has-glass-effect has-glass-white"  data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <div class="recognition-card has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="500">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
-                            <img src="assets/images/recognition-gptw.png" alt="Great Place To Work">
+                            <img src="assets/images/recognition-gptw.webp" alt="Great Place To Work">
                         </div>
 
-                        <h3>Great Place To Work®</h3>
+                        <h3 class="body-text-20 body-text-bold">Great Place To Work®</h3>
 
                         <p>
                             Certified in the US and India reflecting the culture
@@ -518,50 +587,190 @@
                         </p>
 
                     </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
             </div>
 
             <!-- Enterprise Security -->
-            <div class="recognition-card-wrap"  data-aos="fade-up" data-aos-delay="400">
-                <div class="recognition-card has-glass-effect has-glass-white"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <div class="recognition-card has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
                     <div class="recognition-card-content">
 
                         <div class="recognition-icon">
                             <img src="assets/images/recognition-security.png" alt="Enterprise Security">
                         </div>
 
-                        <h3>Enterprise Security</h3>
+                        <h3 class="body-text-20 body-text-bold">Enterprise Security</h3>
 
                         <p>
-                            Certified across data, privacy, AI governance, and
-                            healthcare compliance meeting the highest enterprise standards.
+                            Certified across data, privacy, AI governance, and healthcare compliance meeting the highest enterprise standards in
+                            every mandate.
                         </p>
 
                     </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
             </div>
 
         </div>
-
-        <!-- Certifications -->
-        <div class="certifications-wrap" data-aos="fade-up" data-aos-delay="200">
-            <div class="certifications-card recognition-card has-glass-effect has-glass-white">
-                <div class="certifications-content">
-                    <span class="certifications-title">Certifications</span>
-
-                    <p class="certifications-list">
-                        ISO 27001 · ISO 27701 · SOC 2 Type II · ISO 42001 · HIPAA Compliant
-                    </p>
+        <div class="recognition-grid recognition-grid-compact">
+        
+            <!-- ISO 27001 -->
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                <div class="recognition-card recognition-card-compact has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                    <div class="recognition-card-content">
+                        <div class="recognition-icon">
+                            <img src="assets/images/ISO-27001-logo.webp" alt="ISO 27001">
+                        </div>
+                        <h3 class="body-text-18 body-text-bold">ISO 27001</h3>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
                 </div>
             </div>
+        
+            <!-- ISO 27701 -->
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                <div class="recognition-card recognition-card-compact has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+                    <div class="recognition-card-content">
+                        <div class="recognition-icon">
+                            <img src="assets/images/ISO-27701-logo.webp" alt="ISO 27701">
+                        </div>
+                        <h3 class="body-text-18 body-text-bold">ISO 27701</h3>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
+                </div>
+            </div>
+        
+            <!-- SOC 2 Type II -->
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="700">
+                <div class="recognition-card recognition-card-compact has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+                    <div class="recognition-card-content">
+                        <div class="recognition-icon">
+                            <img src="assets/images/SOC-2-type-logo.webp" alt="SOC 2 Type II">
+                        </div>
+                        <h3 class="body-text-18 body-text-bold">SOC 2 Type II</h3>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
+                </div>
+            </div>
+        
+            <!-- ISO 42001 -->
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
+                <div class="recognition-card recognition-card-compact has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
+                    <div class="recognition-card-content">
+                        <div class="recognition-icon">
+                            <img src="assets/images/ISO-42001-logo.webp" alt="ISO 42001">
+                        </div>
+                        <h3 class="body-text-18 body-text-bold">ISO 42001</h3>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
+                </div>
+            </div>
+        
+            <!-- HIPAA Compliant -->
+            <div class="recognition-card-wrap aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
+                <div class="recognition-card recognition-card-compact has-glass-effect has-glass-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
+                    <div class="recognition-card-content">
+                        <div class="recognition-icon">
+                            <img src="assets/images/HIPAA-COMPLIANT-logo.webp" alt="HIPAA Compliant">
+                        </div>
+                        <h3 class="body-text-18 body-text-b">HIPAA COMPLIANT</h3>
+                    </div>
+                    <svg width="0" height="0" style="position:absolute">
+                        <filter id="glass-effect-white" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                            <feImage href="#" x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="map"></feImage>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="204.7" xChannelSelector="R" yChannelSelector="G" result="dR"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="170.6" xChannelSelector="R" yChannelSelector="G" result="dG"></feDisplacementMap>
+                            <feDisplacementMap in="SourceGraphic" in2="map" scale="136.5" xChannelSelector="R" yChannelSelector="G" result="dB"></feDisplacementMap>
+                            <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"></feColorMatrix>
+                            <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"></feColorMatrix>
+                            <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"></feColorMatrix>
+                            <feBlend in="r" in2="g" mode="screen" result="rg"></feBlend>
+                            <feBlend in="rg" in2="b" mode="screen"></feBlend>
+                        </filter>
+                    </svg>
+                </div>
+            </div>
+        
         </div>
-
     </div>
   </section>
 <!-- Recognition & trust Section End -->
 
 <!-- Our Works CTA Start -->
-<section class="call-to-action-section about-us-call-to-action-section">
+<section class="call-to-action-section about-us-call-to-action-section iq-overflow-clip">
     <div class="call-to-action-blurb-left-top blurb-bg"></div>
     <div class="container">
         <div class="call-to-action-content">
