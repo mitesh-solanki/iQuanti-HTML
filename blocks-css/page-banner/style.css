@@ -104,6 +104,15 @@
     top: -25%;
 }
 
+.our-works-orbit-decor {
+    position: absolute;
+    width: 866px;
+    height: 861px;
+    right: 0;
+    top: -8%;
+    pointer-events: none;
+    z-index: -1;
+}
 
 .our-works-hero-section .blurb-bg-center-center {
     left: 0;
