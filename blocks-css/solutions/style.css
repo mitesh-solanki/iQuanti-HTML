@@ -328,6 +328,11 @@
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
+.contact-solutions-grid .solution-card:hover {
+    transform: none !important;
+    box-shadow: none;
+}
+
 .solution-card.has-content-side-left .solution-card-header {
     margin-bottom: 24px;
 }

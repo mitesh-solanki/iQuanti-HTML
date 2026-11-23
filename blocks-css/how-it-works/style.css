@@ -93,7 +93,7 @@
 
 .iq-vertical-timeline-curve-tab .iq-vertical-timeline-curve-tab-grid .timeline-curve-tab-item::after {
     content: "";
-    background: url("../../assets/images/dashed-line-vector.webp");
+    background: url("../../assets/images/dashed-line-vector.svg");
     background-repeat: no-repeat;
     width: 1px;
     height: 100%;
@@ -167,7 +167,7 @@
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3)::before {
     content: "";
-    background: url("../../assets/images/curve-outside-tab-vector-big.webp");
+    background: url("../../assets/images/curve-outside-tab-vector-big.svg");
     position: absolute;
     inset: 0;
     height: 100%;
@@ -187,9 +187,13 @@
     margin-top: -70px;
 }
 
+.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3):not(.curve-active.active) .timeline-curve-tab-icon {
+    display: none;
+}
+
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-content {
-    padding-inline: 24px 16px;
-    margin-left: 24px;
+    /* padding-inline: 24px 16px; */
+    margin-left: 0;
 }
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3)::after {
@@ -210,11 +214,7 @@
 }
 
 .iq-vertical-timeline-curve-tab .timeline-curve-tab-item.active:nth-child(3):has(.timeline-curve-tab-label-description)::before {
-    background-image: url("../../assets/images/curve-outside-tab-vector-rec-test.svg")
-}
-
-.iq-vertical-timeline-curve-tab .timeline-curve-tab-item:nth-child(3) .timeline-curve-tab-icon {
-    display: none;
+    background-image: url("../../assets/images/curve-outside-tab-vector-rec-vec.svg")
 }
 
 

@@ -1299,10 +1299,11 @@ body .cls-superscript .superscript {
 }
 
 .site-header .main-navigation a:hover,
-.site-header .main-navigation a.active {
+.site-header .main-navigation a.active,
+.site-header .main-navigation li.current-menu-item a {
     color: var(--color-electric-blue);
     background: var(--color-off-white);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
@@ -1636,7 +1637,7 @@ body .cls-superscript .superscript {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: var(--color-primary-orange);
+    background: var( --color-primary-orange);
     flex-shrink: 0;
     top: 3px;
     position: relative;
@@ -2082,19 +2083,14 @@ body.contact-page {
 }
 
 
-
-
 /* Stats Bar block styles moved to acf-blocks/stats-bar/style.css for isolated loading */
-
-
-
-
-
 
 
 .webinar-checks-line-bg-sec-wrap {
     background-image: url("../images/webinar-sec-wrap-checks-line-bg.svg");
 }
+
+
 
 /* Content with Sticky Callout block styles moved to acf-blocks/content-sticky-callout/style.css for isolated loading */
 
@@ -2712,10 +2708,12 @@ html:has(.media-content-popup-main:popover-open) {
     color: var(--color-elevate-gray);
 }
 
+
  .has-dark-bg .key-tags span:not(:last-child)::after,
  .has-dark-bg .key-tags .key-tags-dots-left span::before {
     background-color: var(--color-primary-light-orange);
  }
+
 
  .has-dark-bg .highlight-text-orange,
   .dark-bg-orange-text {
