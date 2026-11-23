@@ -67,8 +67,8 @@
 .media-content-card {
     transition: all 0.3s ease;
     height: 100%;
-    display: flex;
     flex: 1;
+    display: flex;
     flex-direction: column;
     perspective: 1400px;
 }
@@ -78,8 +78,8 @@
     transform-style: preserve-3d;
     display: grid;
     height: 100%;
+    flex: 1;
 }
-
 .media-content-card-front {
     z-index: 2;
     transform: rotateY(0deg);
@@ -92,8 +92,10 @@
     transform: rotateY(180deg);
     padding: 24px 22px 22px;
     justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-
 
 .media-content-card.is-flipped .media-content-card-inner,
 .media-content-card-inner.is-flipped {
@@ -105,6 +107,7 @@
     grid-area: 1/1;
     backface-visibility: hidden; 
     -webkit-backface-visibility: hidden;
+    height: 100%;
 }
 
 .media-content-card:hover .media-content-card-front,
@@ -216,14 +219,7 @@
 }
 
 .media-content-card-back .media-content-card-actions {
-    margin-top: 24px;
-}
-
-.media-content-card-grid > div,
-.content-showcase-section .media-content-card-grid > div {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    margin-top: auto;
 }
 
 /* Our Works Filters */
@@ -252,6 +248,13 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 24px;
+}
+
+.media-content-card-grid > div,
+.content-showcase-section .media-content-card-grid > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .content-showcase-section .section-footer {
