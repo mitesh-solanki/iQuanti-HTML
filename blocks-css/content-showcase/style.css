@@ -22,7 +22,7 @@
 
 .pill-switch .cta-action:not(.cta-action-primary) {
     background: transparent;
-    color: var(--color-elevate-gray);
+    color: var(--color-electric-blue);
     font-weight: 900;
     line-height: 20px;
     border-radius: 8px;
@@ -30,7 +30,7 @@
 
 .pill-switch .cta-action:not(.cta-action-primary):hover {
     background: transparent;
-    color: var(--color-elevate-gray);
+    color: var(--color-electric-blue);
 }
 
 

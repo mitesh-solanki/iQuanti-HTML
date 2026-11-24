@@ -35,6 +35,10 @@
     margin-top: 16px;
 }
 
+.about-checks-line-bg-sec-wrap-1 {
+    background-image: url("../../assets/images/core-feature-chceks-line-bg.svg");
+}
+
 .about-us-banner {
     background-image: url("../../assets/images/about-us-banner.png");
     background-position: bottom;
