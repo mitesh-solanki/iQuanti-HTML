@@ -141,10 +141,15 @@
     transition: .3s ease-in-out;
 }
 
-.media-content-card:hover  {
-    transform: translateY(-8px) scale(1.03) !important;
+.media-content-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.media-content-card:hover {
+    transform:  translateY(-8px) scale(1.02) translateZ(0) !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
 }
 
 .media-content-card .media-content-card-front-body {
