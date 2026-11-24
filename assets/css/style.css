@@ -1378,6 +1378,10 @@ body .cls-superscript .superscript {
  
 
 /* Sticky Header Light Mode */
+.site-header.sticky-header .header-contact.active {
+    background-color: var(--color-off-white);
+    color: var(--color-electric-blue);
+}
 
 
 /* ========================================

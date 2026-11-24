@@ -134,6 +134,7 @@
 
 .client-card .chart-note {
     color: var(--color-smoke-white);
+    margin-top: auto;
 }
 
 .client-card .chart-note span {
@@ -146,7 +147,7 @@
     background-color: var(--color-elevate-gray-20);
     border: 1px solid var(--color-elevate-gray-40);
     border-radius: 8px;
-    margin-top: 14px;
+    margin-top: auto;
 }
 
 .ai-core-box-wrap .ai-core-box-desc {
@@ -154,6 +155,9 @@
     margin-top: 4px;
 }
 
+.client-card .chart-note + .ai-core-box-wrap {
+    margin-top: 14px;
+}
 
 /* ========================================
   COMPANY OVERVIEW CARD
