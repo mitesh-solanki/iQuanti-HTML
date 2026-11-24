@@ -15,6 +15,11 @@
     border: 0;
 }
 
+.pill-switch .cta-action:hover {
+   transform: scale(1) !important;
+   box-shadow: none;
+}
+
 .pill-switch .cta-action:not(.cta-action-primary) {
     background: transparent;
     color: var(--color-elevate-gray);
@@ -27,6 +32,8 @@
     background: transparent;
     color: var(--color-elevate-gray);
 }
+
+
 
 /* Pill Tab Widget */
 .pill-tabs {
@@ -134,8 +141,10 @@
     transition: .3s ease-in-out;
 }
 
-.media-content-card:hover .media-content-card-front-media img {
-    transform:scale(1.2);
+.media-content-card:hover  {
+    transform: translateY(-8px) scale(1.03) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
 }
 
 .media-content-card .media-content-card-front-body {

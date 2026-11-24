@@ -766,7 +766,7 @@ form input::placeholder {
     line-height: 26px;
     padding: 12px 20px;
     border-radius: 100px !important;
-    transition: all 0.25s ease;
+    transition: all 0.25s ease !important;
     font-weight: 700;
     text-decoration: none;
     gap: 10px;
@@ -799,6 +799,23 @@ form input::placeholder {
 .cta-action-primary:hover {
    background-color: #025ec2;
 }
+
+/* Hover state: Subtle scale-up aur halka shadow */
+.cta-action-hover-state:hover {
+    transform: scale(1.04) !important; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+
+/* Active state: Click karne par thoda press feel aayega */
+.cta-action-hover-state:active {
+    transform: scale(0.98);
+}
+
+/* Primary button hover par thoda color contrast (optional) */
+.cta-action-hover-state :hover {
+    filter: brightness(1.08); /* Electric blue thoda aur vibrant dikhega */
+}
+
 
 .cta-action-white {
     border: 1px solid var(--color-cool-gray);
@@ -918,6 +935,10 @@ form input::placeholder {
 .highlight-text.highlight-text-orange {
     color: var(--color-primary-orange) !important;
 }
+
+.highlight-text.highlight-text-q-purple {
+    color: var(--color-q-purple) !important;
+} 
 
 
 /* ========================================
@@ -1350,6 +1371,11 @@ body .cls-superscript .superscript {
     color: var(--color-off-white);
 }
 
+.site-header.header-mode-dark .main-navigation li.current-menu-item a {
+    background: var(--color-elevate-gray);
+    color: #fff;
+}
+ 
 
 /* Sticky Header Light Mode */
 
