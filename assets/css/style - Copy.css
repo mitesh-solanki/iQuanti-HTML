@@ -3040,6 +3040,7 @@ color: #FFFFFF;
     align-items: center;
     gap: 4px 5px;
     margin-bottom: 16px;
+    line-height: 1.2;
 }
 
 .solution-tags span,
