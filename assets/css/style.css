@@ -773,6 +773,8 @@ form input::placeholder {
     cursor: pointer;
     width: fit-content;
     font-family: "neulis-neue", sans-seerif;
+    cursor: pointer;
+    pointer-events: unset !important;
 }
 
 

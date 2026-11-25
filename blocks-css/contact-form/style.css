@@ -1014,11 +1014,6 @@ body.webinar-details-page .speaker-profile-card .speaker-avatar img {
         min-height: 700px;
     }
 
-    .iq-split-hero-section .contact-form-wrapper {
-        display: flex;
-        justify-content: end;
-    }
-
     .iq-contact-content-grid {
         justify-content: space-between;
         gap: 40px !important;

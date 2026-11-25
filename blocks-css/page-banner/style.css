@@ -35,6 +35,8 @@
     margin-top: 16px;
 }
 
+
+/* Aboutus page CSS  */
 .about-checks-line-bg-sec-wrap-1 {
     background-image: url("../../assets/images/core-feature-chceks-line-bg.svg");
 }
@@ -54,6 +56,11 @@
 
 .about-us-banner .banner-content h1 {
     color: var(--color-ice-blue);
+}
+
+.iq-feature-blurb-top-left {
+    top: -20%;
+    left: 0;
 }
 
 .spotlight-banner-section  {
