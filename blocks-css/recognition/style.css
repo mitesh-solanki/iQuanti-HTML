@@ -15,6 +15,10 @@
     background-image: url("../../assets/images/recognition-trust-checks-line-bg.svg");
 }
 
+.section-wrap .recognition-section {
+    background-image: none;
+} 
+
 .recognition-section .recognition-blurb-center-left {
     top: -55%;
     left: 0%;
@@ -29,9 +33,6 @@
     max-width: 1264px;
 }
 
-.recognition-section .recognition-heading {
-    margin-bottom: 60px;
-}
 
 /* ========================================
    CARDS GRID
@@ -106,9 +107,9 @@
 }
 
 .recognition-card p {
-    font-size: 14.5px;
+    font-size: 14px;
     line-height: 1.5695;
-    color: var(--color-dim-gray);
+    color: var(--color-slate-grey);
 }
 
 .recognition-block-empty-preview {
@@ -169,7 +170,7 @@
 
 @media (min-width: 1200px) {
     .recognition-section .recognition-heading {
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
 }
 

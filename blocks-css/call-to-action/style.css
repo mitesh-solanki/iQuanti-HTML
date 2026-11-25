@@ -72,6 +72,12 @@
     max-width: 869px;
 }
 
+/* Aboutus Call To Action CSS */
+.about-us-call-to-action-section .call-to-action-content p{
+    max-width: 738px;
+    margin-inline: auto;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */

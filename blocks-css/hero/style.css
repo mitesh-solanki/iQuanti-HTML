@@ -14,6 +14,11 @@
     z-index: 0;
 }
 
+.hero-section.hero-section-has-bg-image {
+    min-height: 700px;
+    background-position: center;
+}
+
 .hero-section .blurb-bg-right-center {
     right: 0;
     top: 0;
@@ -34,6 +39,16 @@
     inset: 0;
     pointer-events: none;
     z-index: -1;
+}
+
+
+/* Hero Section Dark Bg */
+.hero-section.has-dark-bg .hero-content h1 {
+    color: var(--color-off-white)
+}
+
+.hero-section.has-dark-bg .hero-content .sub-head-2 {
+    color: var(--color-cool-gray);
 }
 
 /* =========================
@@ -429,6 +444,10 @@
 }
 
 @media (max-width: 1380px) {
+    .hero-section.hero-section-has-bg-image {
+        min-height: 600px;
+    }
+
     .home-hero-section .hero-content {
         padding-bottom: 10px;
     }
@@ -502,7 +521,7 @@
     }
 
     .hero-grid .hero-content {
-        width: 100%;
+        width: 100% !important;
     }
 
     .hero-grid .hero-image {
@@ -535,6 +554,10 @@
 
     .hero-section {
         padding-top: 106px;
+    }
+
+    .hero-section.hero-section-has-bg-image {
+        min-height: 500px;
     }
 
     .hero-grid .hero-content .hero-description {
