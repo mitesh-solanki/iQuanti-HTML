@@ -234,10 +234,17 @@
     bottom: -35%;
     z-index: 0;
     pointer-events: none;
-    background: url("../../assets/images/solutions-center-bg.webp") center center / auto no-repeat;
+    background: none center center / auto no-repeat;
     transform: translate3d(0, var(--feature-parallax-y, 0%), 0);
     backface-visibility: hidden;
     will-change: transform;
+}
+
+.feature-glow.is-bg-ready {
+    background-image: image-set(
+        url("../../assets/images/solutions-center-bg.avif") type("image/avif"),
+        url("../../assets/images/solutions-center-bg.webp") type("image/webp")
+    );
 }
 
 /* Static overlays — do not live on the transforming glow */
