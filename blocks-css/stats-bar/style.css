@@ -6,17 +6,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 321px;
-    padding: 80px 120px;
+    min-height: 322px;
+    padding: 80px;
     background: rgba(250, 250, 250, 0.2);
 }
+
+
 
 .stats-bar-box-stat {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 33.3333%;
+    max-width: max-content;
 }
+
+.stats-bar-box-cols-above-three .stats-bar-box-stat {
+    flex:1;
+    max-width: 100%;
+}   
 
 .stats-bar-box .stats-bar-box-stat .stats-bar-count-value {
     margin: 0;
