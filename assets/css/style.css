@@ -940,6 +940,9 @@ form input::placeholder {
     color: var(--color-q-purple) !important;
 } 
 
+.highlight-text.highlight-text-qunatum-purple {
+    color: var(--color-qunatum-purpule) !important;
+} 
 
 /* ========================================
    Glass Effect
