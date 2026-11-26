@@ -2242,9 +2242,6 @@ body.contact-page {
     border: none !important;
 }
 
-.iq-profile-grid-wrapper.has-expanded-card .iq-profile-card-item:not(.is-expanded) {
-    display: none;
-}
 
 .iq-profile-card-item.is-expanded {
     grid-column: 1 / -1;
@@ -2682,7 +2679,7 @@ html:has(.media-content-popup-main:popover-open) {
 }
 
 .iq-profile-grid-lsiting-section .iq-profile-card {
-    height: 380px;
+    height: 500px;
     padding: 15px;
     position: relative;
 }
@@ -2691,12 +2688,6 @@ html:has(.media-content-popup-main:popover-open) {
     padding-bottom: 50px;
 }
 
-.iq-orbit-rings-vector {
-    position: absolute;
-    top: -3%;
-    right: 0;
-    z-index: -1;
-}
 
 
 /* 2-column staggered: 2nd column pushed down */
@@ -2706,9 +2697,49 @@ html:has(.media-content-popup-main:popover-open) {
 }
 
 /* 4-column staggered: 1st and 3rd columns pushed down */
-.iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:nth-child(3n + 2) {
-    top:50px;
-} 
+/* .iq-profile-grid-wrapper.is-staggered.columns-3 > .iq-profile-card:not(:nth-child(3n + 2)) {
+    top: 106px;
+} */
+
+
+.iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded),
+.iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded){
+        grid-column: 1 / -1;
+       justify-self: center; 
+}
+
+.iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded){
+    width: calc((100% - 48px) / 3);
+}
+
+.iq-profile-grid-wrapper.has-cols-4 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded){
+    width: calc((100% - 48px) / 4);
+}
+
+
+
+/* 1. Expanded Item Poori Row (Column 1 se 4 tak) Fill Karega */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item.is-expanded,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:has(.is-expanded) {
+    grid-column: 1 / -1 !important;
+}
+
+/* 2. Case A: Row 1st Card (1, 4, 7...) Expand  2nd and 3rd Hide */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item + .iq-profile-card-item,
+
+/* Case B: Row  2nd Card (2, 5, 8...) Expand -> 1st and 3rd Hide */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))),
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+
+/* Case C: Row 3rd Card (3, 6, 9...) Expand -> 1st and 2nd Hide */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item + .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))),
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))) {
+    display: none !important;
+}
+
+
+
 
 /* 4-column staggered: 1st and 3rd columns pushed down */
 
@@ -2716,6 +2747,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-profile-grid-wrapper.is-staggered.columns-4 > .iq-profile-card:nth-child(4n + 3) { 
     top:50px;
 }
+
 
 
 
@@ -2827,6 +2859,9 @@ html:has(.media-content-popup-main:popover-open) {
         background-color: var(--color-smoke-white);
     }
 
+    .iq-profile-grid-lsiting-section {
+        padding-top: 184px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -2834,7 +2869,11 @@ html:has(.media-content-popup-main:popover-open) {
 
 @media (min-width: 1381px) {
     .iq-profile-grid-lsiting-section .container > .heading-wrap{
-        margin-bottom: 200px;
+        margin-bottom: 125px;
+    }
+
+    .iq-profile-grid-lsiting-section {
+        padding-top: 204px
     }
 }
 
@@ -3444,7 +3483,26 @@ html:has(.media-content-popup-main:popover-open) {
         grid-column: auto;
     }
 
+    .iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded) {
+        width: calc((100% - 48px) / 2);
+    }
 
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item, 
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item + .iq-profile-card-item,
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))),
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item + .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))), 
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))) {
+        display: block !important;
+    }
+
+    /* Case A: Row  1st Card (1, 3, 5...) Expand  -> 2nd Card Hide */
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(2n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+
+    /* Case B: Row  2nd Card (2, 4, 6...) Expand -> 1st Card Hide */
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(2n + 1):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))) {
+        display: none !important;
+    }
 
 }
 
@@ -3708,20 +3766,6 @@ html:has(.media-content-popup-main:popover-open) {
         height: 32px;
     }
 
-    .iq-orbit-rings-vector {
-        position: absolute;
-        top: -1%;
-        z-index: -1;
-        left: 50%;
-        right: auto;
-        opacity: 1;
-        transform: translate(-50%);
-        opacity: 0.7;
-    }
-
-    .iq-orbit-rings-vector img {
-         width: 400px;
-    }
 
     .split-content-grid {
         gap: 30px;
@@ -3750,6 +3794,9 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 0;
     }
 
+        .iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded) {
+            width: 100%;
+        }
     
 }
 
