@@ -96,6 +96,26 @@ jQuery(document).ready(function ($) {
             }
         }
     });
+
+
+    // Marquee Slider: Constant linear scroll speed (160px/s) across any image count and screen size
+        function updateMarqueeSpeed() {
+        $('.iq-marquee').each(function () {
+            var $group = $(this).find('.iq-marquee-group').first();
+            var $track = $(this).find('.iq-marquee-track');
+            if ($group.length && $track.length) {
+                var groupWidth = $group.outerWidth(true);
+                if (groupWidth > 0) {
+                    var speedPxPerSec = 160;
+                    var duration = (groupWidth / speedPxPerSec).toFixed(2);
+                    $track.css('--marquee-duration', duration + 's');
+                }
+            }
+        });
+    }
+ 
+    updateMarqueeSpeed();
+    $(window).on('resize orientationchange load', updateMarqueeSpeed);
     
 
 });

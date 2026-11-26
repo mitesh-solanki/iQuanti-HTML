@@ -78,6 +78,10 @@
     margin-inline: auto;
 }
 
+.about-us-call-to-action-section {
+    padding-top: 0;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */

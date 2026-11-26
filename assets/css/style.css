@@ -2573,7 +2573,7 @@ html:has(.media-content-popup-main:popover-open) {
 .iq-marquee-track {
     display: flex;
     width: max-content;
-    animation: iqMarquee 12s linear infinite;
+    animation: iqMarquee var(--marquee-duration, 24s) linear infinite;
     will-change: transform;
 }
 
@@ -3109,14 +3109,6 @@ html:has(.media-content-popup-main:popover-open) {
         font-size: 24px;
     }
     /* Aboutus Page CSS  */
-
-    .core-feature-grid-section,
-    .about-marquee-section,
-    .our-legacy-section,
-    .our-leadership-section,
-    .about-recognition-section {
-        padding-bottom: 0;
-    }
 
     .iq-feature-card {
         padding: 24px;
@@ -3794,9 +3786,13 @@ html:has(.media-content-popup-main:popover-open) {
         gap: 0;
     }
 
-        .iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded) {
-            width: 100%;
-        }
+    .iq-profile-grid-wrapper.has-cols-3 .iq-profile-card-item:last-child:nth-child(3n + 1):not(.is-expanded) {
+        width: 100%;
+    }
+
+    .iq-marquee-group .iq-marquee-item:nth-last-child(even) {
+        height: 300px;
+    }
     
 }
 
