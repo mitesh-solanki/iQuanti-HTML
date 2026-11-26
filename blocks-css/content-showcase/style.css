@@ -159,7 +159,8 @@
     flex: 1;
 }
 
-.media-content-card .media-content-card-front-title {
+.media-content-card .media-content-card-front-title,
+.media-content-card .media-content-card-front-desc {
     margin-bottom: 24px;
     overflow: hidden;
     display: -webkit-box;
@@ -255,6 +256,10 @@
     gap: 32px;
 }
 
+.content-showcase-section .container > h2 {
+    align-self: flex-start;
+}
+
 /* Media Content Card Grid & Component */
 .content-showcase-section .media-content-card-grid {
     width: 100%;
@@ -274,6 +279,24 @@
 .content-showcase-section .section-footer {
     width: 100%;
     margin-top: 16px;
+}
+
+
+/* Webinar Listing Filter Page CSS */
+.filter-content-showcase-section .content-showcase-section .container {
+    gap: 48px;
+}
+
+.filter-content-showcase-section .media-content-card-grid {
+    margin-top:0;
+}
+
+.filter-content-showcase-section  .section-footer{
+    margin-top: 32px
+}
+.filter-media-content-card-grid .media-content-card .media-content-card-front-title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 /* ========================================

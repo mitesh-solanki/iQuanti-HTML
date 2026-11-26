@@ -118,6 +118,14 @@ jQuery(document).ready(function ($) {
     $(window).on('resize orientationchange load', updateMarqueeSpeed);
     
 
+    // Select 2
+    // Single Select
+    jQuery('.js-select2-single').select2({
+        placeholder: 'Select a service',
+        allowClear: true,
+        width: '100%'
+    });
+
 });
 
 // Mobile Menu Js 
@@ -1499,3 +1507,4 @@ document.addEventListener('DOMContentLoaded', function () {
         boot();
     }
 })(window, document);
+

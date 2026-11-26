@@ -460,6 +460,17 @@
 }
 
 
+/* Webinar Listing Hero Section CSS */
+.webinar-listing-hero-section.hero-section .hero-grid .hero-content {
+    width: 60%;
+}
+
+.webinar-listing-hero-section.hero-section .hero-content .sub-head-2 {
+    color:var(--color-off-white);
+    max-width: 680px;
+}
+
+
 
 /* ==========================================================
    RESPONSIVE / MEDIA QUERIES
@@ -599,6 +610,7 @@
 }
 
 @media (max-width: 767px) {
+    
     section.has-header-in-section.hero-section,
     .hero-section.has-header-in-section {
         padding-top: 102px !important;
@@ -610,6 +622,10 @@
 
     .hero-section.hero-section-has-bg-image {
         min-height: 500px;
+    }
+
+    .hero-grid .hero-content h1 {
+        margin-bottom: 16px;
     }
 
     .hero-grid .hero-content .hero-description {
