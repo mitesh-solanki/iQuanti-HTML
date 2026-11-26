@@ -35,63 +35,6 @@
     margin-top: 16px;
 }
 
-/* Aboutus page CSS  */
-.about-checks-line-bg-sec-wrap-1 {
-    background-image: url("../../assets/images/about-checks-line-bg-sec-wrap-1.svg");
-}
-
-.about-checks-line-bg-sec-wrap-2 {
-    background-image: url("../../assets/images/about-checks-line-bg-sec-wrap-2.svg");
-}
-
-.about-hero-section {
-    background-image: url("../../assets/images/about-hero-section-banner-image.webp");
-    background-position: bottom;
-}
-
-.about-hero-section .hero-grid .hero-content {
-    width: 42%;
-}
-
-.aboutus-sec-wrap-1-blurb-top-left {
-    top: -20%;
-    left: 0;
-}
-
-.aboutus-sec-wrap-1-blurb-left-center {
-    top:10%;
-    left: -5%;
-}
-
-.aboutus-sec-wrap-1-blurb-left-bottom {
-    left: 0;
-    bottom: -10%
-}
-
-.aboutus-sec-wrap-1-blurb-right-bottom.blurb-bg {
-    right: 0;
-    bottom: 0;
-}
-
-.aboutus-sec-wrap-2-blurb-top-left {
-    top: 0;
-    left: 0;
-}
-
-.aboutus-sec-wrap-2-blurb-left-bottom.blurb-bg {
-    bottom: 5%;
-}
-
-.aboutus-sec-wrap-2-blurb-right-center.blurb-bg {
-    right: 0;
-    bottom: 45%;
-}
-
-.aboutus-sec-wrap-2-blurb-right-bottom {
-    right: 0;
-    bottom: -30%;
-}
-
 .spotlight-banner-section  {
     min-height: 800px;
     overflow: hidden;
@@ -176,6 +119,7 @@
 .our-works-hero-section .spotlight-banner-content p {
     max-width: 647px;
 }
+
 .our-works-hero-section .spotlight-banner-content .cta-action {
     margin-top: 40px;
 }

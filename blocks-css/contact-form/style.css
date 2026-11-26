@@ -660,10 +660,6 @@ button:disabled {
    DETAILS & WEBINAR SPLIT HERO LAYOUTS
 ======================================== */
 
-.iq-contact-section {
-    background-image: url("../../assets/images/iq-contact-banner-image.webp");
-}
-
 .iq-split-hero-section {
     position: relative;
     min-height: 766px;

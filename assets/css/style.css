@@ -2020,6 +2020,16 @@ body .cls-superscript .superscript {
     color: var(--color-rich-black);
 }
 
+/* Banner Image */
+.banner-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: clip;
+}
+
 
 /* ==========================================================================
     LAYOUT CSS
