@@ -1,0 +1,364 @@
+/* ==========================================================================
+   iQuanti Team Listing - Smooth Card Expand Animation
+   File: assets/css/team-card-expand.css
+   ========================================================================== */
+
+/* 1. Coordinate Anchor for Morphing Card Overlay */
+.iq-profile-grid-wrapper {
+    position: relative;
+}
+
+/* Neutralize legacy is-expanded instant grid jump and styling */
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded,
+.iq-profile-card-item.is-expanded {
+    display: block !important;
+    grid-column: auto !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    animation: none !important;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded::after {
+    display: none !important;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item.is-expanded .iq-profile-card {
+    display: flex !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(28px) !important;
+}
+
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item.is-expanded,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:has(.is-expanded) {
+    grid-column: auto !important;
+}
+
+/* Ensure style.css never hides sibling cards */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item + .iq-profile-card-item,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))),
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):is(.is-expanded, :has(.is-expanded)) + .iq-profile-card-item,
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):has(+ .iq-profile-card-item + .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))),
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 2):has(+ .iq-profile-card-item:is(.is-expanded, :has(.is-expanded))) {
+    display: block !important;
+}
+
+/* CRITICAL: Keep single card on the last row (Card 13) centered at all times,
+   even when the morph overlay is appended inside the grid wrapper! */
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):nth-last-child(-n + 2),
+.iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: calc((100% - 48px) / 3) !important;
+}
+
+.iq-profile-grid-wrapper .iq-profile-card-item .iq-profile-card-details {
+    display: none !important;
+}
+
+/* 2. Interactive Team Card Items */
+.iq-profile-card-item {
+    cursor: pointer;
+    outline: none;
+    opacity: 1 !important;
+}
+
+.iq-profile-card-item:focus-visible {
+    border-radius: 8px;
+    outline: 2px solid var(--color-electric-blue, #0070E3);
+    outline-offset: 4px;
+}
+
+/* While morph overlay is expanding, hide only the underlying card */
+.iq-profile-card-item.is-morphing-source {
+    visibility: hidden !important;
+}
+
+/* 3. The Morphing Card Overlay (Desktop & General) */
+.iq-profile-morph-card {
+    position: absolute;
+    z-index: 90;
+    background-color: #323232;
+    border-radius: 8px;
+    border: 1px solid rgba(102, 105, 112, 0.25);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    pointer-events: auto;
+    opacity: 1;
+    
+    /* Hardware-accelerated fluid transition */
+    transition: left 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+                top 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+                width 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.38s ease,
+                opacity 0.25s ease;
+    will-change: left, top, width, height, opacity;
+}
+
+/* When closing, smoothly dissolve as it reaches the destination card */
+.iq-profile-morph-card.is-collapsing {
+    opacity: 0;
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                top 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s ease,
+                opacity 0.22s ease 0.12s;
+}
+
+/* Left Media Container (Image + Bottom Pill Badge) */
+.iq-profile-morph-media {
+    flex: 0 0 auto;
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+    background: #252525;
+}
+
+.iq-profile-morph-media .iq-profile-card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.iq-profile-morph-media .iq-profile-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* Pill Badge at bottom of image */
+.iq-profile-morph-media .iq-profile-card-badge {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    border-radius: 9999px;
+    text-align: center;
+    cursor: default;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.iq-profile-morph-media .iq-profile-card-badge:hover,
+.iq-profile-morph-media .iq-profile-card-badge.is-blue-badge {
+    background-color: var(--color-electric-blue, #0070E3) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.iq-profile-morph-media .iq-profile-card-badge h3 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.iq-profile-morph-media .iq-profile-card-badge p {
+    margin: 3px 0 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+/* Right Details Body (Close Button, Name, Title, Bio) */
+.iq-profile-morph-details {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 44px 36px 64px;
+    position: relative;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+
+    /* Staggered slide and fade-in */
+    opacity: 0;
+    transform: translateX(28px);
+    transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1) 0.08s,
+                transform 0.34s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+    will-change: opacity, transform;
+}
+
+.iq-profile-morph-card.is-expanded .iq-profile-morph-details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Sleek Scrollbar */
+.iq-profile-morph-details::-webkit-scrollbar {
+    width: 6px;
+}
+.iq-profile-morph-details::-webkit-scrollbar-track {
+    background: transparent;
+}
+.iq-profile-morph-details::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+.iq-profile-morph-details::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Close Button (X) */
+.iq-profile-morph-details .iq-profile-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(217, 217, 217, 0.22);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.25s ease;
+    z-index: 10;
+    outline: none;
+    padding: 0;
+}
+
+.iq-profile-morph-details .iq-profile-close-btn:hover {
+    background-color: rgba(217, 217, 217, 0.38);
+    transform: rotate(90deg);
+}
+
+.iq-profile-morph-details .iq-profile-close-btn:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.iq-profile-morph-details .iq-profile-close-btn svg {
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+
+/* Profile Details Content */
+.iq-profile-morph-details .iq-profile-details-body {
+    padding-top: 6px;
+    padding-right: 48px;
+}
+
+.iq-profile-morph-details .iq-profile-details-body h3 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+}
+
+.iq-profile-morph-details .iq-profile-details-body .iq-profile-details-role {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 22px 0;
+}
+
+.iq-profile-morph-details .iq-profile-details-bio p {
+    color: #CCCDCF;
+    font-size: 14.5px;
+    line-height: 1.58;
+    margin: 0 0 16px 0;
+    font-weight: 400;
+}
+
+.iq-profile-morph-details .iq-profile-details-bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* 4. Responsive Breakpoints */
+@media (max-width: 991px) {
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):nth-last-child(-n + 2),
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:last-child:nth-child(3n + 1) {
+        width: calc((100% - 48px) / 2) !important;
+    }
+
+    .iq-profile-morph-card {
+        flex-direction: column !important;
+        height: auto !important;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .iq-profile-morph-media {
+        width: 100% !important;
+        height: 380px !important;
+        min-height: 380px !important;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .iq-profile-morph-details {
+        width: 100% !important;
+        padding: 28px 24px 32px 24px;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .iq-profile-morph-details .iq-profile-details-body {
+        padding-right: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:nth-child(3n + 1):nth-last-child(-n + 2),
+    .iq-profile-grid-wrapper.has-cols-3 > .iq-profile-card-item:last-child:nth-child(3n + 1) {
+        width: 100% !important;
+    }
+
+    .iq-profile-morph-media {
+        height: 300px !important;
+        min-height: 300px !important;
+        padding: 20px;
+    }
+
+    .iq-profile-morph-details {
+        padding: 20px 18px 24px 18px;
+    }
+
+    .iq-profile-morph-details .iq-profile-details-body h3 {
+        font-size: 20px;
+    }
+
+    .iq-profile-morph-details .iq-profile-details-body .iq-profile-details-role {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .iq-profile-morph-details .iq-profile-details-bio p {
+        font-size: 13.5px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .iq-profile-morph-details .iq-profile-close-btn {
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+    }
+}
