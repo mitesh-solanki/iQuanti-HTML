@@ -38,6 +38,7 @@
     color: var(--color-elevate-gray);
     text-align: left;
     text-wrap: balance;
+    min-height: 56px;
 }
 
 .stats-bar-stat-divider {
@@ -94,5 +95,9 @@
 @media (max-width: 767px) {
     .stats-bar-box {
         padding: 60px 40px;
+    }
+    
+    .stats-bar-box-stat {
+        width: 50%;
     }
 }
