@@ -14,11 +14,14 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
-    <!-- 3. Custom Main CSS (Last, taaki agar library ya base style override karni ho toh easily ho jaye) -->
-     <link rel="stylesheet" href="assets/css/contact.css">
+    <!-- 3. Custom Main CSS -->
+    <link rel="stylesheet" href="blocks-css/contact-form/style.css">
+    <link rel="stylesheet" href="blocks-css/content-sticky-callout/style.css">
+    <link rel="stylesheet" href="blocks-css/call-to-action/style.css">
+    <link rel="stylesheet" href="blocks-css/webinar-slider/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="contact-page">
+<body class="webinar-page iq-bg-pure-white">
 <!-- Header Section Start -->
 <header class="site-header">
     <div class="header-container container">
@@ -77,33 +80,39 @@
 </header>
 <!-- Header Section End -->
 <!--webinar hero section start-->
-<section class="iq-split-hero-section webinar-hero-section has-header-space">
+<section class="iq-split-hero-section webinar-hero-section has-header-space has-dark-bg">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="iq-items-center iq-split-hero-wrapper">
+    <div class="iq-split-hero-wrapper">
 
         <!-- LEFT CONTENT -->
         <div class="iq-split-hero-left" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
             <div class="iq-split-hero-header">
-            <img src="./assets/images/webinar-logo.svg" class="webinar-logo" alt="webinar-logo">
-            <h2 class="iq-split-hero-title headline-2 iq-text-white">
-                Faster, Better, Compliant: Scaling Content with AI  for Financial Brands
-            </h2>
+                <div class="section-label has-white">
+                    <span class="insights-label">ON-DEMAND WEBINAR</span>
+                </div>
+                <h2 class="iq-split-hero-title headline-2 iq-text-white">
+                    Faster, Better, Compliant: <span class="highlight-text highlight-text-orange">Scaling Content with AI</span>  for Financial Brands
+                </h2>
             </div>
             <!-- ADDRESS -->
              <div class="speaker-profile-card-grid">
                  <div class="speaker-profile-card">
                     <div class="speaker-avatar">
-                        <img src="./assets/images/webinar-hero.svg" alt="Matthew DiBenedetti">
+                        <img src="assets/images/matthew-diBenedetti-float-pf-image.webp" alt="Matthew DiBenedetti">
                     </div>
                     <div class="speaker-info">
-                        <span class="speaker-name body-text-18 body-text-bold ">
-                            Matthew DiBenedetti
-                        </span>
-                        <div class="divider"></div>
-                        <span class="speaker-role body-text-14 body-text-bold">
-                            SVP of Creative & Experience
+                        <div class="speaker-details">
+                            <span class="speaker-name body-text-16 body-text-bold ">
+                                Matthew DiBenedetti
+                            </span>
+                            <span class="speaker-role body-text-12 body-text-bold">
+                                SVP of Creative & Experience
+                            </span>
+                        </div>
+                        <span class="company-name dark-bg-orange-text body-text-12 body-text-bold">
+                            iQuanti
                         </span>
                     </div>
                 </div>
@@ -112,124 +121,181 @@
 
 
          <!-- RIGHT CONTENT -->
-
         <div class="iq-split-hero-right">
+            <!-- Contact Form -->
             <div class="contact-form-wrapper iq-split-contact-form-wrapper sticky-contact-form">
 
-                <form class="contact-form iq-split-contact-form has-glass-effect has-glass-dark" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">
+                <form class="contact-form has-glass-effect has-glass-dark" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
 
-                <!-- Form Header -->
-                <div class="contact-form-header">
-                    <h3 class="contact-form-title">
-                    Getting started is easy.
-                    </h3>
-                    <p class="contact-form-required body-text-14">
-                    Required fields<span class="asterisk">*</span>
-                    </p>
-                </div>
+                    <!-- Form Header -->
+                    <div class="contact-form-header">
 
-                <div class="contact-form-row-wrap">
-                    
-                    <!-- Name & Company -->
-                    <div class="contact-form-row">
-                    <div class="form-group">
-                        <label for="name">
-                        Your name*
-                        </label>
-                        <input type="text" id="name" name="name" required>
+                        <h3 class="contact-form-title">
+                            Getting started is easy.
+                        </h3>
+
+                        <p class="contact-form-required body-text-14">
+                            Required fields<span class="asterisk">*</span>
+                        </p>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="company">
-                        Company name*
-                        </label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    </div>
+                    <div class="contact-form-row-wrap">
+                        
+                        <!-- Name & Company -->
+                        <div class="contact-form-row">
 
-                    <!-- Email -->
-                    <div class="contact-form-row">
-                    <div class="form-group">
-                        <label for="email">
-                        Your work email*
-                        </label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    </div>
-                    
-                    <!-- Interest & Message -->
-                    <div class="contact-form-row">
-                    <div class="form-group">
-                        <label for="interest">
-                        Interested in*
-                        </label>
-                        <select id="interest" name="interest" required>
-                        <option value="">Select an option</option>
-                        <option value="seo">SEO</option>
-                        <option value="paid-media">Paid Media</option>
-                        <option value="digital-marketing">Digital Marketing</option>
-                        <option value="other">Other</option>
-                        </select>
-                    </div>
-                    </div>
+                            <div class="form-group">
 
-                    <!-- Privacy & Add Message -->
-                    <div class="privacy-message-wrap">
-                    <button type="button" class="add-message-btn">
-                        <span class="plus-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                            <path d="M9 7H16.5V9H9V16.5H7V9H0V7H7V0H9V7Z" fill="#FAFAFA"></path>
-                        </svg>
-                        </span>
-                        <span class="btn-text body-text-14">Add message <span class="optional sm-text-12">(Optional)</span></span>
-                    </button>
+                                <label for="name">
+                                    Your name*
+                                </label>
 
-                    <!-- Privacy Checkbox -->
-                    <div class="privacy-checkbox">
-                        <div class="custom-check-box-wrap">
-                        <input type="checkbox" id="privacy" name="privacy" required>
-                        <span class="custom-check-box"></span>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="company">
+                                    Company name*
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                >
+
+                            </div>
+
                         </div>
-                        <label for="privacy">
-                        <span class="sm-text-12">I confirm I have read iQuanti's</span>
-                        <span class="sm-text-12 privacy-policy-text">Privacy Policy.* </span>
-                        </label>
-                    </div>
-                    </div>
 
-                    <!-- reCAPTCHA -->
-                    <div class="recaptcha-box">
-                    <div class="recaptcha-checkbox"></div>
-                    <div class="recaptcha-content">
-                        <p>I'm not a robot</p>
-                        <span>reCAPTCHA · Privacy · Terms</span>
-                    </div>
-                    </div>
 
-                    <!-- Submit -->
-                    <button type="submit" class="contact-submit cta-action cta-action-primary cta-action-hover-state" disabled>
-                    Contact Us
-                    </button>
+                        <!-- Email -->
+                        <div class="contact-form-row">
 
-                </div><!-- /.contact-form-row-wrap -->
+                            <div class="form-group">
 
+                                <label for="email">
+                                    Your work email*
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+                        
+                        <!-- Interest & Message -->
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="interest">
+                                    Interested in*
+                                </label>
+
+                                <select
+                                    id="interest"
+                                    name="interest"
+                                    required
+                                >
+                                    <option value="">
+                                        Select an option
+                                    </option>
+
+                                    <option value="seo">
+                                        SEO
+                                    </option>
+
+                                    <option value="paid-media">
+                                        Paid Media
+                                    </option>
+
+                                    <option value="digital-marketing">
+                                        Digital Marketing
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="privacy-message-wrap">
+                            <button type="button" class="add-message-btn">
+                                <span class="plus-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                    <path d="M9 7H16.5V9H9V16.5H7V9H0V7H7V0H9V7Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </span>
+                                <span class="btn-text body-text-14 body-text-reg">Add message <span class="optional sm-text-12">(Optional)</span></span>
+                            </button>
+                            <!-- Privacy Checkbox -->
+                            <div class="privacy-checkbox">
+                                <div class="custom-check-box-wrap">
+                                    <input type="checkbox"id="privacy"name="privacy" required>
+                                    <span class="custom-check-box"></span>
+                                </div>
+                                <label for="privacy">
+                                    <span class="sm-text-12">I confirm I have read iQuanti's</span>
+                                    <span class="sm-text-12 privacy-policy-text">Privacy Policy.* </span>
+                                </label>
+        
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            class="contact-submit cta-action cta-action-primary cta-action-hover-state"
+                            disabled
+                        >
+                            Contact Us
+                            </button>
+                        </div>
+                        <svg width="0" height="0" style="position:absolute">
+                            <filter id="glass-effect-dark" filterUnits="userSpaceOnUse" x="0" y="0" width="300" height="200" color-interpolation-filters="sRGB">
+                                <feImage href="#" x="0" y="0" width="300" height="200" result="map"/>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="58.8" xChannelSelector="R" yChannelSelector="G" result="dR"/>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="49" xChannelSelector="R" yChannelSelector="G" result="dG"/>
+                                <feDisplacementMap in="SourceGraphic" in2="map" scale="39.2" xChannelSelector="R" yChannelSelector="G" result="dB"/>
+                                <feColorMatrix in="dR" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
+                                <feColorMatrix in="dG" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"/>
+                                <feColorMatrix in="dB" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"/>
+                                <feBlend in="r" in2="g" mode="screen" result="rg"/>
+                                <feBlend in="rg" in2="b" mode="screen"/>
+                            </filter>
+                        </svg>
                 </form>
 
-            </div><!-- /.contact-form-wrapper -->
-            </div><!-- /.iq-split-hero-right -->
+            </div>
+        </div>
 
       </div>
     </div>
+     <img class="banner-image" src="assets/images/webinar-landing-hero-banner-image.webp" alt=" Iq contact banner image">
 </section>
 <!--webinar hero section end-->
 
 
-<div class="section-wrap webinar-checks-line-bg-sec-wrap has-checks-line-bg">
+<div class="section-wrap webinar-checks-line-bg-sec-wrap has-checks-line-bg iq">
     <!--Overview section start-->
     <section class="sticky-content-section overview-section">
-        <div class="sticky-content-bottom-left blurb-bg">
-            <img src="assets/images/overview-blurb-bottom-left.svg" alt="Overview blurb decorative graphic top right">
-        </div>
         <div class="sticky-content-top-right blurb-bg">
             <img src="assets/images/overview-blurb-top-right.svg" alt="Overview blurb decorative graphic top right">
         </div>
@@ -238,8 +304,9 @@
                 <div class="sticky-left-content">
                 <h2 class="headline-2">Overview</h2>
                 <div class="overview-text">
-                <p class="body-text-18 ">Generative search and LLM platforms like Google AI Overviews, Microsoft Copilot, Perplexity, and emerging ChatGPT Search are reshaping how consumers discover financial products. As search shifts from links to conversational answers, paid advertising models, measurement frameworks, and compliance expectations are evolving rapidly, especially for highly regulated BFS brands.</p>
-                 <p class="body-text-18">In this on demand webinar, we've explored the current and emerging paid advertising opportunities across generative search and AI-driven platforms, what's realistically available to BFS marketers today, and how to prepare for what's coming next.</p>
+                <p class="body-text-18 ">Generative search and LLM platforms like Google AI Overviews, Microsoft Copilot, Perplexity, and emerging ChatGPT Search are reshaping how consumers discover financial products. As search shifts from links to conversational answers, paid advertising models, measurement frameworks, and compliance expectations are evolving rapidly, especially for highly regulated BFS brands.
+                   <br> In this on demand webinar, we've explored the current and emerging paid advertising opportunities across generative search and AI-driven platforms, what's realistically available to BFS marketers today, and how to prepare for what's coming next.</p>
+                 
                  </div>
                  <ul class="iq-highlight-list">
                  <li class="body-text-18 body-text-bold">
@@ -260,13 +327,13 @@
                  </ul>
                  </div>
                  <div class="sticky-right-content">
-                    <div class="info-highlight-card">
+                    <div class="info-highlight-card has-glass-effect has-glass-white">
                         <div class="info-highlight-card-label">
                             <img src="./assets/images/key-highlight-icon.svg" alt="key-highlight">
                             <span class="body-text-20 body-text-bold">Key Insights</span>
                         </div>
                         <div class="info-highlight-card-content">
-                            <p class="body-text-18 body-text-bold">We've also unpacked how declining clicks, new ad formats, and stricter trust requirements are forcing banks to rethink budgets, creative and success metrics in an AI-first search environment.</p>
+                            <p class="body-text-18 body-text-bold font-area-normal">We've also unpacked how declining clicks, new ad formats, and stricter trust requirements are forcing banks to rethink budgets, creative and success metrics in an AI-first search environment.</p>
                         </div>
                     </div>
                  </div>
@@ -294,9 +361,9 @@
               data-slider-action="prev" 
               aria-label="Previous Webinars"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M7.62492 19.2929C7.2344 19.6834 7.2344 20.3166 7.62492 20.7071L13.9889 27.0711C14.3794 27.4616 15.0126 27.4616 15.4031 27.0711C15.7936 26.6805 15.7936 26.0474 15.4031 25.6569L9.74624 20L15.4031 14.3431C15.7936 13.9526 15.7936 13.3195 15.4031 12.9289C15.0126 12.5384 14.3794 12.5384 13.9889 12.9289L7.62492 19.2929ZM31.6654 21H32.6654V19H31.6654V20V21ZM8.33203 20V21H31.6654V20V19H8.33203V20Z" fill="#0070E3"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M31.6615 21H32.6615V19H31.6615V20V21ZM8.32812 20V21H31.6615V20V19H8.32812V20ZM7.62102 19.2929C7.23049 19.6834 7.23049 20.3166 7.62102 20.7071L13.985 27.0711C14.3755 27.4616 15.0087 27.4616 15.3992 27.0711C15.7897 26.6805 15.7897 26.0474 15.3992 25.6569L9.74234 20L15.3992 14.3431C15.7897 13.9526 15.7897 13.3195 15.3992 12.9289C15.0087 12.5384 14.3755 12.5384 13.985 12.9289L7.62102 19.2929Z" fill="#3F4551"/>
+            </svg>
             </button>
     
             <button 
@@ -305,9 +372,9 @@
               data-slider-action="next" 
               aria-label="Next Webinars"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M8.33594 19C7.78365 19 7.33594 19.4477 7.33594 20C7.33594 20.5523 7.78365 21 8.33594 21V20V19ZM32.3764 20.7071C32.7669 20.3166 32.7669 19.6834 32.3764 19.2929L26.0124 12.9289C25.6219 12.5384 24.9887 12.5384 24.5982 12.9289C24.2077 13.3195 24.2077 13.9526 24.5982 14.3431L30.2551 20L24.5982 25.6569C24.2077 26.0474 24.2077 26.6805 24.5982 27.0711C24.9887 27.4616 25.6219 27.4616 26.0124 27.0711L32.3764 20.7071ZM8.33594 20V21H31.6693V20V19H8.33594V20Z" fill="#0070E3"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M8.33594 19C7.78365 19 7.33594 19.4477 7.33594 20C7.33594 20.5523 7.78365 21 8.33594 21V20V19ZM8.33594 20V21H31.6693V20V19H8.33594V20ZM32.3764 20.7071C32.7669 20.3166 32.7669 19.6834 32.3764 19.2929L26.0124 12.9289C25.6219 12.5384 24.9887 12.5384 24.5982 12.9289C24.2077 13.3195 24.2077 13.9526 24.5982 14.3431L30.2551 20L24.5982 25.6569C24.2077 26.0474 24.2077 26.6805 24.5982 27.0711C24.9887 27.4616 25.6219 27.4616 26.0124 27.0711L32.3764 20.7071Z" fill="#3F4551"/>
+            </svg>
             </button>
           </div>
         </div>
@@ -320,19 +387,19 @@
           data-slider-track
         >
           <a href="#" class="peek-slide-card" data-slider-item>
-            <img src="assets/images/webinar-slider-image-1.png" alt="Webinar 1" class="iq-webinar-card-img" loading="lazy" />
+            <img src="assets/images/webinar-slider-image-1.webp" alt="Webinar 1" class="iq-webinar-card-img" loading="lazy" />
           </a>
           <a href="#" class="peek-slide-card" data-slider-item>
-            <img src="assets/images/webinar-slider-image-2.png" alt="Webinar 2" class="iq-webinar-card-img" loading="lazy" />
+            <img src="assets/images/webinar-slider-image-2.webp" alt="Webinar 2" class="iq-webinar-card-img" loading="lazy" />
           </a>
           <a href="#" class="peek-slide-card" data-slider-item>
-            <img src="assets/images/webinar-slider-image-3.png" alt="Webinar 3" class="iq-webinar-card-img" loading="lazy" />
+            <img src="assets/images/webinar-slider-image-3.webp" alt="Webinar 3" class="iq-webinar-card-img" loading="lazy" />
           </a>
           <a href="#" class="peek-slide-card" data-slider-item>
-            <img src="assets/images/webinar-slider-image-4.png" alt="Webinar 4" class="iq-webinar-card-img" loading="lazy" />
+            <img src="assets/images/webinar-slider-image-4.webp" alt="Webinar 4" class="iq-webinar-card-img" loading="lazy" />
           </a>
           <a href="#" class="peek-slide-card" data-slider-item>
-            <img src="assets/images/webinar-slider-image-2.png" alt="Webinar 5" class="iq-webinar-card-img" loading="lazy" />
+            <img src="assets/images/webinar-slider-image-2.webp" alt="Webinar 5" class="iq-webinar-card-img" loading="lazy" />
           </a>
         </div>
       </div>

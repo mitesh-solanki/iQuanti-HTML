@@ -7447,6 +7447,10 @@ html:has(.media-content-popup-main:popover-open) {
         margin: 0 auto 40px;
     }
 
+    .iq-split-hero-section .iq-split-hero-header:has(.section-label):has(h2:last-child)  {
+        gap:0
+    }
+
      .contact-solutions-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 24px !important;

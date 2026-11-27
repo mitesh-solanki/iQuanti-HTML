@@ -405,6 +405,10 @@ h2,
     font-family: "neulis-neue", sans-serif !important;
 }
 
+.font-area-normal {
+    font-family: area-normal, system-ui, sans-serif !important;
+}
+
 .has-nobody-bg-image {
     background-image: none;
 }
@@ -633,6 +637,10 @@ body.motion-paused .glow-bg span {
 
 .iq-bg-none {
     background: none !important;
+}
+
+.iq-bg-pure-white {
+    background-color: var(--color-pure-white) !important;
 }
 
 .iq-text-center {
@@ -1064,7 +1072,7 @@ form input::placeholder {
 }
 
 .section-wrap {
-    overflow: hidden;
+    overflow: clip;
 }
 /* ========================================
    Custom Check-Box
@@ -2328,6 +2336,14 @@ body.contact-page {
 
 .iq-profile-grid-wrapper .iq-profile-card-item.is-expanded::after {
     opacity: 1;
+}
+
+.iq-profile-grid-wrapper.has-expanded-card .iq-profile-card:hover .iq-profile-card-badge {
+    background:rgba(34, 34, 34, 0.40);
+}
+
+.iq-profile-grid-wrapper.has-expanded-card .iq-profile-card {
+    cursor:inherit;
 }
 
 /* Right side details content ka smooth slide-in */

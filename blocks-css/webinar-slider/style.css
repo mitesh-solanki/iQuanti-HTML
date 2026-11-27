@@ -56,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-inline: 0 !important;
@@ -66,18 +66,15 @@
 
 .peek-slider-section .peek-slider-title,
 .iq-webinar-slider-section .iq-webinar-title {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
     color: var(--color-elevate-gray);
     margin: 0;
     padding: 0 !important;
 }
 
-.peek-slider-header h2 {
-    padding: 8px;
+.peek-slider-section .peek-slider-title {
+    padding: 10px !important;
 }
+
 
 /* Navigation Arrows */
 .peek-slider-section .peek-slider-nav,
@@ -92,8 +89,8 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1px solid var(--color-warm-gray, #cbd5e1);
-    background: #FDFCF8;
+    border: 1px solid var(--color-cool-gray);
+    background: var(--color-off-white);
     color: #0284c7;
     display: inline-flex;
     align-items: center;
@@ -177,7 +174,7 @@
     flex: 0 0 297px;
     width: 297px;
     height: 184px;
-    border-radius: 12px;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     display: block;
@@ -201,11 +198,8 @@
     flex: 0 0 404px;
     width: 404px;
     height: 250px;
-    border-radius: 14px;
     opacity: 1;
     z-index: 5;
-    /* border-color: rgba(255, 255, 255, 0.28); */
-    /* box-shadow: 0 20px 45px -8px rgba(6, 11, 30, 0.65), 0 0 25px rgba(37, 99, 235, 0.3); */
 }
 
 .peek-slider-section .peek-slide-card:hover,
@@ -245,11 +239,11 @@
 .iq-webinar-slider-section .iq-webinar-pagination {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 8px;
     width: 404px;
-    margin-left: clamp(24px, 5.625vw, 81px);
-    margin-top: 10px !important;
+    margin-left: max(0px, calc((100% - 1260px) / 2)) !important;
+    margin-top: 12px !important;
 }
 
 .peek-slider-section .iq-pagination-dot,
@@ -364,5 +358,14 @@
     .iq-webinar-slider-section .peek-slider-header,
     .iq-webinar-slider-section .iq-webinar-header {
         justify-content: center;
+    }
+
+    .peek-slider-section .peek-slider-nav, .iq-webinar-slider-section .iq-webinar-nav {
+        display: none;
+    }
+
+    .peek-slider-section .peek-slider-btn, .iq-webinar-slider-section .iq-nav-btn {
+        width: 54px;
+        height: 54px;
     }
 }
