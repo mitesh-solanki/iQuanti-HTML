@@ -249,6 +249,10 @@
     top: 20%;
     right: 0;
 }
+.content-showcase-blurb-left-bottom {
+    bottom: -10%;
+    left: 0;
+}
 .content-showcase-section .container {
     display: flex;
     flex-direction: column;
@@ -283,17 +287,21 @@
 
 
 /* Webinar Listing Filter Page CSS */
-.filter-content-showcase-section .content-showcase-section .container {
+.webinar-filter-content-showcase-section {
+    background-image: url("../../assets/images/webinar-filter-content-showcase-checks-line-bg.svg");
+}
+.webinar-filter-content-showcase-section .container {
     gap: 48px;
 }
 
-.filter-content-showcase-section .media-content-card-grid {
+.webinar-filter-content-showcase-section .media-content-card-grid {
     margin-top:0;
 }
 
-.filter-content-showcase-section  .section-footer{
+.webinar-filter-content-showcase-section  .section-footer{
     margin-top: 32px
 }
+
 .filter-media-content-card-grid .media-content-card .media-content-card-front-title {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

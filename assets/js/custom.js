@@ -122,7 +122,7 @@ jQuery(document).ready(function ($) {
     // Single Select
     jQuery('.js-select2-single').select2({
         placeholder: 'Select a service',
-        allowClear: true,
+        allowClear: false,
         width: '100%'
     });
 
